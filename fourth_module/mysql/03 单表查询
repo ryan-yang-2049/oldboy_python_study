@@ -1,0 +1,231 @@
+重点中的重点：关键字的执行优先级
+from
+where
+group by
+聚合函数<sum,min,max,avg,count>
+having
+select
+distinct
+order by
+limit
+
+1.找到表:from
+2.拿着where指定的约束条件，去文件/表中取出一条条记录
+3.将取出的一条条记录进行分组group by，如果没有group by，则整体作为一组
+4.将分组的结果进行having过滤
+5.执行select
+6.去重
+7.将结果按条件排序：order by
+8.限制结果的显示条数
+详细见：http://www.cnblogs.com/linhaifeng/articles/7372774.html
+
+
+
+company.employee
+    员工id      id                  int
+    姓名        emp_name            varchar
+    性别        sex                 enum
+    年龄        age                 int
+    入职日期     hire_date           date
+    岗位        post                varchar
+    职位描述     post_comment        varchar
+    薪水        salary              double
+    办公室       office              int
+    部门编号     depart_id           int
+
+
+
+#创建表
+create table employee(
+id int not null unique auto_increment,
+name varchar(20) not null,
+sex enum('male','female') not null default 'male', #大部分是男的，枚举类型
+age int(3) unsigned not null default 28,            #无符号 不为空 默认28
+hire_date date not null,
+post varchar(50),
+post_comment varchar(100),
+salary double(15,2),
+office int, #一个部门一个屋子
+depart_id int
+);
+
+查看表结构：
+MariaDB [company]> desc employee;
++--------------+-----------------------+------+-----+---------+----------------+
+| Field        | Type                  | Null | Key | Default | Extra          |
++--------------+-----------------------+------+-----+---------+----------------+
+| id           | int(11)               | NO   | PRI | NULL    | auto_increment |
+| name         | varchar(20)           | NO   |     | NULL    |                |
+| sex          | enum('male','female') | NO   |     | male    |                |
+| age          | int(3) unsigned       | NO   |     | 28      |                |
+| hire_date    | date                  | NO   |     | NULL    |                |
+| post         | varchar(50)           | YES  |     | NULL    |                |
+| post_comment | varchar(100)          | YES  |     | NULL    |                |
+| salary       | double(15,2)          | YES  |     | NULL    |                |
+| office       | int(11)               | YES  |     | NULL    |                |
+| depart_id    | int(11)               | YES  |     | NULL    |                |
++--------------+-----------------------+------+-----+---------+----------------+
+
+
+#插入记录
+#三个部门：教学，销售，运营
+insert into employee(name,sex,age,hire_date,post,salary,office,depart_id) values
+('egon','male',18,'20170301','老男孩驻沙河办事处外交大使',7300.33,401,1), #以下是教学部
+('alex','male',78,'20150302','teacher',1000000.31,401,1),
+('wupeiqi','male',81,'20130305','teacher',8300,401,1),
+('yuanhao','male',73,'20140701','teacher',3500,401,1),
+('liwenzhou','male',28,'20121101','teacher',2100,401,1),
+('jingliyang','female',18,'20110211','teacher',9000,401,1),
+('jinxin','male',18,'19000301','teacher',30000,401,1),
+('成龙','male',48,'20101111','teacher',10000,401,1),
+
+('歪歪','female',48,'20150311','sale',3000.13,402,2),#以下是销售部门
+('丫丫','female',38,'20101101','sale',2000.35,402,2),
+('丁丁','female',18,'20110312','sale',1000.37,402,2),
+('星星','female',18,'20160513','sale',3000.29,402,2),
+('格格','female',28,'20170127','sale',4000.33,402,2),
+
+('张野','male',28,'20160311','operation',10000.13,403,3), #以下是运营部门
+('程咬金','male',18,'19970312','operation',20000,403,3),
+('程咬银','female',18,'20130311','operation',19000,403,3),
+('程咬铜','male',18,'20150411','operation',18000,403,3),
+('程咬铁','female',18,'20140512','operation',17000,403,3)
+;
+
+
+1 查询语法
+select * from employee;
+select name,salary from employee;
+
+去重查询:
+MariaDB [company]> SELECT DISTINCT post FROM employee;
+
+#通过四则运算查询 员工年薪 ，别名。
+    SELECT name, salary*12 FROM employee;
+    SELECT name, salary*12 AS Annual_salary FROM employee;
+    SELECT name, salary*12 Annual_salary FROM employee;
+
+
+定义显示格式
+        MariaDB [company]> select concat('姓名:',name,'  年薪:',salary*12 ) as annual_salary from employee where depart_id =2;
+        +--------------------------------+
+        | annual_salary                  |
+        +--------------------------------+
+        | 姓名:歪歪  年薪:36001.56       |
+        | 姓名:丫丫  年薪:24004.20       |
+        | 姓名:丁丁  年薪:12004.44       |
+        | 姓名:星星  年薪:36003.48       |
+        | 姓名:格格  年薪:48003.96       |
+        +--------------------------------+
+        5 rows in set (0.00 sec)
+
+
+2 where 条件查询
+MariaDB [company]> select name,salary from employee where salary > 10000;
+MariaDB [company]> select name,salary from employee where salary > 10000 and salary < 20000;
+
+3 关键字 BETWEEN AND  和 or
+
+MariaDB [company]> select name,salary from employee where salary between 10000 and  20000; # 大于等10000 小于等于20000
+MariaDB [company]> select name,salary from employee where salary not  between 10000 and  20000;  #不在10000 和20000 之间
+
+MariaDB [company]> select * from employee where salary=10000 or age=18 or sex='male';
+
+
+select name,salary from employee where salary = 10000 or salary = 20000 or salary = 30000;
+优化：
+select name,salary from employee where salary in (10000,20000,30000);
+
+4 NULL 和 ‘’ 的查找方法
+查找描述信息是 NULL的
+select * from employee where post_comment is NULL;
+如果值是NULL 只能用 is  那如果值没有，那么只能用  post_comment='' 去查找。
+
+5 like 的 % 和 _
+% 表示任意字符;
+_ 表示一个字符
+MariaDB [company]> select * from employee where name like 'jin%';
+MariaDB [company]> select * from employee where name like 'j_n%';
+
+
+6 group by 分组
+    聚合函数：【group_concat】【count】【max】【avg】【sum】
+    部门ID分组：
+    MariaDB [company]> select depart_id,group_concat(name) from employee group by depart_id;
+    +-----------+--------------------------------------------------------------+
+    | depart_id | group_concat(name)                                           |
+    +-----------+--------------------------------------------------------------+
+    |         1 | egon,成龙,jinxin,jingliyang,liwenzhou,yuanhao,wupeiqi,alex   |
+    |         2 | 格格,星星,丁丁,丫丫,歪歪                                     |
+    |         3 | 张野,程咬金,程咬银,程咬铜,程咬铁                             |
+    +-----------+--------------------------------------------------------------+
+    3 rows in set (0.00 sec)
+
+    统计人数：
+    MariaDB [company]> select depart_id,count(id) from employee group by depart_id;
+    +-----------+-----------+
+    | depart_id | count(id) |
+    +-----------+-----------+
+    |         1 |         8 |
+    |         2 |         5 |
+    |         3 |         5 |
+    +-----------+-----------+
+    3 rows in set (0.00 sec)
+
+    MariaDB [company]> select depart_id,group_concat(name),count(id) from employee group by depart_id;
+    +-----------+--------------------------------------------------------------+-----------+
+    | depart_id | group_concat(name)                                           | count(id) |
+    +-----------+--------------------------------------------------------------+-----------+
+    |         1 | egon,成龙,jinxin,jingliyang,liwenzhou,yuanhao,wupeiqi,alex   |         8 |
+    |         2 | 格格,星星,丁丁,丫丫,歪歪                                      |         5 |
+    |         3 | 张野,程咬金,程咬银,程咬铜,程咬铁                              |         5 |
+    +-----------+--------------------------------------------------------------+-----------+
+    3 rows in set (0.00 sec)
+
+
+
+7 having  过滤
+
+    练习：
+        1. 查询各岗位内包含的员工个数小于2的岗位名、岗位内包含员工名字、个数
+        select post,COUNT(id),GROUP_CONCAT(name) FROM emp GROUP BY post HAVING COUNT(id)> 2;
+
+        2. 查询各岗位平均薪资大于10000的岗位名、平均工资
+        SELECT post 岗位名 ,AVG(salary) 平均工资 FROM emp GROUP BY post HAVING avg(salary) > 10000;
+
+
+
+        3. 查询各岗位平均薪资大于10000且小于20000的岗位名、平均工资
+        SELECT post,avg(salary) FROM emp GROUP BY post HAVING avg(salary) BETWEEN 10000 and 20000；
+
+
+8 排序
+    SELECT * FROM emp ORDER BY salary;  # 默认升序  降序是  DESC
+
+先按照年龄升序排序，在按照薪资升序排序
+    SELECT * FROM emp ORDER BY age,salary;
+
+
+9 limit  可以用作翻页
+
+select * from emp limit 10;   #取前 10条
+select * from emp limit 3,3;  #从第三条开始往后取3条。
+
+
+10 使用正则表达式查询
+    SELECT * FROM employee WHERE name REGEXP '^ale';
+
+    SELECT * FROM employee WHERE name REGEXP 'on$';
+
+    SELECT * FROM employee WHERE name REGEXP 'm{2}';
+
+
+    小结：对字符串匹配的方式
+    WHERE name = 'egon';
+    WHERE name LIKE 'yua%';
+    WHERE name REGEXP 'on$';
+
+
+
+
+

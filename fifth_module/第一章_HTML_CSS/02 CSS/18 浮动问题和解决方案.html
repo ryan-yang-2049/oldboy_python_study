@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动问题和解决方案</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wrap{
+            width: 1190px;
+            /*通常页面布局的时候父盒子的高度不需要设置，通过盒子填充父盒子的高度*/
+            /*height: 500px;*/
+            background-color: yellowgreen;
+            margin: 0 auto;
+            overflow: hidden;   /*第四种方法：给父元素添加该属性*/
+        }
+
+        .wrap div{
+            float: left;
+        }
+
+        .wrap_1{
+            width: 220px;
+            height: 480px;
+            background-color: #BFBFBF;
+            margin-right: 25px;
+        }
+        .wrap_2{
+            width: 700px;
+            height: 480px;
+            background-color: darkorange;
+        }
+        .wrap_3{
+            width: 220px;
+            height: 480px;
+            background-color: darkblue;
+            margin-left: 25px;
+        }
+
+        /*#clearfix{*/
+            /*float: none;*/
+            /*clear: both;*/
+        /*}*/
+        /*第三种方法*/
+        /*官方推荐的解决办法，最长使用的解决方案*/
+        /*.wrap:after{*/
+            /*visibility: hidden;*/
+            /*clear: both;*/
+            /*content: '.';*/
+            /*display: block;*/
+            /*height: 0;*/
+        /*}*/
+
+    </style>
+
+
+</head>
+<body>
+<!--
+浮动产生的问题：
+    父元素不设置高度时，子元素设置了浮动，不会撑开父元素的高度，子元素不占位置
+
+解决办法：
+    1.给父盒子设置固定高度，缺点：不灵活。
+    2.给浮动元素的最后一个元素加一个空的块级元素，且该元素不浮动，设置clear：both；缺点：结构冗余；
+    3.在父级元素标签里面使用伪类
+                    .wrap:after{
+                        visibility: hidden;
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;}
+    4.给父元素添加 overflow: hidden;
+        使用overflow属性扩展盒子高度减少代码量，也减少了空的HTML标签，是代码更加简洁，清晰，从而提高了代码的可读性和网页性能
+        如果页面中有定位元素，并且元素超出了父级的范围，就必须使用clear属性来清除浮动来扩展盒子高度
+
+-->
+    <!--第二种方法-->
+    <!--<div class="wrap">-->
+        <!--<div class="wrap_1"></div>-->
+        <!--<div class="wrap_2"></div>-->
+        <!--<div class="wrap_3"></div>-->
+        <!--<div id="clearfix"></div>-->
+    <!--</div>-->
+
+    <div class="wrap">
+        <div class="wrap_1"></div>
+        <div class="wrap_2"></div>
+        <div class="wrap_3"></div>
+        <!--<div id="clearfix"></div>-->
+    </div>
+
+
+
+
+
+</body>
+</html>

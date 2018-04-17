@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本样式</title>
+    <style type="text/css">
+        .box1{
+            width: 500px;
+            height: 200px;
+            background-color: yellowgreen;
+            color: red;
+
+            /*设置字体下划线：underline；删除线:line-through,上横线：overline*/
+            text-decoration: underline;
+            text-decoration-color: black;
+
+            /*设置鼠标属性*/
+            cursor: pointer;
+
+            /*设置文字往右移动20px，首行缩进*/
+            text-indent: 20px;
+
+            /*设置对齐方式,
+                对齐方式：center，left，right、
+                两端对齐:justify(只对英文有效)*/
+            text-align: center;
+
+            /*设置字体阴影:
+                第一个值：设置对象的阴影水平偏移值。可以为负值
+                第二个值：设置对象的阴影垂直偏移值。可以为负值
+                第三个值：从来设置对象的阴影模糊值。不允许负值
+                第四个值：设置对象的阴影的颜色。
+            */
+            text-shadow: 5px 0 5px black;
+
+            /*行高:它决定了元素中文本内容的高度，height则是定义元素自身的高度。*/
+            /*当行高等于盒子的高度时，那么会实现文本垂直方向居中*/
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">我爱你中国</div>
+        <a href="#">我爱你中国</a>
+</body>
+</html>

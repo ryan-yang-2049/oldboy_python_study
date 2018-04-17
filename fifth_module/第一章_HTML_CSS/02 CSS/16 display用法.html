@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display用法</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            /*控制元素隐藏，不占页面位置*/
+            /*display: none;*/
+
+            /*控制元素隐藏，占据页面位置，影响后面元素的布局*/
+            /*visibility: hidden;*/
+
+
+            /*display: inline-block;*/
+
+            /*块级元素转换为行内元素*/
+            display: inline;
+        }
+
+        a{
+            /*display: block;*/
+            display: inline-block;
+            width:  300px;
+            height: 300px;
+            background-color: blueviolet;
+
+        }
+
+        img{
+            display: inline;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+display
+
+    1.控制HTML元素的显示和隐藏
+    2.块级元素与行内元素的转换。
+block（块级）:默认占满整个页面宽度，如果设置了指定宽度，则会用margin填充剩下的部分。
+inline（行内）:行内元素,只要设置了display: inline，那么元素的width、height、margin-top、margin-bottom和 float属性都不会有什么影响。
+inline-block（行内块级）:行内块元素,同时具有行内元素和块级元素的特点。
+none:设置颜色不会被显示
+-->
+<!--行内标签-->
+    <div>123</div>
+    <div>我爱你中国</div>
+    <a href="#">百度一下</a>   <!--行内标签-->
+    <img src="./images/1.png" alt="美女">    <!--行内块标签-->
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

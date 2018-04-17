@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS高级选择器</title>
+
+    <style type="text/css">
+
+        /*群组选择器*/
+
+        .title,.content,.footer{
+            width: 968px;
+            margin: 0 auto;
+
+            background-color: #BFBFBF;
+            border: 1px solid red;
+        }
+
+        /*交集选择器*/
+        p.p1{
+            color: aqua;
+        }
+
+        p#title_p1{
+            font-size: 30px;
+            color: darkmagenta;    /*覆盖上面的color*/
+        }
+
+        /*毗邻选择器*/
+        /*找到所有紧挨在p3后面的第一个p标签，设置字体颜色为红色。*/
+        h3+p{
+            color: red;
+        }
+
+        /*兄弟选择器*/
+        /*h3~p{*/
+            /*color: blueviolet;*/
+
+        /*}*/
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <p class="p1" id="title_p1">我是一个段落</p>
+    </div>
+
+    <div class="content">
+        <h3>我是三级标题1</h3>
+        <a href="https://www.baidu.com">百度一下</a>
+        <p>我是另一个段落</p>
+        <h3>我是三级标题2</h3>
+        <p>我是另一个段落</p>
+        <h3>我是三级标题3</h3>
+        <p>我是另一个段落</p>
+
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+</html>

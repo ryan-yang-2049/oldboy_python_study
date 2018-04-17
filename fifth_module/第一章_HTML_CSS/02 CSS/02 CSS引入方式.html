@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS引入方式</title>
+
+    <style type="text/css">
+       /*内链式*/
+        h1{
+            font-size: 30px;
+            color: red;
+
+        }
+
+       /*导入式*/
+       @import url('./css_样式/index.css');
+
+
+    </style>
+    <!--链接式-->
+    <link rel="stylesheet"  type="text/css" href="./css_样式/index.css">
+
+</head>
+<body>
+<!--
+    内嵌式的优先级高于内链式
+
+index.css
+
+@import url(other.css)
+注意： @import url()必须写在文件最开始的位置。
+
+链接式与导入式的区别
+
+1、<link/>标签属于XHTML,@import是属性css2.1
+2、使用<link/>链接的css文件先加载到网页当中，再进行编译显示
+3、使用@import导入的css文件，客户端显示HTML结构，再把CSS文件加载到网页当中
+4、@import是属于CSS2.1特有的，对于不兼容CSS2.1的浏览器来说就是无效的
+
+-->
+    <!--内嵌方式-->
+    <div>
+        <h1 style="font-size: 50px;color:yellow;">路飞学城</h1>
+        <h2>python开发</h2>
+    </div>
+
+
+
+
+</body>
+</html>

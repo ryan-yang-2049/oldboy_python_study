@@ -1,0 +1,128 @@
+口述题
+
+1、简述计算机操作系统中的“中断”的作用？
+    有了中断技术后，中央处理器可以完全不管通道和设备的执行，因为如果有特殊情况  异常或正常结束，通道会发I/O 中断，通知 CPU 来处理
+
+2、简述计算机内存中的“内核态”和“用户态”；
+内核态：当一个任务（进程）执行系统调用而陷入内核代码中执行时，我们就称进程处于内核运行态（或简称为内核态）。此时处理器处于特权级最高的（0级）内核代码中执行。当进程处于内核态时，执行的内核代码会使用当前进程的内核栈。每个进程都有自己的内核栈。
+用户态：当进程在执行用户自己的代码时，则称其处于用户运行态（用户态）。即此时处理器在特权级最低的（3级）用户代码中运行。
+
+
+21、什么是同步I/O，什么是异步I/O？
+同步I/O：就是串行；
+异步I/O：就是并行；
+线程读写IO，如果必须阻塞等待IO返回才能继续执行，就是同步的，否者就是异步的。
+
+3、什么是进程？
+正在进行的一个过程或任务。
+
+4、什么是线程？
+在一个进程中存在多个线程，多个线程共享该进程的地址空间。
+
+5、简述select和epoll的区别；
+select 和 epoll 都是IO多路复用的机制。I/O多路复用就通过一种机制，可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的读写操作。但select，poll，epoll本质上都是同步I/O，因为他们都需要在读写事件就绪后自己负责进行读写，也就是说这个读写过程是阻塞的，而异步I/O则无需自己负责进行读写，异步I/O的实现会负责把数据从内核拷贝到用户空间。
+总结下select的几大缺点：
+（1）每次调用select，都需要把fd集合从用户态拷贝到内核态，这个开销在fd很多时会很大
+（2）同时每次调用select都需要在内核遍历传递进来的所有fd，这个开销在fd很多时也很大
+（3）select支持的文件描述符数量太小了，默认是1024
+
+6、简述多线程和多进程的使用场景；
+多进程：计算密集型
+多线程：IO密集型；
+
+多线程与多进程的区别
+1.开启线程的开销比开启进程的开销要小。
+2.线程的PID与开启线程的进程的PID相同，就不需要重新去申请内存地址空间。进程在开启子进程就需要去申请，因此，速度慢。
+3.进程之间的数据是相互隔离的。同一进程内开启的多个线程是共享该进程地址空间的
+
+
+7.请问multiprocessing模块中的Manager类的作用是什么？与Value和Array类相比，Manager的优缺点是什么？
+Manager是一种较为高级的多进程通信方式，它能支持Python支持的的任何数据结构。
+Value + Array 是python中共享内存 映射文件的方法，速度比较快。
+
+
+8。什么是协程？使用协程与使用线程的区别是什么？
+协程：是单线程下的并发，又称微线程；
+协程的适用场景： 当程序中存在大量不需要CPU的操作时（IO），适用于协程；
+
+线程和进程的操作是由程序触发系统接口，最后的执行者是系统；协程的操作则是程序员
+协程存在的意义：对于多线程应用，CPU通过切片的方式来切换线程间的执行，线程切换时需要耗时（保持状态，下次继续）。协程，则只使用一个线程，在一个线程中规定某个代码块执行顺序。
+
+9. 说说你所知道的MySQL数据库存储引擎，InnoDB存储引擎和MyISM存储引擎的区别？
+最大的区别就是：InnoDB实现了事物处理。
+
+10. 主键具有什么特征？
+不为空且唯一
+
+11.什么情况下需要使用事务
+场景：客户在ATM取款，而此时银行在维护数据库。
+当客户取款时，银行在维护数据库，此时用户取了500块钱，但是 此时数据库在维护，但是，不会因为用户取了钱就不扣除，数据库会在恢复以后重新扣除用户现金。MySQL事务：一致性，原子性，隔离性，持久性。
+
+12. 索引的本质是什么？索引有什么优点，缺点是什么？
+优点
+有了索引.对于记录数量很多的表,可以提高查询速度.
+缺点
+索引是占用空间的.
+索引会影响update insert delete速度
+
+编程题
+一. 数据库
+1、创建一个表student，包含ID(学生学号)，sname(学生姓名)，gender(性别)，credit(信用卡号),四个字段，要求：ID是主键，且值自动递增，sname是可变长字符类型，gender是枚举类型, credit是可变长字符类型；
+
+create database if not exists stu_database default charset utf8 collate utf8_general_ci;
+
+create table if not exists stu_database.student(id int,name char(25));
+
+
+
+2、在上面的student表中增加一个名为class_id的外键，外键引用class表的cid字段；
+
+3、向该表新增一条数据，ID为1，学生姓名为alex，性别女，修改ID为1的学生姓名为wupeiqi，删除该数据；
+
+4、查询student表中，每个班级的学生数；
+
+5、修改credit字段为unique属性；
+
+6、请使用命令在你本地数据库中增加一个用户，并给该用户授予创建表的权限；
+
+7、请使用pymsql模块连接你本地数据库，并向student表中插入一条数据；
+
+8、请使用mysqldump命令备份student表；
+
+二. 请使用协程写一个消费者生产者模型；
+
+import asyncio
+import random
+async def produce(queue, n):
+    for x in range(n):
+        # produce an item
+        print('producing {}/{}'.format(x, n))
+        # simulate i/o operation using sleep
+        await asyncio.sleep(random.random())
+        item = str(x)
+        # put the item in the queue
+        await queue.put(item)
+async def consume(queue):
+    while True:
+        # wait for an item from the producer
+        item = await queue.get()
+        # process the item
+        print('consuming {}...'.format(item))
+        # simulate i/o operation using sleep
+        await asyncio.sleep(random.random())
+        # Notify the queue that the item has been processed
+        queue.task_done()
+async def run(n):
+    queue = asyncio.Queue()
+    # schedule the consumer
+    consumer = asyncio.ensure_future(consume(queue))
+    # run the producer and wait for completion
+    await produce(queue, n)
+    # wait until the consumer has processed all items
+    await queue.join()
+    # the consumer is still awaiting for an item, cancel it
+    consumer.cancel()
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(run(10))
+loop.close()

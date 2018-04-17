@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型-padding(内边距)</title>
+
+    <style type="text/css">
+        *{padding: 0;margin: 0}
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            padding-left: 30px;
+            padding-top: 30px;
+            /*padding: 50px;*/
+        }
+
+
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /*margin-top: 100px;*/
+            border: 1px solid red;
+            padding: 10px;
+            /*overflow: hidden;*/ /*当内容溢出元素框时隐藏*/
+            margin: 0 auto; /*使盒子元素水平居中显示*/
+
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin-top: 100px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!--内边距：内容区域到边框的距离
+        内边距会扩大元素所在的区域
+
+        注意：为元素设置内边距，只能影响自己
+        -->
+    <div class="box1">爱你呦</div>
+    <div class="box2">
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>

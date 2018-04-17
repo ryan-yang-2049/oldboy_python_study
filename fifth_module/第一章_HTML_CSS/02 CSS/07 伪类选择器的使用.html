@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器的使用</title>
+    <style type="text/css">
+        /*a:link{
+            background-color: red;
+        }*/
+
+        /*a:visited{
+            color: #25CB33;
+        }*/
+
+        a:hover{
+            color: coral;
+            font-size: 30px;
+        }
+
+        a:active{
+            color: yellow;
+
+        }
+
+        input:focus{
+            background-color: red;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<!--
+a:link :没有访问的超链接a标签样式;
+a:visited :访问过的超链接a标签样式;
+a:hover : 鼠标悬浮在元素上应用样式：
+a:active：鼠标点击瞬间的样式;
+input:focus : input输入框获取焦点时样式;
+-->
+
+<ul>
+    <li><a href="#">百度一下</a></li>
+    <br>
+    <li><a href="#">Google</a></li>
+    <br>
+    <li><a href="#">博客</a></li>
+    </ul>
+
+<form action="">
+    <input type="text">
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style type="text/css">
+        /*被修饰的标签的字体变成30px*/
+        p:first-letter{
+            font-size: 30px;
+        }
+
+        /*给被修饰的标签的内容前面加内容和颜色*/
+        p:before{
+            content: "cherry,";
+            color: red;
+        }
+        /*给被修饰的标签的内容后面加内容和颜色*/
+        p:after{
+            content: "love ";
+            color: black;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+<p>爱你哟</p>
+</body>
+</html>

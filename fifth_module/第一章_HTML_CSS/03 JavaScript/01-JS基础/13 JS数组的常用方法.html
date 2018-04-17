@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS数组的常用方法</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+    //数组常用方法。
+    //https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+
+    //1.数组的合并 concat()
+    var north = ['北京','山东','天津','河北'];
+    var south = ['SH','ZJ','GZ'];
+
+    var newArr = north.concat(south);
+    console.log(newArr);
+
+    // 2.将数组转换成字符串,每个元素之间用逗号隔开。
+    var score = [100,19,20,49,0];
+    //toString() 直接转换成字符串
+    var str1 = score.toString();
+    console.log(str1);
+
+    // 3. join() 将数组中的元素使用指定的字符串链接起来，它会形成一个新的字符串
+    var str2 = score.join('||');
+    console.log(str2);
+
+    // 4.查找数组下标
+    // indexOf(正向查找) ：如果查找的元素在数组中则得到对应的下标，如果不在，则返回 -1
+    var index = score.indexOf(200);
+    console.log(index);
+
+    // lastIndexOf(反向查找) ：如果查找的元素在数组中则得到对应的下标，如果不在，则返回 -1
+    var lastIndex = score.lastIndexOf(199);
+    console.log("下标索引为:"+lastIndex);
+
+    // 5.数组的排序
+    var names = ['ryan','cherry','curry','jams'];
+    // 反转数组
+    var reverseNames = names.reverse();
+    console.log(reverseNames);
+
+    // sort():按照26 个字母排序
+    var sortNames = names.sort();
+    console.log(sortNames);
+
+    // 6.移除和添加数组的元素
+    // pop(): 移除数组的最后一个值，直接修改数组，并得到该值。
+    var newNames = names.pop();
+    console.log("pop:"+newNames);
+    // shift(): 移除数组的第一个值，并得到该值。
+    var firstNames = names.shift();
+    console.log(firstNames);
+
+    //unshift():向数组的开头添加一个或多个元素，并返回新的长度
+    var newLength = names.unshift('kobe');
+    console.log(newLength);
+    console.log(names);
+
+    // splice函数的第二个参数指删除的数目。splice直接修改原数组，并把删除的所有元素以另一个新数组的方式返回。
+    var spliceNames = names.splice(names.indexOf('curry'),1);
+    console.log(spliceNames);
+    console.log(names);
+
+    // push():添加元素,直接修改数组，返回的是一个长度
+    var newNames2 = names.push('cherry');
+    console.log(newNames2);
+    console.log(names);
+
+
+
+
+
+</script>
+</html>

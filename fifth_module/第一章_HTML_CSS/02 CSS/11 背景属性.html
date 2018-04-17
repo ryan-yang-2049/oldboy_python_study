@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景属性</title>
+    <style type="text/css">
+        #img{
+            width: 1000px;
+            height: 1000px;
+
+            /*设置背景颜色*/
+            /*background-color: yellowgreen;*/
+            /*设置背景图片*/
+            /*background-image: url(./images/1.png);*/
+            /*background-repeat:属性定义了图像的平铺模式。
+                repeat	    默认。背景图像将在垂直方向和水平方向重复。
+                repeat-x	背景图像将在水平方向重复。
+                repeat-y	背景图像将在垂直方向重复。
+                no-repeat	背景图像将仅显示一次。
+                inherit	    规定应该从父元素继承 background-repeat 属性的设置。
+            */
+            /*background-repeat: no-repeat;*/
+            /*background-attachment: fixed;*/
+            /*background-position: -50px -50px;*/
+
+            /*简写
+                注意：此时上面的background 的一些值会被覆盖掉，比如颜色
+                此时可以有两种写法，可以在background里面直接写颜色
+                或者重新定义一个颜色 */
+            /*background: 背景 照片位置 图片展开方式  滚动/固定   position/图片长,宽*/
+            background: yellowgreen url(./images/1.png) no-repeat  fixed right/300px 300px;
+            /*background-color: yellowgreen;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="img"></div>
+</body>
+</html>

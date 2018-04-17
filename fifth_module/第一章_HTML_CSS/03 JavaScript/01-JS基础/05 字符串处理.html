@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js 字符串处理</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+// 字符串运算
+    var firstName = 'cherry';
+    var lastName = 'Gou';
+
+    var fullName = firstName + lastName;
+    console.log(fullName);
+
+// 字符串拼接
+    var str = "我想带"+firstName+"去浪漫的土耳其，还一起去东京和巴黎";
+
+    var fullStr = str;
+    console.log(fullStr);
+
+
+    var a1 = '3';
+    var a2 = '2';
+    console.log(a1+a2);   // result : 12  相当于字符串拼接，但是可以进行减法运算
+    console.log(parseInt(a1)+parseInt(a2)); //转换字符串，parseInt相当于python的int
+
+    console.log(a1*a2)   // 字符串如果只包含数字，那就可以进行乘法运算。如果字符串不全是数字，那么得到的结果是 NaN。(not a number)，但是类型却是number类型。
+
+</script>
+
+
+</body>
+</html>

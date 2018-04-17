@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS流程控制 for</title>
+</head>
+<body>
+
+
+</body>
+<script type="text/javascript">
+    // for 循环
+    // for(var i = 1;i<=10;i++){
+    //     console.log(i)
+    // }
+    //1-100 之间的偶数
+    // for(var i = 1;i<=100;i++){
+    //     if(i%2===0){
+    //         console.log(i)
+    //     }
+    // }
+
+    //计算1-100 的和
+    // var sum = 0;
+    // for(var i = 1;i<=100;i++){
+    //     sum += i;
+    // }
+    // alert(sum);
+
+    //再屏幕上输出下面的内容：
+    /*
+        ******
+        ******
+        ******
+     */
+    // for(var i = 1;i<=3;i++){
+    //     for(var j = 0 ;j<6;j++){
+    //         document.write('*')
+    //     }
+    //
+    //     document.write('<br/>')
+    // }
+
+    // 在浏览器中输出直角三角形，和等边三角形。使用python语言和js语言输出。
+
+    for(var i = 0;i<6;i++){
+            for( j=i;j>=1;j--){
+                document.write('*')
+        }
+        document.write('*');
+        document.write('<br>');
+    }
+
+    document.write('=================================================<br>');
+
+    for(var m = 1;m<=6;m++){
+        for(var n = 6-1;n>=m;n--){
+            document.write('&nbsp;');
+
+        }
+        for(var p = 1;p<=2*m-1;p++){
+            document.write('*');
+        }
+
+        document.write('<br>')
+    }
+
+
+
+
+</script>
+</html>

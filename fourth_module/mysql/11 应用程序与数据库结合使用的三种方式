@@ -1,0 +1,12 @@
+应用程序与数据库结合使用
+方式一：
+    Python：调用存储过程
+    MySQL：编写存储过程
+
+方式二：
+    Python：编写纯生SQL
+    MySQL：什么也不做。
+
+方式三：
+    Python：ORM框架 --> 纯生SQL
+    MySQL：什么也不做。

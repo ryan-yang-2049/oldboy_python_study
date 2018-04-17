@@ -1,0 +1,48 @@
+事务用于将某些操作的多个SQL作为原子性操作，一旦有某一个出现错误，即可回滚到原来的状态，从而保证数据库数据完整性。
+
+原子性。
+
+事务最常用的场景：转账
+create table user(
+id int primary key auto_increment,
+name char(32),
+balance int
+);
+
+insert into user(name,balance)
+values
+('wsb',1000),
+('egon',1000),
+('ysb',1000);
+
+#原子操作
+start transaction;
+update user set balance=900 where name='wsb'; #买支付100元
+update user set balance=1010 where name='egon'; #中介拿走10元
+update user set balance=1090 where name='ysb'; #卖家拿到90元
+commit;
+
+#出现异常，回滚到初始状态  rollback。
+start transaction;
+update user set balance=900 where name='wsb'; #买支付100元
+update user set balance=1010 where name='egon'; #中介拿走10元
+uppdate user set balance=1090 where name='ysb'; #卖家拿到90元,出现异常没有拿到
+rollback;
+commit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

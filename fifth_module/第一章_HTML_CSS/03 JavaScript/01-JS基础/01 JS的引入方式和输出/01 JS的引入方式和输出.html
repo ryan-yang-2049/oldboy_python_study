@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的引入方式和输出</title>
+    <style type="text/css">
+
+    </style>
+    <!--外链式-->
+    <!--<script src="01.js"></script>-->
+</head>
+
+
+<body>
+
+<!--
+javascript 的引入方式：
+    a.行内式，将JavaScript代码块直接写在标签内
+        <input type="button" onclick="alert(1)"/>
+
+    b.内部式
+
+    c.外部式：引入一个外部JS文件
+        1.JS引入的时候一般放在HTML所有内容之后
+        2.外部式元素内写代码块不会生效
+-->
+<!--
+JavaScript的输出方式：
+    1.document.write("")向文档内输入内容，不会覆盖源文档的内容
+    2.console 控制台输出【开发者工具】
+    3.console.log() 向控制台抛出一条消息
+    4.console.error() 向控制台抛出一个异常
+    5.console.dir() 输入一个对象的全部属性
+    6.console.clear() 清除
+
+    7.alert() 弹出一个带有一条指定信息的消息（警告）
+    8.innerHTML/innerText获取或者向指定元素内添加内容
+    9.innerHTML 获取元素内所有的内容（包括元素），还可以解析内容的样式
+    10.innerText 获取元素的文本内容
+
+
+
+-->
+    <!--行内式引入：dom == document object model-->
+    <p id="p1" onclick="clickhandler()">123</p>
+
+</body>
+
+<!--内部式，建议引入的时候要在body之后，我们要等待所有的dom元素加载完成之后再去执行相应的js操作。-->
+<script type="text/javascript">
+
+//    document.write('我爱中国')
+//
+//    console.log("hello world")
+//    console.error("hello world,everyday")
+//
+
+//    console.dir(window)
+
+    //prompt 像alert一样弹出框，有返回值
+    var a=prompt("请输入内容")
+    alert(a)
+    function clickhandler() {
+        // 弹出警告框
+//        alert(1);
+
+    }
+
+
+</script>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击有惊喜案例</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            text-align: center;
+            color: greenyellow;
+            line-height: 200px;
+            font-size: 25px;
+            font-weight: bold;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        点击有惊喜！！
+    </div>
+
+    <div class="box">
+        这个是测试！！
+    </div>
+</body>
+
+<script type="text/javascript">
+    var oBox = document.getElementsByClassName('box')[0];
+
+    console.log(oBox);
+
+    var a = 0;
+
+
+    oBox.onclick = function () {
+        a++;
+        if(a%4===1){
+            this.style.background = 'green';
+            this.innerText = '继续点击！';
+        }else if(a%4===2){
+            this.style.background = 'blue';
+            this.innerText = '骗你的！';
+        }else if(a%4===3){
+            this.style.background = 'transparent';
+            this.innerText = '';
+        }else{
+            this.style.background = 'red';
+            this.innerText = '点击有惊喜';
+        }
+
+    }
+
+</script>
+</html>

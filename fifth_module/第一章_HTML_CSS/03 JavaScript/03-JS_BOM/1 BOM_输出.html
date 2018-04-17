@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM_输出</title>
+</head>
+<body>
+
+    <button onclick="printInfo()">打印信息</button>
+    <button onclick="infoSearch()">查找</button>
+
+
+</body>
+
+    <script type="text/javascript">
+        //1.js ECMAScript DOM BOM
+
+        //BOM Browser Object Model 浏览器对象模型
+            //核心  浏览器
+
+        // 输出 屏幕高度 滚动高度 setInterval .. window.open() close（） location
+        // var pro = prompt('中国很美','love china'); //prompt('msg',defaultValue);
+
+        // console.log(pro);
+
+
+        // confirm
+        var m = confirm("学习BOM");   //点击 确定返回True,点击取消，返回False
+        console.log(m);
+
+        //常用输出： alert console prompt confirm
+
+        //
+        function printInfo() {
+            window.print();
+        }
+
+        function infoSearch() {
+            var m2 = confirm("查找");
+            find(m2)
+        }
+
+
+    </script>
+
+
+</html>

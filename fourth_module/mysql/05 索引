@@ -1,0 +1,183 @@
+
+索引在MySQL中也叫做“键”，是存储引擎用于快速找到记录的一种数据结构。
+
+###b+树性质
+1.索引字段要尽量的小
+2.索引的最左匹配特性（即从左往右匹配）
+
+MariaDB [db1]> create table t2(id int,name char(5))engine=myisam;
+MariaDB [db1]> create index idx on t2(id);
+
+
+Mysql索引管理
+
+一、功能
+    #1. 索引的功能就是加速查找
+    #2. mysql中的primary key，unique，联合唯一也都是索引，这些索引除了加速查找以外，还有约束的功能
+
+二、MySQL的索引分类
+
+    索引分类
+        1.普通索引index :加速查找
+        2.唯一索引
+            主键索引：primary key ：加速查找+约束（不为空且唯一）
+            唯一索引：unique：加速查找+约束 （唯一）
+        3.联合索引
+            -primary key(id,name):联合主键索引
+            -unique(id,name):联合唯一索引
+            -index(id,name):联合普通索引
+        4.全文索引fulltext :用于搜索很长一篇文章的时候，效果最好。
+        5.空间索引spatial :了解就好，几乎不用
+
+
+
+
+三、 索引的两大类型hash与btree
+
+    #我们可以在创建上述索引的时候，为其指定索引类型，分两类
+    hash类型的索引：查询单条快，范围查询慢
+    btree类型的索引：b+树，层数越多，数据量指数级增长（我们就用它，因为innodb默认支持它）
+
+    #不同的存储引擎支持的索引类型也不一样
+    InnoDB 支持事务，支持行级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；
+    MyISAM 不支持事务，支持表级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；
+    Memory 不支持事务，支持表级别锁定，支持 B-tree、Hash 等索引，不支持 Full-text 索引；
+    NDB 支持事务，支持行级别锁定，支持 Hash 索引，不支持 B-tree、Full-text 等索引；
+    Archive 不支持事务，支持表级别锁定，不支持 B-tree、Hash、Full-text 等索引；
+
+
+
+四、创建/删除索引的语法
+    创建/删除索引的语法格式
+        #方法一：创建表时
+            　　CREATE TABLE 表名 (
+                        字段名1  数据类型 [完整性约束条件…],
+                        字段名2  数据类型 [完整性约束条件…],
+                        [UNIQUE | FULLTEXT | SPATIAL ]   INDEX | KEY
+                        [索引名]  (字段名[(长度)]  [ASC |DESC])
+                        );
+
+
+        #方法二：CREATE在已存在的表上创建索引
+                CREATE  [UNIQUE | FULLTEXT | SPATIAL ]  INDEX  索引名
+                             ON 表名 (字段名[(长度)]  [ASC |DESC]) ;
+
+
+        #方法三：ALTER TABLE在已存在的表上创建索引
+                ALTER TABLE 表名 ADD  [UNIQUE | FULLTEXT | SPATIAL ] INDEX
+                                     索引名 (字段名[(长度)]  [ASC |DESC]) ;
+
+        #删除索引：DROP INDEX 索引名 ON 表名字;
+
+        善用帮助文档
+        help create
+        help create index
+        ==================
+        1.创建索引
+            -在创建表时就创建（需要注意的几点）
+            create table s1(
+            id int ,#可以在这加primary key
+            #id int index #不可以这样加索引，因为index只是索引，没有约束一说，
+            #不能像主键，还有唯一约束一样，在定义字段的时候加索引
+            name char(20),
+            age int,
+            email varchar(30)
+            #primary key(id) #也可以在这加
+            index(id) #可以这样加
+            );
+            -在创建表后在创建
+            create index name on s1(name); #添加普通索引
+            create unique index age on s1(age);添加唯一索引
+            alter table s1 add primary key(id); #添加主键索引，也就是给id字段增加一个主键约束
+            create index name on s1(id,name); #添加普通联合索引
+        2.删除索引
+            drop index id on s1;
+            drop index name on s1; #删除普通索引
+            drop index age on s1; #删除唯一索引，就和普通索引一样，不用在index前加unique来删，直接就可以删了
+            alter table s1 drop primary key; #删除主键(因为它添加的时候是按照alter来增加的，那么我们也用alter来删)
+
+
+
+
+
+#1. 准备表
+create table s1(
+id int,
+name varchar(20),
+gender char(6),
+email varchar(50)
+);
+
+#2. 创建存储过程，实现批量插入记录
+delimiter $$ #声明存储过程的结束符号为$$
+create procedure auto_insert1()
+BEGIN
+    declare i int default 1;
+    while(i<3000000)do
+        insert into s1 values(i,concat('egon',i),'male',concat('egon',i,'@oldboy.com'));
+        set i=i+1;
+    end while;
+END$$ #$$结束
+delimiter ; #重新声明分号为结束符号
+
+#3. 查看存储过程
+show create procedure auto_insert1\G
+
+#4. 调用存储过程
+call auto_insert1();
+
+验证索引 查询时间:
+
+        MariaDB [db1]> select count(*) from s1 where name = 'egon1000';
+        +----------+
+        | count(*) |
+        +----------+
+        |        1 |
+        +----------+
+        1 row in set (0.13 sec)
+
+        MariaDB [db1]> create index b on s1(name);
+        Query OK, 0 rows affected (1.87 sec)
+        Records: 0  Duplicates: 0  Warnings: 0
+
+        MariaDB [db1]> select count(*) from s1 where name = 'egon1000';
+        +----------+
+        | count(*) |
+        +----------+
+        |        1 |
+        +----------+
+        1 row in set (0.00 sec)
+    范围比较小也可以提速：
+        MariaDB [db1]> select count(id) from s1 where id > 1000 and id < 2000;
+        +-----------+
+        | count(id) |
+        +-----------+
+        |       999 |
+        +-----------+
+        1 row in set (0.00 sec)
+
+        MariaDB [db1]> select count(id) from s1 where id > 1000 and id < 300000;
+        +-----------+
+        | count(id) |
+        +-----------+
+        |    298999 |
+        +-----------+
+        1 row in set (0.12 sec)
+
+
+
+增加联合索引，关于范围查询的字段要放到后面
+        select count(*) from s1 where name='egon' and age=10 and id>3000 and email='xxxx';
+        index(name,email,age,id)
+
+        select count(*) from s1 where name='egon' and age> 10 and id=3000 and email='xxxx';
+        index(name,email,id,age)
+
+        select count(*) from s1 where name like 'egon' and age= 10 and id=3000 and email='xxxx';
+        index(email,id,age,name)
+
+
+
+
+
+

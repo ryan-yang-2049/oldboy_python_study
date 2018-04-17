@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object_构造函数</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+//1.对象的创建
+
+    //1).字面量创建
+    var stu = {
+        name:'cherry',
+        age:23,
+        fav:'video'
+    };    //对象的创建方式
+
+    // console.log(stu);
+    // 对象.属性  可以用来get或者set，
+    // stu.name ='ryan';
+    // console.log(stu);
+
+    //2).使用 Object() 创建对象
+    // Object():构造函数，特点：1.首字母大写。碰到构造函数，要想创建对象 new
+    var obj = new Object();
+    obj.name = 'ryan';
+
+    // console.log(obj)
+
+    //-----------------构造函数--------------------
+    //注意：1.函数名首字母要大写
+    //2.构造寒素不需要return
+    //3.为对象添加成员变量： this.name = 'ryan'
+
+    var Stu02 = function () {
+        this.name = 'cherry';
+        this.age = 24;
+        this.job = 'teacher';
+        this.fav = function () {
+            console.log('video')
+        }
+    }
+
+    // 创建对象
+    var s = new Stu02()
+    s.addr = 'SH';
+    console.log(s)
+
+    var s1 = new Stu02()
+    console.log(s1)
+
+    // 弊端：每次new一个对象里面的成员变量和方法都一样。
+
+    // 推荐大家使用的构造函数的方式
+
+    function Animal() {
+        this.name = 'pig';
+        this.age = 5;
+        // this.fav = function () {
+        //     console.log(this.age)
+        // }
+    }
+
+    Animal.prototype.showname = function () {
+        alert(this.name)
+    }
+    var a = new Animal()
+
+    a.showname()
+
+</script>
+
+</html>

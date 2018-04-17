@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS高级选择器</title>
+
+    <style type="text/css">
+
+        /*群组选择器*/
+
+        .title,.content,.footer{
+            width: 968px;
+            margin: 0 auto;
+
+            background-color: #BFBFBF;
+            border: 1px solid red;
+        }
+
+
+        /*交集选择器*/
+        p.p1{
+            color: aqua;
+        }
+
+        p#title_p1{
+            font-size: 30px;
+            color: darkmagenta;    /*覆盖上面的color*/
+        }
+
+        /*毗邻选择器*/
+        /*找到所有紧挨在p3后面的第一个p标签，设置字体颜色为红色。*/
+        h3+p{
+            color: red;
+        }
+
+        /*兄弟选择器*/
+        h3~p{
+            color: blueviolet;
+
+        }
+
+        /*属性选择器*/
+        /*找到所有class=baidu的选择器*/
+        [class='baidu']{
+            color: #25CB33;
+        }
+
+        /*找到所有class开头是btn的选择器*/
+        [class^=btn]{
+            font-size: 20px;
+            color: crimson;
+        }
+
+        /*找到所有class结尾是btn的选择器*/
+        /*[class$=btn]{*/
+            /*font-size: 20px;*/
+            /*color: crimson;*/
+        /*}*/
+
+    </style>
+
+
+<!--
+总结：
+    基础选择器：
+        1.标签选择器 div
+        2.类选择器 .div1
+        3.id选择器 #box
+        4.通配符选择器 *
+
+     高级选择器：
+        1.群组选择器，中间用 ,
+        2.交集选择器，选择器之间不能有空格，第一个标签必须是标签选择器，第二个标签可以是ID选择器或者是class选择器
+        3.后代选择器，选择器之间用空格
+        4.子代选择器 >
+        5.毗邻选择器 +
+        6.兄弟选择器 ~
+        7.属性选择器 []
+
+
+-->
+
+</head>
+<body>
+
+    <div class="title">
+        <p class="p1" id="title_p1">我是一个段落</p>
+    </div>
+
+    <div class="content">
+        <h3>我是三级标题1</h3>
+        <a href="https://www.baidu.com">百度一下</a>
+        <p>我是另一个段落</p>
+        <h3>我是三级标题2</h3>
+        <p>我是另一个段落</p>
+        <h3>我是三级标题3</h3>
+        <p>我是另一个段落</p>
+
+    </div>
+
+    <div class="footer">
+        <a class="baidu">百度</a>
+        <br>
+        <a class="btn-default">百度一下</a>
+        <br>
+        <a class="baidu">百度</a>
+        <br>
+        <a class="btn-google">谷歌</a>
+    </div>
+
+</body>
+</html>

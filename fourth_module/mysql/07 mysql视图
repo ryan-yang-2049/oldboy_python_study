@@ -1,0 +1,22 @@
+视图是一个虚拟表（非真实存在），其本质是【根据SQL语句获取动态的数据集，并为其命名】，用户使用时只需使用【名称】即可获取结果集，可以将该结果集当做表来使用。
+
+创建一张视图
+CREATE VIEW course2teacher AS SELECT * FROM course INNER JOIN teacher ON course.teacher_id = teacher.tid;
+
+
+#！！！注意注意注意：
+#1. 使用视图以后就无需每次都重写子查询的sql，但是这么效率并不高，还不如我们写子查询的效率高
+
+#2. 而且有一个致命的问题：视图是存放到数据库里的，如果我们程序中的sql过分依赖于数据库中存放的视图，那么意味着，一旦sql需要修改且涉及到视图的部分，则必须去数据库中进行修改，而通常在公司中数据库有专门的DBA负责，你要想完成修改，必须付出大量的沟通成本DBA可能才会帮你完成修改，极其地不方便
+
+
+视图主要用于查询，不应该视图的记录，而且涉及到多张表的情况下是根本无法修改视图中的数据的。
+
+修改视图：语法：ALTER VIEW 视图名称 AS SQL语句
+    例:mysql> alter view teacher_view as select * from course where cid>3;
+删除视图：语法：DROP VIEW 视图名称
+
+DROP VIEW teacher_view
+
+
+

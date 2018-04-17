@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math对象的使用</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+/*
+abs(x)    返回数的绝对值。
+exp(x)    返回 e 的指数。
+floor(x)对数进行下舍入。
+log(x)    返回数的自然对数（底为e）。
+max(x,y)    返回 x 和 y 中的最高值。
+min(x,y)    返回 x 和 y 中的最低值。
+pow(x,y)    返回 x 的 y 次幂。
+random()    返回 0 ~ 1 之间的随机数。
+round(x)    把数四舍五入为最接近的整数。
+sin(x)    返回数的正弦。
+sqrt(x)    返回数的平方根。
+tan(x)    返回角的正切。
+*/
+
+    var  x = 1.234;
+    // ceil 大于等于x，并且与它最接近的整数
+    var a = Math.ceil(x);
+    console.log(a);
+    // floor 小于等于x，并且与它最接近的整数
+    var b = Math.floor(x);
+    console.log(b);
+
+    console.log(Math.max(2,4)) ; //min 最小值
+
+    //经常使用的  random
+
+    var ran = Math.random(); // 0-1 之间的随机数
+    console.log(ran);
+
+    //100-200 之间的随机数
+    var c = 100+Math.random()*100;
+    console.log(c);
+
+    // 5-15 之间的随机数 ; min + Math.random()*(max-min)
+    var d = 5+Math.random()*(15-5);
+    console.log(d)
+</script>
+</html>

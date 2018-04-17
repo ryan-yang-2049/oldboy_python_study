@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型-border</title>
+    <style type="text/css">
+        .wrap{
+            width: 200px;
+            height: 200px;
+
+            background-color: yellowgreen;
+
+            /*
+            border-top-width: 5px;
+            border-left-width: 5px;
+            border-right-width: 5px;
+            border-bottom-width: 5px;
+
+            border-top-color: red ;
+            border-left-color: red ;
+            border-bottom-color: red ;
+            border-right-color: red ;
+
+            border-top-style: solid;
+            border-left-style: double;
+            border-bottom-style: dotted;
+            border-right-style: dashed;
+            */
+            /*设置四个相同的边框*/
+            /*border: 5px solid red;*/
+
+
+            border-width: 1px;          /*一般设置为1px的边框*/
+            border-color: black;
+            border-style: solid double;
+            /*border-style
+                四个值: 上，右，下，左（顺时针）
+                三个值：上，左右，下
+                两个值：上下，左右
+                一个值：四个方向
+            */
+
+        }
+    </style>
+
+<!--
+边框样式：border-style（上下左右一样）
+    border-top/right/bottom/left 上左下右边框属性。
+        none： ：无边框。
+        dotted ：点状虚线边框。
+        dashed ：矩形虚线边框。
+        solid  : 实线边框。
+        double ：双线边框
+        hidden : 与none相同，应用于表解决边框冲突
+
+边框颜色：border-color
+边框粗细：border-width
+    - 关键字: thin、medium、thick
+    - 像素值：px
+
+-->
+</head>
+<body>
+
+    <div class="wrap"></div>
+
+
+</body>
+</html>

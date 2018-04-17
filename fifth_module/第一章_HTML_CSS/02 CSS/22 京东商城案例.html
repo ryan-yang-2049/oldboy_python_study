@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东商城案例</title>
+
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        .wrap{
+            width: 100%;
+            background-color: #EDF1EB;
+        }
+
+        .container{
+            width: 1190px;
+            /*如果不加，底部背景颜色就没有了*/
+            overflow: hidden;
+            /*居中*/
+            margin: 0 auto;
+        }
+
+        .container div{
+            float: left;
+        }
+
+        .c_l{
+            width: 190px;
+            height: 480px;
+            background-color: yellowgreen;
+
+        }
+
+        .c_c{
+            width: 795px;
+            height: 480px;
+            background-color: red;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .c_r{
+            width: 190px;
+            height: 480px;
+            background-color: yellow;
+        }
+
+
+        .c_l ul li{
+            list-style: none;
+            padding: 5px 10px;
+
+
+        }
+
+        .c_l ul li a{
+            /*去掉超链接下划线*/
+            text-decoration: none;
+            color: #4F4F4F;
+        }
+
+        /*移动鼠标变红*/
+        .c_l ul li a:hover{
+            color: red;
+        }
+
+
+        .c_l ul li:hover{
+            background-color: floralwhite;
+        }
+
+        .center_img{
+            width: 588px;
+            height: 467px;
+            margin-top: 5px;
+            float: left;
+        }
+
+
+        .c_c ul li{
+            list-style: none;
+            float: right;
+            position: relative;
+            right: 10px;
+            top: 5px;
+
+        }
+
+        .c_c ul li img{
+            width: 190px;
+            height: 155px;
+        }
+
+        .c_r{
+            position: relative;
+        }
+
+        .c_r p{
+            color: green;
+            background-color: gray;
+            width: 90px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            /*margin-left: 10px;*/
+            position: absolute;
+
+        }
+        .c_r .p1{
+            /*position: absolute;*/
+            left: 95px;
+            top: 30px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <div class="wrap">
+        <div class="container">
+            <div class="c_l">
+                <ul>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">家用电器</a></li>
+                </ul>
+            </div>
+            <div class="c_c">
+                <!-- img>ul>(li>a>img)*3 -->
+                <img src="./images/1.png" alt="" class="center_img">
+                <ul>
+                    <li><a href=""><img src="./images/3.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/4.png" alt=""></a></li>
+                    <li><a href=""><img src="./images/5.png" alt=""></a></li>
+                </ul>
+
+
+            </div>
+            <div class="c_r">
+                <div>
+                    <p class="p1">hello word</p>
+                    <p class="p2">我爱你中国</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

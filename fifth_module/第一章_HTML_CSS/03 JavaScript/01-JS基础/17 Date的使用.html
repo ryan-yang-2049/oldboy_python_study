@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date的使用</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+    // 创建日期对象
+    var myDate = new  Date();
+
+    //获取当天的号数
+    var  day = myDate.getDate();
+    console.log(day);
+
+    // 获取当天的日期时间
+    console.log(Date()); // Mon Apr 09 2018 11:56:46 GMT+0800 (中国标准时间)
+
+    // getMonth(): 是从0--11 开始计算，如果得到当月则 +1
+    console.log(myDate.getMonth()+1);
+
+    // getDay()： 0-6，0 代表周日；
+    console.log(myDate.getDay());
+
+    console.log(myDate.getFullYear());  // 2018
+
+    console.log(myDate.getHours());  // 获取时间 的小时 0-23
+
+    console.log(myDate.setDate(1))
+</script>
+
+</html>

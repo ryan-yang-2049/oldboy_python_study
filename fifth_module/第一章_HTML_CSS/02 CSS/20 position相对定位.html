@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position相对定位</title>
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1{
+            background-color: yellowgreen;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        .box2{
+            background-color: darkorange;
+            position: relative;
+            top: 150px;
+        }
+
+        .box3{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+overflow属性：
+    visible: 默认值。内容不会被修剪，会呈现在盒子之外。
+    hidden：内容会被修剪，并且其余内容不可见的
+    scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余内容
+    auto：如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+
+-->
+
+<!--
+在页面布局中，大的模块用overflow，每个盒子里面小的部分用定位去处理
+
+定位：position
+    属性值：
+        static：默认值，没有定位
+        relative：相对定位
+        absolute：绝对定位
+        fixed: 固定定位
+
+一、relative 相对定位：相对于自身原来位置进行偏移
+偏移设置：top,left,right,bottom
+单位：px
+影响：
+1.没有偏移量的时候对元素本身基本没有影响
+2.提升层级
+    设置了相对定位的网页元素，无论是在标准流中还是在浮动流中，都不会对它的父级元素和相邻元素有任何影响，它只针对自身原来的位置进行偏移。
+-->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

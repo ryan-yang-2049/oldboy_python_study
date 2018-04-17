@@ -1,0 +1,326 @@
+MySQL数据库：表，数据库，数据库管理系统，数据库服务器
+
+MySQL就是一个基于Socket 编写的C/S架构的软件。
+
+命令行设置密码： mysqladmin -uroot password "123456"
+修改密码：  mysqladmin -uroot -p"123456" password "654321"
+
+
+DDL语句（数据库定义语言）：create drop alter
+DML语句（数据库操纵语言）：insert，delete，update，select
+DCL语句（数据库控制语言）：grant，revoke
+
+
+MySQL的CRUD （create,retrieve,update,delete)
+
+数据库：
+    create database db1 charset utf8;
+    show databases;
+    show create database db1;
+    select database();
+    use db1;
+    drop database db1;
+    alter database db1 charset utf8;
+    alter database db1 engine=MyISAM;
+
+表操作：
+语法：
+    create table 表名(
+        字段名1 类型[(宽度) 约束条件],
+        字段名2 类型[(宽度) 约束条件],
+        字段名3 类型[(宽度) 约束条件]
+        );
+
+    create table t1(id int,name char)engine=innodb;
+    show create table t1; #查看创建语句
+    desc t1 ; #查看表结构
+    创建无符号0 填充的表：create table t5(id int(5) unsigned zerofill)
+
+    修改表结构：
+        alter table t1 rename t1; #重命名
+    增加字段：
+        alter table t1 add 字段名 数据类型 [完整性约束条件]，
+                       add 字段名 数据类型 [完整性约束条件] [FIRST|AFTER 字段名];
+
+    删除字段：
+        alter table t1 drop 字段名；
+
+    修改字段：
+        alter table t1 modify 字段名 数据类型 [完整性约束条件]；
+        alter table t1 change 旧字段名 新字段名 旧数据类型|新数据类型 [完整性约束条件]；
+
+
+    例子：
+        alter table t1 add sex enum('male','female') default 'male' first; #最表的最前面添加性别字段
+        alter table t1 add num int(5) not null after name; # 在表的name 字段后添加num字段
+
+        alter table t1 modify id int(5) not null primary key auto_increment; #修改为主键
+
+        alter table t1 add primary key(host_ip,port)；#给表增加复合主键
+
+        alter table t1 modify name varchar(10) not null primary null [auto_increment]; #增加主键[自增]
+
+        alter table t1 modify id int(11) not null; 删除自增之后才能删除主键
+
+        alter table t1 drop primary key; # 删除主键
+
+
+复制表
+    create table t1 select * from t2 ;  #复制表结构+数据（key 不会复制：主键，外键和索引）
+    create table t1 select * from t2 where 1=2; #只复制表结构。
+    create table t1 like employee;  #只复制表结构
+
+删除表：
+    drop table t1;
+
+
+
+数据类型：
+    数字类型：tinyint，int，bigint，float，double，decimal
+    字符串类型：char(定长），varchar(变长)。表中定长往前放，变长往后放。
+    时间类型：datetime
+            格式：year      date          time            datetime
+                 "2018"  "2018-03-12"  "10:54:12"   "2017-12-12 12:12:12"
+
+    枚举类型与集合： enum('male','female')<枚举类型>，set('play','music','read','run') <集合类型>
+
+
+
+完整性约束
+    PRIMARY KEY (PK)    标识该字段为该表的主键，可以唯一的标识记录
+    FOREIGN KEY (FK)    标识该字段为该表的外键
+    NOT NULL    标识该字段不能为空
+    UNIQUE KEY (UK)    标识该字段的值是唯一的
+    AUTO_INCREMENT    标识该字段的值自动增长（整数类型，而且为主键）
+    DEFAULT    为该字段设置默认值
+
+    UNSIGNED 无符号
+    ZEROFILL 使用0填充
+
+delete and truncate：
+    delete一般和where搭配使用。
+    对于自增的字段，在用delete删除数据后，再插入值，该字段仍按照删除前的位置继续增长。
+    情况表应用 truncate清空表，比起delete一条一条删除记录，truncate是直接情况表，再删除大表时用它。
+    但是 delete删除的数据可以找回，truncate删除的数据不能找回。
+
+自增：
+    修改自增字段起始值：
+        alter table t1 auto_increment=3;
+    创建表时指定起始值：
+        create table t1(id int primary key auto_increment,name char(20))auto_increment=3;
+    设置步长：
+        auto_increment_increment: 步长
+        auto_increment_offset： 起始偏移量
+
+    设置步长
+        set session auto_increment_increment=5;   当前会话。
+        set global auto_increment_increment=5;    全局
+
+    设置起始偏移量
+        set session auto_increment_offset=5;
+        注意： 起始偏移量一定要 <= 步长。
+
+
+查看字段的长度:char_length(字段名称)
+    select char_length(name) from employee;
+
+
+
+
+foreign key （外键约束）
+
+建立多对一的关系需要注意：
+    1.先建被关联的表,并且被关联的字段必须唯一。（非常重要）
+    2.创建关联表的外键，一定要保证是可重复的。
+
+    create table dep_info(
+        id int primary key auto_increment,    #被关联的字段必须唯一
+        name varchar(20),
+        comment varchar(50)
+    );
+
+    create table emp_info(
+        id int primary key auto_increment,
+        name varchar(20),
+        dep_id int,  #关联的字段，一定要保证是重复的。
+        constraint fk_depip_id foreign key(dep_id) references dep_info(id)
+        on delete cascade
+        on update cascade
+    );
+
+    { on delete cascade , on update cascade} 目的是为了被关联的外键表发生改变，那么外键就发生改变；
+
+
+重点中的重点：关键字的执行优先级
+from
+where
+group by
+聚合函数<sum,min,max,avg,count>
+having
+select
+distinct
+order by
+limit
+
+关键字IS NULL(判断某个字段是否为NULL不能用等号，需要用IS)， 注意''是空字符串，不是null 要用“=”
+
+
+pymysql
+#链接
+conn = pymysql.connect(host='101.132.161.180',user='root',password='123456',database='db1',charset='utf8')
+#获取mysql游标
+cursor = conn.cursor()
+#SQL语句
+sql = 'insert into user(user,password) values(%s,%s)'
+#执行SQL语句
+rows= cursor.execute(sql,['curry2','123'])  #插入一条
+rows = cursor.executemany(sql,[('hanxin哈哈','123'),('libai呵呵','123')]) # 插入多条
+
+# 如果是增删改查需要提交
+conn.commit()   #提交执行的ddl 语句
+
+
+# 如果是查询语句
+print(cursor.fetchone()) #获取第一条[按照游标的位置获取数据]
+print(cursor.fetchmany(3))  #获得查询3条语句。
+print(cursor.fetchall())  #获得查询的所有结果
+
+
+# 光标移动
+#绝对位置
+cursor.scroll(0,mode='absolute') # 光标移动数据的绝对位置，（0 是起始位置）
+
+#相对位置
+cursor.scroll(1,mode='relative')  #  1 表示光标移动位置，可以是负数
+
+# 查询当前表最后一个自增ID号
+last_num = cursor.lastrowid   　
+
+cursor.close() #关闭游标
+conn.close()   #关闭链接
+
+
+视图：虚拟表,效率不高。
+创建视图：CREATE VIEW course2teacher AS SELECT * FROM course INNER JOIN teacher ON course.teacher_id = teacher.tid;
+修改视图：ALTER VIEW 视图名称 AS SQL语句
+删除视图：DROP VIEW teacher_view
+
+
+触发器：使用触发器可以定制用户对表进行[增，删，改]操作前后的行为，注意：没有查询
+# 插入前
+# CREATE TRIGGER 触发器名称 BEFORE INSERT ON 表名 FOR EACH ROW
+  BEGIN
+    ...
+  END
+# 插入后，把BEFORE 替换成 AFTER
+# 删除就把INSERT 换成DELETE
+# 更新就把INSERT 替换成 UPDATE
+
+
+#创建触发器
+delimiter //
+CREATE TRIGGER tri_after_insert_cmd AFTER INSERT ON cmd FOR EACH ROW
+BEGIN
+    IF NEW.success = 'no' THEN #等值判断只有一个等号
+            INSERT INTO errlog(err_cmd, err_time) VALUES(NEW.cmd, NEW.sub_time) ; #必须加分号
+      END IF ; #必须加分号
+END//
+delimiter ;
+
+使用触发器：触发器无法由用户直接调用，而知由于对表的[增/删/改]操作被动引发的
+删除触发器：drop trigger tri_after_insert_cmd
+
+
+MySQL事务：
+    原子性：要么全部执行，要么都不执行。
+    一致性：一个事务执行前和执行后，数据库都必须要处于一致性的状态。
+    分离性、隔离性：分离性是指在并发的事务是相互隔离的
+    持久性：持久性是指当数据库系统出现故障了，要确保已经提交的事务的更新是不会丢失的。
+
+
+
+存储过程：
+    存储过程包含了一系列可执行的sql语句，存储过程存放于MySQL中，通过调用它的名字可以执行其内部的一堆sql
+
+使用存储过程的优点：
+    #1. 用于替代程序写的SQL语句，实现程序与sql解耦
+    #2. 基于网络传输，传别名的数据量小，而直接传sql数据量大
+使用存储过程的缺点：
+    #1. 程序员扩展功能不方便
+
+
+
+补充：程序与数据库结合使用的三种方式
+    方式一：
+        MySQL：存储过程
+        程序： 调用存储过程
+
+    方式二：
+        MySQL：
+        程序：纯SQL
+
+    方式三:
+        MySQL:
+        程序：类和对象，即ORM（本质还是纯SQL）
+
+
+
+
+MySQL索引：
+    b+树性质：
+        1.索引字段要尽量的小
+        2.索引的最左匹配特性（即从左往右匹配）
+
+索引分类：
+    1.普通索引index：加速查找
+    2.唯一索引：
+        主键索引：primary key：加速查找+约束（不为空且唯一）
+        唯一索引：unique ：加速查找+约束（唯一）
+    3.联合索引
+        -primary key(id,name)：联合主键索引
+        -unique(id,name):联合唯一索引
+        -index(id,name) :联合普通索引
+    4.全文索引fulltest：用于搜索很长一片文章的时候，效果最好。
+    5.空间索引spatial：了解就好，几乎不用
+
+
+索引的两大类型:hash 与btree
+    hash类型的索引：查询单条快，范围查询慢
+    btree类型的索引：b+树，层数越多，数据量指数级增长（我们就用它，因为innodb默认支持它）
+
+
+1.创建索引
+    -在创建表时就创建（需要注意的几点）
+    create table s1(
+    id int ,#可以在这加primary key
+    #id int index #不可以这样加索引，因为index只是索引，没有约束一说，
+    #不能像主键，还有唯一约束一样，在定义字段的时候加索引
+    name char(20),
+    age int,
+    email varchar(30)
+    #primary key(id) #也可以在这加
+    index(id) #可以这样加
+    );
+    -在创建表后在创建
+    create index name on s1(name); #添加普通索引
+    create unique age on s1(age);添加唯一索引
+    alter table s1 add primary key(id); #添加住建索引，也就是给id字段增加一个主键约束
+    create index name on s1(id,name); #添加普通联合索引
+2.删除索引
+    drop index id on s1;
+    drop index name on s1; #删除普通索引
+    drop index age on s1; #删除唯一索引，就和普通索引一样，不用在index前加unique来删，直接就可以删了
+    alter table s1 drop primary key; #删除主键(因为它添加的时候是按照alter来增加的，那么我们也用alter来删)
+
+创建索引原则:
+    1.最左前缀匹配原则，非常重要的原则。
+    2. “=” 和 in 可以乱序，
+    3. 尽量选择区分度高的列作为索引
+    4.索引列不能参与计算，保持列“干净”
+
+
+
+
+
+
+

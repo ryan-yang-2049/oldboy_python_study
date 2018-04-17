@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index的使用</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .box1{
+            background-color: yellowgreen;
+            top: 50px;
+            z-index: 1;
+        }
+
+        .box2{
+            background-color: darkorange;
+            /*div 盒子上的的圆角，上右下左*/
+            /*border-radius: 20px 20px 20px 20px;*/
+            /* 把这个div设置成为圆形*/
+            border-radius: 50%;
+            z-index: 20;
+        }
+
+        .box3{
+            background-color: red;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+
+<!--
+堆叠：z-index
+    调整元素定位时重叠层的上下位置
+        - z-index属性值：整数，默认值为0
+        - 设置了position属性时，z-index属性可以设置各元素之间的重叠高低关系
+        - z-index值大的层位于其值小的层上方
+z-index 优先级：数字越大，优先级越高
+
+-->
+
+
+  <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+
+
+</body>
+</html>

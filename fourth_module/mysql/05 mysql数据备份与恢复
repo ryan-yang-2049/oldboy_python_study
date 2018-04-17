@@ -1,0 +1,56 @@
+备份库：
+#语法：
+# mysqldump -h 服务器 -u用户名 -p密码 数据库名 > 备份文件.sql
+
+#示例：
+#单库备份
+mysqldump -uroot -p123 db1 > db1.sql
+mysqldump -uroot -p123 db1 table1 table2 > db1-table1-table2.sql
+
+#多库备份
+mysqldump -uroot -p123 --databases db1 db2 mysql db3 > db1_db2_mysql_db3.sql
+
+#备份所有库
+mysqldump -uroot -p123 --all-databases > all.sql
+ mysql -uroot -p -e "show databases;"|grep -Evi "info|perfor|Database"|sed -r 's#^([a-z].*$)#mysqldump -uroot -pzhishikU123 -B \1 |gzip >/disk2/mysql_bak/backup_alldata/\1_$(date +%F).sql.gz#g'|bash
+
+
+恢复逻辑备份
+    #方法一：
+    [root@egon backup]# mysql -uroot -p123 < /backup/all.sql
+
+    #方法二：
+    mysql> use db1;
+    mysql> SET SQL_LOG_BIN=0;
+    mysql> source /root/db1.sql
+
+    #注：如果备份/恢复单个库时，可以修改sql文件
+    DROP database if exists school;
+    create database school;
+    use school;
+
+
+数据库迁移
+务必保证在相同版本之间迁移
+# mysqldump -h 源IP -uroot -p123 --databases db1 | mysql -h 目标IP -uroot -p456
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型-margin(外边距)</title>
+    <style type="text/css">
+        .box1{
+            /*position: absolute;*/
+            width: 200px;
+            height: 200px;
+            /*background-color: yellowgreen;*/
+            background:  yellowgreen url(./images/1.png) no-repeat  center/100px 100px;
+
+            /*
+            margin-top: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 20px;
+            */
+            /*margin: 60px 100px;*/
+            /* margin
+                四个值：上，右，下，左；
+                两个值: 上下，左右
+            */
+            margin-bottom: 200px;
+            /*padding-bottom: 100px;*/
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /*margin-top: 100px;*/
+            border: 1px solid red;
+            /*padding: 1px;*/
+            overflow: hidden;
+            margin-left: 20px; /*使盒子元素水平居中显示*/
+
+        }
+
+        .child {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            margin-top: 200px;
+        }
+    </style>
+<!--
+当两个垂直外边距相遇时会形成一个外边框，称为 “外边距合并”！
+所有毗邻的两个或更多盒元素的margin将会合并为一个margin共享之。毗邻的定义为：同级或者嵌套的盒元素，并且它们之间没有非空内容、Padding或Border分隔。
+
+注意：父子级盒子嵌套设置外边距会形成外边距合并，影响布局，
+
+解决办法：
+
+    1. 父级或子元素使用浮动或者绝对定位absolute 浮动或绝对定位不参与margin的折叠
+
+    2. 父级overflow:hidden;   溢出隐藏
+
+    3. 父级设置padding（破坏非空白的折叠条件）
+
+    4. 父级设置border
+-->
+
+
+
+</head>
+<body>
+
+
+    <div class="box1"></div>
+    <div class="box2">
+        <div class="child"></div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

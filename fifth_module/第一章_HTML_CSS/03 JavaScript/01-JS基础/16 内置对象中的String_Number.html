@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String_Number</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+    //内置对象
+
+    //String 字符串对象
+
+    var str1 = 'hello world';
+    console.log(str1.length);
+
+    // 小写全部转换成大写的
+    var bigStr1 = str1.toUpperCase();
+    console.log(bigStr1);
+    console.log("原字符串："+str1);
+
+    //大写转小写
+    var lowStr1 = bigStr1.toLowerCase();
+    console.log(lowStr1);
+
+    // 切割 split('按照什么切割','数组长度')
+    var splitStr1 = str1.split(' ');  //["hello", "world"]
+    console.log(splitStr1);
+
+
+    // substring: 获取指定范围下标的长度，开集。
+    var subStr1 = str1.substring(2,6);
+    console.log(subStr1);
+
+
+
+
+    // Number 字符串对象
+
+    // 1.将number 类型转换成字符串类型
+    var num = 123.32622222;
+    var numStr = num.toString();
+    console.log(typeof numStr+":"+numStr);
+
+
+    // 2.四舍五入:toFixed('四舍五入的小数位数')
+    var numShort = num.toFixed(2);
+    console.log(typeof numShort+":"+numShort);
+
+
+</script>
+
+
+
+</html>

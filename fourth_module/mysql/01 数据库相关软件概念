@@ -1,0 +1,452 @@
+1、数据库服务器：运行数据库管理软件的计算机
+
+2、数据库管理软件：MySQl，oracle，DB2，sqlserver
+
+3、库： 文件夹
+    增
+        create database db1 charset utf8;
+    查
+        show create database db1;查看建表语句及编码
+        show databases; 查看全部数据名称
+    改
+        alter database db1 charset gbk;
+    删
+        drop database db1;
+
+
+4、表: 文件
+    切换库：use 库名；
+    查看当前库名：select database();
+
+    增
+        create table t1(id int,name char);    # frm 结尾的是表结构，ibd结尾的是表的数据。
+    查
+        show create table t1;
+        show tables;
+        desc t1;
+    改
+        alter table t1 modify name char(6);
+        alter table t1 change name NAME char(7);
+        alter table t1 rename t2
+    删
+        drop table t1;
+
+5、记录：事物一系列典型的特征;
+    增
+        insert t1(id,name) values(1,'egon'),(2,'ryan'),(3,'alex')
+    查
+        select id,name from t1;
+        select id,name from db1.t1;
+        select * from t1;
+    改
+        update db1.t1 set name='egon1' where name='egon';
+    删
+        delete from t1; 删除全表
+        delete from t1 where id=3; 删除指定数据
+        DROP USER 'username'@'host'; 删除用户
+
+6、数据：描述事物特征的符号
+
+
+命令行创建用户密码：
+mysqladmin -uroot -p password "123456"
+
+创建用户root的数据库密码：
+update mysql.user set authentication_string=password('123456') where user='root';
+flush privileges;
+
+
+
+系统数据库
+information_schema： 虚拟库，不占用磁盘空间，存储的是数据库启动后的一些参数，如用户表信息、列信息、权限信息、字符信息等
+performance_schema： MySQL 5.5开始新增一个数据库：主要用于收集数据库服务器性能参数，记录处理查询请求时发生的各种事件、锁等现象
+mysql： 授权库，主要存储系统用户的权限信息
+test： MySQL数据库系统自动创建的测试数据库
+
+
+
+
+存储引擎
+1、什么是存储引擎？
+    存储引擎就是表的类型。
+
+2、查看MySQL支持的存储引擎；
+    show engines
+
+3、指定表类型/存储引擎
+
+create table t1(id int) engine=innodb;
+create table t2(id int) engine=memory;
+create table t3(id int) engine=blackhole;
+create table t4(id int) engine=myisam;
+
+
+insert into t1 values(1);
+insert into t2 values(1);
+insert into t3 values(1);
+insert into t4 values(1);
+
+
+select * from t1;
+select * from t2;
+select * from t3;
+select * from t4;
+
+
+
+表的增删改查
+    create table 表名(
+    字段名1 类型[(宽度) 约束条件],
+    字段名2 类型[(宽度) 约束条件],
+    字段名3 类型[(宽度) 约束条件]
+    );
+
+    #注意：
+    1. 在同一张表中，字段名是不能相同
+    2. 宽度和约束条件可选
+    3. 字段名和类型是必须的
+
+
+    show create table t1\G; #查看表详细结构，可加\G
+
+
+修改表结构
+
+语法：
+1. 修改表名
+      ALTER TABLE 表名
+                          RENAME 新表名;
+
+2. 增加字段
+      ALTER TABLE 表名
+                          ADD 字段名  数据类型 [完整性约束条件…],
+                          ADD 字段名  数据类型 [完整性约束条件…];
+      ALTER TABLE 表名
+                          ADD 字段名  数据类型 [完整性约束条件…]  FIRST;
+      ALTER TABLE 表名
+                          ADD 字段名  数据类型 [完整性约束条件…]  AFTER 字段名;
+
+3. 删除字段
+      ALTER TABLE 表名
+                          DROP 字段名;
+
+4. 修改字段
+      ALTER TABLE 表名
+                          MODIFY  字段名 数据类型 [完整性约束条件…];
+      ALTER TABLE 表名
+                          CHANGE 旧字段名 新字段名 旧数据类型 [完整性约束条件…];
+      ALTER TABLE 表名
+                          CHANGE 旧字段名 新字段名 新数据类型 [完整性约束条件…];
+
+
+
+复制表
+
+    复制表结构＋记录 （key不会复制: 主键、外键和索引）
+    mysql> create table new_service select * from service;
+
+    只复制表结构
+    mysql> create table new1_service select * from service where 1=2;
+    mysql> create table t4 like employees;
+
+
+
+
+数据类型：
+整形：
+    tinyint  长度为256，默认[-128,127] .
+    create table t2(x tinyint unsigned); 设置无符号类型<unsigned>（那个就是 0-255）
+
+
+    create table t3(x int(4) unsigned);  其中的 int(4) 的4 为显示宽度。意义不大。其他类型就是存储宽度。
+
+    create table t5(id int(5) unsigned zerofill)；创建有一个显示宽带为5 ，数据不足5位用0填充。
+浮点型
+
+
+
+
+
+日期类型:year,date,time,datetime
+
+create table student(
+    id int,
+    name char(6),
+    born_year year,
+    birth_date date,
+    class_time time,
+    reg_time datetime
+);
+
+insert into student values
+(1,'ryan',now(),now(),now(),now())
+
+insert into student values
+(2,'egon',"1997","1997-12-12","12:12:12","2017-12-12 12:12:12");
+
+
+
+
+字符串类型
+
+char: 定长
+varchar： 变长。
+
+
+create table t15(name char(5));
+create table t16(name varchar(5));
+
+
+insert into t15 value('1 ');
+insert into t16 value('啊 ');
+
+
+select char_length(name) from t15; #存储5个字符
+select char_length(name) from t16; #存储3个字符
+
+#让char现出原形
+mysql> SET sql_mode = 'PAD_CHAR_TO_FULL_LENGTH';
+
+
+
+
+
+枚举类型与集合类型
+
+create table consumer(
+    id int,
+    name char(16),
+    sex enum('male','female','other'),
+    level enum('vip1','vip2','vip3'),
+    hobbies set('play','music','read','run')
+);
+
+
+insert into consumer values
+(1,'egon','male','vip2','read,run');
+
+insert into consumer values(1,'egon','xxx','vip2','read,run');     # xxx 不在范围之类，那么就为空
+
+
+约束条件not null与default
+
+    create table t15(
+        id int(11) unsigned zerofill
+    );
+
+    MariaDB [db4]> desc t15;
+    +-------+---------------------------+------+-----+---------+-------+AAA
+    | Field | Type                      | Null | Key | Default | Extra |
+    +-------+---------------------------+------+-----+---------+-------+
+    | id    | int(11) unsigned zerofill | YES  |     | NULL    |       |
+    +-------+---------------------------+------+-----+---------+-------+
+
+    Null: 是否允许传空值。
+    Default: 如果字段不能为空，则设置一个默认值，设置默认值关键字 default。
+
+
+    create table t16(
+        id int,
+        name char(6),
+        sex enum('male','female') not null default 'male'
+    );
+
+    MariaDB [db4]> desc t16;
+    +-------+-----------------------+------+-----+---------+-------+
+    | Field | Type                  | Null | Key | Default | Extra |
+    +-------+-----------------------+------+-----+---------+-------+
+    | id    | int(11)               | YES  |     | NULL    |       |
+    | name  | char(6)               | YES  |     | NULL    |       |
+    | sex   | enum('male','female') | NO   |     | male    |       |
+    +-------+-----------------------+------+-----+---------+-------+
+    3 rows in set (0.00 sec)
+
+
+    insert into t16(id,name) values(1,'ryan');
+
+    MariaDB [db4]> insert into t16(id,name) values(1,'ryan');
+    Query OK, 1 row affected (0.00 sec)
+
+    MariaDB [db4]> select * from t16;
+    +------+------+------+
+    | id   | name | sex  |
+    +------+------+------+
+    |    1 | ryan | male |
+    +------+------+------+
+    1 row in set (0.00 sec)
+
+
+约束条件unique key
+单列唯一性
+    方式1：
+        create table department(
+        id int unique,
+        name char(10) unique
+        );
+        MariaDB [db4]> desc department;
+        +-------+----------+------+-----+---------+-------+
+        | Field | Type     | Null | Key | Default | Extra |
+        +-------+----------+------+-----+---------+-------+
+        | id    | int(11)  | YES  | UNI | NULL    |       |
+        | name  | char(10) | YES  | UNI | NULL    |       |
+        +-------+----------+------+-----+---------+-------+
+
+    方式2：
+        create table department(
+        id int,
+        name char(10),
+        unique(id),
+        unique(name)
+        );
+
+联合唯一:联合唯一指定是两个字段合并起来不能相同
+    create table services(
+    id int,
+    ip char(15),
+    port int,
+    unique(ip,port),
+    unique(id)
+    )
+
+    MariaDB [db4]> desc services;
+    +-------+----------+------+-----+---------+-------+
+    | Field | Type     | Null | Key | Default | Extra |
+    +-------+----------+------+-----+---------+-------+
+    | id    | int(11)  | YES  | UNI | NULL    |       |
+    | ip    | char(15) | YES  | MUL | NULL    |       |
+    | port  | int(11)  | YES  |     | NULL    |       |
+    +-------+----------+------+-----+---------+-------+
+
+    insert into services values
+    (1,'192.168.1.1',80),
+    (2,'192.168.1.1',81),
+    (3,'192.168.1.2',80),
+    (4,'192.168.1.2',81);
+
+
+    insert into services values
+    (5,'192.168.1.1',80);
+
+    MariaDB [db4]> insert into services values
+        -> (5,'192.168.1.1',80);
+    ERROR 1062 (23000): Duplicate entry '192.168.1.1-80' for key 'ip'
+
+
+约束条件primary key
+  约束角度来说：not null unique（不为空且唯一）
+  存储引擎(innodb):对于innodb存储引擎来说，一张表内必须有一个主键。
+
+单列主键
+        create table t17(
+            id int primary key,
+            name char(16)
+        );
+        MariaDB [db4]> desc t17;
+        +-------+----------+------+-----+---------+-------+
+        | Field | Type     | Null | Key | Default | Extra |
+        +-------+----------+------+-----+---------+-------+
+        | id    | int(11)  | NO   | PRI | NULL    |       |
+        | name  | char(16) | YES  |     | NULL    |       |
+        +-------+----------+------+-----+---------+-------+
+
+        insert into t17 values
+        (1,'egon'),
+        (2,'ryan'),
+        (2,'cherry');
+        报错信息：ERROR 1062 (23000): Duplicate entry '2' for key 'PRIMARY'
+
+复合主键
+        create table t19(
+            ip char(15),
+            port int,
+            primary key(ip,port)
+        );
+
+        insert into t19 values
+        ('192.168.1.1',80),
+        ('192.168.1.1',81),
+        ('192.168.1.2',80),
+        ('192.168.1.2',81);
+
+
+
+约束条件 auto_increment
+    条件为key：primary key auto_increment,
+
+    create table t20(
+        id int primary key auto_increment,
+        name char(16)
+    );
+    MariaDB [db4]> desc t20;
+    +-------+----------+------+-----+---------+----------------+
+    | Field | Type     | Null | Key | Default | Extra          |
+    +-------+----------+------+-----+---------+----------------+
+    | id    | int(11)  | NO   | PRI | NULL    | auto_increment |
+    | name  | char(16) | YES  |     | NULL    |                |
+    +-------+----------+------+-----+---------+----------------+
+
+    #注意下面的value 对应的name 要写上，否则会报错。
+    insert into t20(name) value
+    ('ryan1'),
+    ('ryan2'),
+    ('ryan3'),
+    ('ryan4');
+
+    insert into t20(id,name) value
+    (5,'cherry4');
+
+    insert into t20(name) value
+    ('cherry2'),
+    ('cherry3');
+
+
+了解
+    查看mysql变量
+         MariaDB [db4]> show variables like 'auto_inc%';
+        +--------------------------+-------+
+        | Variable_name            | Value |
+        +--------------------------+-------+
+        | auto_increment_increment | 1     |
+        | auto_increment_offset    | 1     |
+        +--------------------------+-------+
+        auto_increment_increment: 步长
+        auto_increment_offset： 起始偏移量
+
+
+    设置步长
+        set session auto_increment_increment=5;   当前会话。
+        set global auto_increment_increment=5;    全局
+
+    设置起始偏移量
+        set session auto_increment_offset=5;
+        注意： 起始偏移量一定要 <= 步长。
+
+
+
+清空表
+    delete from t20; 删除表数据，不会删除表结构，如果删除一个自增长的表，那么，自增长的值会按照删除前的值进行增长。
+    delete 一般会和where 搭配使用，删除指定的数据。
+    truncate t20; 删除表数据，不会删除表结构。但是如果是一个自增长的表，那么，会清空自增长的值，从起始偏移量开始自增长。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scroll系列</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+    </style>
+</head>
+<body style="width: 2000px;height: 2000px;">
+
+    <div style="height: 200px;background-color: yellowgreen"></div>
+    <div style="height: 200px;background-color: lightyellow"></div>
+    <div style="height: 200px;background-color: darkolivegreen"></div>
+    <div style="height: 200px;background-color: red"></div>
+    <div style="height: 200px;background-color: gray"></div>
+
+    <!--overflow:auto 如果内容区域过长，那么可以用滚动条进行滑动，如果是hidden 则直接隐藏-->
+    <div id="scro" style="width: 200px;height: 200px;border: 1px solid blue;overflow: auto;">
+        <p>爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,爱你中国,</p>
+
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+    window.onload = function () {
+
+        //实时监听滚动事件
+        // document.documentElement.scrollTop 谷歌浏览器不能获取到值 恒为 0
+        window.onscroll = function () {
+            var wTop = (document.documentElement.scrollTop+document.body.scrollTop);
+            var wLeft = (document.documentElement.scrollLeft+document.body.scrollLeft);
+            var wWidth = (document.documentElement.scrollWidth);  //body设置的宽
+            var wHeight = (document.documentElement.scrollHeight); //body的高
+            // console.log('Top:'+ wTop);
+            // console.log('Left:'+ wLeft);
+            // console.log('width:'+ wWidth);
+            // console.log('height:'+ wHeight);
+        };
+
+        var scro = document.getElementById('scro');
+        scro.onscroll = function () {
+            //scrollHeight :表示内容的高度+padding的高度(不包含margin)
+            console.log('Top:'+ scro.scrollTop);
+            console.log('Left:'+ scro.scrollLeft);
+            console.log('width:'+ scro.scrollWidth);
+            console.log('height:'+ scro.scrollHeight);
+
+        }
+    };
+
+
+</script>
+
+
+
+</html>

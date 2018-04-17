@@ -1,0 +1,28 @@
+1.实现与抽屉新热榜一样的布局
+2.允许点赞、评论
+3.开发登录、注册页面
+4.开发发贴功能
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../static/css/sub.css">
+
+link表示链接一个外部样式表，rel 属性指示被链接的文档是一个样式表，type 属性规定被链接文档的MIME 类型，该属性最常见的 MIME 类型是 "text/css"，该类型描述样式表。
+href就是我们要引入文件的地址。向上面的目录结构，我需要从当前login.html文件所在的templates文件夹向上翻一层，然后再依次找到static/css/下面的sub.css文件。
+
+
+
+
+
+
+
+
+
+
+
