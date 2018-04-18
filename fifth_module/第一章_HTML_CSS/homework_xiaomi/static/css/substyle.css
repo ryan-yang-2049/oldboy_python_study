@@ -8,32 +8,241 @@ body{
     min-width: 1226px;
 }
 
+a{text-decoration: none}
 
-.site-bn-bar{
-    width: 100%;
-    height: 120px;
+.site-topbar{
+    position: relative;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background-color: #333333;
     /*border: 1px solid red;*/
 }
 
-.site-bn-bar .site-bn-bar-link{
-    display: inline-block;
-    background: url("../imgs/top-radio.jpg") no-repeat 0 0;
-    background-position: center 0;
-    width: 100%;
-    height: 120px;
-    text-indent: -9999em;
+.container{
+    width: 1226px;
+    margin:0 auto;
+}
+.container:before,.container:after{
+    content: ' ';
+    display: table;
+}
+
+.container .topbar-nav{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+.container .topbar-nav a{
+    color: #b0b0b0;
+}
+
+.container .topbar-nav a:hover{
+    color: #FFFFFF;
+}
+
+.container .topbar-nav span{
+    margin: 0 .5em;
+    color: #424242;
+}
+
+
+.container .topbar-cart{
+    width: 120px;
+    margin-left: 15px;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    /*overflow: hidden;*/
+    background-color: #424242;
+    /*border: 1px solid red;*/
 }
 
 
 
+.container .topbar-cart img{
+    display: inline-block;
+    margin-left: 18px;
+    margin-top:  12px;
+    width: 20px;
+    height: 15px;
+    line-height: 15px;
+    float: left;
+    opacity: 0.3;
+
+}
+
+.container .topbar-cart span{
+    display: inline-block;
+    margin-left: 8px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #b0b0b0;
+}
+.container .topbar-cart:hover {
+    background-color: #FFFFFF;
+}
+.container .topbar-cart:hover span{
+    color: #ff6700;
+}
+.container .topbar-cart:hover img{
+    /*background-color: #ff6700;*/
+    opacity: 1;
+}
+
+
+.topbar-info{
+    float: right;
+    line-height: 40px;
+
+}
+
+.topbar-info .link{
+    padding: 0 5px;
+    text-align: center;
+}
+.topbar-info .sep{
+    color: #424242;
+    /*float: left;*/
+}
+.topbar-info .message{
+    padding: 0 10px;
+}
+
+.topbar-info .link:hover ,.topbar-info .message:hover {
+    color: #FFFFFF;
+}
+
+
+/*内容导航栏位置*/
+.site-header{
+    position: relative;
+    height: 100px;
+    /*border: 1px solid red;*/
+}
+
+
+.site-header .header-logo{
+    position: relative;
+    float: left;
+    width: 62px;
+    margin-top: 22px;
+}
 
 
 
+.site-header .header-logo .logo{
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    background: url(../imgs/logo-footer.png) no-repeat;
+    background-color: #ff6700;
+}
+
+.site-header .header-nav{
+    float: left;
+    width: 850px;
+}
+
+.site-header .header-nav .nav-list{
+    position: relative;
+    float: left;
+    width: 820px;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 10px;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.site-header .header-nav .nav-list .nav-category{
+    position: relative;
+    float: left;
+    /*width: 165px;*/
+}
+
+.site-header .header-nav .nav-list .nav-category .gif-logo{
+    display: inline-block;
+    float: left;
+    background: url(../imgs/sousuo2.gif) no-repeat;
+    width: 165px;
+    height: 88px;
+}
 
 
+.site-header .header-nav .nav-list .nav-item{
+    float: left;
+}
 
+.site-header .header-nav .nav-list .nav-item a{
+    display: inline-block;
+    padding: 26px 10px 38px;
+    color: #333333;
+}
 
+.site-header .header-nav .nav-list .nav-item a:hover{
+    color: #ff6700;
+}
 
+.header-search{
+    float: right;
+    width: 296px;
+    margin-top: 25px;
+    position: relative;
+}
+.header-search .search-form{
+    position: relative;
+    width: 296px;
+    height: 50px;
+    /*background-color: #336699;*/
+}
 
+.header-search .search-text{
+    position: absolute;
+    top: 0;
+    right: 51px;
+    width: 223px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    float: left;
+}
 
+.header-search .search-form .search-a{
+    display: inline-block;
+    width: 51px;
+    height: 48px;
+    border: 1px solid #e0e0e0;
+    float: right;
+}
+
+.header-search .search-a span{
+    background: url(../imgs/searchbox_black.png) no-repeat;
+    background-color: #FFFFFF;
+    display: block;
+    margin-top: 9px;
+    margin-left: 9px;
+    width: 25px;
+    height: 25px;
+}
+
+.header-search .search-form label{
+    position: absolute;
+    font-size: 13px;
+    color: gray;
+    top: 15px;
+    right: 55px;
+    background-color: #eeeeee;
+}
+
+.header-search .search-form:hover .search-text,.header-search .search-form:hover .search-a{
+    border:1px solid #ff6700;
+}
 

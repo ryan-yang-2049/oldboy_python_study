@@ -292,7 +292,7 @@ body{
 .content-list .item .part2 .recommend b{
     color: #b4b4b4;
     font-size: 14px;
-    fonr-width: 700;
+    font-weight: 700;
 
 }
 
@@ -316,7 +316,7 @@ body{
 .content-list .item .part2 .discuss b{
     color: #b4b4b4;
     font-size: 14px;
-    fonr-width: 700;
+    font-weight: 700;
 
 }
 
@@ -340,7 +340,7 @@ body{
 .content-list .item .part2 .collect b{
     color: #b4b4b4;
     font-size: 14px;
-    fonr-width: 700;
+    font-weight: 700;
 
 }
 
