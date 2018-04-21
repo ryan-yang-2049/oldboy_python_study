@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>文本样式</title>
     <style type="text/css">
-        .box1{
+        .box2{
             width: 500px;
             height: 200px;
             background-color: yellowgreen;
@@ -37,10 +37,26 @@
             /*当行高等于盒子的高度时，那么会实现文本垂直方向居中*/
             line-height: 200px;
         }
+
+
+        .box1{
+            /*display: inline;*/
+            height: 100px;
+            /*line-height: 100px;*/
+            background-color: yellowgreen;
+            text-align: center;  /*水平居中*/
+            text-indent: 80px; /*首行缩进*/
+            /*letter-spacing: 10px; !*文字间距*!*/
+            word-spacing: 10px;/*单词间距*/
+            text-transform: capitalize; /*控制单词的大小写等*/
+        }
+
     </style>
 </head>
 <body>
-    <div class="box1">我爱你中国</div>
-        <a href="#">我爱你中国</a>
+    <div class="box1">我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国我爱你中国
+    i love china i love china</div>
+
+        <!--<a href="#">我爱你中国</a>-->
 </body>
 </html>
