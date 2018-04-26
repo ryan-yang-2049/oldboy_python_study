@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function对象</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    //
+    //函数的创建方式一
+    function f(x,y) {
+        return x+y;
+    }
+
+    console.log(f(3,4));
+
+    // 函数的创建方式二(了解)
+    var obj = new Function("参数1","参数n","function_body");
+
+    // function 对象的属性 length 声明了函数期望的参数个数。
+    console.log(f.length);  //2
+
+
+    function add(x,y,z) {
+        return x+y+z;
+    }
+    console.log(add(1,2,3,4,5,6));  // 6
+    console.log(add(1,2));          // NaN (此时z没有值，是undefined)
+    console.log(add(1,2,"a"));   // 3a (1+2+a)
+
+
+
+    function  func01(x,y) {
+        return x+y;
+    }
+
+    var func01 = 1;
+    var b = 2;
+    console.log("-----");
+    // console.log(func01(func01,b));  //Uncaught TypeError: func01 is not a function 因为这里的func01 是做为函数调用的，可是此时的func01,被常量替换了，因此会报错
+
+    function func02(a,b) {
+        // arguments 可以得到函数传参的列表
+        console.log(arguments[0]); // 1
+        console.log(arguments[1]); // 2
+        return a+b;
+    }
+
+    console.log(func02(1,2));  // 3
+
+
+    // 计算多个不确定数字的和
+    function func03() {
+        var sum = 0;
+        for (var  i = 0;i<arguments.length;i++){
+            sum+=arguments[i]
+        }
+        return sum;
+
+    }
+    console.log(func03(1,3,4,5,6,7,8)); //34
+
+
+    // 匿名函数(不是一个标准的函数对象,如果调用函数在匿名函数之前，那么会报错)
+    var func04 = function(arg){
+        return "tony";
+    };
+
+    console.log(func04(1)); //tony
+    console.log(typeof func04);
+
+    //匿名函数2  （函数本身就是一个执行体、）
+    (function(){
+        alert("tony");
+    } )();
+
+    (function(arg){
+        console.log(arg);
+    })('123')
+
+
+</script>
+</html>
