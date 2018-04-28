@@ -5,19 +5,15 @@
     <title>匀速运动案例</title>
     <style type="text/css">
         *{padding: 0;margin: 0;}
-
         .box{
             width: 100px;
             height: 100px;
             background-color: greenyellow;
             position: absolute;
-            top: 200px;
+            top: 50px;
             left: 1px;
-
         }
-
     </style>
-
 </head>
 <body>
 
@@ -25,10 +21,8 @@
         <button id="btn">运动</button>
         <button id="btn2">停止</button>
         <div class="box" id="box1"></div>
-
     </div>
 </body>
-
 <script type="text/javascript">
     var btn = document.getElementById('btn');
     var btn2 = document.getElementById('btn2');
@@ -36,31 +30,21 @@
     var count = 0;
     var num = 0;
     var time = null;
-
     btn2.onclick = function () {
         clearInterval(time);
         box1.style.display = 'block';
     };
-
-
     btn.onclick = function () {
-
         time = setInterval(function () {
             count += 1;
             num += 0.1;
             if(count > 500){
                 clearInterval(time);
                 box1.style.display = 'none';
-
             }
             box1.style.left = count+'px';
             box1.style.borderRadius = num +'px';
-
         },10);
-
     }
-
-
-
 </script>
 </html>

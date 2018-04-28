@@ -6,31 +6,23 @@
     <style type="text/css">
         *{padding: 0;margin: 0;}
         ul{list-style: none;}
-
         .box{
             width: 440px;
             height: 300px;
             margin: 20% auto ;
             overflow: hidden;
             position: relative;
-
         }
-
         ul li{
             float: left;
         }
-
         .box ul{
             width: 400%;
             position: absolute;
             top: 0;
             left: 0;
         }
-
-
     </style>
-
-
 </head>
 <body>
     <div class="box">
@@ -40,37 +32,28 @@
             <li><img src="./images/4.png" alt=""></li>
             <li><img src="./images/5.png" alt=""></li>
         </ul>
-
     </div>
-
 </body>
 <script type="text/javascript">
     var box = document.getElementsByClassName('box')[0];
-
+    console.log(box);
     var ul = box.children[0];
-
     //让图片往左走，先初始化一个num
     var num = 0;
     var time = null;
-
     function autoPlay() {
         num--;
         num <= -410 ? num =0 :num  ;
         ul.style.left = num+'px';
-
     }
 
-
-    time = setInterval(autoPlay,10);
-
+    time = setInterval(autoPlay,30);
     // 鼠标移上去的时候
     box.onmouseover = function () {
         clearInterval(time)
     };
-
     box.onmouseout = function () {
-        time = setInterval(autoPlay,10)
+        time = setInterval(autoPlay,30)
     }
-
 </script>
 </html>

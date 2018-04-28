@@ -10,7 +10,7 @@
         #box{
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,.5);
+            background: #808080;
         }
         #content{
             position: relative;
@@ -24,7 +24,6 @@
             margin: auto;
 
         }
-
         #span1{
             position: absolute;
             background-color: greenyellow;
@@ -40,20 +39,10 @@
 </head>
 <body>
     <button id='btn'>弹出</button>
-
-
 </body>
 <script type="text/javascript">
-    //dom: document object model
-
-    //树状结构
-    // 每个body的标签都称为节点;节点又称为 dom 元素
-
-    console.log(document);
     // 获取dom 元素。
     var btn = document.getElementById('btn');
-    console.log(btn);
-
 
     // 创建div,p,span标签， dom元素
     var oDiv = document.createElement('div');
@@ -64,7 +53,6 @@
     oDiv.id = 'box';
     oP.id = 'content';
     oP.innerHTML = '模态框成功弹出';   //一般设置文档内容
-
     oSpan.id = 'span1';
     oSpan.innerHTML = 'x';
 
@@ -73,30 +61,13 @@
     // 在p标签下面添加 span标签
     oP.appendChild(oSpan);
 
-
     btn.onclick = function () {
-        // alert(1212);
         //动态的添加到body中一个div节点
-
-        console.log(btn.parentNode);
         btn.parentNode.insertBefore(oDiv,btn)
-
     };
-
 
     oSpan.onclick = function () {
         oDiv.parentNode.removeChild(oDiv)
     }
-
-
-
-
-
-
-
-
-
-
-
 </script>
 </html>

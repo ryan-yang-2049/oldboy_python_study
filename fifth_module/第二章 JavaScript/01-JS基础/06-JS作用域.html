@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS作用域</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    // if没有自己的作用域
+    if(1===1){
+
+        var s=12;
+    }
+    console.log(s);//12
+
+   // ----------------------
+    function f(){
+        var temp=666;
+    }
+    f();
+    // console.log(temp);//Uncaught ReferenceError: temp is not defined
+
+
+
+
+
+
+</script>
+
+
+</html>
