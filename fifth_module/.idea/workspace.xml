@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/06-JS作用域.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第二章 JavaScript/02-JS BOM对象/01 window对象.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/12 正反选.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/css/index.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/sub.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/01-JS基础/19 定时器的用法.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/01-JS基础/19 定时器的用法.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/01 模态框案例.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/01 模态框案例.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/02 点击有惊喜案例.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/02 点击有惊喜案例.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/04 选项卡.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/04 选项卡.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/05 仿淘宝搜索框.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/05 仿淘宝搜索框.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/07 获取当前最新的时间.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/07 获取当前最新的时间.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/08 匀速运动案例.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/08 匀速运动案例.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/09 5秒之后关闭广告.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/09 5秒之后关闭广告.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/10 小米滚动.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/10 小米滚动.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/11 无缝轮播图.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/11 无缝轮播图.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/1 BOM_输出.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/1 BOM_输出.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/2 BOM的open和close方法.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/2 BOM的open和close方法.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/3 BOM的其他对象.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/3 BOM的其他对象.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/4 BOM的client系列.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/4 BOM的client系列.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/5 屏幕的可视区域.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/5 屏幕的可视区域.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/6 offset系列.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/6 offset系列.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/7 scroll系列.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/7 scroll系列.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/todo.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/todo.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html" />
       <change beforePath="$PROJECT_DIR$/../python3_note_5-6module.docx" afterPath="$PROJECT_DIR$/../python3_note_5-6module.docx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,46 +30,64 @@
     <SUITE FILE_PATH="coverage/fifth_module$chart_view.coverage" NAME="chart_view Coverage Results" MODIFIED="1524644652602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="09 5秒之后关闭广告.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/09 5秒之后关闭广告.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="10 小米滚动.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/10 小米滚动.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="11 无缝轮播图.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/11 无缝轮播图.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="todo.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                  <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/css/index.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sub.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/sub.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/css/index.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -96,16 +114,15 @@
     <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/01-JS基础/09 JS流程控制while.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/css/substyle.css" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/19 浮动案例-京东导航栏.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/static/css/substyle.css" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.heml.html" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index.js" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index.css" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/02 CSS引入方式.html" />
@@ -114,7 +131,6 @@
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/10 文本样式.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/20 position相对定位.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/index.html" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/1 BOM_输出.html" />
         <option value="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/01-js引入方式.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/01-JS基础/01 JS的引入方式和输出/01 JS的引入方式和输出.html" />
         <option value="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/02-数据类型转换.html" />
@@ -140,6 +156,20 @@
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/09 5秒之后关闭广告.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/10 小米滚动.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/11 无缝轮播图.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/1 BOM_输出.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/2 BOM的open和close方法.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/3 BOM的其他对象.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/4 BOM的client系列.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/5 屏幕的可视区域.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/6 offset系列.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/7 scroll系列.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/12 正反选.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/todo.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/index.css" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/sub.js" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html" />
+        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/css/index.css" />
       </list>
     </option>
   </component>
@@ -149,9 +179,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="943" />
+    <option name="width" value="1213" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -170,6 +200,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,25 +212,36 @@
             <path>
               <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
               <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
               <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
               <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
               <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="03 JavaScript" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_todolist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
               <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
               <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="03 JavaScript" type="462c0819:PsiDirectoryNode" />
-              <item name="02-JS_DOm" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
+              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
+              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
@@ -215,8 +258,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,14 +276,15 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\temp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\temp" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_xiaomi\static\imgs" />
       <recent name="$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/static/imgs" />
       <recent name="$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\static\css" />
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\temp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,12 +299,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.11 无缝轮播图.html">
-    <configuration name="07 获取当前最新的时间.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/07 获取当前最新的时间.html" />
-    <configuration name="08 匀速运动案例.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/08 匀速运动案例.html" />
-    <configuration name="09 5秒之后关闭广告.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/09 5秒之后关闭广告.html" />
-    <configuration name="10 小米滚动.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/10 小米滚动.html" />
-    <configuration name="11 无缝轮播图.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/11 无缝轮播图.html" />
+  <component name="RunManager" selected="JavaScript Debug.todo.html">
+    <configuration name="12 正反选.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/12 正反选.html" />
+    <configuration name="13 城市二级联动.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html" />
+    <configuration name="7 scroll系列.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/7 scroll系列.html" />
+    <configuration name="todo.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/homework_todolist/temp/todo.html" />
+    <configuration name="todo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/homework_todolist/todo.html" />
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -411,19 +453,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.07 获取当前最新的时间.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.08 匀速运动案例.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.09 5秒之后关闭广告.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.10 小米滚动.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.11 无缝轮播图.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.7 scroll系列.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.12 正反选.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.13 城市二级联动.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.todo.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.todo.html (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.11 无缝轮播图.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.10 小米滚动.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.09 5秒之后关闭广告.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.08 匀速运动案例.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.07 获取当前最新的时间.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.todo.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.todo.html (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.12 正反选.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.13 城市二级联动.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.7 scroll系列.html" />
       </list>
     </recent_temporary>
   </component>
@@ -444,7 +486,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="943" height="1087" extended-state="1" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
@@ -454,7 +496,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33157894" sideWeight="0.49558985" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39411098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26240352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -487,101 +529,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/02 CSS引入方式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/06 CSS样式优先级.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/12 盒模型定义.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/10 文本样式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/11 背景属性.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-379">
-          <caret line="105" column="18" lean-forward="true" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/13 盒模型border.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/16 display用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/14 盒模型-margin(外边距).html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="29" lean-forward="true" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/20 position相对定位.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="58" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/21 z-index的使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/02 CSS/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/1 BOM_输出.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -603,7 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="39" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="6" column="30195" lean-forward="false" selection-start-line="6" selection-start-column="30195" selection-end-line="6" selection-end-column="30195" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="466" column="8" lean-forward="true" selection-start-line="466" selection-start-column="8" selection-end-line="466" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-290">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="21" column="11" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="93" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="31" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="25" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="747">
           <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="16" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,10 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="7" />
-          <folding>
-            <marker date="1524814216385" expanded="true" signature="878:884" ph=" " />
-            <marker date="1524814216385" expanded="true" signature="884:890" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -825,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,14 +771,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/09 5秒之后关闭广告.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        <state relative-caret-position="493">
+          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -872,7 +793,121 @@
     <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/11 无缝轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/1 BOM_输出.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/2 BOM的open和close方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/3 BOM的其他对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/4 BOM的client系列.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/5 屏幕的可视区域.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/6 offset系列.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/03-JS_BOM/7 scroll系列.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="64" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/12 正反选.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/todo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/sub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding />
         </state>
       </provider>

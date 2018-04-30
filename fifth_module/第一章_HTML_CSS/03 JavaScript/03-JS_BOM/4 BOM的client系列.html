@@ -9,51 +9,27 @@
             height: 200px;
             position: absolute;
             border: 10px solid darkblue;
-            margin: 10px 0px 0px 0px;
+            margin: 10px 0 0 0;
             padding: 10px 20px 30px 40px;
         }
     </style>
-
-
 </head>
 <body>
-
     <div class="box"></div>
-
 </body>
     <script type="text/javascript">
-        /*stlye:
-            top
-            left
-            right
-            bottom
+        /*stlye: top,left,right,bottom
         */
-
         /*client
             clientTop ：内容区域到边框顶部的距离
             clientLeft ： 内容区域到边框左部得距离
             clientWidth ：内容区域 + 左右 padding  可视宽度
             clientHeight ： 内容区域 + 上下 padding  可视宽度
         */
-
         var oBox = document.getElementsByClassName('box')[0];
         console.log(oBox.clientTop);
         console.log(oBox.clientLeft);
         console.log(oBox.clientWidth);
         console.log(oBox.clientHeight);
-
-
-
-
-
-
-
-
-
-
-
     </script>
-
-
-
 </html>

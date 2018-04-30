@@ -1,0 +1,31 @@
+*{margin: 0;padding: 0;}
+
+.header{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    /*text-align: center;*/
+    font-size: 24px;
+    color: #dddddd;
+    background-color: #323232;
+}
+
+.header .span1{
+    display: inline-block;
+    position: absolute;
+    left: 300px;
+
+}
+
+.header .header-input{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    left: 500px;
+}
+
+
+
+
+
+

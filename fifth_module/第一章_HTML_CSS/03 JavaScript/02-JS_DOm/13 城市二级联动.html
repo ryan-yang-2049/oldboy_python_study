@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>城市二级联动</title>
+</head>
+<body>
+<select id="provinces">
+    <option value="">请选择省份</option>
+</select>
+
+<select id="citys">
+    <option value="">请选择城市</option>
+</select>
+</body>
+
+<script type="text/javascript">
+    data={"上海":["浦东","浦西","黄埔","普陀"],"贵州":["贵阳","遵义","桐梓"],"辽宁":["锦州","沈阳","秦皇岛"]}; //object
+    var pro_ele = document.getElementById('provinces');
+    var city_ele = document.getElementById('citys');
+    city = null;
+    //添加省份
+    for(var i in data){
+       var ele =  document.createElement('option');
+       ele.innerHTML=i;
+       pro_ele.appendChild(ele);
+    }
+    //和省份进行联动
+    pro_ele.onchange = function () {
+        console.log(this.selectedIndex)
+        console.log(this.options[this.selectedIndex])
+
+        var city2 = data[this.options[this.selectedIndex].innerHTML];
+        //保留 “请选择城市” option
+        city_ele.options.length = 1;
+        for(var i=0;i<city2.length;i++){
+            var ele2 =  document.createElement('option');
+            ele2.innerHTML = city2[i];
+            city_ele.appendChild(ele2)
+        }
+    }
+</script>
+</html>

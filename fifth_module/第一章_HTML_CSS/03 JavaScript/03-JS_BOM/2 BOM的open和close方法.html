@@ -7,12 +7,9 @@
 <body>
     <!--行间的js中的open window不能省略-->
     <button onclick="window.open('https://foofish.net/')">python之禅</button>
-
     <button>百度</button>
     <button onclick="window.close()">关闭</button>
-
-    <button>关闭2</button>
-
+    <button>关闭</button>
 
 </body>
 <script type="text/javascript">
@@ -22,19 +19,14 @@
         // open('https://www.baidu.com')
 
         //打开一个空白标签
-            //在当前页面打开用 _self ，默认是新标签页打开 "_target
+        //在当前页面打开用 _self ，默认是新标签页打开 "_target
         open('about:blank',"_self")
     };
-
 
     oClose.onclick = function () {
         if(confirm("是否关闭")){
             close()
         }
     }
-
-
 </script>
-
-
 </html>
