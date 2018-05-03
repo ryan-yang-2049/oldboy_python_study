@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery的引入</title>
+    <script type="text/javascript">
+        window.onload = function () {
+        //如果不写window.onload() 代码执行顺序，从上到下 此时的oDiv的值为 null
+        //如果写了window.onload() 那么此时的 oDiv的值为：<div id="box"></div>
+        var oDiv = document.getElementById('box');
+        console.log(oDiv);
+        }
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+
+<!--
+jquery-3.3.1.js :用在开发环境下，程序员使用。
+jquery-3.3.1.min.js ： 压缩版本的。一般用在生产环境下。
+-->
+<script src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    /*
+    //jquery 是js 的一个库文件，既然是库文件，那么就会抛出来一个构造函数或者对象
+    //书写jQuery的方式 入口函数
+    //$(document) 等待文档加载完成以后 调用ready方法，然后加入一个function的回调函数
+    */
+    $(document).ready(function () {
+        alert('111')
+    })
+</script>
+</html>

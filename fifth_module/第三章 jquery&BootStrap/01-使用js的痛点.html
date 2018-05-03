@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>example</title>
+    <style type="text/css">
+        .div1{width: 200px;height: 30px;display: none;background-color: red;}
+        .div2{width: 200px;height: 30px;display: none;background-color: yellowgreen;}
+    </style>
+</head>
+<body>
+    <button id="btn1">JS展示</button>
+    <button id="btn2">jQuery展示</button>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+<script src="./jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    //JavaScript实现
+    window.onload = function () {
+        var oBtn = document.getElementById('btn1');
+        var oDiv = document.getElementsByClassName('div1')[0];
+        oBtn.onclick = function () {
+            oDiv.style.display = 'block';
+            oDiv.innerHTML = 'JavaScript div 展示了';
+    }};
+    /*jquery 实现上面的js代码*/
+    // DOM元素加载完成之后就会调用
+    //程序执行需要有入口 1.入口函数的方式
+    $(document).ready(function () {
+        $('#btn2').click(function () {
+            $('.div2').css('display','block');
+            $('.div2').html('jquery div 展示了');
+        })
+    });
+    //等价于
+    $(function () {
+        $('#btn2').click(function () {
+            $('.div2').css('display','block');
+            $('.div2').html('jquery div 展示了');
+        })
+    });
+
+</script>
+</html>

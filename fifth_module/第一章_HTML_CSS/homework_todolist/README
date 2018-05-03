@@ -1,0 +1,96 @@
+1.localStorage 用法
+扩展：
+    Web Storage实际上由两部分组成：sessionStorage与localStorage。
+
+    sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。
+    localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
+
+localStorage 常用API
+    clear ：清空localStorage上存储的数据
+    getItem ：读取数据
+    hasOwnProperty ：检查localStorage上是否保存了变量x，需要传入x
+    key ： 读取第i个数据的名字或称为键值(从0开始计数)
+    length	：localStorage存储变量的个数
+    propertyIsEnumerable ：用来检测属性是否属于某个对象的
+    removeItem ： 删除某个具体变量
+    setItem	：存储数据
+    toLocaleString	：将（数组）转为本地字符串
+    valueOf ：获取所有存储的数据
+
+
+存储数据：
+    localStorage.setItem("name","caibin") //存储名字为name值为caibin的变量
+    localStorage.name = "caibin"; // 等价于上面的命令
+    localStorage // Storage {name: "caibin", length: 1}
+
+
+读取数据：
+    localStorage.getItem("name") //caibin,读取保存在localStorage对象里名为name的变量的值
+    localStorage.name // "caibin"
+    localStorage.valueOf() //读取存储在localStorage上的所有数据
+    localStorage.key(0) // 读取第一条数据的变量名(键值)
+    //遍历并输出localStorage里存储的名字和值
+    for(var i=0; i<localStorage.length;i++){
+        console.log('localStorage里存储的第'+i+'条数据的名字为：'+localStorage.key(i)+',值为：'+localStorage.getItem(localStorage.key(i)));
+    }
+
+删除数据：
+    localStorage.removeItem("name"); //undefined
+
+
+
+检查localStorage里是否保存某个变量：
+    localStorage.hasOwnProperty('name') // true
+    localStorage.hasOwnProperty('sex')  // false
+
+将数组转为本地字符串：
+    var arr = ['aa','bb','cc'];
+    localStorage.arr = arr //["aa","bb","cc"]
+    localStorage.arr.toLocaleString(); // "aa,bb,cc"
+
+将JSON存储到localStorage里：
+    var students = {
+        xiaomin: {
+            name: "xiaoming",
+            grade: 1
+        },
+        teemo: {
+            name: "teemo",
+            grade: 3
+        }
+    }
+
+    students = JSON.stringify(students);  //将JSON转为字符串存到变量里
+    console.log(students);
+    localStorage.setItem("students",students);//将变量存到localStorage里
+
+    var newStudents = localStorage.getItem("students");
+    newStudents = JSON.parse(students); //转为JSON
+    console.log(newStudents); // 打印出原先对象
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
