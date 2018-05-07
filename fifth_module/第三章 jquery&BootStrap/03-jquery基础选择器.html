@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery基础选择器</title>
+    <style type="text/css">
+
+
+    </style>
+
+
+</head>
+<body>
+    <ul>
+        <li id="brother" class="item">路飞学诚1</li>
+        <li><a href="https://www.luffycity.com">路飞学诚2</a></li>
+        <li class="item">路飞学诚3</li>
+        <li>路飞学诚4</li>
+        <li class="item">路飞学诚5</li>
+        <li>路飞学诚6</li>
+        <li class="item">路飞学诚7</li>
+        <a href="#">百度一下</a>
+    </ul>
+    <!--<div id="duanzi">-->
+        <!--<p>天王盖地虎</p>-->
+        <!--<p><h1>小鸡炖蘑菇</h1></p>-->
+        <!--<p>宝塔镇河妖</p>-->
+        <!--<p>蘑菇放辣椒</p>-->
+    <!--</div>-->
+
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+
+    //使用jquery 的时候要有入口函数（回调函数）
+    $(document).ready(function () {
+        //基础选择器
+        //1.ID 选择器
+        console.log($('#brother'));
+        $('#brother').css('color','red');
+
+        //2.标签选择器
+        //设置一个值
+        // $('a').css('color','green');
+        //设置多个值，设置多个值使用对象存储， key:value
+        $('a').css({'color':'green','font-size':'24px'});
+
+        //3.类选择器
+        $('.item').css('background-color','yellowgreen')
+
+
+        //4.通配符选择器
+        // $('*').html('');  //清空整个界面的dom元素
+
+
+
+    })
+
+
+
+
+
+</script>
+
+
+</html>

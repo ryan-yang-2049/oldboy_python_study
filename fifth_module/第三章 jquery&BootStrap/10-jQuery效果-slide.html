@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery效果-slide</title>
+    <style type="text/css">
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            display: none;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">显示</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $('#btn').hover(function () {
+        //     $('#box').slideDown(2000)
+        // },function () {
+        //     $('#box').slideUp(1000)
+        // })
+
+        $('#btn').click(function () {
+            var isShow = true;
+            $('#box').slideToggle()
+        })
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+</script>
+</html>

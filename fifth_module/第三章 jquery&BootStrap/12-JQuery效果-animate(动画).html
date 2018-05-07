@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery效果-animate(动画)</title>
+    <style type="text/css">
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: #84a42b;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+
+    <button id="btn">动画吧</button>
+    <button id="btn2">停止吧</button>
+    <div id="box">
+        hello everybody！
+    </div>
+</body>
+<!--
+animate
+概念：用于创建自定义动画的函数
+语法：animate(params,[speed],[fn])
+参数：
+params:一组包含作为动画属性和终值的样式属性和及其值的集合
+speed:三种预定速度之一的字符串("slow","normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+fn:在动画完成时执行的函数，每个元素执行一次。
+-->
+
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#btn').click(function () {
+            /*
+            //第一种：直接修改样式
+            $('#box').animate({
+                width:'200px',
+                height:'200px'
+
+            })
+            //第二种： 动画：先右移动，在往下移动
+            $('#box').animate({
+                left:'50px'
+                // top:'50px'
+            }).animate({top:'100px'});
+            */
+            //第三种：往右和下同同时移动，耗时5秒
+            // $('#box').animate({
+            //     left:'100px',
+            //     top:'100px'
+            // },5000);
+
+            //第四种：先右移动，然后延时3秒，然后在往下移动
+            //delay 延迟
+            $('#box').animate({
+                left:'50px'
+                // top:'50px'
+            }).delay(3000).animate({top:'100px'});
+
+            //停止动画 stop
+            $('#btn2').click(function () {
+                $('#box').stop();
+            })
+
+        })
+    })
+
+
+
+</script>
+
+
+
+
+</html>

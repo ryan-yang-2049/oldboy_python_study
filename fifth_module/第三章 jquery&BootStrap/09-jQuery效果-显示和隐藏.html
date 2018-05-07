@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery效果-隐藏和显示</title>
+    <style type="text/css">
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            display: none;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">显示</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    // .css 方法
+    // $('#btn').click(function () {
+    //     $('#box').css('display','block');
+    // })
+    
+    // jquery 提供了一些方法 show() hide() 控制元素显示 隐藏
+    /*
+    var isShow = true;
+    
+    $('#btn').click(function () {
+        if(isShow){
+            $('#box').show('slow',function () {
+                $(this).text('盒子出来了');
+                $('#btn').text('隐藏');
+                isShow = false;
+            })
+        }else {
+            $('#box').hide(2000,function () {
+                $('#btn').text('显示');
+                isShow = true;
+            })
+        }
+    });
+    */
+    // toggle 开关  如果元素显示则隐藏，反之则显示
+    // 此方法建议只对元素开关，不做别的操作。
+    $('#btn').click(function () {
+        $('#box').toggle(3000,function () {
+            alert(111)
+        });
+    })
+
+
+</script>
+</html>

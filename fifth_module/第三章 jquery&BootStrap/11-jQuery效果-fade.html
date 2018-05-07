@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery效果-fade</title>
+    <style type="text/css">
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: #84a42b;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">隐藏</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //淡入淡出
+        /*
+        $('#btn').mouseover(function () {
+            // $('#box').fadeOut(2000);
+            $('#box').fadeTo(2000,0.5);
+        });
+
+        $('#btn').mouseout(function () {
+            // $('#box').fadeIn(2000);
+            $('#box').fadeTo(2000,1);    //fadeTo(时间，透明度)
+        })
+        */
+        $('#btn').click(function () {
+            $('#box').fadeToggle(3000)
+        })
+
+    })
+
+
+
+</script>
+</html>

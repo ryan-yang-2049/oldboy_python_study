@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery筛选选择器</title>
+</head>
+<body>
+
+    <div id="box">
+        <p class="p1">
+            <span>我是第一个span标签</span>
+            <span>我是第二个span标签</span>
+            <span>我是第三个span标签</span>
+        </p>
+        <button>按钮</button>
+    </div>
+    <ul>
+        <li class="list">2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+    //点语法： get方法和 set方法
+
+
+    //获取第n个元素 数值从0开始
+    $('span').eq(1).css({'display':'block','background':'red'});
+
+    //first()获取第一个元素
+    $('span').first().css('color','yellowgreen')
+    //first()获取最后一个元素
+    $('span').last().css('color','green')
+
+
+    //.parent() 选择父亲元素  {parent('.p1')：精确找到父级元素}
+    $('span').parent('.p1').css({'width':'300px','height':'400px','background':'gray'})
+
+
+    //.siblings()选择所有的兄弟元素
+    $('.list').siblings('li').css('color','red');
+
+    //.find()
+    //查找所有的后代元素
+    $('div').find('button').css('background','green');
+
+</script>
+
+
+
+</html>

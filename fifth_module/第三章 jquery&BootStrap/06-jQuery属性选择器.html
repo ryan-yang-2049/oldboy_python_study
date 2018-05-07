@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery属性选择器</title>
+</head>
+<body>
+    <div id="box">
+            <h2 class="title">属性元素器</h2>
+            <p class="p1">我是一个段落</p>
+            <ul>
+                <li id="li1">分手应该体面1</li>
+                <li class="what" id="li2">分手应该体面2</li>
+                <li class="what">分手应该体面3</li>
+                <li class="heihei">分手应该体面4</li>
+
+            </ul>
+
+            <form action="" method="post">
+
+                <input name="username" type='text' value="1" checked="checked"></input>
+                <input name="username1111" type='text' value="2"></input>
+                <input name="username2222" type='text' value="3"></input>
+                <input name="username3333" type='text' value="4"></input>
+                <button class="btn-default">按钮1</button>
+                <button class="btn-info">按钮2</button>
+                <button class="btn-success">按钮3</button>
+                <button class="btn-danger">按钮4</button>
+            </form>
+        </div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //标签名[属性名] 查找所有含有id属性的该标签名的元素
+        $('li[id]').css('color','red');
+
+        //[attr=value] 匹配给定的属性是某个特定值的元素
+        $('li[class=what]').css('font-size','24px');
+
+        //[attr!=value] 匹配所有不含有指定的属性，或者属性不等于特定值的元素
+        $('li[class!=what]').css('font-size','30px');
+
+        //匹配给定的属性是以某些值开始的元素
+        $('input[name^=username]').css({'display':'block','background-color':'yellowgreen'});
+
+        //匹配给定的属性是以某些值结尾的元素
+        $('input[name$=222]').css('background','green');
+
+        //匹配给定的属性是以包含某些值的元素
+        $('button[class*=btn]').css('background','grey');
+        $('button[class*=dan]').css('background','orange');
+
+
+    })
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>
