@@ -42,6 +42,16 @@
 
         //1.设置单选的值
         $('input[type=radio]').val(['12'])
+        $('input[type=checkbox]').val(['a','c'])
+
+        //2.设置下拉列表选中的值，这里必须要用select
+        $('select').val(['3'])
+
+        //3.text 获取值和设置值
+        console.log($(':text').val())
+        $(':text').val('输入搜索内容')
+
+
 
     })
 
