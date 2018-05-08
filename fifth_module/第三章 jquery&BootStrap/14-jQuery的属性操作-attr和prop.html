@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery的属性操作-attr和prop</title>
+</head>
+<body>
+    <div id="box">
+        <p>路飞学城</p>
+    </div>
+    <button>获取</button>
+
+    <ul>
+        <li class="luffy">luffy1</li>
+        <li class="luffy">luffy2</li>
+        <li class="luffy">luffy3</li>
+        <li class="luffy">luffy4</li>
+    </ul>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //jQuery 属性操作
+        //html属性操作  attr()
+        //attr() 如果有一个参数，表示获取值
+        $('button').click(function () {
+            $('#box p').text($('#box').attr('id'))
+        });
+        //attr() 如果设置两个值 表示设置属性
+        //设置多个值用对象存储，如果设置多个类名 不能使用attr()<会覆盖>
+        $('#box').attr('class','abc');
+        $('#box').attr({'class':'abc1','name':'box2'})
+
+        //删除一个属性  removeattr()
+        // $('#box').removeAttr('name');
+        //删除多个属性值
+        $('#box').removeAttr('name class');
+
+        //DOM属性操作
+        console.log($('li').prop('class'))
+
+        //设置值
+        $('li').first().prop({'name':'app','name2':'app2'});
+        console.log($('li').first());
+
+        //删除dom对象的name属性
+        $('li').first().removeProp('name');
+        console.log($('li').prop('name')); //undefined
+
+
+    })
+
+
+
+
+</script>
+</html>

@@ -5,65 +5,33 @@
     <title>jQuery层级选择器</title>
 </head>
 <body>
-
     <div id="box1">
         <p id="p1">锄禾日当午</p>
         <p>汗滴禾下土</p>
         <p>谁知盘中餐</p>
         <p>粒粒皆辛苦</p>
-
         <div id="box2">
             <p>李白</p>
         </div>
-
-
     </div>
-
-
-
 </body>
 <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         //1.后代选择器
         $('#box1 p').css('color','red');
-
         //2.子代选择器
-        $('#box2 p').css('color','yellowgreen');
-
+        $('#box2>p').css('color','yellowgreen');
         //3.毗邻选择器：匹配所有紧接着选中元素的兄弟
         $('#p1+p').css('font-size','25px');
-
         //4.兄弟选择器
         $('#p1~p').css('font-size','30px');
-
         //5.获取第一个元素
         $('p:first').css('color','black');
-
         //6.获取最后一个元素
         $('p:last').css('color','blue');
-
         //7.指定第几个标签元素 eq()
         $('p:eq(2)').css('font-size','40px')
-
     })
-
-
-
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>

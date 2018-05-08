@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery属性操作-值操作</title>
+</head>
+<body>
+<div id="box2">
+        hello world!
+        <p>我是一个段落</p>
+        <a href="#">百度一下</a>
+        <input type="text" value="input" name="">
+    </div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //4.值属性的操作  text() html() val()
+        // text 仅仅是获取文本，设置值的时候也是文本，
+        // html 获取所有的元素和文本，设置的时候也是html样式
+
+        // $('#box2').text('<a href="#">百度一下</a>'); //<a href="#">百度一下</a>
+        // $('#box2').html('<a href="#">百度一下</a>'); //链接
+
+        //val 获取值
+        console.log($('input').val());  //input 获取到的是 input标签属性的value值
+        //设置input 的value值
+        $('input').val('搜索查询');
+    })
+</script>
+</html>

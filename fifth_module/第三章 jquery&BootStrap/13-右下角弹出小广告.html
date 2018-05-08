@@ -16,26 +16,19 @@
             width: 100%;
             height: 100%;
         }
-
     </style>
 </head>
 <body>
-
 <div id="box">
     <img class="img1" src="./广告.png"  alt="">
 </div>
-
 </body>
 <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
     $(function () {
-        $('#box').slideDown('normal').slideUp('fast').fadeIn(1000).click(function () {
+        $('#box').slideDown('normal').fadeIn(1000).click(function () {
             $(this).fadeOut(1000);
         })
     })
-
-
-
-
 </script>
 </html>

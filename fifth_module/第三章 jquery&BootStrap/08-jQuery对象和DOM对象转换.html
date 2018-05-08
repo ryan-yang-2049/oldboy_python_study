@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery对象和DOM对象转换</title>
-
 </head>
 <body>
     <div id="box">
@@ -13,48 +12,27 @@
 </body>
 <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-
-    // dom ==> jQuery对象
-    var oDiv = document.getElementById('box');
-    console.log($(oDiv));
-
-
-    $(oDiv).click(function () {
-        oDiv.style.color ='red';
-        $('#box').css({'width':'200px','height':'100px','background':'yellowgreen'})
-    });
-
-    // jQuery对象 ==> dom对象
-    //第一种方式 $('button')[0]
-    // $('button')[0].onclick(function () {
-    //
-    // })
-
-    //第二种方式  $('button').get(0)
-
-    var isShow = true;
-
-    $('button').get(0).onclick = function () {
-        // $('#box').get(0).style.display = 'none';  //js 隐藏
-
-        if(isShow){
-            $('#box').hide();   // jquery 隐藏
-            console.log($(this));  //$(this) 是获取到 button的 jquery对象。
-            $(this).text('显示');
-            isShow = false;
-        }else {
-            $('#box').show();
-            $(this).text('隐藏');
-            isShow = true;
-
-        }
-
-
-
-    }
-
-
-
+    $(function () {
+        // dom ==> jQuery对象
+        var oDiv = document.getElementById('box');
+        $(oDiv).click(function () {   //此时的$(oDiv) 是jQuery对象
+            $('#box').css({'font-size':'24px','color':'red'})
+        });
+        // jQuery对象 ==> dom对象
+        //第一种方式 $('button')[0]
+        //第二种方式  $('button').get(0)
+        var isShow = true;
+        $('button').get(0).onclick = function () {
+            // $('#box').get(0).style.display = 'none';  //js 隐藏
+            if(isShow){
+                $('#box').hide();   // jquery 隐藏
+                console.log($(this));  //$(this) 是获取到 button的 jquery对象。
+                $(this).text('显示');
+                isShow = false;
+            }else {
+                $('#box').show();
+                $(this).text('隐藏');
+                isShow = true;
+            }}})
 </script>
-
 </html>

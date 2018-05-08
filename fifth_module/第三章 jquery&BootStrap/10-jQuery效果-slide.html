@@ -9,10 +9,8 @@
             height: 100px;
             border: 1px solid red;
             display: none;
-
         }
     </style>
-
 </head>
 <body>
     <div id="box"></div>
@@ -21,28 +19,24 @@
 <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
     $(function () {
-        // $('#btn').hover(function () {
-        //     $('#box').slideDown(2000)
-        // },function () {
-        //     $('#box').slideUp(1000)
-        // })
-
+        // 第一种方法
+        var isShow = true;
         $('#btn').click(function () {
-            var isShow = true;
+            if(isShow){
+                $('#box').slideDown(2000);
+                $('#box').html('slideDown');
+                $('button').html('隐藏');
+                isShow = false;
+            }else {
+               $('#box').slideUp(1000);
+               $('button').html('显示');
+                isShow = true;
+            }
+        });
+        //第二种方法
+        $('#btn').click(function () {
             $('#box').slideToggle()
         })
-
-
-
-
-
     })
-
-
-
-
-
-
-
 </script>
 </html>
