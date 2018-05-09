@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防淘宝导航栏案例</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			div{width: 100%;}
+			div img{width: 100%;}
+
+			.nav{display: none;}
+
+		</style>
+	</head>
+<body>
+
+    <div class="top">
+        <img src="images/top.jpg" alt="" />
+
+    </div>
+    <div class="nav">
+        <img src="images/nav.jpg"/>
+    </div>
+    <div class= 'taobao'>
+        <img src="images/taobao1.png"/>
+    </div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var h = $('.top').height();
+
+
+
+        $(document).scroll(function () {
+            var scrollTP = $(document).scrollTop();
+
+
+            if(h<scrollTP){
+                $('.nav').css({'display':'block','position':'fixed','top':'0'})
+            }else {
+                $('.nav').css({'display':'none','position':'static','top':'0'})
+            }
+        })
+
+
+
+    })
+
+
+</script>
+</html>

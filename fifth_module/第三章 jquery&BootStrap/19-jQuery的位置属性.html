@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery的位置属性</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        #box{position: relative;width: 200px;height: 200px;border: 1px solid red;padding: 10px 5px;}
+        p{position: absolute;left:30px;top: 30px}
+    </style>
+</head>
+	<body style="height: 2000px; width: 2000px;">
+		<div id="box">
+
+			<p>我是一个段落标签</p>
+
+		</div>
+
+		<button id="btn">动画吧</button>
+
+		<div style="width: 200px;height: 200px;margin:  100px auto;border: 1px solid deepskyblue;"></div>
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //1.获取匹配元素的先对父元素的偏移
+        // console.log($('p').position().left);
+        // console.log($('p').position().top);
+
+        var offsetTop = $('p').position().top + 50 +'px';
+        $('#btn').click(function () {
+            $('p').animate({top:offsetTop},1000)
+        });
+
+        //2.获取匹配元素 相对滚动条卷起的位置信息  scrollTop scrollLeft
+
+
+        $(document).scroll(function () {
+            console.log($(this).scrollLeft());
+            console.log($(this).scrollTop());
+        });
+
+        //3.offset  获取匹配元素在当前视口的相对偏移,返回的对象包含两个整型属性：top 和 left （相对于浏览器）
+
+        console.log($('#box').offset());
+        console.log($('#box').offset().top);
+        console.log($('#box').offset().left);
+
+
+        //4.获取元素宽高
+        console.log("宽"+$('#box').width());
+        console.log("高"+$('#box').height());
+
+
+        //5.设置元素宽高
+        $('#box').width(300);
+        $('#box').height(300);
+
+        //innerWidth  // outerWidth
+        //获取元素的内部宽度 innerWidth = 宽度 + 2 * padding
+        //获取元素的外部宽度 outerWidth = 宽度 + 2 * padding + 2 * border
+
+
+        $('#box').innerWidth(500);
+        console.log("宽"+$('#box').width());   //宽490
+        console.log($('#box').innerWidth());
+
+
+
+
+    })
+    
+
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery文档操作-复制-替换-删除</title>
+</head>
+<body>
+    <span style="display: block">hello,world!</span>
+    <ul>
+
+
+    </ul>
+
+    <button>按钮</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('ul').append('<li><a href="#">luffy</a></li>');
+        $('ul').after('<h3>我是一个三级标题</h3>');
+
+        //复制
+        $('button').click(function () {
+            // 1.clone()：克隆匹配的DOM元素并且选中这些克隆的副本。
+            // 2.clone(true)：元素以及其所有的事件处理并且选中这些克隆的副本(简言之，副本具有与真身一样的事件处理能力)
+            $(this).clone(true).insertAfter($(this))
+        });
+
+        //替换
+        // $('h3').replaceWith('<button>替换的按钮</button>');
+
+        // $('<a href="#">替换的超链接</a>').replaceAll('button');
+
+
+        //删除
+        //empty():清空元素中的所有后代节点
+        //清空掉ul中的子元素，保留ul
+        // $('ul').empty()
+
+        //remove():删除节点后，事件也会删除（简言之，删除了整个标签）
+        // $('ul').remove()
+
+        //detach()：删除节点后，事件会保留
+        var  $btn = $('button').detach();
+        console.log($btn);
+
+        $('ul').append($btn[0])
+    })
+
+
+
+
+
+
+
+</script>
+</html>
