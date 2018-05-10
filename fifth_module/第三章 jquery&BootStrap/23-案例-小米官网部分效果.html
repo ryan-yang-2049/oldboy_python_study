@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23-案例-小米官网部分效果</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{list-style: none;}
+        .wrap{width: 980px;height: 612px;margin: 20px auto 0;background: #f4f3f4;border: 1px solid gray;}
+
+        ul li{float: left;margin-left: 10px;position: relative;overflow: hidden;width: 233px;height: 300px;}
+
+
+        ul li p{
+            width: 233px;
+            height: 100px;
+            background: #F56633;
+            position: absolute;
+            bottom: -100px;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li><a href="#"><img src="images/xiaomi_01.png"/></a><p>百度一下，你就知道</p></li>
+        <li><a href="#"><img src="images/xiaomi_02.png"/></a><p>百度一下，你就知道</p></li>
+
+        <li><a href="#"><img src="images/xiaomi_03.png"/></a><p>百度一下，你就知道</p></li>
+        <li><a href="#"><img src="images/xiaomi_04.png"/></a><p>百度一下，你就知道</p></li>
+        <li><a href="#"><img src="images/xiaomi_05.png"/></a><p>百度一下，你就知道</p></li>
+        <li><a href="#"><img src="images/xiaomi_07.png"/></a><p>百度一下，你就知道</p></li>
+        <li><a href="#"><img src="images/xiaomi_08.png"/></a><p>百度一下，你就知道</p></li>
+        <li><a href="#"><img src="images/xiaomi_09.png"/></a><p>百度一下，你就知道</p></li>
+    </ul>
+</div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        
+        $('.wrap li').hover(function () {
+            $(this).children('p').stop(true).animate({bottom:0},400)
+
+        },function () {
+            $(this).children('p').stop(true).animate({bottom:-100},50)
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+
+
+</script>
+</html>

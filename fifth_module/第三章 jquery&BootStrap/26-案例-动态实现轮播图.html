@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-案例-动态实现轮播图</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        ul{list-style: none;}
+
+        #box{
+            width: 240px;
+            height: 180px;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+
+        ul{
+            width: 960px;
+            position: absolute;
+        }
+
+        ul li{
+            float: left;
+
+        }
+
+        p{
+            position: absolute;
+            left: 80px;
+            bottom: 20px;
+        }
+
+        p span{
+            color: white;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        p span.active{
+            color: red;
+            background-color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+			<ul>
+				<!--显示轮播的图片-->
+                <!--<li><img src="./images/06.jpg" alt="" /></li>-->
+				<!--<li><img src="./images/07.jpg" alt="" /></li>-->
+				<!--<li><img src="./images/08.jpg" alt="" /></li>-->
+				<!--<li><img src="./images/09.jpg" alt="" /></li>-->
+			</ul>
+			<p>
+				<!--显示索引-->
+			</p>
+
+		</div>
+		<button id="play">轮播吧！</button>
+		<button id="stop">暂停！</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //1.获取本地图片数据,后面可以从后端服务器获取
+        var imgArr = ['./images/06.jpg','./images/07.jpg','./images/08.jpg','./images/09.jpg'];
+
+        //2.动态的生成图片
+
+        for(var i=0;i<imgArr.length;i++){
+            $('ul').append("<li><img src="+imgArr[i]+" /></li>")
+        }
+
+        //3.生成索引
+        var str = '';
+        $('li').each(function (ind,ele) {
+            str += "<span>"+(ind+1)+"</span>";
+        });
+        $('p').html(str);
+
+        //4.默认设置索引的第一个active
+        $('span').first().addClass('active');
+
+
+        var ind = 0;
+        //5.点击索引更改图片
+        $('span').click(function () {
+            $(this).addClass('active').siblings('span').removeClass('active');
+            //获取当前点击的索引
+            ind = $(this).index();
+            // $('ul').css({left:ind * (-240)});
+            $('ul').animate({left:ind * (-240)},100);
+        });
+        //6.自动播放
+        var timer = null;
+        $('#play').click(function () {
+            //开启定时器
+            timer = setInterval(next,1000);
+
+            function next() {
+                if(ind===$('li').length-1){
+                    ind = 0;
+                    $('p span').eq(ind).addClass('active').siblings('span').removeClass('active');
+                    $('ul').css('left',0);
+                }else {
+                    ind++;
+                    $('p span').eq(ind).addClass('active').siblings('span').removeClass('active');
+                    $('ul').css('left',(-240)*ind);
+                }
+            }
+
+
+        });
+
+        //7.暂停轮播图
+        $('#stop').click(function () {
+            clearInterval(timer);
+        })
+
+    })
+
+</script>
+</html>

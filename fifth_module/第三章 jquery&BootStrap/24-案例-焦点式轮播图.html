@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24-案例-焦点式轮播图</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        ul,ol{list-style: none;}
+
+        #wrap{width: 650px;height: 250px;margin: 100px auto 0;background: red;overflow: hidden;position: relative;}
+        /*#wrap img{display: block;}*/
+        #wrap ul{height: 250px;position: relative;z-index: 1;}
+        #wrap ol{height: 30px;position: absolute;z-index: 2;bottom: 0;right: 0;}
+
+        #wrap>ul>li{
+            position: absolute;
+            top:0;
+            left: 0;
+
+        }
+
+        #wrap>ol>li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            border: 1px solid white;
+            background: gray;
+            margin-right: 5px;
+        }
+        #wrap>ol>li:hover{
+            /*设置鼠标形状*/
+            cursor: pointer;
+        }
+
+        #wrap li.active{
+            padding: 2px;
+            color: orange;
+            margin-top: -4px;
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <ul>
+        <!--设置绝对定位之后 脱离标准流 最后一个盒子层级提升了-->
+        <li style="z-index: 1;"><a href="#"><img src="./images/01.jpg"/></a></li>
+        <li><a href="#"><img src="./images/02.jpg"/></a></li>
+        <li><a href="#"><img src="./images/03.jpg"/></a></li>
+        <li><a href="#"><img src="./images/04.jpg"/></a></li>
+        <li><a href="#"><img src="./images/05.jpg"/></a></li>
+
+    </ul>
+    <ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+</div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //控制层级关系的索引
+        var index = 0;
+
+        $('#wrap>ol>li').mouseenter(function () {
+            index++;
+            //修改下表的class
+            $(this).addClass('active').siblings('li').removeClass('active');
+
+            //修改图片
+            $('#wrap>ul>li').eq($(this).index()).css({left:650,'z-index':index}).animate({left:0},1000)
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+</script>
+</html>
