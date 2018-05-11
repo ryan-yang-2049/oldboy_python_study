@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31-jQuery鼠标事件</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        #box{
+            /*position: relative;*/
+            width: 200px;
+            height: 200px;
+            background-color: #25CB33;
+        }
+
+        #child{
+            /*position: absolute;*/
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            /*margin: 50px 50px;*/
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="box">
+
+        <div id="child"></div>
+        <input type="text" value="123">
+        <br>
+        <input type="password">
+        
+    </div>
+
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //点击事件
+        //单击
+        // $('#box').click(function () {
+        //     console.log('click 事件')
+        // });
+        // //双击
+        // $('#box').dblclick(function () {
+        //     console.log('dblclick 事件')
+        // })
+        /*
+        //鼠标按下  弹起
+        $('#box').mousedown(function () {
+            console.log('mounsedown')
+        });
+
+        $('#box').mouseup(function () {
+            console.log('mounseup')
+        });
+        */
+        /*
+        //mouseover 以及  mouseout
+        //被选元素和子元素被选中时 会触发函数 移入移除；
+        //意思就是，当鼠标从动到父盒子的时候先触发 mouseover 然后鼠标从父盒子移动到子盒子的时候会触发一次mouseout，然后再触发一次 mouseover
+        $('#box').mouseover(function () {
+            $(this).css({background:'red'});
+            console.log('mouseover');
+        });
+        $('#box').mouseout(function () {
+            $(this).css({background:'#25CB33'});
+            console.log('mouseout');
+        })
+        */
+        /*
+        //mouseenter 以及 mouseleave
+        //只有被选元素移入的时候才会触发
+        //和上面的mouseover/out 对比在于：mouseenter把整个盒子当成了一个元素，无论父盒子还是子盒子 移入移出就只有一次操作。
+        $('#box').mouseenter(function () {
+            $(this).css({background:'red'});
+            console.log('mouseenter');
+        });
+        $('#box').mouseleave(function () {
+            $(this).css({background:'#25CB33'});
+            console.log('mouseleave');
+
+        })
+           */
+
+        // $('#box').mousemove(function () {
+        //     console.log('mousemove');
+        //
+        // })
+        //获取焦点
+        // $('input[type=text]').focus(function () {
+        //     console.log($(this).val())
+        // });
+        // //失去焦点
+        // $('input[type=text]').blur(function () {
+        //     console.log($(this).val())
+        // })
+
+        //keydown() /keyup()
+        //keydown : 当键盘按下的时候的第一瞬间只是原始的值，当键盘弹起或者有值继续输入的时候就是 keyup获取的值
+        $('input[type=password]').keydown(function () {
+            console.log($(this).val())
+        });
+        $('input[type=password]').keyup(function () {
+            console.log($(this).val())
+        })
+
+    })
+
+
+</script>
+</html>

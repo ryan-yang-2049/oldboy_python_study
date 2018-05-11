@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localstorage_practical</title>
+</head>
+<body>
+
+    <button>查看</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+   $(function () {
+        //存储值
+       localStorage.setItem('jQuery','good');
+       localStorage.setItem('jQuery','good');
+       //获取值
+       console.log(localStorage.getItem('jQuery'));
+       console.log(localStorage.jQuery);
+       //localStorage都是以字符串形式来存储数据的，即使你存储的是数组和对象，localStorage也会将数组和对象以字符串的形式存储。
+
+
+
+   })
+
+
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>29-jQuery事件的绑定和移除</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        #box{
+            width: 200px;
+            height: 200px;
+            background: #25CB33;
+            margin: 40px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <button>点击</button>
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+/*jQuery  没有捕获阶段*/
+    $(function () {
+        //1.给div 添加click事件
+        // $('#box').click(function () {alert('div添加了click事件');})
+
+        //2.给DOM元素(div)绑定click事件
+        //语法：jquery对象.bind('事件类型1 事件类型2 ',fn)
+        // $('#box').bind('click mouseenter',function () {alert('div被绑定事件了');});
+
+        //3.被同一个DOM元素添加多个的事件，显示不同的结果
+
+        $('div').bind({
+            "click":cl1=function () {
+                console.log('click')
+            },
+            "mouseenter":mou1=function () {
+                console.log('mouseenter')
+            }
+        });
+
+        //事件的移除  如果没有参数  表示移除所有事件
+        //移除所有事件
+        // $('#box').unbind()
+        //移除指定事件
+        // $('#box').unbind('click',cl1);
+
+        //添加的事件不能发生在未来-->动态生成的元素不能直接添加对象 上面添加的div事件就不能发生了
+        //当然 如果添加的元素再事件定义之前，是可以发生事件的
+        $('body').append('<div style="width: 100px;height: 100px;background-color: burlywood">大河向东流啊</div>');
+
+
+        //绑定自定义事件
+        $('button').bind('myClick',function (ev,user,pass) {
+            alert('自定义事件');
+            alert(user);
+            alert(pass);
+        });
+
+        $('button').trigger('myClick',['ryan','123']);
+    })
+
+
+
+</script>
+</html>

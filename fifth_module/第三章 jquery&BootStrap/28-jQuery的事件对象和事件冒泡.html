@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28-jQuery的事件对象和事件冒泡</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        #box{
+            left: 20px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            position: relative;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+
+        button{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="box">
+        <p class="p1"></p>
+        <!--<button>点击</button>-->
+        <a href="https://www.luffycity.com">路飞</a>
+    </div>
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        // $('button').click(function () {
+        //     //冒泡 阻止冒泡
+        //     alert('btn事件触发了')
+        // });
+        // $('#box').click(function () {
+        //     alert('div事件触发了！')
+        // });
+
+        //事件对象
+        $('.p1').click(function (ev) {
+
+            //事件类型  事件属性
+            console.log(ev.type);   //click
+            console.log(ev.target); //<p class="p1"></p>
+            console.log(ev.pageX);  //85
+            console.log(ev.pageY);  //60
+
+            //常用的事件 方法
+            alert('p标签事件触发了！');
+            //1.阻止事件冒泡
+            ev.stopPropagation();
+
+
+
+        });
+
+        $('a').click(function (ev) {
+           //2.阻止默认事件: 阻止a标签的默认事件(不跳转到a标签里面的href连接)
+           // ev.preventDefault();
+           // ev.stopPropagation();
+           alert('a标签点击了');
+
+           return false;
+        });
+
+
+
+        $('#box').click(function () {
+            alert('box 点击了！')
+        })
+
+
+
+
+    })
+
+</script>
+</html>

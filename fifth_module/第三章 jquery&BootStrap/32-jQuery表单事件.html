@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32-jQuery表单事件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .show{
+        color: red;
+    }
+    </style>
+
+</head>
+<body>
+    <form action="https://www.luffycity.com">
+        <select name="sweets" id="" multiple=''>
+            <option value="">巧克力</option>
+            <option value="" selected=''>糖果</option>
+            <option value="">焦糖</option>
+            <option value="" selected=''>曲奇饼</option>
+            <option value="">烧饼</option>
+            <option value="">麦香饼</option>
+            <option value="">曲奇饼2</option>
+        </select>
+
+        <input type="text" value="hello" id='target'>
+        <input type="submit" value="Luffy"/>
+        <input type="button" value="按钮" />
+
+    </form>
+
+
+    <textarea id="other1">Trigger the handler</textarea>
+    <input id="other" type="text" value="Trigger the handler">
+
+
+    <div class="show"></div>
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //change() 事件
+        //此事件仅限于 input元素  textarea slect
+        $('select').change(function () {
+            // console.log($('select option:selected').html());
+            $('.show').html($('select option:selected').html());
+
+        });
+
+        //select 仅限于用在input type=text   textarea标签
+        $('#other').select(function () {
+            // console.log($(this).text()); //textarea 使用
+            console.log($(this).val())
+        });
+
+
+
+        $('form').submit(function (ev) {
+            //阻止默认事件：也就是阻止 form表单中设置的默认action的链接不执行。然后执行后面阻止事件后面的代码。
+            ev.preventDefault();
+            alert('111');
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+
+
+</script>
+</html>
