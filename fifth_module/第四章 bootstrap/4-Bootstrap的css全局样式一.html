@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap的css全局样式一</title>
+      <link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <style type="text/css">
+          [class^='col-']{
+              /*background-color: yellowgreen;*/
+              /*border: 1px solid black;*/
+          }
+      </style>
+
+
+  </head>
+  <body>
+  <!--固定容器宽度 .container-->
+  <div class="container">
+      <h1>Bootstrap的css全局样式</h1>
+      <div class="col-md-4">
+          <h1>h1. Bootstrap heading</h1>
+          <h2>h2. Bootstrap heading</h2>
+          <h3>h3. Bootstrap heading<small>Secondary text</small></h3>
+          <h4>h4. Bootstrap heading</h4>
+          <h5>h5. Bootstrap heading</h5>
+          <h6>h6. Bootstrap heading</h6>
+
+          <p>我是 <span class="lead">页面</span> 主体</p>
+          <p>大河 <mark>向东</mark> 流</p>
+      </div>
+      <div class="col-md-4">
+          <p class="text-left">Left aligned text.</p>
+          <p class="text-center">Center aligned text.</p>
+          <p class="text-right">Right aligned text.</p>
+          <p class="text-justify">Justified text.</p>
+          <p class="text-nowrap">No wrap text.</p>
+
+          <p class="text-lowercase">Lowercased text.</p>
+          <p class="text-uppercase">Uppercased text.</p>
+          <p class="text-capitalize">Capitalized text.</p>
+      </div>
+      <div class="col-md-4">
+          <div class="table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>姓名</th>
+                      <th>年龄</th>
+                      <th>身高</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="success">
+                      <td>1</td>
+                      <td>ryan</td>
+                      <td>18</td>
+                      <td>1.88</td>
+                  </tr>
+                  <tr class="danger">
+                      <td>2</td>
+                      <td>lucky</td>
+                      <td>18</td>
+                      <td>1.88</td>
+                  </tr>
+                  <tr class="info">
+                      <td>3</td>
+                      <td>cherry</td>
+                      <td>20</td>
+                      <td>1.68</td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+
+
+  </div>
+
+
+
+  </body>
+  <script src="./jquery-3.3.1.min.js"></script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-Bootstrap响应式原理</title>
+    <!--使用@media 必须做一下操作-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        /*最大宽度为 500px  的时候*/
+        @media screen and (max-width: 500px){
+            .box{
+                width: 200px;
+                height: 300px;
+                background-color: yellow;
+            }
+        }
+        /*300px ~ 600px*/
+        @media screen and (min-width: 500px) and (max-width: 900px){
+            .box{
+                width: 200px;
+                height: 300px;
+                background-color: red;
+            }
+        }
+
+        /*最小宽度为900px的时候*/
+        @media screen and (min-width: 900px){
+            .box{
+                width: 200px;
+                height: 300px;
+                background-color: black;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>

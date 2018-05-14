@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-jQuery的ajax</title>
+</head>
+<body>
+    <button id="btn">ajax演示</button>
+    <div id="box"></div>
+</body>
+<script src="../jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $('#btn').click(function(){
+        //     //只传一个url，导入的index.html文件含有多个传递参数，类似于：index/html?name='张三'
+        //     $('#box').load('./02-index.html');
+        // })
+
+        //get 请求
+        // $.ajax({
+        //     url:'./data.json',
+        //     type:'get',
+        //     dataType:'json',
+        //     success:function (data) {
+        //         console.log(data)
+        //     },
+        //     error:function () {
+        //
+        //     }
+        //
+        // })
+
+        //注意: post请求需要结合django就可以演示了。
+        $.ajax({
+            url:"/home",
+            type:'post',
+            data:{
+                username:"ryan",
+                password:"1234"
+            },
+            success:function (data) {
+                if(data.state === 'ok' && data.state === '200'){
+                    alert('success')
+                }
+            },
+            // error:function () {
+            //     console.log(err);
+            // }
+
+
+        })
+
+
+
+
+
+    })
+
+
+
+
+</script>
+</html>

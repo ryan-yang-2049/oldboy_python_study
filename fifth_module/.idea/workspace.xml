@@ -2,15 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/27-事件流.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/28-jQuery的事件对象和事件冒泡.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/29-jQuery事件的绑定和移除.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/30-jQuery自定义事件和事件代理.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/31-jQuery鼠标事件.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/32-jQuery表单事件.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/localstorage_practical.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/01-jQuery的ajax.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/02-index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/data.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/npm.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/jquery-3.3.1.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/01-使用js的痛点.html" afterPath="$PROJECT_DIR$/第三章 jquery/01-使用js的痛点.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/02-jquery文件引入和加载的区别.html" afterPath="$PROJECT_DIR$/第三章 jquery/02-jquery文件引入和加载的区别.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/03-jquery基础选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/03-jquery基础选择器.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/04-jquery层级选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/04-jquery层级选择器.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/05-jQuery基本过滤选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/05-jQuery基本过滤选择器.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/06-jQuery属性选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/06-jQuery属性选择器.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/07-jQuery筛选选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/07-jQuery筛选选择器.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/08-jQuery对象和DOM对象转换.html" afterPath="$PROJECT_DIR$/第三章 jquery/08-jQuery对象和DOM对象转换.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/09-jQuery效果-显示和隐藏.html" afterPath="$PROJECT_DIR$/第三章 jquery/09-jQuery效果-显示和隐藏.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/10-jQuery效果-slide.html" afterPath="$PROJECT_DIR$/第三章 jquery/10-jQuery效果-slide.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/11-jQuery效果-fade.html" afterPath="$PROJECT_DIR$/第三章 jquery/11-jQuery效果-fade.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/12-JQuery效果-animate(动画).html" afterPath="$PROJECT_DIR$/第三章 jquery/12-JQuery效果-animate(动画).html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/13-右下角弹出小广告.html" afterPath="$PROJECT_DIR$/第三章 jquery/13-右下角弹出小广告.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/14-jQuery的属性操作-attr和prop.html" afterPath="$PROJECT_DIR$/第三章 jquery/14-jQuery的属性操作-attr和prop.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/15-jQuery属性操作-calss和值操作.html" afterPath="$PROJECT_DIR$/第三章 jquery/15-jQuery属性操作-calss和值操作.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/16-input中的value值.html" afterPath="$PROJECT_DIR$/第三章 jquery/16-input中的value值.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/17-jQuery文档操作-插入节点.html" afterPath="$PROJECT_DIR$/第三章 jquery/17-jQuery文档操作-插入节点.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/18-jQuery文档操作-复制-替换-删除.html" afterPath="$PROJECT_DIR$/第三章 jquery/18-jQuery文档操作-复制-替换-删除.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/19-jQuery的位置属性.html" afterPath="$PROJECT_DIR$/第三章 jquery/19-jQuery的位置属性.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/20-防淘宝导航栏案例.html" afterPath="$PROJECT_DIR$/第三章 jquery/20-防淘宝导航栏案例.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/21-jQuery的筛选方法.html" afterPath="$PROJECT_DIR$/第三章 jquery/21-jQuery的筛选方法.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/22-案例-选项卡嵌套.html" afterPath="$PROJECT_DIR$/第三章 jquery/22-案例-选项卡嵌套.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/23-案例-小米官网部分效果.html" afterPath="$PROJECT_DIR$/第三章 jquery/23-案例-小米官网部分效果.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/24-案例-焦点式轮播图.html" afterPath="$PROJECT_DIR$/第三章 jquery/24-案例-焦点式轮播图.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/26-案例-动态实现轮播图.html" afterPath="$PROJECT_DIR$/第三章 jquery/26-案例-动态实现轮播图.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/27-事件流.html" afterPath="$PROJECT_DIR$/第三章 jquery/27-事件流.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/28-jQuery的事件对象和事件冒泡.html" afterPath="$PROJECT_DIR$/第三章 jquery/28-jQuery的事件对象和事件冒泡.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/29-jQuery事件的绑定和移除.html" afterPath="$PROJECT_DIR$/第三章 jquery/29-jQuery事件的绑定和移除.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/30-jQuery自定义事件和事件代理.html" afterPath="$PROJECT_DIR$/第三章 jquery/30-jQuery自定义事件和事件代理.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/31-jQuery鼠标事件.html" afterPath="$PROJECT_DIR$/第三章 jquery/31-jQuery鼠标事件.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/32-jQuery表单事件.html" afterPath="$PROJECT_DIR$/第三章 jquery/32-jQuery表单事件.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/01.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/01.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/02.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/02.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/03.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/03.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/04.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/04.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/05.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/05.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/06.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/06.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/07.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/07.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/08.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/08.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/09.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/09.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/nav.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/nav.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/taobao1.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/taobao1.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/top.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/top.jpg" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_01.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_01.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_02.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_02.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_03.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_03.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_04.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_04.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_05.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_05.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_07.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_07.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_08.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_08.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_09.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_09.png" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/jquery-3.3.1.js" afterPath="$PROJECT_DIR$/第三章 jquery/jquery-3.3.1.js" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/第三章 jquery/jquery-3.3.1.min.js" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/localstorage_practical.html" afterPath="$PROJECT_DIR$/第三章 jquery/localstorage_practical.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/test.html" afterPath="$PROJECT_DIR$/第三章 jquery/test.html" />
+      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/广告.png" afterPath="$PROJECT_DIR$/第三章 jquery/广告.png" />
+      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/01-js引入方式.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/01-js引入方式.html" />
+      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/02-数据类型转换.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/02-数据类型转换.html" />
+      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/03-创建字符串对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/03-创建字符串对象.html" />
+      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/04-JS数组对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/04-JS数组对象.html" />
+      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/05-Function对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/05-Function对象.html" />
+      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/06-JS作用域.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/06-JS作用域.html" />
+      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/02-JS BOM对象/01 window对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/02-JS BOM对象/01 window对象.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,86 +105,68 @@
     <SUITE FILE_PATH="coverage/fifth_module$chart_view.coverage" NAME="chart_view Coverage Results" MODIFIED="1524644652602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="31-jQuery鼠标事件.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/31-jQuery鼠标事件.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="101" column="68" lean-forward="false" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2686">
-                  <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="32-jQuery表单事件.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/32-jQuery表单事件.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="59" column="68" lean-forward="false" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="README" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="localstorage_practical.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/localstorage_practical.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="30-jQuery自定义事件和事件代理.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/30-jQuery自定义事件和事件代理.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="localstorage_practical.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/localstorage_practical.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="43" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="1-Bootstrap介绍和引入.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2-Bootstrap响应式原理.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3-Bootstrap的栅格系统使用.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="4-Bootstrap的css全局样式一.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="63" column="31" lean-forward="true" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="5-Bootstrap的css全局样式二.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="688">
+              <caret line="56" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="6-Bootstrap组件使用一.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,9 +193,13 @@
       <find>localStorage</find>
       <find>todo</find>
       <find>update</find>
+      <find>col-md-3</find>
+      <find>col-lg-2 col-md-4 col-sm-6 col-xs-12</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>col-md-4</replace>
+      <replace>col-lg-2 col-md-3 col-sm-4 col-xs-6</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -141,34 +208,24 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/01-JS基础/09 JS流程控制while.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/16-input中的value值.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/16-input中的value值.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/test.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/15-jQuery属性操作-calss和值操作.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/14-jQuery的属性操作-attr和prop.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/test.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/15-jQuery属性操作-calss和值操作.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/14-jQuery的属性操作-attr和prop.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/10-jQuery效果-slide.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/09-jQuery效果-显示和隐藏.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/08-jQuery对象和DOM对象转换.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/07-jQuery筛选选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/06-jQuery属性选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/04-jquery层级选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/03-jquery基础选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/17-jQuery文档操作-插入节点.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/10-jQuery效果-slide.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/09-jQuery效果-显示和隐藏.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/08-jQuery对象和DOM对象转换.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/07-jQuery筛选选择器.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/06-jQuery属性选择器.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/04-jquery层级选择器.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/03-jquery基础选择器.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/17-jQuery文档操作-插入节点.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/sub.js" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/todo.html" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/to1.html" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/todo.html" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/index.css" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index.html" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/css/index.css" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index2.js" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index2.html" />
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/README" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index3.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index.js" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/02-jquery文件引入和加载的区别.html" />
@@ -210,6 +267,16 @@
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/localstorage_practical.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/localstorage_practical.html" />
+        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/33-jQuery的ajax技术/02-index.html" />
+        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/33-jQuery的ajax技术/data.json" />
+        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/33-jQuery的ajax技术/01-jQuery的ajax.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统介绍.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html" />
       </list>
     </option>
   </component>
@@ -219,9 +286,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
-    <option name="width" value="1208" />
+    <option name="width" value="1184" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -252,33 +319,7 @@
             <path>
               <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
               <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
-              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
-              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="homework_todolist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
-              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="homework_todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
-              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="homework_todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
-              <item name="第三章 jquery&amp;BootStrap" type="462c0819:PsiDirectoryNode" />
+              <item name="第四章 bootstrap" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -303,11 +344,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第四章 bootstrap" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第三章 jquery&amp;BootStrap\images" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第三章 jquery&amp;BootStrap" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\static\js" />
-      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第三章 jquery&amp;BootStrap" />
@@ -328,12 +369,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.localstorage_practical.html">
-    <configuration name="29-jQuery事件的绑定和移除.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery&amp;BootStrap/29-jQuery事件的绑定和移除.html" />
-    <configuration name="30-jQuery自定义事件和事件代理.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery&amp;BootStrap/30-jQuery自定义事件和事件代理.html" />
-    <configuration name="31-jQuery鼠标事件.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery&amp;BootStrap/31-jQuery鼠标事件.html" />
-    <configuration name="32-jQuery表单事件.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery&amp;BootStrap/32-jQuery表单事件.html" />
-    <configuration name="localstorage_practical.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery&amp;BootStrap/localstorage_practical.html" />
+  <component name="RunManager" selected="JavaScript Debug.5-Bootstrap的css全局样式二.html">
+    <configuration name="1-Bootstrap介绍和引入.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/1-Bootstrap介绍和引入.html" />
+    <configuration name="2-Bootstrap响应式原理.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/2-Bootstrap响应式原理.html" />
+    <configuration name="3-Bootstrap的栅格系统使用.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/3-Bootstrap的栅格系统使用.html" />
+    <configuration name="4-Bootstrap的css全局样式一.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/4-Bootstrap的css全局样式一.html" />
+    <configuration name="5-Bootstrap的css全局样式二.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/5-Bootstrap的css全局样式二.html" />
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -482,19 +523,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.29-jQuery事件的绑定和移除.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.30-jQuery自定义事件和事件代理.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.31-jQuery鼠标事件.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.32-jQuery表单事件.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.localstorage_practical.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.1-Bootstrap介绍和引入.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.2-Bootstrap响应式原理.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.3-Bootstrap的栅格系统使用.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.4-Bootstrap的css全局样式一.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.5-Bootstrap的css全局样式二.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.localstorage_practical.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.32-jQuery表单事件.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.31-jQuery鼠标事件.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.30-jQuery自定义事件和事件代理.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.29-jQuery事件的绑定和移除.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.5-Bootstrap的css全局样式二.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.4-Bootstrap的css全局样式一.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.3-Bootstrap的栅格系统使用.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.2-Bootstrap响应式原理.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.1-Bootstrap介绍和引入.html" />
       </list>
     </recent_temporary>
   </component>
@@ -515,7 +556,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
@@ -525,7 +566,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33157894" sideWeight="0.49558985" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26957002" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23814774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -582,79 +623,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/todo.html" />
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/temp/index.css" />
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="121" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="139" selection-end-column="7" />
-          <folding>
-            <element signature="e#926#932#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index2.js" />
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index3.html" />
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <marker date="1524814216385" expanded="true" signature="878:884" ph=" " />
-            <marker date="1524814216385" expanded="true" signature="884:890" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding>
-            <element signature="e#926#932#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/jquery-3.3.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/02-jquery文件引入和加载的区别.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/01-使用js的痛点.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/03-jquery基础选择器.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/03-jquery基础选择器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="7" />
@@ -662,7 +631,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/04-jquery层级选择器.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/04-jquery层级选择器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
@@ -670,14 +639,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/05-jQuery基本过滤选择器.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/05-jQuery基本过滤选择器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/06-jQuery属性选择器.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/06-jQuery属性选择器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="7" />
@@ -685,7 +654,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/07-jQuery筛选选择器.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/07-jQuery筛选选择器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="7" />
@@ -693,7 +662,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/08-jQuery对象和DOM对象转换.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/08-jQuery对象和DOM对象转换.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
@@ -701,7 +670,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/10-jQuery效果-slide.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/10-jQuery效果-slide.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="7" />
@@ -709,28 +678,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/11-jQuery效果-fade.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/11-jQuery效果-fade.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/12-JQuery效果-animate(动画).html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/12-JQuery效果-animate(动画).html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="46" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/13-右下角弹出小广告.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/13-右下角弹出小广告.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/14-jQuery的属性操作-attr和prop.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/14-jQuery的属性操作-attr和prop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="9" />
@@ -738,7 +707,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/test.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
@@ -746,14 +715,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/15-jQuery属性操作-calss和值操作.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/15-jQuery属性操作-calss和值操作.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/16-input中的value值.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/16-input中的value值.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
@@ -761,7 +730,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/17-jQuery文档操作-插入节点.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/17-jQuery文档操作-插入节点.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="57" />
@@ -771,7 +740,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/18-jQuery文档操作-复制-替换-删除.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/18-jQuery文档操作-复制-替换-删除.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="31" />
@@ -781,7 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/19-jQuery的位置属性.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/19-jQuery的位置属性.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
@@ -792,17 +761,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/nav.jpg">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/images/nav.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/taobao1.png">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/images/taobao1.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/20-防淘宝导航栏案例.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/20-防淘宝导航栏案例.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
@@ -810,7 +779,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/21-jQuery的筛选方法.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/21-jQuery的筛选方法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -842,7 +811,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/09-jQuery效果-显示和隐藏.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/09-jQuery效果-显示和隐藏.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
@@ -850,12 +819,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/03.jpg">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/images/03.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/22-案例-选项卡嵌套.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/22-案例-选项卡嵌套.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="993">
           <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
@@ -869,7 +838,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/23-案例-小米官网部分效果.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/23-案例-小米官网部分效果.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
@@ -877,7 +846,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/24-案例-焦点式轮播图.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/24-案例-焦点式轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1206">
           <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
@@ -887,7 +856,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/26-案例-动态实现轮播图.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/26-案例-动态实现轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="122" column="17" lean-forward="true" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
@@ -895,7 +864,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/27-事件流.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/27-事件流.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
@@ -903,7 +872,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/28-jQuery的事件对象和事件冒泡.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/28-jQuery的事件对象和事件冒泡.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="76" column="11" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
@@ -911,7 +880,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/29-jQuery事件的绑定和移除.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/29-jQuery事件的绑定和移除.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
@@ -921,7 +890,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/30-jQuery自定义事件和事件代理.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/30-jQuery自定义事件和事件代理.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
@@ -929,31 +898,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/31-jQuery鼠标事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="101" column="68" lean-forward="false" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/32-jQuery表单事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="59" column="68" lean-forward="false" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery&amp;BootStrap/localstorage_practical.html">
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/localstorage_practical.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
@@ -963,8 +908,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
+        <state relative-caret-position="136">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/31-jQuery鼠标事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="101" column="68" lean-forward="false" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/32-jQuery表单事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="59" column="68" lean-forward="false" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/02-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/01-jQuery的ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/jquery-3.3.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="63" column="31" lean-forward="true" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="56" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>

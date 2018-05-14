@@ -1,0 +1,20 @@
+{
+  "arr":[
+    {
+      "name" :"ryan",
+      "age":18,
+      "addr":"SH"
+    },
+    {
+      "name" :"cherry",
+      "age":17,
+      "addr":"GZ"
+    },
+
+    {
+      "name" :"Lucky",
+      "age":10,
+      "addr":"CM"
+    }
+  ]
+}
