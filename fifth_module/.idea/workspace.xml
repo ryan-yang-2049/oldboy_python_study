@@ -2,96 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/01-jQuery的ajax.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/02-index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/data.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/npm.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/jquery-3.3.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/7-Bootstrap插件介绍.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/01-使用js的痛点.html" afterPath="$PROJECT_DIR$/第三章 jquery/01-使用js的痛点.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/02-jquery文件引入和加载的区别.html" afterPath="$PROJECT_DIR$/第三章 jquery/02-jquery文件引入和加载的区别.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/03-jquery基础选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/03-jquery基础选择器.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/04-jquery层级选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/04-jquery层级选择器.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/05-jQuery基本过滤选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/05-jQuery基本过滤选择器.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/06-jQuery属性选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/06-jQuery属性选择器.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/07-jQuery筛选选择器.html" afterPath="$PROJECT_DIR$/第三章 jquery/07-jQuery筛选选择器.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/08-jQuery对象和DOM对象转换.html" afterPath="$PROJECT_DIR$/第三章 jquery/08-jQuery对象和DOM对象转换.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/09-jQuery效果-显示和隐藏.html" afterPath="$PROJECT_DIR$/第三章 jquery/09-jQuery效果-显示和隐藏.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/10-jQuery效果-slide.html" afterPath="$PROJECT_DIR$/第三章 jquery/10-jQuery效果-slide.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/11-jQuery效果-fade.html" afterPath="$PROJECT_DIR$/第三章 jquery/11-jQuery效果-fade.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/12-JQuery效果-animate(动画).html" afterPath="$PROJECT_DIR$/第三章 jquery/12-JQuery效果-animate(动画).html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/13-右下角弹出小广告.html" afterPath="$PROJECT_DIR$/第三章 jquery/13-右下角弹出小广告.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/14-jQuery的属性操作-attr和prop.html" afterPath="$PROJECT_DIR$/第三章 jquery/14-jQuery的属性操作-attr和prop.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/15-jQuery属性操作-calss和值操作.html" afterPath="$PROJECT_DIR$/第三章 jquery/15-jQuery属性操作-calss和值操作.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/16-input中的value值.html" afterPath="$PROJECT_DIR$/第三章 jquery/16-input中的value值.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/17-jQuery文档操作-插入节点.html" afterPath="$PROJECT_DIR$/第三章 jquery/17-jQuery文档操作-插入节点.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/18-jQuery文档操作-复制-替换-删除.html" afterPath="$PROJECT_DIR$/第三章 jquery/18-jQuery文档操作-复制-替换-删除.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/19-jQuery的位置属性.html" afterPath="$PROJECT_DIR$/第三章 jquery/19-jQuery的位置属性.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/20-防淘宝导航栏案例.html" afterPath="$PROJECT_DIR$/第三章 jquery/20-防淘宝导航栏案例.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/21-jQuery的筛选方法.html" afterPath="$PROJECT_DIR$/第三章 jquery/21-jQuery的筛选方法.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/22-案例-选项卡嵌套.html" afterPath="$PROJECT_DIR$/第三章 jquery/22-案例-选项卡嵌套.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/23-案例-小米官网部分效果.html" afterPath="$PROJECT_DIR$/第三章 jquery/23-案例-小米官网部分效果.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/24-案例-焦点式轮播图.html" afterPath="$PROJECT_DIR$/第三章 jquery/24-案例-焦点式轮播图.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/26-案例-动态实现轮播图.html" afterPath="$PROJECT_DIR$/第三章 jquery/26-案例-动态实现轮播图.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/27-事件流.html" afterPath="$PROJECT_DIR$/第三章 jquery/27-事件流.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/28-jQuery的事件对象和事件冒泡.html" afterPath="$PROJECT_DIR$/第三章 jquery/28-jQuery的事件对象和事件冒泡.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/29-jQuery事件的绑定和移除.html" afterPath="$PROJECT_DIR$/第三章 jquery/29-jQuery事件的绑定和移除.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/30-jQuery自定义事件和事件代理.html" afterPath="$PROJECT_DIR$/第三章 jquery/30-jQuery自定义事件和事件代理.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/31-jQuery鼠标事件.html" afterPath="$PROJECT_DIR$/第三章 jquery/31-jQuery鼠标事件.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/32-jQuery表单事件.html" afterPath="$PROJECT_DIR$/第三章 jquery/32-jQuery表单事件.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/01.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/01.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/02.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/02.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/03.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/03.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/04.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/04.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/05.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/05.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/06.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/06.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/07.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/07.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/08.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/08.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/09.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/09.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/nav.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/nav.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/taobao1.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/taobao1.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/top.jpg" afterPath="$PROJECT_DIR$/第三章 jquery/images/top.jpg" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_01.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_01.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_02.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_02.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_03.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_03.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_04.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_04.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_05.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_05.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_07.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_07.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_08.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_08.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/images/xiaomi_09.png" afterPath="$PROJECT_DIR$/第三章 jquery/images/xiaomi_09.png" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/jquery-3.3.1.js" afterPath="$PROJECT_DIR$/第三章 jquery/jquery-3.3.1.js" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/第三章 jquery/jquery-3.3.1.min.js" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/localstorage_practical.html" afterPath="$PROJECT_DIR$/第三章 jquery/localstorage_practical.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/test.html" afterPath="$PROJECT_DIR$/第三章 jquery/test.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/广告.png" afterPath="$PROJECT_DIR$/第三章 jquery/广告.png" />
-      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/01-js引入方式.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/01-js引入方式.html" />
-      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/02-数据类型转换.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/02-数据类型转换.html" />
-      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/03-创建字符串对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/03-创建字符串对象.html" />
-      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/04-JS数组对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/04-JS数组对象.html" />
-      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/05-Function对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/05-Function对象.html" />
-      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/01-JS基础/06-JS作用域.html" afterPath="$PROJECT_DIR$/第二章 javaScript/01-JS基础/06-JS作用域.html" />
-      <change beforePath="$PROJECT_DIR$/第二章 JavaScript/02-JS BOM对象/01 window对象.html" afterPath="$PROJECT_DIR$/第二章 javaScript/02-JS BOM对象/01 window对象.html" />
+      <change beforePath="$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html" afterPath="$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html" />
+      <change beforePath="$PROJECT_DIR$/../~$thon3_note_5-6module.docx" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,61 +20,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="6-Bootstrap组件使用一.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="282" column="2" lean-forward="false" selection-start-line="282" selection-start-column="2" selection-end-line="283" selection-end-column="68" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="7-Bootstrap插件介绍.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/7-Bootstrap插件介绍.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#1032#1039#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="1-Bootstrap介绍和引入.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2-Bootstrap响应式原理.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3-Bootstrap的栅格系统使用.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4-Bootstrap的css全局样式一.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="63" column="31" lean-forward="true" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="5-Bootstrap的css全局样式二.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="56" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="6-Bootstrap组件使用一.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="442">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="29" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -226,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/index3.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index.js" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/02-jquery文件引入和加载的区别.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/01-使用js的痛点.html" />
@@ -270,13 +177,14 @@
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/33-jQuery的ajax技术/02-index.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/33-jQuery的ajax技术/data.json" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/33-jQuery的ajax技术/01-jQuery的ajax.html" />
-        <option value="$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html" />
         <option value="$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html" />
         <option value="$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统介绍.html" />
         <option value="$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html" />
         <option value="$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html" />
         <option value="$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html" />
         <option value="$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html" />
+        <option value="$PROJECT_DIR$/第四章 bootstrap/7-Bootstrap插件介绍.html" />
       </list>
     </option>
   </component>
@@ -320,6 +228,12 @@
               <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
               <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
               <item name="第四章 bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
+              <item name="第四章 bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-3.3.7-dist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -369,12 +283,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.5-Bootstrap的css全局样式二.html">
-    <configuration name="1-Bootstrap介绍和引入.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/1-Bootstrap介绍和引入.html" />
-    <configuration name="2-Bootstrap响应式原理.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/2-Bootstrap响应式原理.html" />
+  <component name="RunManager" selected="JavaScript Debug.7-Bootstrap插件介绍.html">
     <configuration name="3-Bootstrap的栅格系统使用.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/3-Bootstrap的栅格系统使用.html" />
     <configuration name="4-Bootstrap的css全局样式一.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/4-Bootstrap的css全局样式一.html" />
     <configuration name="5-Bootstrap的css全局样式二.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/5-Bootstrap的css全局样式二.html" />
+    <configuration name="6-Bootstrap组件使用一.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/6-Bootstrap组件使用一.html" />
+    <configuration name="7-Bootstrap插件介绍.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第四章 bootstrap/7-Bootstrap插件介绍.html" />
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -523,19 +437,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.1-Bootstrap介绍和引入.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.2-Bootstrap响应式原理.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.3-Bootstrap的栅格系统使用.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.4-Bootstrap的css全局样式一.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.5-Bootstrap的css全局样式二.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.3-Bootstrap的栅格系统使用.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.4-Bootstrap的css全局样式一.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.5-Bootstrap的css全局样式二.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.6-Bootstrap组件使用一.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.7-Bootstrap插件介绍.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.5-Bootstrap的css全局样式二.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.4-Bootstrap的css全局样式一.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.3-Bootstrap的栅格系统使用.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.2-Bootstrap响应式原理.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.1-Bootstrap介绍和引入.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.7-Bootstrap插件介绍.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.6-Bootstrap组件使用一.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.5-Bootstrap的css全局样式二.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.4-Bootstrap的css全局样式一.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.3-Bootstrap的栅格系统使用.html" />
       </list>
     </recent_temporary>
   </component>
@@ -566,7 +480,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33157894" sideWeight="0.49558985" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23814774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23814774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -623,14 +537,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/03-jquery基础选择器.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第三章 jquery/04-jquery层级选择器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -978,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第四章 bootstrap/jquery-3.3.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1028,9 +926,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/第四章 bootstrap/6-Bootstrap组件使用一.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state relative-caret-position="731">
+          <caret line="282" column="2" lean-forward="false" selection-start-line="282" selection-start-column="2" selection-end-line="283" selection-end-column="68" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/1-Bootstrap介绍和引入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="29" selection-end-column="87" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/7-Bootstrap插件介绍.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1032#1039#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
