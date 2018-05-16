@@ -14,10 +14,10 @@
             <input type="checkbox" value="b" checked=""/>睡觉
             <input type="checkbox" value="c" checked=""/>打豆豆
 
-            <select name="timespan" id="timespan" class="Wdate"   >
-                <option value="1">8:00-8:30</option>
-                <option value="2">8:30-9:00</option>
-                <option value="3">9:00-9:30</option>
+            <select name="timespan" id="timespan" class="Wdate" style="display: block;"  >
+                <option value="select1">8:00-8:30</option>
+                <option value="select2">8:30-9:00</option>
+                <option value="select3">9:00-9:30</option>
             </select>
             <input type="text" name="" id="" value="111" />
     </form>
@@ -27,36 +27,25 @@
     $(function () {
         //取出 type 类型的标签，还可以取出：checkbox button submit file text disabled
         // console.log($(':radio')) //取出 type=radio 的标签
-
         //1.获取单选框里面的value的值。
-        console.log($('input[type=radio]:checked').val())
-
-        //2.获取复选框里面的value的值,仅仅获取第一个值
-        console.log($('input[type=checkbox]:checked').val())
-
+        console.log($('input[type=radio]:checked').val())  //13
+        //2.获取复选框里面的value的值
+        // 可以看到复选框里面有多个checked，但是仅仅获取第一个值
+        console.log($('input[type=checkbox]:checked').val())  // a
         //3.下拉列表被选中的值;如果再option中不设置默认值，那么取第一个，如果设置了默认值，取出默认值。
         var obj = $('#timespan option:selected')
-        console.log(obj.val())
+        console.log(obj.val()) // select1
 
         //设置值
-
         //1.设置单选的值
-        $('input[type=radio]').val(['12'])
-        $('input[type=checkbox]').val(['a','c'])
-
+        $('input[type=radio]').val(['12'])  //12对应男，页面默认勾选 男
+        $('input[type=checkbox]').val(['b']) // 页面勾选 睡觉 ，虽然html里面都设置了checked，这段代码相当于重置了checked
         //2.设置下拉列表选中的值，这里必须要用select
-        $('select').val(['3'])
-
+        $('select').val(['select3'])  //9:00-9:30
         //3.text 获取值和设置值
-        console.log($(':text').val())
-        $(':text').val('输入搜索内容')
-
-
-
+        console.log($('input[type=text]').val()) //默认显示value的值 111
+        $(':text').val('输入搜索内容') //替换value='111' 为 value='输入搜索内容'
+        $('input[type=text]').val('输入搜索内容')
     })
-
-
-
-
 </script>
 </html>

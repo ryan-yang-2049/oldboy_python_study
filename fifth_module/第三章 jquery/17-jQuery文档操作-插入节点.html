@@ -5,48 +5,30 @@
     <title>jQuery操作-插入节点</title>
 </head>
 <body>
-    <span style="display: block">hello,world!</span>
-    <ul>
-
-    </ul>
+    <span class="span1" style="display: block">hello,world!</span>
+    <ul></ul>
 </body>
 <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
     $(function () {
-
         var oLi = document.createElement('li');
         oLi.innerHTML='路飞';
-
         //追加元素
         $('ul').append('<li><a href="#">luffy</a></li>');
-
         $('ul').append(oLi);
         //如果直接的内容是当前页面中的某些元素，那么这些元素将从原位置上消失。简言之，就是一个移动操作
-        $('ul').append($('span'));
-
-
-        //appendTo()
-
+        $('ul').append($('.span1'));
+        // //appendTo()
         $('<a href="#">呵呵一下</a>').appendTo($('ul'));
-
-
         // prepend() 插入到被插元素得第一个位置
-        $('ul').prepend('<li>我是第一元素</li>');
-        $('<li>我是第0元素</li>').prependTo($('ul'));
-
+        $('ul').prepend('<li>插入到第一位置</li>');
+        $('<li>插入到第0位置</li>').prependTo($('ul'));
         // before  after
         $('ul').before('<h2>我是一个二级标题</h2>');
         $('ul').after('<h3>我是一个三级标题</h3>');
-
         //insertAfter
-
-        $('<a href="#">呵呵两下</a>').insertAfter($('ul'))
-        $('<a href="#">呵呵三下</a>').insertBefore($('ul'))
-
-
-
+        $('<a href="#">insertAfter插入</a>').insertAfter($('ul'))
+        $('<a href="#">insertBefore插入</a>').insertBefore($('ul'))
     })
-
-
 </script>
 </html>
