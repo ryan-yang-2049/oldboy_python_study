@@ -9,18 +9,16 @@
             color: red;
         }
     </style>
-
 </head>
 <body>
+</html>
 <ul>
     <li class="one">1</li>
     <li class="two num">2</li>
     <li class="three">3</li>
     <li class="four num"><a href="#">4</a></li>
     <a href="#" class="five">5</a>
-
 </ul>
-
 </body>
 <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
@@ -28,33 +26,33 @@
         //hasClass
         //jquery的遍历方法， .each()
         // $('ul').children() 相当于 $('li')
-        // $('ul').children().each(function (index,ele) {
-        //     var name = $(this).hasClass('one');
-        //     if(name){
-        //         $(this).css({'color':'red'})
-        //     }else {
-        //         $(this).css({'font-size':'30px'})
-        //     }
-        //
-        // });
+        $('ul').children().each(function (index,ele) {
+            var name = $(this).hasClass('one');
+            if(name){
+                $(this).css({'color':'red'})
+            }else {
+                $(this).css({'font-size':'30px'})
+            }
+
+        });
 
 
 
-        // console.log($('ul').children('.num'))
+        // console.log($('ul').children('.num'));
 
         console.log($('a').parent());
-
-
-        console.log($('li').last().prev());
-        console.log($('li').last().prevAll());
-
-        //siblings(pramas) 参数不同获取的标签不同
-        // console.log($('.five').siblings('li'));
-        // console.log($('.five').siblings('a'));
-
-        $('li').hover(function () {
-            $(this).addClass('active').siblings('li').removeClass('active')
-        })
+        //
+        //
+        // console.log($('li').last().prev());
+        // console.log($('li').last().prevAll());
+        //
+        // //siblings(pramas) 参数不同获取的标签不同
+        // // console.log($('.five').siblings('li'));
+        // // console.log($('.five').siblings('a'));
+        //
+        // $('li').hover(function () {
+        //     $(this).addClass('active').siblings('li').removeClass('active')
+        // })
 
 
 
