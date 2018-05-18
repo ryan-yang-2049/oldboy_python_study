@@ -5,13 +5,7 @@
     <title>30-jQuery自定义事件和事件代理</title>
     <style type="text/css">
         *{margin: 0;padding: 0;}
-        #box{
-            width: 200px;
-            height: 200px;
-            background: #25CB33;
-            margin: 40px auto;
-        }
-
+        #box{width: 200px;height: 200px;background: #25CB33;margin: 40px auto;}
     </style>
 </head>
 <body>
@@ -30,7 +24,7 @@
         //     console.log($(this).html())
         // });
 
-        //事件代理：自己完成不了当前的点击事件，交给父级元素来做这个事件操作
+        // //事件代理：自己完成不了当前的点击事件，交给父级元素来做这个事件操作
         //父级.on('事件名字','选择器1，选择器2'，fn(回调函数))
         $('ul').on('click','li',function () {
             console.log(this);
@@ -38,17 +32,7 @@
 
         //后添加就不能使用前面的事件,因此要使用事件代理
         $('ul').append('<li>ryan</li>')
-
-
-
-
     })
-
-
-
-
-
-
 
 
 </script>

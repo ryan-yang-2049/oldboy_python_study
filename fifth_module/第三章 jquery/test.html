@@ -1,42 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>23-案例-小米官网部分效果</title>
-    <style type="text/css">
-        *{padding: 0;margin: 0;}
-        ul{list-style: none;}
-        .wrap{width: 300px;height: 200px;margin: 20px auto 0;background: #f4f3f4;border: 1px solid gray;}
-        ul li{float: left;margin-left: 5px;position: relative;overflow: hidden;width: 93px;height: 200px;background-color: yellowgreen}
-        ul li p{
-            width: 93px;
-            height: 80px;
-            background: #F56633;
-            position: absolute;
-            bottom: -100px;
-            text-align: center;
-            color: white;
-            line-height: 100px;
-        }
-    </style>
-</head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>7-Bootstrap插件介绍</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
 <body>
-<div class="wrap">
-    <ul>
-        <li>我在这里模仿一个照片<p>百度一下</p></li>
-        <li>我在这里模仿一个照片<p>百度一下</p></li>
-        <li>我在这里模仿一个照片<p>百度一下</p></li>
-    </ul>
-</div>
+
 </body>
-<script src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('.wrap li').hover(function () {
-            $(this).children('p').stop(true).animate({bottom:0},1000)
-        },function () {
-            $(this).children('p').stop(true).animate({bottom:-100},1000)
-        })
-    })
-</script>
+<script src="./jquery-3.3.1.min.js"></script>
+<script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </html>
