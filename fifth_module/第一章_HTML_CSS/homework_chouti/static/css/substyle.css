@@ -194,7 +194,7 @@ body{
 
 .top-area .sort-nav{
     float: left;
-    margin-left: 160px;
+    margin-left: 140px;
     margin-top: 7px;
 }
 
@@ -347,6 +347,14 @@ body{
 .content-list .item .part2 .discuss:hover b{
     text-decoration: underline;
     text-align: center;
+}
+
+.content-list .item .comments-box-packup{
+    /*float: left;*/
+    display: none;
+    width: 120px;
+    height: 20px;
+    background-color: black;
 }
 
 .share-site-to{
