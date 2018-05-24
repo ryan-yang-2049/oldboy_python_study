@@ -23,6 +23,62 @@
             <a href="#" class="register_a">注册</a>
             <a href="#" class="login_a">登陆</a>
         </div>
+            <div class="login-register">
+                <div class="cd-user-modal">
+                    <div class="cd-user-modal-container" id="cd-user-modal-container">
+                        <ul class="cd-switcher">
+                            <li class="active"><a href="#0">用户登录</a></li>
+                            <li><a href="#0">注册新用户</a></li>
+                        </ul>
+                    <div class="cd-login login-register-children"> <!-- 登录表单 -->
+                        <form class="cd-form">
+                            <p class="fieldset">
+                                <label class="image-replace cd-username" for="signin-username">用户名</label>
+                                <input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="输入用户名">
+                            </p>
+                            <p class="fieldset">
+                                <label class="image-replace cd-password" for="signin-password">密码</label>
+                                <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="输入密码">
+                            </p>
+                            <p class="fieldset">
+                                <input type="checkbox" class="remember-me" id="remember-me" checked>
+                                <label class="has-left" for="remember-me">记住登录状态</label>
+                            </p>
+                            <p class="fieldset">
+                                <input class="full-width2" type="submit" value="登 录">
+                            </p>
+                        </form>
+                    </div>
+
+                    <div class="cd-signup login-register-children"> <!-- 注册表单 -->
+                        <form class="cd-form">
+                            <p class="fieldset">
+                                <label class="image-replace cd-username" for="signup-username">用户名</label>
+                                <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="输入用户名">
+                            </p>
+                            <p class="fieldset">
+                                <label class="image-replace cd-email" for="signup-email">邮箱</label>
+                                <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="输入mail">
+                            </p>
+                            <p class="fieldset">
+                                <label class="image-replace cd-password" for="signup-password">密码</label>
+                                <input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="输入密码">
+                            </p>
+                            <p class="fieldset">
+                                <input type="checkbox" id="accept-terms" class="remember-me">
+                                <label class="has-left" for="accept-terms">我已阅读并同意 <a href="#0">用户协议</a></label>
+                            </p>
+                            <p class="fieldset">
+                                <input class="full-width2" type="submit" value="注册新用户">
+                            </p>
+                        </form>
+                    </div>
+                        <!--<a href="#0" class="cd-close-form">关闭</a>-->
+                    </div>
+                </div>
+            </div>
+
+
         <div class="key-search">
             <form action="#" method="post" id="header-search">
                 <input type="text" class="search-input" id="search-inpit">
@@ -52,144 +108,24 @@
 				</a>
 			</div>
             <div class="content-list">
-                  <div class="item">
-                        <div class="news-pic">
-                            <img src="./static/img/news_pic/girl1.png" alt="抽屉新热榜">
-                        </div>
-                        <div class="news-content">
-                            <div class="part1">
-                                    <a href="#" class="show-content" target="_blank">这是一个美女的故事</a>
-                                    <span class="content-source">-ww4.sinaimg.cn</span>
-                            </div>
-                            <div class="part2">
-                                    <a href="#" class="recommend" title="推荐">
-                                        <span class="hand-icon icon-recommend"></span>
-                                        <b>4</b>
-                                    </a>
-                                    <a href="javascript:;" class="discuss">
-                                        <span class="hand-icon icon-discuss"></span>
-                                        <b>3</b>
-                                    </a>
-                                    <a href="javascript:;" class="collect" title="加入私藏">
-                                        <span class="hand-icon icon-collect"></span>
-                                        <b>私藏</b>
-                                    </a>
-                                    <a href="#" class="user-a">
-                                        <b>cherry</b>
-                                    </a>
-                                <span class="left time-into">
-                                    <a class="time-a" href="#" target="_blank">
-                                        <b>4分钟前</b>
-                                    </a>
-                                    <i>入热榜</i>
-                                </span>
-                                <span class="share-site-to">
-                                    <i>分享到</i>
-                                    <span class="share-icon">
-                                        <a class="icon-sina"    title="分享到新浪微博" href="#" ></a>
-                                        <a class="icon-douban"  title="分享到豆瓣"    href="#" ></a>
-                                        <a class="icon-qqzone"  title="分享到QQ空间"  href="#" ></a>
-                                        <a class="icon-tenxun"  title="分享到腾讯微博" href="#" ></a>
-                                        <a class="icon-renren"  title="分享到人人网"   href="#" ></a>
-                                    </span>
-                                </span>
 
-                            </div>
-                            <div class="comments-box-packup">
-                                <span>最热评论</span>
-                                <b class="count-times"></b>
-                                <hr>
-                                <ul>
-                                <!--<ul class="comment-list">-->
-
-                                    <li>好</li>
-                                    <li>很好</li>
-                                    <li>非常好</li>
-                                </ul>
-                                <textarea class="comment-reply"></textarea>
-                                <a href="javascript:;" class="comment-submit">评论</a>
-                                
-                            </div>
-                        </div>
-                  </div>
-          <div class="item">
-            <div class="news-pic">
-                <img src="./static/img/news_pic/girl1.png" alt="抽屉新热榜">
-            </div>
-            <div class="news-content">
-                <div class="part1">
-                        <a href="#" class="show-content" target="_blank">这是一个美女的故事</a>
-
-                        <span class="content-source">-ww4.sinaimg.cn</span>
-                </div>
-                <div class="part2">
-                        <a href="#" class="recommend" title="推荐">
-                            <span class="hand-icon icon-recommend"></span>
-                            <b>1</b>
-                        </a>
-                        <a href="javascript:;" class="discuss">
-                            <span class="hand-icon icon-discuss"></span>
-                            <b>2</b>
-                        </a>
-                        <a href="javascript:;" class="collect" title="加入私藏">
-                            <span class="hand-icon icon-collect"></span>
-                            <b>私藏</b>
-                        </a>
-                        <a href="#" class="user-a">
-                            <b>cherry</b>
-                        </a>
-                        <span class="left time-into">
-                        <a class="time-a" href="#" target="_blank">
-                            <b>4分钟前</b>
-                        </a>
-                        <i>入热榜</i>
-                    </span>
-                    <span class="share-site-to">
-                        <i>分享到</i>
-                        <span class="share-icon">
-                            <a class="icon-sina"    title="分享到新浪微博" href="#" ></a>
-                            <a class="icon-douban"  title="分享到豆瓣"    href="#" ></a>
-                            <a class="icon-qqzone"  title="分享到QQ空间"  href="#" ></a>
-                            <a class="icon-tenxun"  title="分享到腾讯微博" href="#" ></a>
-                            <a class="icon-renren"  title="分享到人人网"   href="#" ></a>
-                        </span>
-                    </span>
-
-                </div>
-              <div class="comments-box-packup">
-                    <span>最热评论</span>
-                    <b class="count-times"></b>
-                    <hr>
-                    <ul>
-                        <li>好</li>
-                        <li>很好</li>
-                        <li>非常好</li>
-                    </ul>
-                    <textarea class="comment-reply"></textarea>
-                    <a href="javascript:;" class="comment-submit">评论</a>
-
-                </div>
-            </div>
-
-          </div>
-          <div class="item">
-                <div class="news-pic">
-                    <img src="./static/img/news_pic/girl1.png" alt="抽屉新热榜">
-                </div>
-                <div class="news-content">
-                    <div class="part1">
-                            <a href="#" class="show-content" target="_blank">这是一个美女的故事</a>
-
-                            <span class="content-source">-ww4.sinaimg.cn</span>
+                <div class="item">
+                    <div class="news-pic">
+                        <img src="./static/img/news_pic/girl1.png" alt="抽屉新热榜">
                     </div>
-                    <div class="part2">
+                    <div class="news-content">
+                        <div class="part1">
+                            <a href="#" class="show-content" target="_blank">这是一个美女的故事</a>
+                            <span class="content-source">-ww4.sinaimg.cn</span>
+                        </div>
+                        <div class="part2">
                             <a href="#" class="recommend" title="推荐">
                                 <span class="hand-icon icon-recommend"></span>
-                                <b>7</b>
+                                <b>1</b>
                             </a>
                             <a href="javascript:;" class="discuss">
                                 <span class="hand-icon icon-discuss"></span>
-                                <b>8</b>
+                                <b>3</b>
                             </a>
                             <a href="javascript:;" class="collect" title="加入私藏">
                                 <span class="hand-icon icon-collect"></span>
@@ -198,173 +134,37 @@
                             <a href="#" class="user-a">
                                 <b>cherry</b>
                             </a>
-                        <span class="left time-into">
-                            <a class="time-a" href="#" target="_blank">
-                                <b>4分钟前</b>
-                            </a>
-                            <i>入热榜</i>
-                        </span>
-                        <span class="share-site-to">
-                            <i>分享到</i>
-                            <span class="share-icon">
-                                <a class="icon-sina"    title="分享到新浪微博" href="#" ></a>
-                                <a class="icon-douban"  title="分享到豆瓣"    href="#" ></a>
-                                <a class="icon-qqzone"  title="分享到QQ空间"  href="#" ></a>
-                                <a class="icon-tenxun"  title="分享到腾讯微博" href="#" ></a>
-                                <a class="icon-renren"  title="分享到人人网"   href="#" ></a>
+                            <span class="left time-into">
+                                <a class="time-a" href="#" target="_blank">
+                                    <b>4分钟前</b>
+                                </a>
+                                <i>入热榜</i>
                             </span>
-                        </span>
-
-                    </div>
-                    <div class="comments-box-packup">
-                        <span>最热评论</span>
-                        <b class="count-times"></b>
-                        <hr>
-                        <ul>
-                            <li>好</li>
-                            <li>很好</li>
-                            <li>很好</li>
-                            <li>很好</li>
-                            <li>很好</li>
-                            <li>很好</li>
-                            <li>很好</li>
-                            <li>非常好</li>
-                        </ul>
-                        <textarea class="comment-reply"></textarea>
-                        <a href="javascript:;" class="comment-submit">评论</a>
+                            <span class="share-site-to">
+                                <i>分享到</i>
+                                <span class="share-icon">
+                                    <a class="icon-sina"    title="分享到新浪微博" href="#" ></a>
+                                    <a class="icon-douban"  title="分享到豆瓣"    href="#" ></a>
+                                    <a class="icon-qqzone"  title="分享到QQ空间"  href="#" ></a>
+                                    <a class="icon-tenxun"  title="分享到腾讯微博" href="#" ></a>
+                                    <a class="icon-renren"  title="分享到人人网"   href="#" ></a>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="comments-box-packup">
+                            <span>最热评论</span>
+                            <b class="count-times"></b>
+                            <hr>
+                            <ul>
+                                <li>好</li>
+                                <li>很好</li>
+                                <li>非常好</li>
+                            </ul>
+                            <textarea class="comment-reply"></textarea>
+                            <a href="javascript:;" class="comment-submit">评论</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-          <div class="item">
-    <div class="news-pic">
-        <img src="./static/img/news_pic/girl1.png" alt="抽屉新热榜">
-    </div>
-    <div class="news-content">
-        <div class="part1">
-                <a href="#" class="show-content" target="_blank">这是一个美女的故事</a>
-
-                <span class="content-source">-ww4.sinaimg.cn</span>
-        </div>
-        <div class="part2">
-                <a href="#" class="recommend" title="推荐">
-                    <span class="hand-icon icon-recommend"></span>
-                    <b>4</b>
-                </a>
-                <a href="javascript:;" class="discuss">
-                    <span class="hand-icon icon-discuss"></span>
-                    <b>5</b>
-                </a>
-                <a href="javascript:;" class="collect" title="加入私藏">
-                    <span class="hand-icon icon-collect"></span>
-                    <b>私藏</b>
-                </a>
-                <a href="#" class="user-a">
-                    <b>cherry</b>
-                </a>
-            <span class="left time-into">
-                <a class="time-a" href="#" target="_blank">
-                    <b>4分钟前</b>
-                </a>
-                <i>入热榜</i>
-            </span>
-            <span class="share-site-to">
-                <i>分享到</i>
-                <span class="share-icon">
-                    <a class="icon-sina"    title="分享到新浪微博" href="#" ></a>
-                    <a class="icon-douban"  title="分享到豆瓣"    href="#" ></a>
-                    <a class="icon-qqzone"  title="分享到QQ空间"  href="#" ></a>
-                    <a class="icon-tenxun"  title="分享到腾讯微博" href="#" ></a>
-                    <a class="icon-renren"  title="分享到人人网"   href="#" ></a>
-                </span>
-            </span>
-
-        </div>
-        <div class="comments-box-packup">
-            <span>最热评论</span>
-            <b class="count-times"></b>
-            <hr>
-            <ul>
-                <li>好</li>
-                <li>很好</li>
-                <li>很好</li>
-                <li>很好</li>
-                <li>非常好</li>
-                <li>非常好</li>
-                <li>非常好</li>
-            </ul>
-            <textarea class="comment-reply"></textarea>
-            <a href="javascript:;" class="comment-submit">评论</a>
-
-        </div>
-    </div>
-</div>
-          <div class="item">
-    <div class="news-pic">
-        <img src="./static/img/news_pic/girl1.png" alt="抽屉新热榜">
-    </div>
-    <div class="news-content">
-        <div class="part1">
-                <a href="#" class="show-content" target="_blank">这是一个美女的故事</a>
-
-                <span class="content-source">-ww4.sinaimg.cn</span>
-        </div>
-        <div class="part2">
-                <a href="#" class="recommend" title="推荐">
-                    <span class="hand-icon icon-recommend"></span>
-                    <b>4</b>
-                </a>
-                <a href="javascript:;" class="discuss">
-                    <span class="hand-icon icon-discuss"></span>
-                    <b>5</b>
-                </a>
-                <a href="javascript:;" class="collect" title="加入私藏">
-                    <span class="hand-icon icon-collect"></span>
-                    <b>私藏</b>
-                </a>
-                <a href="#" class="user-a">
-                    <b>cherry</b>
-                </a>
-            <span class="left time-into">
-                <a class="time-a" href="#" target="_blank">
-                    <b>4分钟前</b>
-                </a>
-                <i>入热榜</i>
-            </span>
-            <span class="share-site-to">
-                <i>分享到</i>
-                <span class="share-icon">
-                    <a class="icon-sina"    title="分享到新浪微博" href="#" ></a>
-                    <a class="icon-douban"  title="分享到豆瓣"    href="#" ></a>
-                    <a class="icon-qqzone"  title="分享到QQ空间"  href="#" ></a>
-                    <a class="icon-tenxun"  title="分享到腾讯微博" href="#" ></a>
-                    <a class="icon-renren"  title="分享到人人网"   href="#" ></a>
-                </span>
-            </span>
-
-        </div>
-        <div class="comments-box-packup">
-            <span>最热评论</span>
-            <b class="count-times"></b>
-            <hr>
-            <ul>
-            <!--<ul class="comment-list">-->
-
-                <li>好</li>
-                <li>很好</li>
-                <li>非常好</li>
-                <li>非常好</li>
-                <li>非常好</li>
-                <li>非常好</li>
-            </ul>
-            <textarea class="comment-reply"></textarea>
-            <a href="javascript:;" class="comment-submit">评论</a>
-
-        </div>
-    </div>
-</div>
-
-
-
 			</div>
             <div class="page-area">
                  <ul>

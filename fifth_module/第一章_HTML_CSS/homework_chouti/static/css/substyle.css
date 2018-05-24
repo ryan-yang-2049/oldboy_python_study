@@ -97,6 +97,132 @@ body{
     background-color: #204982;
 }
 
+
+/*-------------------*/
+        .login-register{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #474954;
+            z-index: 3;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.95;
+
+        }
+
+        .cd-user-modal{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            margin: 120px auto;
+        }
+
+        .cd-user-modal ul{
+            list-style: none;
+            display: block;
+        }
+        .cd-user-modal ul li{
+            width: 50%;
+            float: left;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            background-color: #D2D8D8;
+        }
+
+        .cd-user-modal ul li a{
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            border: 1px ;
+        }
+
+        .cd-user-modal ul li.active{
+            display: block;
+            background-color: #ffffff;
+        }
+
+        .cd-user-modal .cd-login{
+            background-color: #ffffff;
+        }
+
+
+        .cd-user-modal .cd-signup{
+            display: none;
+            background-color: #ffffff;
+        }
+        .cd-user-modal .cd-user-modal-container .cd-switcher:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .cd-user-modal .cd-form{
+            display: block;
+        }
+        .cd-user-modal .cd-form .fieldset{
+            display: block;
+            position: relative;
+
+        }
+        .cd-user-modal .cd-form .fieldset label{
+            position: absolute;
+            left: 20px;
+        }
+        .cd-user-modal .cd-form .fieldset .image-replace{
+            display: inline-block;
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 15px;
+            white-space: nowrap;
+            text-shadow: none;
+            overflow: hidden;
+            text-indent: 100%;
+
+        }
+        .cd-user-modal .cd-form .fieldset .has-border{
+            display: inline-block;
+            margin-top: 20px;
+            width: 400px;
+            height: 40px;
+            border: 1px solid  #D2D8D8;
+            border-radius: 7px;
+            margin-left: 40px;
+        }
+        .cd-user-modal .cd-form .fieldset .has-left{
+            display: inline-block;
+            width: 400px;
+            height: 40px;
+            border-radius: 7px;
+            margin-top: 25px;
+            margin-left: 40px;
+        }
+        .cd-user-modal .cd-form .fieldset .remember-me{
+            display: inline-block;
+            border-radius: 7px;
+            margin: 40px;
+        }
+        .cd-user-modal .cd-form .fieldset .full-width2{
+            cursor: pointer;
+            background: #2f889a;
+            color: #FFF;
+            font-weight: bold;
+            border: none;
+            width: 400px;
+            height: 40px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            border-radius: 10px;
+        }
+
+/*---------------------*/
+
+
 /*当行蓝搜索框样式*/
 .key-search{
     float: right;

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        ul{list-style: none}
+
+        .login-register{
+            /*display: none;*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #777777;
+            z-index: 3;
+            overflow: hidden;
+            cursor: pointer;
+
+        }
+
+        .cd-user-modal{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            margin: 120px auto;
+        }
+
+        .cd-user-modal ul{
+            list-style: none;
+            display: block;
+        }
+        .cd-user-modal ul li{
+            width: 50%;
+            float: left;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            background-color: #D2D8D8;
+        }
+
+        .cd-user-modal ul li a{
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            border: 1px ;
+        }
+
+        .cd-user-modal ul li.active{
+            display: block;
+            background-color: #ffffff;
+        }
+
+        .cd-user-modal .cd-login{
+            background-color: #ffffff;
+        }
+
+
+        .cd-user-modal .cd-signup{
+            display: none;
+            background-color: #ffffff;
+        }
+        .cd-user-modal .cd-user-modal-container .cd-switcher:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .cd-user-modal .cd-form{
+            display: block;
+        }
+        .cd-user-modal .cd-form .fieldset{
+            display: block;
+            position: relative;
+
+        }
+        .cd-user-modal .cd-form .fieldset label{
+            position: absolute;
+            left: 20px;
+        }
+        .cd-user-modal .cd-form .fieldset .image-replace{
+            display: inline-block;
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 15px;
+            white-space: nowrap;
+            text-shadow: none;
+            overflow: hidden;
+            text-indent: 100%;
+
+        }
+        .cd-user-modal .cd-form .fieldset .has-border{
+            display: inline-block;
+            margin-top: 20px;
+            width: 400px;
+            height: 40px;
+            border: 1px solid  #D2D8D8;
+            border-radius: 7px;
+            margin-left: 40px;
+        }
+        .cd-user-modal .cd-form .fieldset .has-left{
+            display: inline-block;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 7px;
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+        .cd-user-modal .cd-form .fieldset .remember-me{
+            display: inline-block;
+            border-radius: 7px;
+            /*width: 400px;*/
+            /*height: 40px;*/
+            margin: 40px;
+        }
+        .cd-user-modal .cd-form .fieldset .full-width2{
+            cursor: pointer;
+            background: #2f889a;
+            color: #FFF;
+            font-weight: bold;
+            border: none;
+            width: 400px;
+            height: 40px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="login-register">
+	<div class="cd-user-modal">
+		<div class="cd-user-modal-container">
+			<ul class="cd-switcher">
+				<li class="active"><a href="#0">用户登录</a></li>
+				<li><a href="#0">注册新用户</a></li>
+			</ul>
+        <div class="cd-login login-register-children"> <!-- 登录表单 -->
+            <form class="cd-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-username" for="signin-username">用户名</label>
+                    <input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="输入用户名">
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signin-password">密码</label>
+                    <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="输入密码">
+                </p>
+                <p class="fieldset">
+                    <input type="checkbox" class="remember-me" id="remember-me" checked>
+                    <label class="has-left" for="remember-me">记住登录状态</label>
+                </p>
+                <p class="fieldset">
+                    <input class="full-width2" type="submit" value="登 录">
+                </p>
+            </form>
+        </div>
+
+        <div class="cd-signup login-register-children"> <!-- 注册表单 -->
+            <form class="cd-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-username" for="signup-username">用户名</label>
+                    <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="输入用户名">
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="signup-email">邮箱</label>
+                    <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="输入mail">
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signup-password">密码</label>
+                    <input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="输入密码">
+                </p>
+                <p class="fieldset">
+                    <input type="checkbox" id="accept-terms" class="remember-me">
+                    <label class="has-left" for="accept-terms">我已阅读并同意 <a href="#0">用户协议</a></label>
+                </p>
+                <p class="fieldset">
+                    <input class="full-width2" type="submit" value="注册新用户">
+                </p>
+            </form>
+        </div>
+			<a href="#0" class="cd-close-form">关闭</a>
+		</div>
+	</div>
+</div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var $ChooseLi = $('.cd-switcher').children('li');
+        var $ChooseDiv = $('.cd-user-modal-container').children('div');
+        $('.cd-switcher').on('click','li',function () {
+            $(this).addClass('active').siblings('li').removeClass('active');
+            index = $(this).index($ChooseLi);
+            $ChooseDiv.eq(index).show().siblings('div').hide()
+
+        });
+
+        $('.cd-user-modal')
+
+
+    })
+</script>
+</html>

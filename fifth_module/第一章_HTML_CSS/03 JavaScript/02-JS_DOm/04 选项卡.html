@@ -62,6 +62,7 @@
     for(var i = 0;i < tabLi.length;i++){
         // 为了保存点击时 i 的变量
         tabLi[i].index = i;
+        console.log("i:"+i);
         tabLi[i].onclick = function () {
             for (var j = 0;j < tabLi.length;j++){
                 tabLi[j].className = '';
