@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-属性选择器</title>
+    <style type="text/css">
+        label[for=user]{
+            font-size: 20px;
+            color: red;
+        }
+        label[for=pwd]{
+            font-size: 20px;
+            color: green;
+        }
+
+        label[for^="us"]{
+            font-size: 30px;
+        }
+
+        label[for$='wd']{
+            font-size: 40px;
+        }
+        [type='text']{
+            font-size: 20px;
+            color: #2459A2;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <label for="user">用户名:</label>
+        <input type="text" id="user">
+        <label for="pwd">密码:</label>
+        <input type="password" id="pwd">
+    </div>
+
+
+
+</body>
+</html>

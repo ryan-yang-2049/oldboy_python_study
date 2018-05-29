@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-伪类选择器一</title>
+    <style type="text/css">
+        /*选中第一个元素*/
+        .box ul li:first-child{
+            color: red;
+            font-size: 30px;
+        }
+        /*选中最后一个元素*/
+        .box ul li:last-child{
+            color: green;
+            font-size: 30px;
+        }
+
+        /*选中指定的元素，从1开始计数*/
+        .box ul li:nth-child(2){
+            color: fuchsia;
+            font-size: 40px;
+        }
+        /*n 表示选中所有，从0开始(0的时候表示没有选中)*/
+        /*2n 表示所有的偶数*/
+        /*2n-1 表示所有的奇数*/
+        .box ul li:nth-child(2n-1){
+            color: purple;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li class="item1">
+                1
+                <a href="#">张三</a>
+            </li>
+            <li class="item2">
+                2
+                <a href="#">李四</a>
+            </li>
+            <li class="item3">
+                3
+                <a href="#">ryan</a>
+            </li>
+            <li class="item4">
+                4
+                <a href="#">cherry</a>
+            </li>
+            <li class="item5">
+                5
+                <a href="#">Lucky</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-伪类选择器一</title>
+    <style type="text/css">
+        /*没有被访问的a标签的样式*/
+        .box ul li.item1 a:link{
+            color: gray;
+        }
+        /*被访问过后的a标签的样式*/
+        .box ul li.item2 a:visited{
+            color: yellow;
+        }
+        /*鼠标悬停时的样式*/
+        .box ul li.item3 a:hover{
+            color: red;
+        }
+        /*鼠标点击瞬间的样式*/
+        .box ul li.item4 a:active{
+            color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li class="item1">
+                <a href="#">张三</a>
+            </li>
+            <li class="item2">
+                <a href="#">李四</a>
+            </li>
+            <li class="item3">
+                <a href="#">ryan</a>
+            </li>
+            <li class="item4">
+                <a href="#">cherry</a>
+            </li>
+            <li class="item5">
+                <a href="#">Lucky</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
