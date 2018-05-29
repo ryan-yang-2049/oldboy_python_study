@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/04 选项卡.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/04 选项卡.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/index.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/index.html" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/css/substyle.css" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/css/substyle.css" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/js/sub.js" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/js/sub.js" />
-      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/test.html" afterPath="$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/test.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery/28-jQuery的事件对象和事件冒泡.html" afterPath="$PROJECT_DIR$/第三章 jquery/28-jQuery的事件对象和事件冒泡.html" />
-      <change beforePath="$PROJECT_DIR$/第三章 jquery/test.html" afterPath="$PROJECT_DIR$/第三章 jquery/test.html" />
-    </list>
+    <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +30,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="109" column="38" lean-forward="true" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+                <state relative-caret-position="816">
+                  <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
                   <folding>
                     <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -81,8 +73,8 @@
           <file leaf-file-name="sub.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/js/sub.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="518">
-                  <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+                <state relative-caret-position="824">
+                  <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
                   <folding>
                     <element signature="e#543#549#0" expanded="false" />
                     <element signature="e#615#622#0" expanded="false" />
@@ -315,7 +307,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/gitcode/oldboy_python_study/fifth_module/第三章 jquery&amp;BootStrap/03-jquery基础选择器.html" />
@@ -543,7 +535,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.50441015" order="7" side_tool="true" content_ui="tabs" />
@@ -552,7 +543,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33157894" sideWeight="0.49558985" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -980,27 +971,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/js/sub.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="e#543#549#0" expanded="false" />
-            <element signature="e#615#622#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="109" column="38" lean-forward="true" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+        <state relative-caret-position="816">
+          <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#5015#5021#0" expanded="true" />
             <element signature="e#5021#5027#0" expanded="true" />
             <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/static/js/sub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="824">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="e#543#549#0" expanded="false" />
+            <element signature="e#615#622#0" expanded="false" />
           </folding>
         </state>
       </provider>
