@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/7-盒模型.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/8-使用border制作小三角.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/9-标准文档流的概念.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/10-布局-浮动.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/new_css/9-标准文档流的概念.html" afterPath="$PROJECT_DIR$/new_css/9-标准文档流的概念.html" />
       <change beforePath="$PROJECT_DIR$/../python3_note_5-6module.docx" afterPath="$PROJECT_DIR$/../python3_note_5-6module.docx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +41,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="9-标准文档流的概念.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="9-标准文档流的概念.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_css/9-标准文档流的概念.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="10-布局-浮动.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/10-布局-浮动.html">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="11-浮动的元素脱标‘.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -119,8 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/21-jQuery的筛选方法.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/啊啊啊啊.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/1212121212.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/abc.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/22-案例-选项卡嵌套.html" />
@@ -170,6 +188,8 @@
         <option value="$PROJECT_DIR$/new_css/7-盒模型.html" />
         <option value="$PROJECT_DIR$/new_css/8-使用border制作小三角.html" />
         <option value="$PROJECT_DIR$/new_css/9-标准文档流的概念.html" />
+        <option value="$PROJECT_DIR$/new_css/10-布局-浮动.html" />
+        <option value="$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html" />
       </list>
     </option>
   </component>
@@ -263,12 +283,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.8-使用border制作小三角.html">
-    <configuration name="01 模态框案例.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/01 模态框案例.html" />
-    <configuration name="28-jQuery的事件对象和事件冒泡.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery/28-jQuery的事件对象和事件冒泡.html" />
+  <component name="RunManager" selected="JavaScript Debug.11-浮动的元素脱标‘.html">
+    <configuration name="10-布局-浮动.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/10-布局-浮动.html" />
+    <configuration name="11-浮动的元素脱标‘.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/11-浮动的元素脱标‘.html" />
     <configuration name="8-使用border制作小三角.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/8-使用border制作小三角.html" />
+    <configuration name="9-标准文档流的概念.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/9-标准文档流的概念.html" />
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/homework_chouti/index.html" />
-    <configuration name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第二章 javaScript/login.html" />
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -417,19 +437,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.01 模态框案例.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.28-jQuery的事件对象和事件冒泡.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.8-使用border制作小三角.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.8-使用border制作小三角.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.9-标准文档流的概念.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.10-布局-浮动.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.11-浮动的元素脱标‘.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.8-使用border制作小三角.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.28-jQuery的事件对象和事件冒泡.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.01 模态框案例.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.11-浮动的元素脱标‘.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.10-布局-浮动.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.9-标准文档流的概念.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.8-使用border制作小三角.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -517,20 +537,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/02-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -885,8 +891,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/new_css/9-标准文档流的概念.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/10-布局-浮动.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding />
         </state>
       </provider>
