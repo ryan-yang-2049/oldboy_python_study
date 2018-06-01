@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20-盒子水平居中</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        .box{
+            width: 780px;
+            height: 50px;
+            background-color: #84a42b;
+            /*盒子水平居中，必须要给该盒子设置一个宽度*/
+            /*只有标准流下的盒子，才能使用margin：0 atuo; */
+            /*当一个盒子浮动了，固定定位/绝对定位 ，margin: 0 auto; 也不能使用*/
+            margin: 0 auto;
+            /*让文字居中用text-align*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        你要我怎么做
+    </div>
+</body>
+</html>

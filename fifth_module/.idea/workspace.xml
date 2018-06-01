@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/10-布局-浮动.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/12-浮动元素互相贴靠.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/13-浮动元素字围效果.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/14-浮动元素紧凑效果.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/15-浮动带来的问题.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/16-清除浮动1-给父盒子设置高度.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/16-清除浮动2-clear-both.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/17-清除浮动3-伪元素清除法(常用).html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/18-清除浮动4-overflow-hidden.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/19-margin垂直方向塌陷问题.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/new_css/20-水平盒子居中.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/new_css/9-标准文档流的概念.html" afterPath="$PROJECT_DIR$/new_css/9-标准文档流的概念.html" />
+      <change beforePath="$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html" afterPath="$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html" />
+      <change beforePath="$PROJECT_DIR$/第一章_HTML_CSS/01 HTML/images/3.png" afterPath="$PROJECT_DIR$/new_css/3.png" />
       <change beforePath="$PROJECT_DIR$/../python3_note_5-6module.docx" afterPath="$PROJECT_DIR$/../python3_note_5-6module.docx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,36 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="7-盒模型.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new_css/7-盒模型.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8-使用border制作小三角.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new_css/8-使用border制作小三角.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="9-标准文档流的概念.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new_css/9-标准文档流的概念.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="10-布局-浮动.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_css/10-布局-浮动.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,11 +40,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="11-浮动的元素脱标‘.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html">
+      <file leaf-file-name="14-浮动元素紧凑效果.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/14-浮动元素紧凑效果.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="289">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="15-浮动带来的问题.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/15-浮动带来的问题.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16-清除浮动1-给父盒子设置高度.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/16-清除浮动1-给父盒子设置高度.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16-清除浮动2-clear-both.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/16-清除浮动2-clear-both.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="17-清除浮动3-伪元素清除法(常用).html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/17-清除浮动3-伪元素清除法(常用).html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18-清除浮动4-overflow-hidden.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/18-清除浮动4-overflow-hidden.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="19-margin垂直方向塌陷问题.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/19-margin垂直方向塌陷问题.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20-水平盒子居中.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/new_css/20-水平盒子居中.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="13-浮动元素字围效果.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new_css/13-浮动元素字围效果.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -139,16 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/1212121212.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/abc.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/22-案例-选项卡嵌套.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/23-案例-小米官网部分效果.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/24-案例-焦点式轮播图.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/26-案例-动态实现轮播图.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/27-事件流.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/28-jQuery的事件对象和事件冒泡.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/29-jQuery事件的绑定和移除.html" />
-        <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/30-jQuery自定义事件和事件代理.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/31-jQuery鼠标事件.html" />
         <option value="$PROJECT_DIR$/第三章 jquery&amp;BootStrap/32-jQuery表单事件.html" />
         <option value="$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README" />
@@ -190,6 +239,16 @@
         <option value="$PROJECT_DIR$/new_css/9-标准文档流的概念.html" />
         <option value="$PROJECT_DIR$/new_css/10-布局-浮动.html" />
         <option value="$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html" />
+        <option value="$PROJECT_DIR$/new_css/12-浮动元素互相贴靠.html" />
+        <option value="$PROJECT_DIR$/new_css/13-浮动元素字围效果.html" />
+        <option value="$PROJECT_DIR$/new_css/14-浮动元素紧凑效果.html" />
+        <option value="$PROJECT_DIR$/new_css/15-浮动带来的问题.html" />
+        <option value="$PROJECT_DIR$/new_css/16-清除浮动1-给父盒子设置高度.html" />
+        <option value="$PROJECT_DIR$/new_css/16-清除浮动2-clear-both.html" />
+        <option value="$PROJECT_DIR$/new_css/17-清除浮动3-伪元素清除法(常用).html" />
+        <option value="$PROJECT_DIR$/new_css/18-清除浮动4-overflow-hidden.html" />
+        <option value="$PROJECT_DIR$/new_css/19-margin垂直方向塌陷问题.html" />
+        <option value="$PROJECT_DIR$/new_css/20-水平盒子居中.html" />
       </list>
     </option>
   </component>
@@ -199,9 +258,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="2" />
-    <option name="width" value="1287" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="31" />
+    <option name="y" value="63" />
+    <option name="width" value="1192" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -233,6 +293,23 @@
               <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
               <item name="new_css" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
+              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
+              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="02 CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fifth_module" type="462c0819:PsiDirectoryNode" />
+              <item name="第一章_HTML_CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_xiaomi" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -256,19 +333,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_chouti\static\js" />
-      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第三章 jquery&amp;BootStrap" />
-      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist" />
-      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\static\css" />
-      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\temp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\new_css" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第二章 javaScript" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_chouti" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第四章 bootstrap" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第三章 jquery&amp;BootStrap\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\new_css" />
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_chouti\static\js" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第三章 jquery&amp;BootStrap" />
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist" />
+      <recent name="D:\gitcode\oldboy_python_study\fifth_module\第一章_HTML_CSS\homework_todolist\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -283,12 +360,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.11-浮动的元素脱标‘.html">
-    <configuration name="10-布局-浮动.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/10-布局-浮动.html" />
-    <configuration name="11-浮动的元素脱标‘.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/11-浮动的元素脱标‘.html" />
-    <configuration name="8-使用border制作小三角.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/8-使用border制作小三角.html" />
-    <configuration name="9-标准文档流的概念.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/9-标准文档流的概念.html" />
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第一章_HTML_CSS/homework_chouti/index.html" />
+  <component name="RunManager" selected="JavaScript Debug.20-水平盒子居中.html">
+    <configuration name="16-清除浮动2-clear-both.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/16-清除浮动2-clear-both.html" />
+    <configuration name="17-清除浮动3-伪元素清除法(常用).html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/17-清除浮动3-伪元素清除法(常用).html" />
+    <configuration name="18-清除浮动4-overflow-hidden.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/18-清除浮动4-overflow-hidden.html" />
+    <configuration name="19-margin垂直方向塌陷问题.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/19-margin垂直方向塌陷问题.html" />
+    <configuration name="20-水平盒子居中.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/new_css/20-水平盒子居中.html" />
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -437,19 +514,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.8-使用border制作小三角.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.9-标准文档流的概念.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.10-布局-浮动.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.11-浮动的元素脱标‘.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.16-清除浮动2-clear-both.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.17-清除浮动3-伪元素清除法(常用).html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.18-清除浮动4-overflow-hidden.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.19-margin垂直方向塌陷问题.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.20-水平盒子居中.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.11-浮动的元素脱标‘.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.10-布局-浮动.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.9-标准文档流的概念.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.8-使用border制作小三角.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.20-水平盒子居中.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.19-margin垂直方向塌陷问题.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.18-清除浮动4-overflow-hidden.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.17-清除浮动3-伪元素清除法(常用).html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.16-清除浮动2-clear-both.html" />
       </list>
     </recent_temporary>
   </component>
@@ -470,7 +547,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="0" width="1287" height="1087" extended-state="1" />
+    <frame x="31" y="63" width="1192" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
@@ -480,7 +557,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33157894" sideWeight="0.49558985" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2616137" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28356892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -537,97 +614,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/bootstrap-3.3.7-dist/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/jquery-3.3.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/5-Bootstrap的css全局样式二.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="56" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/17-jQuery文档操作-插入节点.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/19-jQuery的位置属性.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="63" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/21-jQuery的筛选方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/24-案例-焦点式轮播图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/26-案例-动态实现轮播图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/23-案例-小米官网部分效果.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="44" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="85" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/32-jQuery表单事件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="68" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三章 jquery/33-jQuery的ajax技术/01-jQuery的ajax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第四章 bootstrap/2-Bootstrap响应式原理.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -660,13 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -897,6 +876,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/01 HTML/images/5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/01 HTML/images/4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/12-浮动元素互相贴靠.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/13-浮动元素字围效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/new_css/10-布局-浮动.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -905,10 +923,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/new_css/11-浮动的元素脱标‘.html">
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="850">
+          <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/14-浮动元素紧凑效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/15-浮动带来的问题.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/16-清除浮动1-给父盒子设置高度.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/16-清除浮动2-clear-both.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/17-清除浮动3-伪元素清除法(常用).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/18-清除浮动4-overflow-hidden.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/19-margin垂直方向塌陷问题.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_css/20-水平盒子居中.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
           <folding />
         </state>
       </provider>

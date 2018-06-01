@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-浮动元素字围效果</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        body{width: 200px;height: 200px;border: 1px solid #2b542c}
+        div{float: left;}
+        img{width: 150px;height: 150px}
+
+    </style>
+</head>
+<body>
+    <!--所谓字围效果：
+        当div浮动，p不浮动
+        div挡住了p，div的层级提高了，但是p中的文字不会被遮盖。此时就形成了字围效果
+       关于浮动一定要注意:浮动这个元素，我们一定要遵循一个原则：永远不是一个盒子单独浮动，要浮动就要一起浮动
+        -->
+    <div>
+        <img src="./3.png" alt="">
+    </div>
+    <p>
+        123字围效果字围效果字围效果字围效果字围效果字围效果字围效果字围效果
+    </p>
+</body>
+</html>

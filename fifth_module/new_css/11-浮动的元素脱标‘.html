@@ -11,7 +11,6 @@
             background-color: red;
             float: left;
         }
-
         .box2{
             width: 200px;
             height: 200px;
@@ -20,16 +19,18 @@
         span{
             background-color: #2459A2;
             float: left;
+            width: 300px;
+            height: 50px;
         }
     </style>
 </head>
 <body>
 <!--脱标：脱离了标准文档流
     box1盒子设置了浮动，脱离了标准文档流，此时box2盒子就是标准文档流中的第一个盒子，所以就渲染到了左上方
-
 -->
 <div class="box1">box1</div>
 <div class="box2">box2</div>
+<!--span标签设置了 float 不需要转成块级元素 也能够设置设置宽高-->
 <span>span标签</span>
 <span>span标签</span>
 </body>

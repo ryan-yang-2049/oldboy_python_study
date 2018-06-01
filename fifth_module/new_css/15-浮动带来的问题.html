@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-浮动带来的问题</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        /*子元素设置了浮动，一般父盒子不设置高度*/
+        .father{width: 400px;}
+        .box1{width: 50px;height: 100px;background-color: #25CB33;}
+        .box2{width: 100px;height: 75px;float: left;background-color: aqua;}
+        .box3{width: 200px;height: 50px;float: left;background-color: brown;}
+        .mother{width: 400px;height: 200px;background-color: purple;}
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</div>
+<div class="mother"></div>
+</body>
+</html>
