@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易留言板</title>
+    <style type="text/css">
+        span{
+            color: #28a4c9;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>简易留言板</h1>
+<div class="box"></div>
+
+<textarea class="msg" name="liuyan" id="" cols="30" rows="10"></textarea>
+<input type="button" class="btn" value="留言">
+<button onclick="sum()">统计</button>
+</body>
+
+<script type="text/javascript">
+    var  listDiv = document.getElementsByClassName('box')[0];
+    var  ol = document.createElement('ol');
+    listDiv.appendChild(ol);
+
+    var btn = document.getElementsByClassName('btn')[0];
+    var msg = document.getElementsByClassName('msg')[0];
+    var count = 0;
+
+    btn.onclick = function () {
+        var li = document.createElement('li');
+
+        if (msg.value.length !== 0){
+            ol.appendChild(li);
+            li.innerHTML = msg.value + "<span>&nbsp;&nbsp;删除</span>";
+
+            var lis = document.getElementsByTagName('li');
+            console.log("lis====>:"+lis)
+            if(lis.length===0){
+                ol.appendChild(li);
+                count++;
+            }else {
+                ol.insertBefore(li,lis[0])
+                count++;
+            }
+            msg.value='';
+
+            var spanS = document.getElementsByTagName('span');
+            for (var i = 0;i<spanS.length;i++){
+                spanS[i].onclick = function () {
+                    ol.removeChild(this.parentNode);
+                    count --;
+                }
+            }
+
+        }else {
+            alert('内容不能为空')
+        }
+    };
+    function sum() {
+        alert("留言统计："+count+"条");
+    }
+
+
+
+</script>
+
+
+
+</html>
