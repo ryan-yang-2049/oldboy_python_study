@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28-父绝子绝-父相子绝-父固子绝</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 5px solid red;
+            margin: 100px;
+            padding: 50px;
+            position: absolute;
+        }
+
+        .box p{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<!--不仅仅是父相子绝，父绝子绝，父固子绝，都是以父辈元素为参考点
+    注意：父绝子绝没有实战意义，做站的时候不会出现父绝子绝，因为绝对定位是脱离标准流，影响页面布局。“父相子绝”在页面布局中是常用的布局方案，因为相对定位不脱离标准流，子元素设置绝对定位，仅仅是在当前父元素内调整位置信息。
+    -->
+<div class="box">
+    <p></p>
+</div>
+
+</body>
+</html>

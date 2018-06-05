@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-js-dom-点击有惊喜</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+
+        .box{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #84a42b;
+            background-color: #2e6da4;
+            font-size: 30px;
+            font-weight: 800;
+            margin: 30px auto;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    点击有惊喜！
+</div>
+</body>
+<script type="text/javascript">
+    var box = document.getElementsByClassName('box')[0];
+    var a = 0;
+
+    box.onclick = function () {
+        a++;
+        if(a%4===1){
+            this.style.background = 'green';
+            this.innerText = '继续点击！';
+        }else if(a%4===2){
+            this.style.background = 'blue';
+            this.innerText = '骗你的！';
+        }else if(a%4===3){
+            this.style.background = 'transparent';
+            this.innerText = '';
+        }else{
+            this.style.background = 'red';
+            this.innerText = '点击有惊喜';
+        }
+
+    }
+
+
+</script>
+</html>

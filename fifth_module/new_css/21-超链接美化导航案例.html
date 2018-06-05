@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21-超链接美化导航案例</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        .nav{
+            width: 960px;
+            margin: 100px auto 0;
+            /*height: 40px;*/
+            overflow: hidden;
+            background-color: #25CB33;
+        }
+        ul{
+            list-style: none;
+        }
+        .nav ul li{
+            float: left;
+            width: 160px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        /*a标签，不继承父元素的color*/
+        .nav ul li a{
+            display: block;
+            width: 160px;
+            height: 40px;
+            color: red;
+            text-decoration: none;
+        }
+        .nav ul li a:hover{
+            background-color: yellow;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <ul>
+        <li><a href="#">网站导航</a></li>
+        <li><a href="#">网站导航</a></li>
+        <li><a href="#">网站导航</a></li>
+        <li><a href="#">网站导航</a></li>
+        <li><a href="#">网站导航</a></li>
+        <li><a href="#">网站导航</a></li>
+    </ul>
+</div>
+</body>
+</html>

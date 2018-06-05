@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>30-绝对定位盒子居中</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        .box{
+            width: 100%;
+            height: 69px;
+            background-color: black;
+        }
+        .box .child{
+            width: 800px;
+            height: 69px;
+            background-color: pink;
+            /*子元素绝对定位时(此时 margin: 0 auto;不起任何作用)设置盒子居中
+            position：absolute;
+            left:50%
+            margin-left: width/2
+            */
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="child"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>29-绝对定位的盒子无视父辈的padding</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+
+        .father{
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            border: 10px solid red;
+            position: relative;
+            padding: 50px;
+
+        }
+
+        .father p{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<!--绝对定位的子盒子无视父辈的padding-->
+<div class="father">
+    <p></p>
+</div>
+</body>
+</html>

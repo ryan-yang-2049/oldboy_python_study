@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-js-DOM操作</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        html,body{height: 100%;}
+        .btn{
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .content{
+            width: 100%;
+            height: 100%;
+            background-color: #868686;
+        }
+
+        .main{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            top: 100px;
+            line-height: 200px;
+            background-color: #FFFFFF;
+            text-align: center;
+            color: red;
+            margin: auto;
+        }
+
+        .span1{
+            position: absolute;
+            background-color: greenyellow;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: black;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<button class="btn">弹出</button>
+
+</body>
+
+<script type="text/javascript">
+
+    var btn = document.getElementsByClassName('btn')[0];
+
+    var contentDiv = document.createElement('div');
+    var mainP = document.createElement('p');
+    var spanS = document.createElement('span');
+
+    contentDiv.classList.add('content');
+    mainP.classList.add('main');
+    mainP.innerHTML = '模态框成功弹出';
+
+    spanS.classList.add('span1');
+    spanS.innerHTML ='x';
+
+    contentDiv.appendChild(mainP);
+    mainP.appendChild(spanS);
+
+
+    btn.onclick = function () {
+        btn.parentNode.insertBefore(contentDiv,btn);
+        btn.style.display = "none";
+    };
+
+    spanS.onclick = function () {
+        contentDiv.parentNode.removeChild(contentDiv)
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

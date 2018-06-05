@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27-绝对定位以父辈元素为参考点</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 5px solid red;
+            margin: 100px;
+            padding: 50px;
+            /*position: relative;*/
+        }
+
+        .box2{
+            width: 300px;
+            height: 300px;
+            background-color: #25CB33;
+            position: relative;
+        }
+
+        .box p{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box2">
+        <p></p>
+    </div>
+</div>
+
+    <!--
+    父辈元素设置相对定位，子元素设置绝对定位，那么子元素会以父辈元素左上角为参考点
+    此时的父辈元指的是设置绝对元素的上一级设置了相对定位的父辈元素。
+    -->
+</body>
+</html>
