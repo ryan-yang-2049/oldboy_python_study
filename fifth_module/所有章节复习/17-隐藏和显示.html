@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+     <title>jQuery效果-slide</title> 
+    <style type="text/css">
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid rebeccapurple;
+            display: none;
+
+        }
+    </style>
+     
+</head>
+ 
+<body> 
+<div id="box"></div>
+ 
+<button id="btn">显示</button>
+ 
+</body>
+ 
+<script src="jquery-3.3.1.min.js"></script>
+ 
+<script type="text/javascript">
+
+    var isShow = true;
+    $('#btn').click(function () {
+        if (isShow) {
+            $('#box').slideDown(2000);
+            $('#box').html('slideDown');
+            $('button').html('隐藏');
+            isShow = false;
+        } else {
+            $('#box').slideUp(1000);
+            $('button').html('显示');
+            isShow = true;
+        }
+    });
+</script>
+</html>

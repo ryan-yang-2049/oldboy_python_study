@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+      <title>jQuery筛选选择器</title> 
+</head>
+ 
+<body> 
+<div id="box"> 
+    <p class="p1"> 
+        <span>我是第一个span标签</span> 
+        <span>我是第二个span标签</span> 
+        <span>我是第三个span标签</span> 
+    </p> 
+    <button>按钮</button>
+     
+</div>
+ 
+<ul> 
+    <li class="list">2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+ 
+</body>
+ 
+<script src="jquery-3.3.1.min.js"></script>
+ 
+<script type="text/javascript">
+
+    $(function () {
+        $('div').find('span').eq(2).css('background','red');
+        console.log($('div').find('span').html())
+    })
+</script>
+ 
+</html>

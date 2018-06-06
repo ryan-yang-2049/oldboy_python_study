@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+      <title>jQuery对象和DOM对象转换</title> 
+</head>
+ 
+<body> 
+<div id="box">  welcome to SH </div>
+ 
+<button>隐藏</button>
+ 
+</body>
+ 
+<script src="jquery-3.3.1.min.js"></script>
+ 
+<script type="text/javascript">
+
+    $(function () {
+        //DOM 对象转换成jquery对象以后，就可以使用jquery的方法
+        var oDiv = document.getElementById('box');
+        $(oDiv).click(function () {
+            $(this).css({'font-size':'24px','color':'red'});
+            console.log(this)
+        });
+
+        var isShow = true;
+
+        $('button').get(0).onclick = function () {
+            if (isShow){
+                $('#box').hide('slow',alert('隐藏了'));
+                $(this).html('显示');
+                isShow = false;
+            }else {
+                $('#box').show();
+                $(this).text('隐藏');
+                isShow = true;
+            }
+        }
+    })
+
+
+
+</script>
+ 
+</html>
