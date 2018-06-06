@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-5秒之后关闭广告</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        img{
+            position: fixed;
+            width: 200px;
+            height: 200px;
+        }
+
+        #left{left: 0;top:30px;}
+        #right{right: 0;top: 30px;}
+        p{font-size: 30px}
+    </style>
+</head>
+<body>
+<img src="./0.jpg" id="left">
+<img src="./1.jpg" id="right">
+<p>两情若是久长时，又岂在朝朝暮暮！</p>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        var left = document.getElementById('left');
+        var right = document.getElementById('right');
+
+        setTimeout(function () {
+            left.style.display = 'none';
+            right.style.display = 'none';
+
+        },5000)
+    }
+</script>
+</html>

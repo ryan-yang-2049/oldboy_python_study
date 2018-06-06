@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-无缝轮播图</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        ul{list-style: none;}
+        .box{
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+            background-color: yellow;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        .box ul {
+            width: 400%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box ul li{float: left;}
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="./0.jpg" alt=""></li>
+        <li><img src="./1.jpg" alt=""></li>
+        <li><img src="./2.jpg" alt=""></li>
+    </ul>
+</div>
+
+</body>
+<script type="text/javascript">
+    var box = document.getElementsByClassName('box')[0];
+    var ul = box.children[0];
+
+    var num = 0;
+    var time = null;
+    function autoPlay() {
+        num--;
+        num <= -305?num=0:num;
+        ul.style.left = num +'px';
+    }
+
+    time = setInterval(autoPlay,5);
+
+    box.onmouseover = function () {
+        clearInterval(time)
+    };
+
+    box.onmouseout =function () {
+        time = setInterval(autoPlay,5)
+    };
+
+
+
+
+</script>
+</html>
