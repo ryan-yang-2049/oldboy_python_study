@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿淘宝搜索框案例</title>
+      <style type="text/css">
+         *{padding: 0;margin: 0;}
+            .header{width: 100%;height: 50px;}
+            .header p{
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 30px;
+            }
+            .content{width: 100%;height: 50px;}
+            .content .search{
+                width: 40%;
+                height: 30px;
+                margin-left: 30%;
+                border: 1px solid black;
+                border-radius: 50px;
+                outline: none;
+            }
+      </style>
+   </head>
+<body style="width: 100%;height: 2000px">
+    <div class="header">
+        <p>仿淘宝搜索框案例</p>
+        <div class="content">
+        <input class="search" type="text" value="请输入搜索内容">
+        </div>
+    </div>
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var h = $('.header').height();
+        $(document).scroll(function () {
+            var scrollTOP =$(document).scrollTop();
+            if(h<scrollTOP){
+                $('.header').css({'position':'fixed','top':'0'})
+            }else {
+                $('.header').css({'position':'static','top':'0'})
+            }})
+    })
+</script>
+</html>

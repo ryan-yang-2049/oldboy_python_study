@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery的位置属性</title>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        #box1{position: relative;width: 200px;height: 200px;border: 1px solid red;padding: 10px 5px;}
+        #box2{width:200px;height:200px;margin-top:20px;border: 1px solid deepskyblue;}
+        p{position: absolute;left:30px;top:30px}
+    </style>
+</head>
+   <body style="height: 2000px; width: 2000px;">
+      <div id="box1">
+         <p>我是一个段落标签</p>
+      </div>
+      <button id="btn">动画吧</button>
+      <div id="box2" style=""></div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+    console.log($('#box2').offset());
+    console.log($('#box2').offset().top);
+    console.log($('#box2').offset().left);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+</script>
+</html>

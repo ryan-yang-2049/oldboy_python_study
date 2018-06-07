@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input中的value中的值</title>
+</head>
+<body>
+    <form action="">
+            <input type="radio" name="sex"  value="12" />男
+            <input type="radio" name="sex"  value="13" checked="" />女
+            <input type="radio" name="sex"  value="14" />gay
+
+            <input type="checkbox" value="a" checked=""/>吃饭
+            <input type="checkbox" value="b"/>睡觉
+            <input type="checkbox" value="c" checked=""/>打豆豆
+
+            <select name="timespan" id="timespan" class="Wdate" style="display: block;"  >
+                <option value="select1">8:00-8:30</option>
+                <option value="select2">8:30-9:00</option>
+                <option value="select3" selected="selected">9:00-9:30</option>
+            </select>
+            <input type="text" name="" id="" value="111" />
+    </form>
+
+
+    <input type="checkbox" class="input">
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // console.log($(':radio').val())
+
+        // console.log($('input[type=checkbox]:checked')[1])
+
+        // var obj = $('#timespan option:selected');
+
+        // console.log(obj.val())
+
+        $('input[type=radio]').val(['14'])
+
+        $('input[type=checkbox]').val(['b','c'])
+
+
+
+        console.log($('select').val())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+</script>
+</html>

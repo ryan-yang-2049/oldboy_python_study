@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery的筛选方法</title>
+    <style type="text/css">
+        .active{font-size: 30px;color: red;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="one">1</li>
+        <li class="two num">2</li>
+        <li class="three">3</li>
+        <li class="four num"><a href="#" class="four-a">4</a></li>
+        <a href="#" class="five">5</a>
+    </ul>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $('ul').children().each(function (index,ele) {
+        //     var name = $(this).hasClass('one');
+        //     if(name){
+        //         $(this).css({'color':'red'})
+        //     }else {
+        //         $(this).css({'font-size':'20px'})
+        //     }
+        //
+        // })
+        // console.log($('ul').children('.num'));
+
+
+
+        // console.log($('.four-a').parent());
+
+
+
+        // console.log($('li').last().prevAll())
+
+        console.log($('.four').siblings('a'))
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+</script>
+</html>

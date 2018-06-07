@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery操作-插入节点</title>
+</head>
+<body>
+    <span class="span1" style="display: block;color: red;">jquery文档操作</span>
+    <ul></ul>
+
+    <button>我是复制操作</button>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        var oLi = document.createElement('li');
+        oLi.innerHTML = '添加li节点';
+
+        //append 选择器添加什么什么元素
+        //append 添加到选择器选择的元素后面，还可以移动页面元素，原始位置的移动
+        $('ul').append('<li><a href="#">luffy</a></li>');
+        $('ul').append(oLi);
+
+        $('ul').append($('.span1'));
+
+
+        //appendTo 相当于把元素添加到什么什么后面
+        $('<li><a href="#">添加一个a标签</a></li>').appendTo($('ul'));
+
+
+        //prepend 把元素添加到指定选择器里面的最前面
+        $('ul').prepend('<li>我是用prepend添加的元素</li>');
+
+        $('<li>我是用prependTo添加的元素</li>').prependTo($('ul'));
+
+        //before / after  把元素添加到选择器的外部的 前面/后面
+        $('ul').before('<h2>我是用before添加的二级标题</h2>');
+        $('ul').after('<h3>我是用after添加的三级标题</h3>');
+
+
+        $('<h1>我是用insertBefore添加的一级标题</h1>').insertBefore($('h2'));
+        $('<h4>我是用insertAfter添加的四级标题</h4>').insertAfter($('h3'));
+
+
+        $('button').click(function () {
+            $('ul').clone(true).insertAfter($(this))
+        })
+
+
+
+        $('h3').replaceWith('<span style="color: #3e8f3e;font-size: 30px">我替换了h3标签</span>');
+
+        // $('<a href="#">我替换了button标签</a>').replaceAll($('button'));
+
+
+
+
+        // $('ul').empty();//清空所有子节点
+
+        // $('ul').remove(); //删除整个选择器的元素（包括本身）
+
+        var $oldBtn = $('button');
+        $oldBtn.detach();
+
+        $oldBtn.text('新增的btn')
+        $('h4').after($oldBtn[0])
+
+    })
+
+
+
+
+</script>
+
+</html>

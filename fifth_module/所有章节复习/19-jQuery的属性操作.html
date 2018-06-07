@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-jQuery的属性操作</title>
+    <style type="text/css">
+        .abc{
+            color: red;
+        }
+        .def{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>路飞学城</p>
+    </div>
+    <button>获取</button>
+
+    <ul>
+        <li class="luffy1">luffy1</li>
+        <li class="luffy2">luffy2</li>
+    </ul>
+
+    <div id="box2">
+        hello world!
+        <p>我是一个段落</p>
+        <a href="#">百度一下</a>
+        <input type="text" value="input" name="">
+    </div>
+
+</body>
+<script src="./jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $('#box2').html('<a href="#">百度一下</a>')
+
+        console.log($('input').val())
+
+        $('input').val('搜索查询');
+
+
+
+
+
+
+
+
+    })
+
+</script>
+</html>

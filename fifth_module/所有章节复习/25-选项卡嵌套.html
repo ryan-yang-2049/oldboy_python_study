@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22-案例-选项卡嵌套</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			ul{list-style: none;}
+			/*清除浮动产生的问题*/
+			#box:after{content: "";display: block;clear: both;}
+
+			#box{width: 400px;border: 1px solid black;margin: 20px auto;background: blue;}
+			#leftBox{width: 100px;float: left;}
+			#leftBox li{width: 100px;height: 89px;background: red;margin-bottom: 2px;color: white;font: 50px/89px "黑体";  text-align: center;}
+			#rightBox div{display: none;float: left; width: 300px;}
+			#rightBox p{width:100%;height: 325px;font: 100px/325px "黑体";text-align: center;background: greenyellow }
+
+			/*父元素设置display：table使它成为一个块级表格元素
+			  子元素设置display：table-cell使子元素成为表格单元格，就好比是在表格中一样*/
+			#rightBox ul{width: 300px;display: table;}
+            #rightBox li{display: table-cell;background: purple;height: 40px;border-right: 2px solid blue;font: 30px/40px "黑体";text-align: center;color: white;}
+            #leftBox .active{background: yellow;color: black;}
+            #rightBox .active{background: white;color: black;}
+
+		</style>
+	</head>
+<body>
+    <div id="box">
+        <ul id="leftBox">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ul>
+        <div id="rightBox">
+            <div style="display: block">
+                <p>a1</p>
+                <ul>
+                    <li class="active">a1</li>
+                    <li>a2</li>
+                    <li>a3</li>
+                    <li>a4</li>
+                </ul>
+            </div>
+            <div>
+                <p>b1</p>
+                <ul>
+                    <li class="active">b1</li>
+                    <li>b2</li>
+                    <li>b3</li>
+                    <li>b4</li>
+                </ul>
+            </div>
+            <div>
+                <p>c1</p>
+                <ul>
+                    <li class="active">c1</li>
+                    <li>c2</li>
+                    <li>c3</li>
+                    <li>c4</li>
+                    <li>c5</li>
+                    <li>c6</li>
+                </ul>
+            </div>
+        <div>
+        <p>d1</p>
+        <ul>
+            <li class="active">d1</li>
+            <li>d2</li>
+            <li>d3</li>
+            <li>d4</li>
+        </ul>
+    </div>
+</div>
+    </div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $('#leftBox li').mouseover(function () {
+            $(this).addClass('active').siblings('li').removeClass('active');
+
+
+            // console.log($(this).index())
+            $('#rightBox div').eq($(this).index()).show().siblings('div').hide();
+
+        });
+
+        $('#rightBox li').click(function () {
+            $(this).addClass('active').siblings('li').removeClass('active');
+
+            $(this).parent().prev().html($(this).html())
+        })
+
+    })
+
+
+</script>
+</html>

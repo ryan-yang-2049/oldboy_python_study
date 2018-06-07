@@ -34,6 +34,7 @@
         //3.生成索引（对应的图片序号）
         var str = '';
         $('li').each(function (ind,ele) {
+            console.log(ind)
             str += "<span>"+(ind+1)+"</span>";
         });
         $('p').html(str);
