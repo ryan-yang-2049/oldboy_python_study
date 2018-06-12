@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32-jQuery表单事件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .show{color: red;}
+    </style>
+</head>
+<body>
+    <form action="https://www.luffycity.com">
+        <select name="sweets" id="" multiple=''>
+            <option value="">巧克力</option>
+            <option value="" selected=''>糖果</option>
+            <option value="">焦糖</option>
+            <option value="" selected=''>曲奇饼</option>
+            <option value="">烧饼</option>
+            <option value="">麦香饼</option>
+            <option value="">曲奇饼2</option>
+        </select>
+        <input type="text" value="hello" id='target'>
+        <input type="submit" value="Luffy"/>
+        <input type="button" value="按钮" />
+    </form>
+    <textarea id="other1">Trigger the handler1</textarea>
+    <input id="other" type="text" value="Trigger the handler">
+    <div class="show"></div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $('select').change(function () {
+        //     $('.show').html($('select option:selected').html())
+        // })
+        // $('#other1').select(function () {
+        //     console.log($(this).val())
+        // })
+        //
+        //
+        // $('#other').select(function () {
+        //     console.log($(this).val())
+        // })
+
+        $('form').submit(function (ev) {
+            // ev.preventDefault();
+            // alert(111)
+        })
+
+
+
+    })
+</script>
+</html>
