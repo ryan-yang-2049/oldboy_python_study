@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="../第四章%20bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <style type="text/css">
+
+
+    </style>
+
+
+
+</head>
+<body>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="username">用户名</label>
+            <input type="text" class="form-control" id="username" placeholder="用户名">
+        </div>
+        <div class="form-group">
+            <label for="passwd">Password</label>
+            <input type="password" class="form-control" id="passwd">
+        </div>
+        <button type="submit" class="sub  btn btn-default" id='login'>登录</button>
+    </form>
+</div>
+</body>
+    <script src="jquery-3.3.1.min.js"></script>
+    <!--<script src="../第四章%20bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript">
+        $(function () {
+            var userName = 'admin';
+            var passWord = 'admin';
+
+            $('.sub').click(function (ev) {
+                ev.preventDefault();
+                var $username = $('#username').val();
+                var $passwd = $('#passwd').val();
+                if($username === userName && $passwd === passWord){
+                    alert('成功')
+                }else {
+                    alert('认证失败')
+                }
+
+            })
+
+        })
+
+
+    </script>
+</html>

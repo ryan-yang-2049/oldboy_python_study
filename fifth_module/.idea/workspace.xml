@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10766978-defb-4d8a-9801-fe6a9a66600a" name="Default" comment="">
+<<<<<<< Updated upstream
       <change beforePath="" afterPath="$PROJECT_DIR$/所有章节复习/26-jquery表单事件.html" />
       <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" />
@@ -24,6 +25,12 @@
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../python3_note_5-6module.docx" afterPath="$PROJECT_DIR$/../python3_note_5-6module.docx" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/考试/1-login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/考试/1-welcome.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/考试/jquery-3.3.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,33 +43,58 @@
     <SUITE FILE_PATH="coverage/fifth_module$02.coverage" NAME="02 Coverage Results" MODIFIED="1524708983860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/fifth_module$chart_view.coverage" NAME="chart_view Coverage Results" MODIFIED="1524644652602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file leaf-file-name="知识点" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/知识点">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+=======
+      <file leaf-file-name="1-login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/考试/1-login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="605">
+              <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="jquery-3.3.1.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/jquery-3.3.1.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <file leaf-file-name="README" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="47" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="npm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/bootstrap-3.3.7-dist/js/npm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <file leaf-file-name="1-welcome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/考试/1-welcome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -117,28 +149,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/01-JS基础/09 JS流程控制while.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/16-input中的value值.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/所有章节复习/13-省份城市二级联动.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/test.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/01-JS基础/09 JS流程控制while.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/所有章节复习/23-仿淘宝搜索框-scroll.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/所有章节复习/21-jquery文档操作.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_xiaomi/xiaomi.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第三章 jquery/15-jQuery属性操作-calss和值操作.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/14-jQuery的属性操作-attr和prop.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/所有章节复习/20-input中的value值.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/所有章节复习/07-选项卡.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第三章 jquery/10-jQuery效果-slide.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/test.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/所有章节复习/07-选项卡.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/所有章节复习/06-简易留言板.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/04-jquery层级选择器.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/06-jQuery属性选择器.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/17-jQuery文档操作-插入节点.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/14-jQuery的属性操作-attr和prop.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/13 城市二级联动.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/07-jQuery筛选选择器.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/16-input中的value值.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/第三章 jquery/03-jquery基础选择器.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第三章 jquery/09-jQuery效果-显示和隐藏.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/第三章 jquery/08-jQuery对象和DOM对象转换.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/07-jQuery筛选选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/06-jQuery属性选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/04-jquery层级选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/所有章节复习/23-仿淘宝搜索框-scroll.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/03-jquery基础选择器.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/第三章 jquery/17-jQuery文档操作-插入节点.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -192,8 +224,13 @@
         <option value="$PROJECT_DIR$/所有章节复习/24-jquery筛选方法.html" />
         <option value="$PROJECT_DIR$/所有章节复习/25-选项卡嵌套.html" />
         <option value="$PROJECT_DIR$/第三章 jquery/26-案例-动态实现轮播图.html" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/所有章节复习/26-jquery表单事件.html" />
         <option value="$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/知识点" />
+=======
+        <option value="$PROJECT_DIR$/考试/1-welcome.html" />
+        <option value="$PROJECT_DIR$/考试/1-login.html" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -203,10 +240,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="936" />
     <option name="height" value="1087" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -226,6 +269,7 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
+<<<<<<< Updated upstream
           <expand>
             <path>
               <item name="fifth_module" type="b2602c69:ProjectViewProjectNode" />
@@ -248,6 +292,82 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="考试" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第四章 bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第一章_HTML_CSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifth_module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第一章_HTML_CSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework_todolist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> Stashed changes
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,7 +387,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< Updated upstream
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\第四章 bootstrap\bootstrap复习" />
+=======
+      <recent name="$PROJECT_DIR$/考试" />
+>>>>>>> Stashed changes
       <recent name="$PROJECT_DIR$/所有章节复习" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\所有章节复习" />
       <recent name="D:\gitcode\oldboy_python_study\fifth_module\new_css" />
@@ -293,12 +417,31 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="JavaScript Debug.26-jquery表单事件.html">
     <configuration name="24-案例-焦点式轮播图.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery/24-案例-焦点式轮播图.html" />
     <configuration name="24-jquery筛选方法.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/所有章节复习/24-jquery筛选方法.html" />
     <configuration name="25-选项卡嵌套.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/所有章节复习/25-选项卡嵌套.html" />
     <configuration name="26-案例-动态实现轮播图.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery/26-案例-动态实现轮播图.html" />
     <configuration name="26-jquery表单事件.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/所有章节复习/26-jquery表单事件.html" />
+=======
+  <component name="RunManager" selected="JavaScript Debug.1-welcome.html">
+    <configuration default="false" name="25-选项卡嵌套.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/所有章节复习/25-选项卡嵌套.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="24-案例-焦点式轮播图.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery/24-案例-焦点式轮播图.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="26-案例-动态实现轮播图.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/第三章 jquery/26-案例-动态实现轮播图.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="1-login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/考试/1-login.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="1-welcome.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fifth_module/考试/1-welcome.html">
+      <method />
+    </configuration>
+>>>>>>> Stashed changes
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -395,6 +538,15 @@
       <module name="fifth_module" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -438,15 +590,8 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
     <list size="5">
+<<<<<<< Updated upstream
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.24-jquery筛选方法.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.25-选项卡嵌套.html" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.24-案例-焦点式轮播图.html" />
@@ -460,6 +605,21 @@
         <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.24-案例-焦点式轮播图.html" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.25-选项卡嵌套.html" />
         <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.24-jquery筛选方法.html" />
+=======
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.25-选项卡嵌套.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.24-案例-焦点式轮播图.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.26-案例-动态实现轮播图.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.1-login.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.1-welcome.html" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.1-welcome.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.1-login.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.26-案例-动态实现轮播图.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.24-案例-焦点式轮播图.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.25-选项卡嵌套.html" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
@@ -480,7 +640,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
@@ -490,21 +650,35 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3920751" sideWeight="0.49779493" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19625138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19170243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> Stashed changes
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39894736" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+<<<<<<< Updated upstream
+=======
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< Updated upstream
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
@@ -532,7 +706,11 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+<<<<<<< Updated upstream
     <option name="version" value="1" />
+=======
+    <option name="processedProjectFiles" value="true" />
+>>>>>>> Stashed changes
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -547,6 +725,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/new_css/20-水平盒子居中.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -625,6 +804,18 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/new_css/21-超链接美化导航案例.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/24-相对定位微调元素.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/23-相对定位的用途.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/22-相对定位的特性.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/25-绝对定位.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/26-绝对定位参考点.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/27-绝对定位以父辈元素为参考点.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/28-父绝子绝-父相子绝-父固子绝.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/29-绝对定位的盒子无视父辈的padding.html" />
+    <entry file="file://$PROJECT_DIR$/new_css/30-绝对定位盒子居中.html" />
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/所有章节复习/01-标签.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -646,20 +837,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/01 模态框案例.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/01 模态框案例.html" />
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/03 JavaScript/02-JS_DOm/03 简易留言板.html" />
     <entry file="file://$PROJECT_DIR$/所有章节复习/05-js-dom-点击有惊喜.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -709,13 +888,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
-          <caret line="108" column="18" lean-forward="false" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_chouti/index.html" />
     <entry file="file://$PROJECT_DIR$/所有章节复习/12-正反选.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -749,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,34 +971,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+<<<<<<< Updated upstream
           <folding>
             <element signature="n#style#0;n#select#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+=======
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/所有章节复习/21-jquery文档操作.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1088">
           <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <marker date="1528356486113" expanded="true" signature="1302:1332" ph="..." />
+=======
+        <state relative-caret-position="1024">
+          <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/第三章 jquery/20-防淘宝导航栏案例.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/所有章节复习/22-jquery位置属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/所有章节复习/23-仿淘宝搜索框-scroll.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="476">
+=======
+        <state relative-caret-position="448">
+>>>>>>> Stashed changes
           <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -844,7 +1040,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/所有章节复习/24-jquery筛选方法.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="680">
+=======
+        <state relative-caret-position="640">
+>>>>>>> Stashed changes
           <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding />
         </state>
@@ -852,7 +1052,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/第三章 jquery/22-案例-选项卡嵌套.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="306">
+=======
+        <state relative-caret-position="288">
+>>>>>>> Stashed changes
           <caret line="18" column="42" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="99" selection-end-column="7" />
           <folding />
         </state>
@@ -860,7 +1064,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/所有章节复习/25-选项卡嵌套.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1462">
+=======
+        <state relative-caret-position="1376">
+>>>>>>> Stashed changes
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
@@ -868,28 +1076,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/第三章 jquery/24-案例-焦点式轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="391">
           <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+=======
+        <state relative-caret-position="368">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三章 jquery/20-防淘宝导航栏案例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/第三章 jquery/26-案例-动态实现轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="480">
+=======
+        <state relative-caret-position="848">
+>>>>>>> Stashed changes
           <caret line="53" column="38" lean-forward="false" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/所有章节复习/26-jquery表单事件.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="43" />
+=======
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/4-Bootstrap的css全局样式一.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/所有章节复习/22-jquery位置属性.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -904,22 +1137,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/第四章 bootstrap/3-Bootstrap的栅格系统使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/考试/jquery-3.3.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/jquery-3.3.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/考试/1-welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/第四章 bootstrap/bootstrap复习/bootstrap-3.3.7-dist/js/npm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/考试/1-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一章_HTML_CSS/homework_todolist/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="47" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
