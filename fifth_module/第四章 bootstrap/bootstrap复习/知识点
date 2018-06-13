@@ -16,6 +16,7 @@
     localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
 
 3. form表单中input标签的readonly和disabled属性有何区别？
+    Readonly和Disabled是用在表单中的两个属性，它们都能够做到使用户不能够更改表单域中的内容。
     Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，包括select, radio, checkbox, button等。
 
 4. 简述form标签的功能和属性？
@@ -26,9 +27,15 @@
 5. 介绍一下CSS的盒子模型？
 
 6. display:none和visibility:hidden的区别是什么？
+    visibility: hidden----将元素隐藏，但是在网页中该占的位置还是占着。
+    display: none----将元素的显示设为无，即在网页中不占任何的位置。
+
 
 7. 设置一个div的最小宽度为100像素，最大高度为50像素
 
 8. CSS属性是否区分大小写？
+    - id名和class名是区分大小写的
+    - 选择器中，只有标签选择器不区分大小写
+    - 属性名和属性值是不区分大小写的
 
 9. 对行内元素设置margin-top 和margin-bottom是否起作用？
