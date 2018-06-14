@@ -74,7 +74,7 @@
 
 
     btn.onclick = function () {
-        btn.parentNode.insertBefore(contentDiv,btn);
+        this.parentNode.insertBefore(contentDiv,btn);
         btn.style.display = "none";
     };
 
