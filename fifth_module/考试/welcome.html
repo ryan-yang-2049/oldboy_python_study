@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+<p>welcome <span id ="span1"></span> </p>
+</body>
+<script type="text/javascript">
+
+    var userInfo = window.location.search;
+    var request = new Array();
+
+    if(userInfo.indexOf("?") !== -1){
+        var str = userInfo.substr(1);
+        var str2 = str.split("&");
+
+        for (var i =0;i<str2.length;i++){
+            request[str2[i].split("=")[0]] = str2[i].split("=")[1];
+        }
+
+    }
+    var span1 = document.getElementById('span1');
+    span1.innerHTML = request['username']
+
+
+
+</script>
+</html>
