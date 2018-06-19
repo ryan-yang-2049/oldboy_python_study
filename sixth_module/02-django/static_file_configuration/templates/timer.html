@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timer</title>
+    <style type="text/css">
+        h4{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h4>hi {{ ctime }}</h4>
+</body>
+
+<script src="/static/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('h4').click(function () {
+            $(this).css('color','green')
+        })
+    })
+</script>
+
+</html>

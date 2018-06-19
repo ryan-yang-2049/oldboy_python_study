@@ -1,0 +1,61 @@
+
+1.安装
+windows : python3 -m pip install  django===2.0.1
+
+django安装路径地址：C:\Python\Python36\Scripts
+
+linux : python3 install django===2.0.1
+django安装路径地址：/usr/local/python36/bin
+
+2.创建一个 django 项目
+创建一个文件夹用于存放django项目：my_pro
+然后执行
+windows：django-admin startproject mysite
+linux：django-admin.py startproject mysite
+
+3.会自动生成一些文件
+
+[root@dev mysite]# tree
+.
+├── manage.py  ----- Django项目里面的工具，通过它可以调用django shell和数据库等。
+└── mysite
+    ├── __init__.py
+    ├── settings.py  ---- 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。
+    ├── urls.py  ----- 负责把URL模式映射到应用程序。路由相关
+    └── wsgi.py  ----- 封装的socket，实际上，django走的第一环就是这个文件
+
+
+4.创建一个blog应用属于mysite项目
+cd mysite
+python3 manage.py startapp blog
+
+[root@dev mysite]# tree blog/
+blog/
+├── admin.py
+├── apps.py
+├── __init__.py
+├── migrations
+│   └── __init__.py
+├── models.py         ---- 数据库相关
+├── tests.py
+└── views.py          ---视图函数
+
+5.创建一个templates目录，用于存放html文件
+
+
+
+
+6.启动django项目
+python3 manage.py runserver 8080    (默认8000端口)
+
+
+
+
+
+
+
+
+
+
+
+

@@ -20,6 +20,16 @@ while True:
 	# HTTP/1.1 200 OK  相应首行
 	# 读取html文件
 	# POST 请求才有请求头数据
+
+	# 按照http请求协议解析数据
+
+	# 专注于web业务开发
+
+	# 按照http响应协议封装数据
+
+
+
+
 	with open('login.html','r') as f:
 		data = f.read()
 	conn.send(("HTTP/1.1 200 OK\r\n\r\n%s"%data).encode('utf8'))

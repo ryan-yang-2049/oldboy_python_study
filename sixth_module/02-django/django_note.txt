@@ -1,0 +1,231 @@
+django （python3 + django1.11）
+笔记来源：https://code.ziqiangxuetang.com/django/django-views-urls2.html
+安装：
+	pip install Django==1.11
+	pip install --upgrade pip
+	
+	检查是否安装成功
+		>>> import django
+		>>> django.VERSION
+		(1, 11, 0, 'final', 1)
+	
+搭建多个互不干扰的开发环境（可选）
+	环境搭建：
+		 安装:pip install virtualenv virtualenvwrapper
+	
+	环境变量：/root/.basr_profile
+		export WORKON_HOME=$HOME/.virtualenvs
+		export PROJECT_HOME=$HOME/workspace
+		source /usr/local/bin/virtualenvwrapper.sh
+		使之生效：source ~/.bash_profile
+	
+	使用方法
+			mkvirtualenv zqxt：创建运行环境zqxt
+			workon zqxt: 工作在 zqxt 环境 或 从其它环境切换到 zqxt 环境
+			deactivate: 退出终端环境
+			其它的：
+			rmvirtualenv ENV：删除运行环境ENV
+			mkproject mic：创建mic项目和运行环境mic
+			mktmpenv：创建临时运行环境
+			lsvirtualenv: 列出可用的运行环境
+			lssitepackages: 列出当前环境安装了的包
+			创建的环境是独立的，互不干扰，无需sudo权限即可使用 pip 来进行包的管理。
+			
+基本命令
+	新建一个 django project
+		django-admin.py startproject project_name   #特别是在 windows 上，如果报错，尝试用 django-admin 代替 django-admin.py 试试	
+
+	新建 app
+		python manage.py startapp app_name 或 django-admin.py startapp app_name
+		#一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。与项目名类似 app name 也需要为合法的 Python 包名，如 blog，news, aboutus 等都是合法的 app 名称。
+	
+	创建数据库表 或 更改数据库表或字段
+		Django 1.7.1及以上 用以下命令
+		# 1. 创建更改的文件
+		python manage.py makemigrations
+		# 2. 将生成的py文件应用到数据库
+		python manage.py migrate
+		#旧版本的Django 1.6及以下用
+		python manage.py syncdb
+		这种方法可以在SQL等数据库中创建与models.py代码对应的表，不需要自己手动执行SQL。
+
+	使用开发服务器
+		#开发服务器，即开发时使用，一般修改代码后会自动重启，方便调试和开发，但是由于性能问题，建议只用来测试，不要用在生产环境。
+		python manage.py runserver
+
+		# 当提示端口被占用的时候，可以用其它端口：
+		python manage.py runserver 8001
+		python manage.py runserver 9999
+		（当然也可以kill掉占用端口的进程）
+		 
+		# 监听机器所有可用 ip （电脑可能有多个内网ip或多个外网ip）
+		python manage.py runserver 0.0.0.0:8000
+		# 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器
+		# 访问对应的 ip加端口，比如 http://172.16.20.2:8000
+
+	清空数据库
+		python manage.py flush
+		#此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表
+	
+	创建超级管理员
+		python manage.py createsuperuser
+		# 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填
+		# 修改 用户密码可以用：
+		python manage.py changepassword username
+	
+	导出数据 导入数据
+		python manage.py dumpdata appname > appname.json
+		python manage.py loaddata appname.json
+
+	Django 项目环境终端
+		python manage.py shell
+	
+	数据库命令行
+		python manage.py dbshell #Django 会自动进入在settings.py中设置的数据库，如果是 MySQL 或 postgreSQL,会要求输入数据库用户密码。
+		
+	更多命令
+		端上输入 python manage.py 可以看到详细的列表
+			
+			
+Django 视图与网址（Django下实现HelloWorld）
+
+
+	环境：阿里云服务器
+	1.创建一个项目
+		在根目录下运行
+		django-admin.py startproject first_project
+		cd first_project
+		python manage.py  runserver 0.0.0.0:8082
+		#提示：当在阿里云下运行，如果不指定0.0.0.0的ip时，会访问不了，因此，要在settings.py 里面添加一行 ALLOEWD_HOSTS = '*',然后在运行 python manage.py  runserver 0.0.0.0:8082
+		
+		此时访问 IP:PORT 就可以得到 Congratulations on your first Django-powered page.
+		
+	2.在项目中创建一个APP		
+		[root@dev first_project]# python manage.py startapp blog	
+			
+		创建的blog的目录结构介绍：
+			blog/
+			├── admin.py			#该应用的后台管理系统配置
+			├── apps.py				#该应用的一些配置（django-1.9后自动生成）
+			├── __init__.py			#python声明模块的文件，内容默认为空
+			├── migrations			#数据移植（迁移）模块，内容自动生成
+			│   └── __init__.py		
+			├── models.py			#数据模型模块，使用ORM框架（类似于MVC结构中的models）
+			├── tests.py			#自动化测试模块；django提供了自动化测试功， 在这里编写测试脚本（语句）
+			└── views.py			#执行响应的代码所在模块；代码逻辑处理的主要地点；项目中大部分代码均在这里编写
+
+		接下来我们添加应用名字到first_project文件夹下的setting.py中的INSTALLED_APPS 	
+		
+			INSTALLED_APPS = [
+				'django.contrib.admin',
+				'django.contrib.auth',
+				'django.contrib.contenttypes',
+				'django.contrib.sessions',
+				'django.contrib.messages',
+				'django.contrib.staticfiles',
+				'blog',
+			]
+
+		接下来修改 blog/views.py
+			[root@dev first_project]# cat blog/views.py
+			from django.shortcuts import render
+			from django.http import HttpResponse
+
+			def index(request):
+				return HttpResponse('Hello,World!')
+			
+		修改myblog/urls.py
+			from django.conf.urls import url
+			from django.contrib import admin
+
+			import blog.views as bv
+
+			urlpatterns = [
+				url(r'^admin/', admin.site.urls),
+				url(r'^index/',bv.index)]	     #访问地址：http://101.132.161.180:8082/index/
+				url(r'^$',bv.index)]			 #访问地址：http://101.132.161.180:8082
+
+	3.运行程序
+		python manage.py  runserver 0.0.0.0:8082 &
+
+		访问：http://101.132.161.180:8082/index/ 即可看到页面显示“Hello World!”
+
+Django 视图与网址进阶（计算机实现）		
+	1.新建项目
+		django-admin.py startproject calc_views
+	2.在项目中新建APP
+		python manage.py startapp calc
+
+	3.结构目录树如下
+			[root@dev calc_views]# tree
+		.
+		├── calc
+		│   ├── admin.py
+		│   ├── apps.py
+		│   ├── __init__.py
+		│   ├── migrations
+		│   │   └── __init__.py
+		│   ├── models.py
+		│   ├── __pycache__
+		│   │   ├── __init__.cpython-36.pyc
+		│   │   └── views.cpython-36.pyc
+		│   ├── tests.py
+		│   └── views.py
+		├── calc_views
+		│   ├── __init__.py
+		│   ├── __pycache__
+		│   │   ├── __init__.cpython-36.pyc
+		│   │   ├── settings.cpython-36.pyc
+		│   │   ├── urls.cpython-36.pyc
+		│   │   └── wsgi.cpython-36.pyc
+		│   ├── settings.py
+		│   ├── urls.py
+		│   └── wsgi.py
+		├── db.sqlite3
+		└── manage.py
+	4.修改 calc/views.py文件
+		[root@dev calc_views]# cat calc/views.py 
+		from django.shortcuts import render
+		from django.http import HttpResponse
+
+		def add(request):
+			a = request.GET['a']
+			b = request.GET['b']
+			c = int(a) + int(b)
+			return HttpResponse(str(c))
+		#注：request.GET 类似于一个字典，更好的办法是用 request.GET.get('a', 0) 当没有传递 a 的时候默认 a 为 0
+	5.接着修改 calc_views/urls.py 文件，添加一个网址来对应我们刚才新建的视图函数。
+		[root@dev calc_views]# cat calc_views/urls.py
+		from django.conf.urls import url
+		from django.contrib import admin
+
+		from calc import views as cv
+		urlpatterns = [
+			url(r'^admin/', admin.site.urls),
+			url(r'^add/$',cv.add,name='add'),]    # 注意修改了这一行
+
+	6.修改 calc_views/settings.py 
+		添加 ALLOEWD_HOSTS = '*' 能够 python manage.py runserver 0.0.0.0:8082 & 能够运行
+		
+		
+	7.访问
+		http://127.0.0.1:8000/add/  访问报错：MultiValueDictKeyError at /add/ 说明是没加参数
+		http://101.132.161.180:8082/add/?a=4&b=5  就可以在页面显示得到结果为 9
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
