@@ -6,14 +6,14 @@
 
 
 from wsgiref.simple_server import make_server
-
+from  urls import  url_patterns
 
 
 def application(environ, start_response):
 	path = environ.get("PATH_INFO")
 	start_response('200 OK', [('Content-Type', 'text/html')])
 	print(path)
-	from  urls import  url_patterns
+
 
 
 	func = None
