@@ -12,6 +12,7 @@ from app01 import  views            #导入对应应用的视图
 
 
 urlpatterns = [
+	re_path("index/",views.index,name="index"),
 	re_path(r'^articles/2003/$', views.special_case_2003,name='s_c_2003'),
 	re_path(r'^articles/([0-9]{4})/$',views.year_archive,name='y_a'),
 	re_path(r'^articles/([0-9]{4})/([1-9]{1}|1[0-2]{1})/$', views.month_archive),

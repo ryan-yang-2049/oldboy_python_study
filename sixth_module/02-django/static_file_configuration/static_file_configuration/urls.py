@@ -41,21 +41,40 @@ Including another URLconf
 # ]
 
 
-from django.contrib import admin
-from django.urls import path,re_path,include
-from app01 import  views            #导入对应应用的视图
+# from django.contrib import admin
+# from django.urls import path,re_path,include,register_converter
+# from app01 import  views            #导入对应应用的视图
+# from app01.urlconverter import MonConvert
+#
+#
+# register_converter(MonConvert,"mm")
+#
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+# 	path('timer/',views.timer),     #添加路由转发
+# 	path('login/',views.login,name="Login"),
+# 	path('articles/<path:year>/',views.path_year),
+# 	path('app01/',include(('app01.urls',"app01"))),
+# 	path('app02/',include(('app02.urls',"app02"))),
+# 	path('month/<mm:month>',views.path_month)
+# ]
 
+
+
+from django.contrib import admin
+from django.urls import path,re_path,include,register_converter
+from app01 import  views            #导入对应应用的视图
+# 导入
+from app01.urlconverter import MonConvert
+
+# 注册
+register_converter(MonConvert,"mm")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('timer/',views.timer),     #添加路由转发
-	path('login/',views.login,name="Login"),
-	path('app01/',include('app01.urls'))
+	# 匹配
+	path('month/<mm:month>',views.path_month)
 ]
-
-
-
-
 
 
 

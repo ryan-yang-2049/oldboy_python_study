@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-
+from django.urls import  reverse
 # Create your views here.
 
 
@@ -8,7 +8,7 @@ def timer(request):
 	ctime = time.time()
 	return  render(request,'timer.html',{"ctime":ctime})
 
-from django.urls import  reverse
+
 def special_case_2003(request):
 	# HttpResponse 响应对象
 	url = reverse('s_c_2003')
@@ -53,11 +53,16 @@ def login(request):
 			return HttpResponse('登陆失败')
 
 
+def index(request):
+
+	return HttpResponse(reverse("app01:index"))
+
+def path_year(request,year):
+	print(year)
+	print(type(year))
+	return HttpResponse("year:%s"%(year))
 
 
+def path_month(request,month):
 
-
-
-
-
-
+	return HttpResponse("month:%d"%month)
