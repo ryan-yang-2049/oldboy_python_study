@@ -5,22 +5,25 @@
     <title>index</title>
 </head>
 <body>
+{#<h3>模板语法</h3>#}
+{#    <p>{{ name }}</p>#}
+{#    <p>{{ i }}</p>#}
+{#    <p>{{ l }}</p>#}
+{#    <p>{{ info }}</p>#}
+{#    <p>{{ ryan }}</p>#}
+{#    <p>{{ person_list }}</p>#}
+{#    <p>{{ b }}</p>#}
+{#    <hr>#}
+{#    深度查询#}
+{#    <p>{{ l.1 }}</p>#}
+{#    <p>{{ info.name }}</p>#}
+{#    <p>{{ ryan.age }}</p>#}
+{#    <p>{{ person_list.1.name.upper }}</p>#}
+<h3>过滤器</h3>
+    {{ now|date:"Y-m-d"  }}
 
-<h3>模板语法</h3>
 
-<p>{{ name }}</p>
-<p>{{ i }}</p>
-<p>{{ l }}</p>
-<p>{{ info }}</p>
-<p>{{ ryan }}</p>
-<p>{{ person_list }}</p>
-<p>{{ b }}</p>
-<hr>
-深度查询
-<p>{{ l.1 }}</p>
-<p>{{ info.name }}</p>
-<p>{{ ryan.age }}</p>
-<p>{{ person_list.1.age }}</p>
+
 
 
 </body>

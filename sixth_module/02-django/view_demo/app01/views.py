@@ -35,36 +35,39 @@ def welcome(request):
 # 	return render(request,'index.html',dic)  # index.html:模板文件
 	# render 先拿到模板文件，渲染成模板文件，转换成HTML文件以后才发送给用户。
 
-
+#
+#
+# def index(request):
+# 	'''
+# 	模板语法：
+# 		变量：{{}}
+# 			1. 深度查询  句点符
+# 			2. 过滤器
+#
+#
+# 		标签：{% %}
+# 	:param request:
+# 	:return:
+# 	'''
+#
+# 	name = 'ryan'
+# 	i = 10
+# 	l = [11,22,33]
+# 	info = {"name":"ryan","age":22}
+# 	b = True
+# 	class Person(object):
+# 		def __init__(self,name,age):
+# 			self.name=name
+# 			self.age = age
+#
+# 	ryan = Person("ryan",22)
+# 	cherry = Person("cherry",18)
+#
+# 	person_list = [ryan,cherry]
 
 def index(request):
-	'''
-	模板语法：
-		变量：{{}}
-			1. 深度查询  句点符
-			2. 过滤器
-
-
-		标签：{% %}
-	:param request:
-	:return:
-	'''
-
-	name = 'ryan'
-	i = 10
-	l = [11,22,33]
-	info = {"name":"ryan","age":22}
-	b = True
-	class Person(object):
-		def __init__(self,name,age):
-			self.name=name
-			self.age = age
-
-	ryan = Person("ryan",22)
-	cherry = Person("cherry",18)
-
-	person_list = [ryan,cherry]
-
+	import datetime
+	now = datetime.datetime.now()     # 2018-06-21 14:02:42.585698
 	return render(request,'index.html',locals())
 
 
