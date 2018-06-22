@@ -21,9 +21,15 @@ from app01 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+	path('login/',views.login),
+	path('orders/',views.orders),
+
 	re_path(r"index/",views.index,name="index"),
 	re_path(r"^$",views.index,name="index"),
 	re_path(r"welcome/",views.welcome,name="welcome"),
+
+
+
 ]
 
 

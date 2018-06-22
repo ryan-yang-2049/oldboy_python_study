@@ -37,43 +37,62 @@ def welcome(request):
 
 #
 #
-# def index(request):
-# 	'''
-# 	模板语法：
-# 		变量：{{}}
-# 			1. 深度查询  句点符
-# 			2. 过滤器
-#
-#
-# 		标签：{% %}
-# 	:param request:
-# 	:return:
-# 	'''
-#
-# 	name = 'ryan'
-# 	i = 10
-# 	l = [11,22,33]
-# 	info = {"name":"ryan","age":22}
-# 	b = True
-# 	class Person(object):
-# 		def __init__(self,name,age):
-# 			self.name=name
-# 			self.age = age
-#
-# 	ryan = Person("ryan",22)
-# 	cherry = Person("cherry",18)
-#
-# 	person_list = [ryan,cherry]
-
 def index(request):
+	'''
+	模板语法：
+		变量：{{}}
+			1. 深度查询  句点符
+			2. 过滤器
+
+
+		标签：{% %}
+	:param request:
+	:return:
+	'''
+
+	name = 'ryan'
+	i = 20
+	l = [11,22,33]
+	info = {"name":"ryan","age":22}
+	b = True
+	class Person(object):
+		def __init__(self,name,age):
+			self.name=name
+			self.age = age
+
+	ryan = Person("ryan",22)
+	cherry = Person("cherry",18)
+
+	person_list = [ryan,cherry]
 	import datetime
 	now = datetime.datetime.now()     # 2018-06-21 14:02:42.585698
+
+	file_size = 10240000
+	text = "welcome to SH, this is a beautiful city"
+
+	link = "<a href=''>click</a>"
+
+	#####################标签#####################
+
+	user="ryan"
+
+
 	return render(request,'index.html',locals())
 
 
+def login(request):
+
+	if request.method == "POST":
+		return render(request,'welcome.html')
+
+	return  render(request,"login.html")
 
 
 
+
+def orders(request):
+
+	return render(request,'orders.html')
 
 
 
