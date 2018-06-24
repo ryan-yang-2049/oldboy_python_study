@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>orders.html</title>
-</head>
-<body>
-<h4>订单</h4>
-{% include 'index.html' %}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>订单页面</title>
+{% endblock title%}
+
+{% block con %}
+    {{ block.super }}
+    <h3>订单</h3>
+    <a href="#" style="display: block">我是a标签</a>
+    {{ block.super }}
+{% endblock %}

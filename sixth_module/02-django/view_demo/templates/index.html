@@ -1,4 +1,10 @@
-<div class="col-md-9">
+{% extends 'base.html' %}
+{% block title %}
+    <title>index11</title>
+{% endblock %}
+
+{% block con %}
+
     <h3>模板语法</h3>
     <p>{{ name }}</p>
     <p>{{ i }}</p>
@@ -14,31 +20,31 @@
     <p>{{ ryan.age }}</p>
     <p>{{ person_list.1.name.upper }}</p>
     <h3>过滤器</h3>
-    <p>{{ now|date:"Y-m-d"  }}</p>
+    <p>{{ now|date:"Y-m-d" }}</p>
     <p>{{ person_list|default:"数据为空" }}</p>
     <p>{{ file_size|filesizeformat }}</p>
 
     <p>{{ text|truncatechars:10 }}</p>
     <p>{{ text|truncatewords:4 }}</p>
 
-    <p>{{ link}}</p>
+    <p>{{ link }}</p>
 
     <h3>for标签</h3>
     {% for i in l %}
         <p>{{ i }}</p>
     {% endfor %}
 
-    {% for i in info  %}
+    {% for i in info %}
         <p>{{ i }}</p>
     {% endfor %}
     <hr>
     {% for person in person_list %}
-        <p>序号:{{ forloop.counter }}  姓名：{{ person.name }}年龄：{{ person.age }}</p>
+        <p>序号:{{ forloop.counter }} 姓名：{{ person.name }}年龄：{{ person.age }}</p>
     {% endfor %}
     <hr>
 
     {% for person in person_list_undefine %}
-        <p>序号:{{ forloop.counter0 }}  姓名：{{ person.name }}年龄：{{ person.age }}</p>
+        <p>序号:{{ forloop.counter0 }} 姓名：{{ person.name }}年龄：{{ person.age }}</p>
     {% empty %}
         <p>undefine or list is empty</p>
     {% endfor %}
@@ -55,7 +61,7 @@
 
     <hr>
     <h3>with标签 --取别名</h3>
-    {% with person_list.1.name as n  %}
+    {% with person_list.1.name as n %}
         <p>姓名：{{ n }}</p>
 
     {% endwith %}
@@ -64,7 +70,7 @@
     <h3>自定义过滤器,标签</h3>
     {% load my_tags_filter %}
     {#自定义的过滤器#}
-    <p>{{ i | multi_filter:20}}</p>
+    <p>{{ i | multi_filter:20 }}</p>
     {#自定义的标签#}
     <p>{% multi_tag 7 9 %}</p>
 
@@ -75,4 +81,6 @@
     {% else %}
         <p>{{ i }}</p>
     {% endif %}
-</div>
+
+
+{% endblock %}
