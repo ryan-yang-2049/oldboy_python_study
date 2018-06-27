@@ -49,30 +49,29 @@ def index(request):
 	# print(book_list[1].title,book_list[1].price)   #php 150.00
 
 	# (2) first，last 方法 : 调用者：queryset对象，返回值：model对象
-	print(Book.objects.all().first())  # 结果：python红宝书  。相当于 Book.objects.all()[0]
-	print(Book.objects.all().last()) # 结果：python3
+	# print(Book.objects.all().first())  # 结果：python红宝书  。相当于 Book.objects.all()[0]
+	# print(Book.objects.all().last()) # 结果：python3
 
 	# (3) filter()  返回值：queryset对象
-	# print(Book.objects.filter(title='php'))
-	# print(Book.objects.filter(price=100))  #<QuerySet [<Book: python红宝书>, <Book: go>]>
-	#
+	# print(Book.objects.filter(title='php')) # <QuerySet [<Book: php>]>
+	# print(Book.objects.filter(price=100))  # <QuerySet [<Book: python红宝书>, <Book: go>, <Book: python2.7>]>
 	# book_obj = Book.objects.filter(price=100).first()
 	# print(book_obj)   # python红宝书
-	# print(Book.objects.filter(title='go',price=150))   # 过滤多个条件
+	# print(Book.objects.filter(title='go',price=150))   # <QuerySet []>  过滤多个条件，逗号表示 and
 
 	# (4) get() 有且只有一个查询结果时才有意义 返回值：model对象
 	# 没有返回值报错，超过一个查询结果也报错。
-	# book_obj = Book.objects.get(title='go')
-	# print(book_obj.price)
+	# book_obj = Book.objects.get(title='java')
+	# print(book_obj.price)  #200.00
 
 	# (5)exclude  排除  返回值：queryset对象
-	# print(Book.objects.exclude(title='go'))
+	# print(Book.objects.exclude(price__in=[100,150,200]))  # <QuerySet [<Book: go>]>
 
 	# (6)order_by 排序 ,调用者：queryset对象 ,返回值：QuerySet 对象    降序 在字段前面加 “-”
-	# ret = Book.objects.all().order_by("-id")  #按照 ID 降序排列
-	# ret = Book.objects.all().order_by("-price")  # 价格排序
-	# ret = Book.objects.all().order_by("price","id")  # 按照价格,id排序，(先排序价格，如果相同，在排序ID)
-	# print(ret)
+	# ret1 = Book.objects.all().order_by("-id")  #按照 ID 降序排列
+	# ret2 = Book.objects.all().order_by("-price")  # 价格排序
+	# ret3 = Book.objects.all().order_by("price","id")  # 按照价格,id排序，(先排序价格，如果相同，在排序ID)
+	# print(ret1)
 
 	# (7) reverse   对查询结果反向排序
 
@@ -81,89 +80,93 @@ def index(request):
 	# print(ret)
 
 	# (9) exists() 如果QuerySet包含数据，就返回True，否则返回False
-	# ret = Book.objects.exclude(title='go').exists()
-	# ret = Book.objects.all().exists()
-	# print(ret)
+	# ret1 = Book.objects.exclude(title='go').exists()
+	# ret2 = Book.objects.all().exists()
+	# print(ret1)  # True
+	# print(ret2)  # True
 
 	# (10) values 方法(很重要):返回一个ValueQuerySet——一个特殊的QuerySet，运行后得到的并不是一系列model的实例化对象，而是一个可迭代的字典序列
 	# 调用对象：queryset对象 ； 返回值：queryset对象
-	# '''
-	# values：工作原理
-	# temp = []
-	# for obj in Book.objects.all():
-	# 	temp.append({
-	# 		"price"=obj.price
-	#       "title"=obj.title
-	# 	})
-	# return temp
-	# '''
-	# ret = Book.objects.all().values("price","title")
-	# # <QuerySet [{'price': Decimal('100.00'), 'title': 'python红宝书'}, {'price': Decimal('150.00'), 'title': 'php'}, {'price': Decimal('200.00'), 'title': 'java'}, {'price': Decimal('100.00'), 'title': 'go'}, {'price': Decimal('180.00'), 'title': 'go'}]>
+	'''
+	values：工作原理
+	temp = []
+	for obj in Book.objects.all():
+		temp.append({
+			"price"=obj.price
+	      "title"=obj.title
+		})
+	return temp
+	'''
+	# ret = Book.objects.all().filter(price=150).values("price","title")
+	# print(ret)
+	# #结果： <QuerySet [{'price': Decimal('150.00'), 'title': 'php'}, {'price': Decimal('150.00'), 'title': 'python3'}]>
 	#
-	# print(ret[1].get('price'))
+	# print(ret[0].get('price'))  #150.00
 
 
 	# (11) values_list(*field):   它与values()非常相似，它返回的是一个元组序列，values返回的是一个字典序列
-	# ret = Book.objects.all().values_list("price","title")
-	# <QuerySet [(Decimal('100.00'), 'python红宝书'), (Decimal('150.00'), 'php'), (Decimal('200.00'), 'java'), (Decimal('100.00'), 'go'), (Decimal('180.00'), 'go')]>
+	# ret = Book.objects.all().filter(price=150).values_list("price","title")
 	# print(ret)
+	# 结果：<QuerySet [(Decimal('150.00'), 'php'), (Decimal('150.00'), 'python3')]>
 
 	# (12) distinct  从返回结果中剔除重复纪录
 	#
 	# ret = Book.objects.all().values('price').distinct()
-	# print(ret)
+	# print(ret) #<QuerySet [{'price': Decimal('100.00')}, {'price': Decimal('150.00')}, {'price': Decimal('200.00')}, {'price': Decimal('180.00')}]>
 
 	# ========================================查询表记录--模糊查询========================================
 	# 大于100 小于200
-	# ret = Book.objects.filter(price__gt=100,price__lt=200)    # <QuerySet [<Book: php>, <Book: go>]>
-	# print(ret)
+	# ret = Book.objects.filter(price__gt=150,price__lt=200)
+	# print(ret) #<QuerySet [<Book: go>]>
 
 	# 以什么什么开头/结尾的书籍
-	# ret = Book.objects.filter(title__startswith='py') # <QuerySet [<Book: python红宝书>]>
-	# ret2 = Book.objects.filter(title__endswith='va')   # <QuerySet [<Book: java>]>
-	# print(ret)
+	# ret = Book.objects.filter(title__startswith='py')
+	# ret2 = Book.objects.filter(title__endswith='va')
+	# print(ret)  # <QuerySet [<Book: python红宝书>, <Book: python2.7>, <Book: python3>]>
+	# print(ret2) # <QuerySet [<Book: java>]>
 
 	# 包含什么什么的书籍  (title__icontains 不区分大小写)
-	# print(Book.objects.filter(title__contains='o'))  #<QuerySet [<Book: python红宝书>, <Book: go>, <Book: go>]>
+	# print(Book.objects.filter(title__contains='py'))  #<QuerySet [<Book: python红宝书>, <Book: python2.7>, <Book: python3>]>
 
 	# in 在列表里面的值
-	# print(Book.objects.filter(price__in=[100,200])) #<QuerySet [<Book: python红宝书>, <Book: java>, <Book: go>]>
+	# print(Book.objects.filter(price__in=[150,200])) #<QuerySet [<Book: python红宝书>, <Book: go>, <Book: java>, <Book: python2.7>]>
 
 	# 在什么什么区间范围
-	# print(Book.objects.filter(price__range=[150,180]))
+	# print(Book.objects.filter(price__range=[150,200])) #<QuerySet [<Book: php>, <Book: java>, <Book: go>, <Book: python3>]>
 
 	# 查询年份,月份
-	# print(Book.objects.filter(pub_date__year=2012,pub_date__month=12))   #<QuerySet [<Book: python红宝书>]>
+	# print(Book.objects.filter(pub_date__year=2012,pub_date__month=12))   #<QuerySet [<Book: python红宝书>, <Book: python2.7>]>
 
 
 	# ========================================单表 删除记录和修改记录========================================
 	# delete： 调用者：queryset对象  model对象
 	# delete调用queryset对象
-	# ret = Book.objects.filter(price__range=[100,200]).delete()
-	# print(ret)
+	# ret = Book.objects.filter(price__range=[150,200]).delete()
+	# print(ret)  #(4, {'app01.Book': 4})
 	# delete调用model对象
-	# Book.objects.filter(price=100).first().delete()
-
+	# ret = Book.objects.filter(price=100).first().delete()
+	# print(ret) # (1, {'app01.Book': 1})
 	# 更新/修改  update ， update只能是queryset 去调用
-	# Book.objects.filter(title="go",price=180).update(title="JavaScript")
+	ret = Book.objects.filter(title="go").update(price=150)
+	print(ret,type(ret)) # 1 <class 'int'>
 
 	return HttpResponse("OK")
 
 def query(request):
 	# 查询老男孩出版社出版过的价格大于200的书籍
-	# ret =Book.objects.filter(publish="老男孩出版社",price__gt=200)
+	ret =Book.objects.filter(publish="老男孩出版社",price__gt=200)
 
 	# 查询2017年8月出版的所有以py开头的书籍名称
-	# ret = Book.objects.filter(title__startswith='py',pub_date__year=2017,pub_date__month=8).values("title")
+	ret = Book.objects.filter(title__startswith='py',pub_date__year=2017,pub_date__month=8).values("title")
 
 	# 查询价格为50, 100 或者150的所有书籍名称及其出版社名称
-	# Book.objects.filter(price__in=[50,100,150]).values("title","publish")
+	Book.objects.filter(price__in=[50,100,150]).values("title","publish")
 
 	# 查询价格在100到200之间的所有书籍名称及其价格
-	# Book.objects.filter(price__range=[100,200]).values("title","price")
+	Book.objects.filter(price__range=[100,200]).values("title","price")
 
 	# 查询所有人民出版社出版的书籍的价格（从高到低排序，去重）
-	# Book.objects.filter(publish="人民出版社").values("price").distinct().order_by("-price")
+	Book.objects.filter(publish="人民出版社").values("price").distinct().order_by("-price")
 
 
 	return HttpResponse("OK")
