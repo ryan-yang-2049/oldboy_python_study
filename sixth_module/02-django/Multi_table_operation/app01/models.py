@@ -37,3 +37,6 @@ class Author(models.Model):
 
 	# 与AuthorDetail建立一对一的关系  to_field 默认关联主键
 	authordetail=models.OneToOneField(to="AuthorDetail",to_field="nid", on_delete=models.CASCADE)
+
+	def __str__(self):
+		return self.name
