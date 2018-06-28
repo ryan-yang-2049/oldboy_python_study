@@ -56,26 +56,26 @@ def add(request):
 	return HttpResponse("ok")
 
 
-# def query(request):
-# 	"""
-# 	跨表查询：
-# 		1.基于对象查询
-# 		2.基于双下划綫查询
-# 		3.聚合和分组查询
-# 		4. F 与 Q 查询
-# 	:param request:
-# 	:return:
-# 	"""
+
+	# """
+	# 跨表查询：
+	# 	1.基于对象查询
+	# 	2.基于双下划綫查询
+	# 	3.聚合和分组查询
+	# 	4. F 与 Q 查询
+	# :param request:
+	# :return:
+	# """
 # ############################基于对象的跨表查询(子查询)###################################
-#
-# 	# 一对多查询的正向查询： 查询python这本书的出版社的名字
-# 	# book_obj = Book.objects.filter(title="python").first()
-# 	# print(book_obj.publish)
-# 	# print(book_obj.publish.name)
-# 	#
-# 	# # 一对多查询的反向查询：查询新华出版社出版了什么书籍
-# 	# publish_obj = Publish.objects.filter(name="新华出版社").first()
-# 	# print(publish_obj.book_set.all())   # QuerySet
+def query(request):
+	# 一对多查询的正向查询： 查询python这本书的出版社的名字
+	book_obj = Book.objects.filter(title="python").first()
+	print(book_obj.publish)
+	print(book_obj.publish.name)
+
+	# 一对多查询的反向查询：查询新华出版社出版了什么书籍
+	# publish_obj = Publish.objects.filter(name="新华出版社").first()
+	# print(publish_obj.book_set.all())   # QuerySet
 #
 # 	# 多对多查询的正向查询 ：查询XHTML所有作者的名字
 # 	# book_obj = Book.objects.filter(title="XHTML").first()
@@ -100,7 +100,7 @@ def add(request):
 #
 #
 #
-#
+	return HttpResponse("query")
 #
 #
 # """
@@ -137,55 +137,55 @@ def add(request):
 # 						                    反向查询 authordetail.author
 # """
 
-def query(request):
-
-	###############################基于双下划线的跨表查询(join查询)###################################
-	'''
-		基于双下划线的跨表查询(join查询)
-		正向查询：按字段
-		反向查询：按表名小写
-	# 正向查询按字段，反向查询按表名小写 用来告诉ORM引擎join那张表
-	'''
-	# 一对多查询： 查询python这本书的出版社的名字
-	# 方式一:正向
-	# book_obj = Book.objects.filter(title="XHTML").values("publish__name")
-	# print(book_obj)     # <QuerySet [{'publish__name': '人民出版社'}]>
-
-	# 方式二：反向
-	# ret = Publish.objects.filter(book__title="XHTML").values("name")
-	# print(ret)
-
-	# 多对多查询 ：查询XHTML书籍所有作者的名字
-	# 方式一：正向
-	# 需求：通过Book表join与其关联的Author表,属于正向查询：按照字段authors通知ORM引擎join book_authors 与 author
-	# ret = Book.objects.filter(title="XHTML").values("authors__name")
-	# for author in ret:
-	# 	print(author.get('authors__name'))
-	# 方式二：反向
-	# 需求：通过Author表join与其关联的Book表，属于反向查询：按表名小写book通知ORM通知join book_authors 与 author表
-	# ret = Author.objects.filter(book__title="XHTML").values("name")
-	# print(ret)
-
-	# 一对一查询：查找ryan详情
-	# 方式一：正向
-	# 需求：通过Author表join与其关联的AuthorDetail表，属于正向查询：按照字段authordetail 通知ORM引擎 join author 表 与 AuthorDetail表
-	# author_obj = Author.objects.filter(name="ryan").values("authordetail__telephone")
-	# print(author_obj)
-
-	# 方式二：反向
-	# 需求：通过AuthorDetail表join与其关联的Author表，属于反向查询：按表名小写author通知ORM通知join author 表 与 AuthorDetail表
-	# author_obj = AuthorDetail.objects.filter(author__name="ryan").values("telephone")
-	# print(author_obj)
-
-	############################### 连续跨表 ###################################
-	#进阶练习
-	#练习：手机号以 110 开头的作者出版过的所有书籍名称以及书籍出版社名称
-
-	#方式一：
-	# 需求：通过Book表join AuthorDetail表，Book与AuthorDetail无关联，所以必须连续跨表
-	# ret = Book.objects.filter(authors__authordetail__telephone__startswith="110").values("title","publish__name")
-	ret = AuthorDetail.objects.filter(telephone__startswith="110").values("author__name")
-
-	print(ret)
-
-	return HttpResponse("query")
+# def query(request):
+#
+# 	###############################基于双下划线的跨表查询(join查询)###################################
+# 	'''
+# 		基于双下划线的跨表查询(join查询)
+# 		正向查询：按字段
+# 		反向查询：按表名小写
+# 	# 正向查询按字段，反向查询按表名小写 用来告诉ORM引擎join那张表
+# 	'''
+# 	# 一对多查询： 查询python这本书的出版社的名字
+# 	# 方式一:正向
+# 	# book_obj = Book.objects.filter(title="XHTML").values("publish__name")
+# 	# print(book_obj)     # <QuerySet [{'publish__name': '人民出版社'}]>
+#
+# 	# 方式二：反向
+# 	# ret = Publish.objects.filter(book__title="XHTML").values("name")
+# 	# print(ret)
+#
+# 	# 多对多查询 ：查询XHTML书籍所有作者的名字
+# 	# 方式一：正向
+# 	# 需求：通过Book表join与其关联的Author表,属于正向查询：按照字段authors通知ORM引擎join book_authors 与 author
+# 	# ret = Book.objects.filter(title="XHTML").values("authors__name")
+# 	# for author in ret:
+# 	# 	print(author.get('authors__name'))
+# 	# 方式二：反向
+# 	# 需求：通过Author表join与其关联的Book表，属于反向查询：按表名小写book通知ORM通知join book_authors 与 author表
+# 	# ret = Author.objects.filter(book__title="XHTML").values("name")
+# 	# print(ret)
+#
+# 	# 一对一查询：查找ryan详情
+# 	# 方式一：正向
+# 	# 需求：通过Author表join与其关联的AuthorDetail表，属于正向查询：按照字段authordetail 通知ORM引擎 join author 表 与 AuthorDetail表
+# 	# author_obj = Author.objects.filter(name="ryan").values("authordetail__telephone")
+# 	# print(author_obj)
+#
+# 	# 方式二：反向
+# 	# 需求：通过AuthorDetail表join与其关联的Author表，属于反向查询：按表名小写author通知ORM通知join author 表 与 AuthorDetail表
+# 	# author_obj = AuthorDetail.objects.filter(author__name="ryan").values("telephone")
+# 	# print(author_obj)
+#
+# 	############################### 连续跨表 ###################################
+# 	#进阶练习
+# 	#练习：手机号以 110 开头的作者出版过的所有书籍名称以及书籍出版社名称
+#
+# 	#方式一：
+# 	# 需求：通过Book表join AuthorDetail表，Book与AuthorDetail无关联，所以必须连续跨表
+# 	# ret = Book.objects.filter(authors__authordetail__telephone__startswith="110").values("title","publish__name")
+# 	ret = AuthorDetail.objects.filter(telephone__startswith="110").values("author__name")
+#
+# 	print(ret)
+#
+# 	return HttpResponse("query")
