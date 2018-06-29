@@ -40,3 +40,10 @@ class Author(models.Model):
 
 	def __str__(self):
 		return self.name
+
+class Emp(models.Model):
+	name=models.CharField(max_length=32)
+	age=models.IntegerField()
+	salary=models.DecimalField(max_digits=8,decimal_places=2)
+	dep=models.CharField(max_length=32)
+	province=models.CharField(max_length=32)
