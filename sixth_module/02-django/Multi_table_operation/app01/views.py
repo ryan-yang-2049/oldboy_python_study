@@ -262,9 +262,26 @@ def query(request):
 	# print(ret) #<QuerySet [{'title': 'HTML', 'author_count': 1}, {'title': 'HTML5', 'author_count': 1}]>
 
 	# 2.统计不止一个作者的书籍
+	#
+	# ret = Book.objects.values("pk").annotate(c=Count("authors__name")).filter(c__gt=1).values("title","c")
+	# print(ret)  # <QuerySet [{'title': 'XHTML', 'c': 2}]>
 
-	ret = Book.objects.values("pk").annotate(c=Count("authors__name")).filter(c__gt=1).values("title","c")
-	print(ret)  # <QuerySet [{'title': 'XHTML', 'c': 2}]>
+	######################  F查询与Q查询    ##################
+
+	# from django.db.models import  F
+	#
+	# # 查询评论数大于阅读数
+	# ret = Book.objects.filter(comment_num__gt=F("read_num"))
+	# print(ret)
+	#
+	# # 所有的书籍的价格都提升1块钱
+	#
+	# Book.objects.all().update(price=F("price")+1)
+
+	from django.db.models import  Q
+	# ret = Book.objects.filter(Q(title="HTML")&Q(price=131))
+	ret = Book.objects.filter(~Q(title="HTML")&~Q(price=131),publish_id=1)
+	print(ret)
 
 
 	return HttpResponse("query")
