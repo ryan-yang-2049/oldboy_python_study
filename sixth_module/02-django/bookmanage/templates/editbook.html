@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <h3>编辑书籍页面</h3>
+{% endblock %}
+
+{% block book_title_name %}
+    <input type="text" name="title" class="form-control" value="{{ edit_book_obj.title }}">
+{% endblock %}
+
+{% block book_price %}
+    <input type="text" name="price" class="form-control" value="{{ edit_book_obj.price }}">
+{% endblock %}
+
+{% block book_pub_date %}
+    <input type="date" name="pub_date" class="form-control" value="{{ edit_book_obj.publishDate|date:"Y-m-d"}}">
+{% endblock %}
+
+{% block book_publish %}
+    <select name="publish_id" id="" class="form-control">
+        {% for publish in publish_list  %}
+
+            {% if edit_book_obj.publish == publish %}
+                <option selected value="{{ publish.pk }}">{{ publish.name }}</option>
+                {% else %}
+                <option value="{{ publish.pk }}">{{ publish.name }}</option>
+            {% endif %}
+
+        {% endfor %}
+    </select>
+{% endblock %}
+
+
+{% block author %}
+    <select type="text" name="author_id_list" multiple class="form-control">
+        {% for author in author_list  %}
+            {% if author in edit_book_obj.authors.all %}
+                <option selected value="{{ author.pk }}">{{ author.name }}</option>
+            {% else %}
+                <option value="{{ author.pk }}">{{ author.name }}</option>
+            {% endif %}
+
+        {% endfor %}
+    </select>
+{% endblock %}
+
+
+
+

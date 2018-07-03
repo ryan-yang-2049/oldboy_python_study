@@ -268,9 +268,8 @@ def query(request):
 
 	######################  F查询与Q查询    ##################
 
-	# from django.db.models import  F
-	#
-	# # 查询评论数大于阅读数
+	from django.db.models import  F
+	# 查询评论数大于阅读数
 	# ret = Book.objects.filter(comment_num__gt=F("read_num"))
 	# print(ret)
 	#
@@ -279,9 +278,10 @@ def query(request):
 	# Book.objects.all().update(price=F("price")+1)
 
 	from django.db.models import  Q
-	# ret = Book.objects.filter(Q(title="HTML")&Q(price=131))
-	ret = Book.objects.filter(~Q(title="HTML")&~Q(price=131),publish_id=1)
-	print(ret)
+	ret1 = Book.objects.filter(Q(title="HTML")&Q(price=133))
+	ret2 = Book.objects.filter(~Q(title="HTML")&~Q(price=133),publish_id=1)
+	ret3 = Book.objects.filter(~Q(title="HTML")|Q(price__gt=103))
+	print(ret3)
 
 
 	return HttpResponse("query")
