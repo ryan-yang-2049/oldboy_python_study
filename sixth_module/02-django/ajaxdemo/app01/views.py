@@ -40,27 +40,17 @@ def login(request):
 
 
 
-# def file_put(request):
-# 	if request.method == "POST":
-# 		print("body:",request.body)   # 请求报文中的请求体 ,JSON 的字符串
-# 		print("path",request.path)  # path /file_put/
-# 		# 只有在 ContentType== urlencoded 时, request.POST 才会有数据
-# 		print("POST",request.POST)    # POST <QueryDict: {'user': ['cherry']}>
-# 		# print(request.FILES)   # <MultiValueDict: {'avatat': [<InMemoryUploadedFile: 13.jpg (image/jpeg)>]}>
-# 		# file_obj = request.FILES.get("avatat")
-# 		# with open(file_obj.name,'wb') as f:
-# 		# 	for line in file_obj:
-# 		# 		f.write(line)
-# 		return HttpResponse("OK")
-# 	return render(request,"test.html")
-
 def file_put(request):
 	if request.method == "POST":
-		print("body:",request.body)   #res:body: b'{"a":1,"b":3}'  请求报文中的请求体 ,JSON 的字符串
-		# 只有在 ContentType== urlencoded 时, request.POST 才会有数据
-		print("POST",request.POST)   # POST <QueryDict: {}>
+		print("POST",request.POST)
+		print(request.FILES)
+		file_obj = request.FILES.get("avatat")
+		with open(file_obj.name,'wb') as f:
+			for line in file_obj:
+				f.write(line)
 		return HttpResponse("OK")
 	return render(request,"test.html")
+
 
 
 '''

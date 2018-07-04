@@ -5,8 +5,10 @@
     <title>file_put</title>
 </head>
 <body>
-<form>
+<h3>基于 Ajax 文件上传</h3>
+<form action="" method="post">
     用户名：<input type="text" id="user">
+    头像：<input type="file" id="avatat">
     <input type="button" class="btn" value="Ajax提交">
 </form>
 </body>
@@ -14,18 +16,20 @@
 <script type="text/javascript">
     $(function () {
         $('.btn').click(function () {
+            var formdata = new FormData();
+            formdata.append("user",$("#user").val());
+            formdata.append("avatat",$("#avatat")[0].files[0]);
             $.ajax({
                 url:"",
                 type:"post",     //默认 x-www-form-urlencoded
-                contentType: "application/json",
-                data:JSON.stringify({
-                    a:1,
-                    b:3
-                }),
+                contentType: false,      // 不做任何编码
+                processData:false,          // 是否对数据做预处理
+                data:formdata,
                 success:function (data) {
-                    console.log("=====>"+data)
+                    console.log(data)
                 }
-            })});
+            })
+        });
     })
 </script>
 </html>
