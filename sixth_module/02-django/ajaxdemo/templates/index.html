@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+<h2>this is index</h2>
+
+<button class="Ajax">Ajax</button>
+
+<p class="content"></p>
+
+<hr>
+<input type="text" id="num1">+<input type="text" id="num2"> =<input type="text" id="res"><button class="cal">计算</button>
+
+
+<hr>
+
+<form>
+    用户名：<input type="text" id="user">
+    密码 ：<input type="password" id="pass">
+    <input type="button" value="submit" class="login_btn"><span class="error"></span>
+    
+</form>
+
+
+</body>
+
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $(".Ajax").click(function () {
+
+            // 发送Ajax请求
+            $.ajax({
+                url:"/test_ajax",         //请求url
+                type:"get",     //请求方式，默认get请求
+                data:{a:1,b:2},
+                success:function (data) {                 //回调函数
+                    console.log(data);
+                    $('.content').text(data);
+                }
+
+
+            })
+        });
+
+        //ajax 计算求值
+        $('.cal').click(function () {
+
+
+            $.ajax({
+                url:"/cal/",
+                type:"post",
+                data:{
+                    "n1":$("#num1").val(),
+                    "n2":$("#num2").val()
+                },
+                success:function (data) {
+                    $('#res').val(data)
+
+                }
+            })
+        });
+
+        //登陆验证
+
+
+        $(".login_btn").click(function () {
+
+            $.ajax({
+                url:"/login/",
+                type:"post",
+                data:{
+                    "user":$("#user").val(),
+                    "pwd":$("#pass").val()
+                },
+                success:function (data) {
+
+                    // data 为json字符串
+                    data = JSON.parse(data);    //反序列化 成 object类型
+                    console.log(data);
+                    console.log(typeof data);
+
+                    if (data.user){
+                        location.href = "http://www.baidu.com"
+                    }else{
+                        $(".error").html(data.msg).css({"color":"red","margin-left":"10px"})
+                    }
+                }
+
+            })
+
+
+        })
+
+
+
+
+    })
+
+
+
+
+
+
+
+</script>
+</html>
