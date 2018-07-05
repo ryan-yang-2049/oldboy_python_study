@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reg</title>
+</head>
+<body>
+
+{#<form action="" method="post">#}
+{#    {% csrf_token %}#}
+{#    <p>用户名：<input type="text" name="name"></p>#}
+{#    <p>密码：<input type="text" name="pwd"></p>#}
+{#    <p>确认密码：<input type="text" name="r_pwd"></p>#}
+{#    <p>邮箱：<input type="text" name="email"></p>#}
+{#    <p>手机号：<input type="text" name="tel"></p>#}
+{#    <input type="submit">#}
+{##}
+{##}
+{#</form>#}
+
+<h3>forms组件渲染方式一</h3>
+<form action="" method="post" novalidate="novalidate">
+    {% csrf_token %}
+    <p>{{ form.name.label }}{{ form.name }}<span>{{ form.name.errors.0 }}</span></p>
+    <p>{{ form.pwd.label }}{{ form.pwd }}<span>{{ form.pwd.errors.0 }}</span></p>
+    <p>{{ form.r_pwd.label }}{{ form.r_pwd }} <span>{{ form.r_pwd.errors.0 }}</span></p>
+    <p>{{ form.email.label }}{{ form.email }}<span>{{ form.email.errors.0 }}</span></p>
+    <p>{{ form.tel.label }}{{ form.tel }}<span>{{ form.tel.errors.0 }}</span></p>
+    <input type="submit">
+</form>
+
+
+{#<h3>forms组件渲染方式二(建议)</h3>#}
+{#<form action="" method="post">#}
+{#    {% csrf_token %}#}
+{#    {% for field in form %}#}
+{#        <p>#}
+{#            <label for={{ field.name }}>{{ field.label }}</label>#}
+{#            {{ field }}#}
+{#        </p>#}
+{#    {% endfor %}#}
+{#    <input type="submit">#}
+{#</form>#}
+{##}
+{##}
+{#<h3>forms组件渲染方式三</h3>#}
+{#<form action="" method="post">#}
+{#    {% csrf_token %}#}
+{##}
+{#        {{ form.as_p }}#}
+{#    <input type="submit">#}
+{#</form>#}
+
+</body>
+</html>
