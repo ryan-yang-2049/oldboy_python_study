@@ -3,51 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>reg</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
 </head>
 <body>
-
 {#<form action="" method="post">#}
 {#    {% csrf_token %}#}
-{#    <p>用户名：<input type="text" name="name"></p>#}
-{#    <p>密码：<input type="text" name="pwd"></p>#}
-{#    <p>确认密码：<input type="text" name="r_pwd"></p>#}
-{#    <p>邮箱：<input type="text" name="email"></p>#}
-{#    <p>手机号：<input type="text" name="tel"></p>#}
+{#    <p>#}
+{#        <label for="name">用户名:</label>#}
+{#        <input type="text" name="name" id="name"></p>#}
+{#    <p>#}
+{#        <label for="pwd">密码:</label>#}
+{#        <input type="text" name="pwd" id="pwd">#}
+{#    </p>#}
+{#    <p>#}
+{#        <label for="r_pwd">确认密码：</label>#}
+{#        <input type="text" name="r_pwd" id="r_pwd">#}
+{#    </p>#}
+{#    <p>#}
+{#        <label for="email">邮箱：</label>#}
+{#        <input type="text" name="email" id="email"></p>#}
+{#    <p>#}
+{#        <label for="tel">手机号：</label>#}
+{#        <input type="text" name="tel" id="tel">#}
+{#    </p>#}
 {#    <input type="submit">#}
-{##}
-{##}
 {#</form>#}
-
+{##}
 <h3>forms组件渲染方式一</h3>
-<form action="" method="post" novalidate="novalidate">
-    {% csrf_token %}
-    <p>{{ form.name.label }}{{ form.name }}<span>{{ form.name.errors.0 }}</span></p>
-    <p>{{ form.pwd.label }}{{ form.pwd }}<span>{{ form.pwd.errors.0 }}</span></p>
-    <p>{{ form.r_pwd.label }}{{ form.r_pwd }} <span>{{ form.r_pwd.errors.0 }}</span></p>
-    <p>{{ form.email.label }}{{ form.email }}<span>{{ form.email.errors.0 }}</span></p>
-    <p>{{ form.tel.label }}{{ form.tel }}<span>{{ form.tel.errors.0 }}</span></p>
-    <input type="submit">
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-offset-3">
+            <form action="" method="post" novalidate="novalidate">
+                {% csrf_token %}
+                <p>
+                    {{ form.name.label }}{{ form.name }}
+                    <span class="pull-right text-danger">{{ form.name.errors.0 }}</span>
+                </p>
+                <p>
+                    {{ form.pwd.label }}{{ form.pwd }}
+                    <span class="pull-right text-danger">{{ form.pwd.errors.0 }}</span>
+                </p>
+                <p>
+                    {{ form.r_pwd.label }}{{ form.r_pwd }}
+                    <span class="pull-right text-danger">{{ form.r_pwd.errors.0 }}</span>
+                    <span class="pull-right text-danger">{{ global_errors.0 }}</span>
+                </p>
+                <p>
+                    {{ form.email.label }}{{ form.email }}
+                    <span class="pull-right text-danger">{{ form.email.errors.0 }}</span>
+                </p>
+                <p>
+                    {{ form.tel.label }}{{ form.tel }}
+                    <span class="pull-right text-danger">{{ form.tel.errors.0 }}</span>
+                </p>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</div>
 
 
-{#<h3>forms组件渲染方式二(建议)</h3>#}
-{#<form action="" method="post">#}
-{#    {% csrf_token %}#}
-{#    {% for field in form %}#}
-{#        <p>#}
-{#            <label for={{ field.name }}>{{ field.label }}</label>#}
-{#            {{ field }}#}
-{#        </p>#}
-{#    {% endfor %}#}
-{#    <input type="submit">#}
-{#</form>#}
+{#<div class="container">#}
 {##}
-{##}
+{#    <div class="row">#}
+{#        <div class="col-md-6 col-lg-offset-3">#}
+{#            <h3>forms组件渲染方式二(建议)</h3>#}
+{#            <form action="" method="post" novalidate="novalidate">#}
+{#                {% csrf_token %}#}
+{#                {% for field in form %}#}
+{#                    <p>#}
+{#                        <label for={{ field.auto_id }}>{{ field.label }}</label>#}
+{#                        {{ field }}#}
+{#                        <span>{{ field.errors.0}}</span>#}
+{#                    </p>#}
+{#                {% endfor %}#}
+{#                <input type="submit">#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+
 {#<h3>forms组件渲染方式三</h3>#}
 {#<form action="" method="post">#}
 {#    {% csrf_token %}#}
-{##}
-{#        {{ form.as_p }}#}
+{#        {{ form.as }}#}
 {#    <input type="submit">#}
 {#</form>#}
 

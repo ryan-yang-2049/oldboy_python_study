@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login.html</title>
+</head>
+<body>
+
+
+<form action=""  method="post" novalidate="novalidate">
+    
+    {% csrf_token %}
+    <label for="id_username">用户名：</label>
+    <input type="text" name="user" id="id_username">
+    <br>
+    <label for="id_passwd">密码：</label>
+    <input type="password" name="pwd" id="id_passwd">
+    <br>
+    <input type="submit" value="submit">
+</form>
+
+
+</body>
+</html>
