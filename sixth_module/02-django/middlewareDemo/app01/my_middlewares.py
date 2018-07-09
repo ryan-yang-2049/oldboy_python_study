@@ -6,50 +6,36 @@
 
 
 from django.utils.deprecation import MiddlewareMixin
-
 from django.shortcuts import HttpResponse
 class CustomerMiddleware(MiddlewareMixin):
-
-
 	def process_request(self,request):
 		print("CustomerMiddleware1 process_request .......")
-
-
 	def process_response(self,request,response):
 		print("CustomerMiddleware1 process_response .......")
-
 		return response
-
 	def process_view(self, request, callback, callback_args, callback_kwargs):
 		# print("callback1====>",callback)
-		print(" CustomerMiddleware1 process_view...")
-
+		# response = callback(request, *callback_args, **callback_kwargs)
+		print("CustomerMiddleware1 process_view...")
+		# return response
 	def process_exception(self,request,exception):
 		print("CustomerMiddleware1 process_exception...")
 		return HttpResponse("Error: %s" % exception)
 
 class CustomerMiddleware2(MiddlewareMixin):
-
-
 	def process_request(self,request):
 		print("CustomerMiddleware2 process_request .......")
-
-
+		# return HttpResponse("中断.....")
 	def process_response(self,request,response):
 		print("CustomerMiddleware2 process_response .......")
-
 		return response
 	def process_view(self, request, callback, callback_args, callback_kwargs):
 		# print("callback2====>", callback)
-		print(" CustomerMiddleware2 process_view...")
-
+		print("CustomerMiddleware2 process_view...")
 		# return HttpResponse("123")
-
 	def process_exception(self,request,exception):
-
-
 		print("CustomerMiddleware2 process_exception...")
-		# return HttpResponse("Error: %s"%exception)
+		return HttpResponse("Error: %s"%exception)
 
 
 

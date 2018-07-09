@@ -6,19 +6,13 @@
 
 
 from django.utils.deprecation import MiddlewareMixin
-
-from django.shortcuts import redirect,HttpResponse
-
+from django.shortcuts import redirect
 from authDemo import settings
 class AuthMiddleware(MiddlewareMixin):
-
-
 	def process_request(self,request):
 		white_list = settings.WHITE_LIST
-
 		if request.path in white_list:
 			return None
-
 
 		if not request.user.is_authenticated:
 			return redirect("/login/")

@@ -4,7 +4,7 @@ from django.shortcuts import render,HttpResponse
 
 def index(request):
 	print("index .....")
-	aaa
+	我是报错内容
 	return HttpResponse("index")
 
 def index_new(request):
