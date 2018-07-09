@@ -1,4 +1,4 @@
-"""cookiedemo URL Configuration
+"""middlewareDemo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -17,14 +17,8 @@ from django.contrib import admin
 from django.urls import path
 
 from app01 import views
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', views.login),
     path('index/', views.index),
-    path('order/', views.order),
-    path('login_session/', views.login_session),
-    path('index_session/', views.index_session),
-    path('loginout/', views.loginout),
-
+    path('index_new/', views.index_new),
 ]
