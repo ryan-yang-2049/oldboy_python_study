@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="/static/blog/bootstrap/css/bootstrap.css">
+    <style type="text/css">
+        #avatar_style{
+            padding-right: 20px;
+        }
+        #avatar{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>注册页面</h3>
+    <div class="row">
+        <div class="col-md-6 col-lg-offset-3">
+            <form>
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                        {{ field }}
+                        <span>{{ field.errors.0 }}</span>
+                    </div>
+                {% endfor %}
+
+                <div class="form-group">
+                    <label for="avatar">
+                        <span id="avatar_style">头像</span>
+                        <img src="/static/blog/img/default.png" id="avatar_img" style="width: 30px;height: 30px">
+                    </label>
+
+                    <input type="file" name="" id="avatar">
+                </div>
+
+
+                <input type="button" class="btn btn-success reg_btn" value="提交">
+                <span class="error"></span>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/static/js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#avatar").change(function () {
+            // 获取用户选中的文件对象
+            var file_obj = $(this)[0].files[0];
+
+            // 获取文件对象路径
+            var reader = new FileReader();
+
+            reader.readAsDataURL(file_obj);
+
+            //修改img的src属性，src=文件对象的路径
+            reader.onload =function () {
+                $("#avatar_img").attr("src",reader.result)
+            };
+
+        });
+
+
+        // 基于Ajax 提交注册数据
+
+        $(".reg_btn").click(function () {
+
+            var formdata = new FormData();
+            formdata.append("user",$("#id_user").val());
+            formdata.append("pwd",$("#id_pwd").val());
+            formdata.append("re_pwwd",$("#id_re_pwd").val());
+            formdata.append("email",$("#id_email").val());
+            formdata.append("avatar",$("#avatar")[0].files[0]);
+            formdata.append("csrfmiddlewaretoken",$("[name='csrfmiddlewaretoken']").val());
+
+
+
+            $.ajax({
+                url:"",
+                type:"post",
+                contenType:false,
+                processData:false,
+                data:formdata,
+                success:function (data) {
+                    console.log(data)
+                }
+            })
+
+        })
+
+
+
+    })
+</script>
+</html>
