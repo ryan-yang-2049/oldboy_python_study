@@ -11,6 +11,7 @@
         #avatar{
             display: none;
         }
+        .error{color: red;}
     </style>
 </head>
 <body>
@@ -18,13 +19,13 @@
     <h3>注册页面</h3>
     <div class="row">
         <div class="col-md-6 col-lg-offset-3">
-            <form>
+            <form id="form">
                 {% csrf_token %}
                 {% for field in form %}
                     <div class="form-group">
                         <label for="{{ field.auto_id }}">{{ field.label }}</label>
                         {{ field }}
-                        <span>{{ field.errors.0 }}</span>
+                        <span class="error pull-right"></span>
                     </div>
                 {% endfor %}
 
@@ -34,12 +35,11 @@
                         <img src="/static/blog/img/default.png" id="avatar_img" style="width: 30px;height: 30px">
                     </label>
 
-                    <input type="file" name="" id="avatar">
+                    <input type="file" name="avatar" id="avatar">
                 </div>
 
 
-                <input type="button" class="btn btn-success reg_btn" value="提交">
-                <span class="error"></span>
+                <input type="button" class="btn btn-success reg_btn" value="提交"><span class="error"></span>
             </form>
         </div>
     </div>
@@ -70,23 +70,42 @@
         $(".reg_btn").click(function () {
 
             var formdata = new FormData();
-            formdata.append("user",$("#id_user").val());
-            formdata.append("pwd",$("#id_pwd").val());
-            formdata.append("re_pwwd",$("#id_re_pwd").val());
-            formdata.append("email",$("#id_email").val());
+{#            formdata.append("user",$("#id_user").val());#}
+{#            formdata.append("pwd",$("#id_pwd").val());#}
+{#            formdata.append("re_pwwd",$("#id_re_pwd").val());#}
+{#            formdata.append("email",$("#id_email").val());#}
+{#            formdata.append("avatar",$("#avatar")[0].files[0]);#}
+{#            formdata.append("csrfmiddlewaretoken",$("[name='csrfmiddlewaretoken']").val());#}
+            var request_data = $("#form").serializeArray();
+            $.each(request_data,function (index,data) {
+               formdata.append(data.name,data.value)
+            });
             formdata.append("avatar",$("#avatar")[0].files[0]);
-            formdata.append("csrfmiddlewaretoken",$("[name='csrfmiddlewaretoken']").val());
-
-
 
             $.ajax({
                 url:"",
                 type:"post",
-                contenType:false,
+                contentType:false,
                 processData:false,
                 data:formdata,
                 success:function (data) {
-                    console.log(data)
+                    if (data.user){
+                        //注册成功
+                    }else {
+                        console.log(data.msg);
+                        //清空错误信息
+                        $("span.error").html("");
+                        $(".form-group").removeClass("has-error");
+                        $.each(data.msg,function (field,error_list) {
+
+                            if (field === "__all__"){
+                                $("#id_re_pwd").next().html(error_list[0]).parent().addClass("has-error")
+                            }
+
+                            $("#id_"+field).next().html(error_list[0]).parent().addClass("has-error")
+                        })
+
+                    }
                 }
             })
 

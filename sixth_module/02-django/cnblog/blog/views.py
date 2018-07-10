@@ -42,21 +42,10 @@ def get_validCode_img(request):
 	return HttpResponse(data)
 
 
-from django import forms
-from django.forms import widgets
-
-wid_01=widgets.TextInput(attrs={"class":"form-control"})
-wid_02=widgets.PasswordInput(attrs={"class":"form-control"})
-wid_03=widgets.EmailInput(attrs={"class":"form-control"})
-class UserForm(forms.Form):
-	user=forms.CharField(max_length=32,label="用户名", widget=wid_01)
-	pwd=forms.CharField(max_length=32,label="密码",widget=wid_02)
-	re_pwd=forms.CharField(max_length=32,label="确认密码",widget=wid_02)
-	email=forms.EmailField(max_length=32,label="邮箱",widget=wid_03)
 
 
 
-
+from blog.utils.Myforms import UserForm
 def register(request):
 
 	if request.is_ajax():
