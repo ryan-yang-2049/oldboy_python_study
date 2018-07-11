@@ -36,7 +36,7 @@ class UserForm(forms.Form):
 		user = self.cleaned_data.get("user")
 		user_obj = UserInfo.objects.filter(username=user).first()
 		if not user_obj:
-			return user_obj
+			return user
 		else:
 			raise ValidationError("该用户已注册")
 
@@ -45,8 +45,11 @@ class UserForm(forms.Form):
 		pwd=self.cleaned_data.get("pwd")
 		re_pwd=self.cleaned_data.get("re_pwd")
 
-		if pwd==re_pwd:
-			return self.cleaned_data
-		else:
-			raise ValidationError("两次密码不一致")
+		if pwd and re_pwd:
 
+			if pwd==re_pwd:
+				return self.cleaned_data
+			else:
+				raise ValidationError("两次密码不一致")
+		else:
+			return self.cleaned_data

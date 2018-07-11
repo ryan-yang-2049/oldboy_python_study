@@ -89,10 +89,11 @@
                 processData:false,
                 data:formdata,
                 success:function (data) {
-                    if (data.user){
+                    if (data.user_info){
                         //注册成功
+                        location.href="/login/"
                     }else {
-                        console.log(data.msg);
+                        {#console.log(data.msg);#}
                         //清空错误信息
                         $("span.error").html("");
                         $(".form-group").removeClass("has-error");

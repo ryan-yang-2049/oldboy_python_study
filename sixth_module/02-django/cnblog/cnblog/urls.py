@@ -14,8 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,re_path
 
+from django.views.static import serve
+from cnblog import settings
 from blog import views
 
 urlpatterns = [
@@ -23,5 +25,15 @@ urlpatterns = [
     path('login/', views.login),
     path('get_validCode_img/', views.get_validCode_img),
     path('index/', views.index),
+    re_path('^$', views.index),
     path('register/', views.register),
+    path('logout/', views.logout),
+
+	#media 配置：
+	re_path(r'media/(?P<path>.*)$',serve,{"document_root":settings.MEDIA_ROOT}),
+
+	# 个人站点配置
+	re_path('^(?P<username>\w+)$',views.home_site)
+
+
 ]
