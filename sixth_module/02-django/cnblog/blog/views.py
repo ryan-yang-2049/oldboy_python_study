@@ -87,7 +87,7 @@ def index(request):
 	return render(request, "index.html",locals())
 
 
-def home_site(request,username):
+def home_site(request,username,**kwargs):
 	'''
 	个人站点视图参数
 	:param request:
@@ -109,31 +109,63 @@ def home_site(request,username):
 
 	# 基于双下划线
 	article_list = models.Article.objects.filter(user=user_obj)
+	# kwargs 为了区分访问的是站点页面还是站点下的跳转页面
+	if kwargs:
+		condition = kwargs.get("condition")
+		param = kwargs.get("param")
+		if condition == "category":
+			article_list = models.Article.objects.filter(user=user_obj).filter(category__title=param)
+		elif condition == "tag":
+			article_list = models.Article.objects.filter(user=user_obj).filter(tags__title=param)
+		else:
+			year,month = param.split("-")
+			article_list = models.Article.objects.filter(user=user_obj).filter(create_time__year=year,create_time__month=month)
+
+
 
 	# 每一个对象的表模型.objects.values('pk').annotate(聚合函数(关联表__统计字段)).values(表模型字段，以及统计的字段)
 	# 查询每一个分类名称以及对应的文章数
-	article_num = models.Category.objects.values('pk').annotate(c=Count("article__title")).values("title","c")
+	# article_num = models.Category.objects.values('pk').annotate(c=Count("article__title")).values("title","c")
 
 
 	# 查询当前用户或者站点的每一个分类名称以及对应的文章数
-	cate_list = models.Category.objects.filter(blog=blog).values('pk').annotate(c=Count("article__title")).values_list("title", "c")
+	# cate_list = models.Category.objects.filter(blog=blog).values('pk').annotate(c=Count("article__title")).values_list("title", "c")
 	# print("cate_list",cate_list)
 
 	# 查询当前站点的每一个标签名称以及对应的文章数
-	tag_list = models.Tag.objects.filter(blog=blog).values('pk').annotate(c=Count("article")).values_list("title", "c")
+	# tag_list = models.Tag.objects.filter(blog=blog).values('pk').annotate(c=Count("article")).values_list("title", "c")
 	# print(tag_list)
 
 	# 查询当前站点每一个月的的名称以及对应的文章数
 	# ret = models.Article.objects.extra(select={"is_recent":"create_time >'2017-09-07'"}).values("title","is_recent")
 	# 方式一：
-	ret = models.Article.objects.filter(user=user_obj).extra(select={"y_m_date":"date_format(create_time,'%%Y-%%m')"}).values("y_m_date").annotate(c=Count('nid')).values("y_m_date","c")
+	# date_list = models.Article.objects.filter(user=user_obj).extra(select={"y_m_date":"date_format(create_time,'%%Y-%%m')"}).values("y_m_date").annotate(c=Count('nid')).values_list("y_m_date","c")
 
 
 	# 方式二
-	from django.db.models.functions import TruncMonth ,TruncDay    # 日期归档
+	# from django.db.models.functions import TruncMonth ,TruncDay    # 日期归档
 
-	ret = models.Article.objects.filter(user=user_obj).annotate(month=TruncMonth("create_time")).values("month").annotate(c=Count("nid")).values_list("month","c")
-	print("ret>>>>>>>", ret)
+	# date_list1 = models.Article.objects.filter(user=user_obj).annotate(month=TruncMonth("create_time")).values("month").annotate(c=Count("nid")).values_list("month","c")
+	# print("ret>>>>>>>", ret)
 
 
-	return render(request,"home_site.html")
+	return render(request,"home_site.html",locals())
+
+def get_classification_data(username):
+	user_obj = UserInfo.objects.filter(username=username).first()
+	blog = user_obj.blog
+	cate_list = models.Category.objects.filter(blog=blog).values('pk').annotate(
+		c=Count("article__title")).values_list("title", "c")
+	tag_list = models.Tag.objects.filter(blog=blog).values('pk').annotate(c=Count("article")).values_list("title","c")
+	date_list = models.Article.objects.filter(user=user_obj).extra(select={"y_m_date": "date_format(create_time,'%%Y-%%m')"}).values("y_m_date").annotate(c=Count('nid')).values_list("y_m_date", "c")
+
+	return {"blog":blog,"cate_list":cate_list,"tag_list":tag_list,"date_list":date_list}
+
+
+def article_detail(request,username,article_id):
+	# 下面这几个变量可以分装在一个函数中，然后 home_site 也可以一起调用
+
+	# contact = get_classification_data(username)
+	article_obj = models.Article.objects.filter(pk=article_id).first()
+
+	return render(request, "article_detail.html",locals())

@@ -29,11 +29,18 @@ urlpatterns = [
     path('register/', views.register),
     path('logout/', views.logout),
 
+
+
 	#media 配置：
 	re_path(r'media/(?P<path>.*)$',serve,{"document_root":settings.MEDIA_ROOT}),
 
+	# 文章详情页
+	re_path(r'^(?P<username>\w+)/articles/(?P<article_id>.*)$',views.article_detail),
+
 	# 个人站点配置
-	re_path('^(?P<username>\w+)$',views.home_site)
+	re_path(r'^(?P<username>\w+)$',views.home_site),
+	# 个人站点跳转
+	re_path(r'^(?P<username>\w+)/(?P<condition>tag|category|archive)/(?P<param>.*)/$',views.home_site),
 
 
 ]
