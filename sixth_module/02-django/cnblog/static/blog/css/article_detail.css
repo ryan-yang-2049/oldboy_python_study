@@ -1,3 +1,8 @@
+
+.article_info .title{
+   margin-bottom: 20px;
+}
+
 #div_digg {
     float: right;
     margin-bottom: 10px;
@@ -50,3 +55,5 @@ input.author{
 .comment_item{
     margin-left: 20px;
 }
+
+

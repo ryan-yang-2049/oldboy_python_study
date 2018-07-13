@@ -10,6 +10,7 @@ from blog.utils.validCode import get_valid_code_img
 from blog import models
 from django.db.models import Avg,Max,Min,Count
 
+from django.db import transaction
 
 def login(request):
 	if request.method == "POST":
@@ -168,4 +169,91 @@ def article_detail(request,username,article_id):
 	# contact = get_classification_data(username)
 	article_obj = models.Article.objects.filter(pk=article_id).first()
 
+	comment_list = models.Comment.objects.filter(article_id=article_id)
 	return render(request, "article_detail.html",locals())
+
+
+from  django.db.models import  F
+from django.http import JsonResponse
+
+# 点赞视图函数
+def digg(request):
+
+	import json
+
+	print(request.POST)
+	article_id = request.POST.get("article_id")
+	is_up = json.loads(request.POST.get("is_up"))
+	# 点赞人即当前登录人
+	user_id = request.user.pk
+
+
+	obj = models.ArticleUpDown.objects.filter(user_id=user_id,article_id=article_id).first()
+	response = {"state":True,"handled":None}
+	if not obj:
+
+		ard = models.ArticleUpDown.objects.create(user_id=user_id,article_id=article_id,is_up=is_up)
+		if is_up:
+			models.Article.objects.filter(pk=article_id).update(up_count=F("up_count")+1)
+		else:
+			models.Article.objects.filter(pk=article_id).update(down_count=F("down_count")+1)
+
+
+
+	else:
+		response["state"] = False
+		response["handled"] = obj.is_up
+
+
+
+
+	return JsonResponse(response)
+
+
+def comment(request):
+
+	print(request.POST)
+
+	article_id = request.POST.get("article_id")
+	content = request.POST.get("content")
+	parent_comment_id = request.POST.get("pid")
+	user_id = request.user.pk
+
+	article_name = models.Article.objects.filter(pk=article_id).first()
+
+	# 事务
+	with transaction.atomic():
+		comment_obj = models.Comment.objects.create(user_id=user_id,article_id=article_id,content=content,parent_comment_id=parent_comment_id)
+		models.Article.objects.filter(pk=article_id).update(comment_count=F("comment_count")+1)
+
+	response = {}
+	response["create_time"] = comment_obj.create_time.strftime("%Y-%m-%d")
+	response["username"] = request.user.username
+	response["content"] = comment_obj.content
+
+	# 发送邮件
+	from django.core.mail import send_mail
+	from cnblog import  settings
+	send_mail(
+		"您的%s文章新增了一条评论内容"%article_name.title,
+		content,
+		"yangyang@kjdow.com",
+		settings.EMAIL_HOST_USER,
+		[""]
+
+	)
+
+	return  JsonResponse(response)
+
+
+
+def get_comment_tree(request):
+	article_id=request.GET.get("article_id")
+
+	comment_obj =list(models.Comment.objects.filter(article_id=article_id).order_by("pk").values("pk","content","parent_comment_id"))
+	print(comment_obj)
+	return JsonResponse(comment_obj,safe=False)
+
+
+
+

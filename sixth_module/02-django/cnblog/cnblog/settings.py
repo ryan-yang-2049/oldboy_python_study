@@ -142,3 +142,11 @@ STATICFILES_DIRS=[
 # 用户上出文件相关配置
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 MEDIA_URL = '/media/'
+
+EMAIL_HOST = 'mail.phc-dow.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'yangyang@phc-dow.com'
+EMAIL_HOST_PASSWORD = 'Ryan!@999'
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER 可以在send_mail中不加发送者的邮箱
+EMAIL_USE_SSL = True
+
