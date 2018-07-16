@@ -148,5 +148,7 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'yangyang@phc-dow.com'
 EMAIL_HOST_PASSWORD = 'Ryan!@999'
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER 可以在send_mail中不加发送者的邮箱
-EMAIL_USE_SSL = True
+EMAIL_USE_SSL = False
 
+
+LOGIN_URL = "/login/"

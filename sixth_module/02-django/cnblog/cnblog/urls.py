@@ -31,9 +31,18 @@ urlpatterns = [
     path('digg/', views.digg),
 
 
-    #
+    # 评论
     path('comment/', views.comment),
+	# 获取评论树相关数据
     path('get_comment_tree/', views.get_comment_tree),
+
+	# 后台管理
+	path("cn_backend/",views.cn_backend),
+	path("cn_backend/add_articles/",views.add_articles),
+	# 后台编辑页面上传文件
+	path("upload/",views.upload),
+
+
 
 
 

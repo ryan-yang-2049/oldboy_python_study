@@ -4,6 +4,7 @@ from django.shortcuts import render, HttpResponse, redirect
 
 from django.http import JsonResponse
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 from blog.models import UserInfo
 from blog.utils.Myforms import UserForm
 from blog.utils.validCode import get_valid_code_img
@@ -11,6 +12,9 @@ from blog import models
 from django.db.models import Avg,Max,Min,Count
 
 from django.db import transaction
+
+from django.core.mail import send_mail
+from cnblog import settings
 
 def login(request):
 	if request.method == "POST":
@@ -234,14 +238,20 @@ def comment(request):
 	# 发送邮件
 	from django.core.mail import send_mail
 	from cnblog import  settings
-	send_mail(
-		"您的%s文章新增了一条评论内容"%article_name.title,
-		content,
-		"yangyang@kjdow.com",
-		settings.EMAIL_HOST_USER,
-		[""]
+	# send_mail(
+	# 	"您的文章 %s 新增了一条评论内容"%article_name.title,
+	# 	content,
+	# 	settings.EMAIL_HOST_USER,
+	# 	["461580544@qq.com",]
+	#
+	# )
 
-	)
+	import threading
+	t=threading.Thread(target=send_mail,args=("您的文章 %s 新增了一条评论内容"%article_name.title,
+		content,
+		settings.EMAIL_HOST_USER,
+		["461580544@qq.com","809074558@qq.com"]))
+	# t.start()
 
 	return  JsonResponse(response)
 
@@ -255,5 +265,51 @@ def get_comment_tree(request):
 	return JsonResponse(comment_obj,safe=False)
 
 
+@login_required
+def cn_backend(request):
+	article_list = models.Article.objects.filter(user=request.user)
+
+	return render(request,"backend/backend.html",locals())
+
+from bs4 import BeautifulSoup
+
+@login_required
+def add_articles(request):
+	if request.method == "POST":
+		title = request.POST.get("title")
+		content = request.POST.get("content")
+		soup = BeautifulSoup(content, "html.parser")
+		# 过滤
+		for tag in  soup.find_all():
+			if tag.name == "script":
+				tag.decompose()
 
 
+		desc = soup.text[0:150]
+		models.Article.objects.create(title=title,content=str(soup),user=request.user,desc=desc)
+
+		return  redirect("/cn_backend/")
+
+	return render(request,"backend/add_article.html")
+
+
+def upload(request):
+
+
+	print(request.FILES)
+	import os
+	img=request.FILES.get("upload_img")
+	path = os.path.join(settings.MEDIA_ROOT,"add_article_img",img.name)
+	with open(path,"wb") as f:
+		for line in img:
+			f.write(line)
+
+	response = {
+		"error":0,
+		"url":"/media/add_article_img/%s"%(img.name)
+	}
+
+	import json
+
+	return JsonResponse(response)
+	# return HttpResponse(json.dumps(response))
