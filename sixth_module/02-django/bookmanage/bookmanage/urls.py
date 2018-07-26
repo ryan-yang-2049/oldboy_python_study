@@ -21,8 +21,9 @@ from book import  views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+	re_path(r'^$', views.books),
 	re_path('books/$', views.books),
-    re_path('books/add/$', views.add_book),
-    re_path('books/(?P<edit_book_id>\d+)/change$', views.change_book),
-    re_path('books/(?P<delete_book_id>\d+)/delete$', views.delete_book),
+    re_path(r'books/add/$', views.add_book),
+    re_path(r'books/(?P<edit_book_id>\d+)/change$', views.change_book),
+    re_path(r'books/(?P<delete_book_id>\d+)/delete$', views.delete_book),
 ]
