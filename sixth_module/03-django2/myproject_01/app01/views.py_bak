@@ -1,0 +1,52 @@
+from django.shortcuts import render,HttpResponse
+
+# Create your views here.
+
+def index(request):
+
+
+	return  render(request,'index.html',locals())
+
+
+
+
+def fbv(request):
+
+	if request.method == "GET":
+		return HttpResponse("FBV.GET")
+	elif request.method == "POST":
+		return HttpResponse("FBV.POST")
+
+
+from django.views import View
+class CBV(View):
+
+	def dispatch(self, request, *args, **kwargs):
+		print(">>>>>>>>>>>>dispatch............")
+		res = super(CBV,self).dispatch(request,*args,**kwargs)
+		return res
+
+	# 如果以GET形式发送的请求，自动触发get里面的方法（django提供的,继承View类）
+	def get(self,request):
+		print(">>>get...........")
+		return render(request,'cbv.html')
+		# return HttpResponse("CBV.GET")
+	# 如果以POST形式发送的请求，自动触发post里面的方法（django提供的，继承View类）
+	def post(self,request):
+		print(">>>post...........")
+		ret = HttpResponse("CBV.POST")
+		ret['h1'] = "v1"
+		ret['h11'] = "v11"
+		ret.set_cookie('c1','v2')
+		ret.set_cookie('c2','v3')
+		print(ret)
+		return ret
+
+
+
+
+
+
+
+
+
