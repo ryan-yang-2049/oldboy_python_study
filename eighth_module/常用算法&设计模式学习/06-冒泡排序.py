@@ -24,6 +24,9 @@
 	# [1, 2, 3, 4, 5, 6, 7, 8, 9]
 	# [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+from cal_time import *
+
+@cal_time
 def bubble_sort(li):
 	for i in range(len(li)-1):  # 第i趟，从0开始
 		exchange = False
@@ -31,12 +34,14 @@ def bubble_sort(li):
 			if li[j] > li[j+1]:         # 升序 > ,降序 <
 				li[j],li[j+1] = li[j+1],li[j]   # 两个值进行交换
 				exchange = True
-		print(li)
+		# print(li)
 		if not exchange:
 			return
 
-
-li = [9,8,7,1,2,3,4,5,6]
+import random
+# li = [9,8,7,1,2,3,4,5,6]
+li = list(range(10000))
+random.shuffle(li)
 bubble_sort(li)
 
 
