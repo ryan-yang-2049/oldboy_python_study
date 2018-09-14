@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rbac.apps.RbacConfig',
     'web.apps.WebConfig',
+	'stark.apps.StarkConfig',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'web.md.xxx.CheckPermission'
+	'web.md.rbac_permission_middleware.CheckPermission'
 ]
 
 ROOT_URLCONF = 'crm_permission.urls'

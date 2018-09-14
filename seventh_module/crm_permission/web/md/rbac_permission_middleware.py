@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# __title__ = 'xxx.py'
+# __title__ = 'rbac_permission_middleware.py'
 # __author__ = 'YangYang'
 # __mtime__ = '2018.09.07'
 

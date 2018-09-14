@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-
-# __title__ = 'stark.py'
-# __author__ = 'YangYang'
-# __mtime__ = '2018.09.04'
+from stark.service.stark import site
+from app01 import models
 
 
 
-print("stark 666")
+site.register(models.UserInfo)
 
 
 
