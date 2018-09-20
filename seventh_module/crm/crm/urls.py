@@ -44,21 +44,23 @@ from app01 import views
 from stark.service.stark import site
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
+	url(r'^test/', views.test),
+
 	url(r'^stark/', site.urls),
 	# url(r'^stark/', ([
 	# 	                 url(r'^x1/',self.x1),
 	# 	                 url(r'^x2/',self.x2)
 	#                  ],'stark','stark')),
 
-	url(r'^rbac/',([
-		               url(r'^login/',views.login),
-		               url(r'^logout/',views.logout),
-		               url(r'^x1/',(
-			               [
-				               url(r'^add/',views.add,name='n1'),
-				               url(r'^change/',views.change,name='n2'),
-			               ],None,'xxx'
-		               )),
-	               ],None,'rbac')),
+	# url(r'^rbac/',([
+	# 	               url(r'^login/',views.login),
+	# 	               url(r'^logout/',views.logout),
+	# 	               url(r'^x1/',(
+	# 		               [
+	# 			               url(r'^add/',views.add,name='n1'),
+	# 			               url(r'^change/',views.change,name='n2'),
+	# 		               ],None,'xxx'
+	# 	               )),
+	#                ],None,'rbac')),
 
 ]

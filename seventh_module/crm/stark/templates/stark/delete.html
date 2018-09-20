@@ -1,0 +1,22 @@
+
+{% extends 'stark/layout.html' %}
+{#包含了修改和添加页面#}
+
+
+{% block content %}
+    {% block css %}
+
+    {% endblock %}
+    <div style="width: 680px;margin: 0 auto">
+
+
+        <form class="changexxx" method="post" novalidate>
+            {% csrf_token %}
+            <p class="bg-info">是否确定要删除</p>
+            <a href="{{ cancel_url }}" class="btn btn-success">取 消</a>
+            <button type="submit" class="btn btn-danger">确 认</button>
+        </form>
+    </div>
+
+{% endblock %}
+
