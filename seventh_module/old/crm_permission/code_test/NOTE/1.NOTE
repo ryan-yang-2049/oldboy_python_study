@@ -1,0 +1,196 @@
+大目标：CRM系统
+        - 权限
+        - stark组件
+        - crm业务
+
+
+
+权限步骤：
+    1.创建django project ：crm_permission
+    2.两个app
+        - rbac：权限组件
+        - web ：销售管理系统
+
+    3. app:rbac
+        - 将权限相关的表编写到此app的models.py里面
+        - 权限、角色、权限角色、用户、用户角色表
+    4. app:web
+        - 将销售管理系统表写到此app的models.py中
+
+    5.两个app的整合
+        销售管理系统中的URL
+            客户管理
+                客户列表：/customer/list/
+                添加客户：/customer/add/
+                删除客户：/customer/list/(?P<cid>\d+)/
+                修改客户：/customer/edit/(?P<cid>\d+)/
+                批量导入：/customer/import/
+                下载模板：/customer/tpl/
+            账单管理
+                账单列表：/payment/list/
+                添加账单：/payment/add/
+                删除账单：/payment/del/(?P<pid>\d+)/
+                修改账单：/payment/edit/<?P<pid>\d+/
+
+
+
+
+        5.1 基于admin进行权限信息的录入
+            admin 后台管理扩展：https://yiyibooks.cn/xx/Django_1.11.6/intro/tutorial07.html
+            python3 manage.py createsuperuser
+                root ： root!2345
+        5.2 基于admin进行权限和角色信息的分配
+
+        6.快速完成一个基本权限控制
+            1.登陆页面是否有访问权限(白名单)
+            2.POST请求，用户登录检验是否合法
+            3.获取当前用户相关的所有权限并放入session
+            4.两次向服务器端发起请求：http://www.xxxx.com/xxxx, 后端编写中间件对用户当前访问的url进行权限的判断(url是否在session中)
+
+
+stark组件：
+    0.内容回顾
+        1.类可以当做字典的key
+
+        2.diango 中的model所在app名称、以及小写类名。
+                from app01 import models as  m1
+                from app02 import models as  m2
+
+                def index(request):
+                    """
+                    # 获取应用名称：m1.UserInfo._meta.app_label
+                    # 获取小写的model名称： m1.UserInfo._meta.model_name
+                    :param request:
+                    :return:
+                    """
+                    print(m1.UserInfo,m1.UserInfo._meta.app_label,m1.UserInfo._meta.model_name)
+                    print(m2.Role,m2.Role._meta.app_label,m2.Role._meta.model_name)
+
+                    # 获取当前models类所在app名称、以及小写类名
+                    _registry = {
+                        m1.UserInfo :'1',
+                        m2.Role :'2',
+                    }
+                    for k,v in _registry.items():
+                        print(k._meta.app_label,k._meta.model_name)
+
+                    return HttpResponse('OK.....')
+
+
+
+
+    1.stark介绍
+        快速完成对N张表进行增删改查 + 自定义复杂操作
+
+    2.单例模式
+        s1.py
+            class AdminSite(object):
+                pass
+            obj1 = AdminSite()
+
+        调用实例：
+            s2.py
+                import s1
+                print(s1.obj1)
+            s3.py
+                import s1
+                print(s1.obj1)
+                import s2
+
+                """
+                这里就创建了一个单例模式，
+                <s1.AdminSite object at 0x0000027C54F88EF0>
+                <s1.AdminSite object at 0x0000027C54F88EF0>
+                """
+
+    3.路由系统
+        - include
+        - namespace
+
+        - 补充：
+            项目/urls.py
+                urlpatterns = [
+                    url(r'^admin/', admin.site.urls),
+
+                    url(r'^rbac/',([
+                        url(r'^login/',views.login),
+                        url(r'^logout/',views.logout),
+                        url(r'^x1/',(
+                            [
+                                url(r'^add/',views.add,name='n1'),
+                                url(r'^change/',views.change,name='n2'),
+                            ],None,'xxx'
+                        )),
+                                   ],None,'rbac')),
+
+                ]
+                # include 就相当于是一个元组 (urlconf_module, app_name, namespace)
+            app01/views.py
+                from django.shortcuts import render,HttpResponse,redirect
+
+                from django.urls import reverse
+
+                def login(request):
+                    url1 = reverse('rbac:xxx:n1')
+                    url2 = reverse('rbac:xxx:n2')
+                    print(url1)
+                    print(url2)
+                    return HttpResponse("rbac login")
+                    # return redirect(url1)
+
+                def logout(request):
+                    return HttpResponse("rbac logout")
+
+                def add(request):
+                    return HttpResponse("rbac add")
+
+                def change(request):
+                    return HttpResponse("rbac change")
+
+    4.制作启动文件(启动后、路由加载前定制一段代码)
+        1.创建一个stark组件
+            python3 manage.py startapp stark
+        2.添加项目/settings.py
+            'stark.apps.StarkConfig',
+
+        3.在stark/apps.py添加ready方法
+            class StarkConfig(AppConfig):
+                name = 'stark'
+
+                def ready(self):
+                    from django.utils.module_loading import autodiscover_modules
+                    autodiscover_modules('stark')
+
+            程序启动时，会先去每个app中找stark.py 文件并加载。
+
+        4.其他app中创建stark.py
+        5.程序启动时便会自动加载 stark.py
+
+
+
+
+    5.参考 django admin 源码编写组件。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
