@@ -1,0 +1,63 @@
+stark组件
+
+    1.stark介绍
+        快速完成对N张表增删改查+自定义复杂操作
+
+    2.单例模式
+
+    3.路由系统
+
+    4.程序启动后、路由加载前定制一段代码
+
+    5.参考django admin源码编写组件
+
+
+步骤：
+    1.创建django project :luffy_permission
+    2.两个app
+        - rbac  权限组件
+        - web   销售管理系统
+    3.app :rbac
+        - 将权限相关的表编写到此app的models.py中
+        - 权限，角色，权限角色关系表，用户，角色用户关系表
+
+    4.app: web
+        - 将销售管理系统表写到此app的models.py中
+        - 销售系统的业务相关代码
+
+
+    5.整合两个app
+        销售管理系统的URL：
+            客户管理
+                客户列表：/customer/list/
+                添加客户：/customer/add/
+                删除客户：/customer/list/(?P<cid>\d+)/
+                修改客户：/customer/edit/(?P<cid>\d+)/
+                批量导入：/customer/import/
+                下载模板：/customer/tpl/
+            账单管理
+                账单列表：/payment/list/
+                添加账单：/payment/add/
+                删除账单：/payment/del/(?P<pid>\d+)/
+                修改账单：/payment/edit/<?P<pid>\d+/
+
+        5.1 基于admin进行权限信息的录入
+        5.2 基于admin进行权限和角色信息的分配
+
+
+    6.快速完成一个基本的权限控制
+        1.登陆页面是否有权限访问
+        2.POST请求，用户登陆检验是否合法
+        3.获取当前用户相关的所有权限并放入session
+        4.再次向服务器端发送请求：http://www.xxx.com/xxx , 后端编写中间件对用户当前访问的url进行权限的判断（是否在session 中）
+
+
+
+
+
+
+
+
+
+
+
