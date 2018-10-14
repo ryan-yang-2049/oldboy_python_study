@@ -27,9 +27,7 @@ def init_permission(current_user,request):
 																							).distinct()
 
 	permission_list = []  # 用户的权限列表
-
 	menu_dict = {}   # 权限url中的可作为菜单的url存入字典
-
 	for item in permissions_queryset:
 		permission_list.append({
 			'id':item['permissions__id'],
@@ -40,7 +38,6 @@ def init_permission(current_user,request):
 			'p_url':item['permissions__pid__url'],
 
 		})
-
 		menu_id = item["permissions__menu_id"]
 		if not menu_id:
 			continue

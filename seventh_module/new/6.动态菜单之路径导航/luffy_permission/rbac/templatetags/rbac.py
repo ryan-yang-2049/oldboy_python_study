@@ -69,4 +69,12 @@ def  mutli_menu(request):
 
 	return {'menu_dict':ordered_dict}
 
-
+# 导航条
+@register.inclusion_tag('rbac/breadcrumb.html')
+def breadcrumb(request):
+	"""
+	导航条
+	:param request:
+	:return: 返回当行的列表
+	"""
+	return {'record_list':request.breadcrumb}

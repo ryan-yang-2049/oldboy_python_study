@@ -39,6 +39,8 @@ class RbacMiddleware(MiddlewareMixin):
 			return HttpResponse('未获取到用户权限信息,请登录！')
 
 		flag = False
+
+		# 路径导航列表
 		url_record = [
 			{'title':'首页','url':'#'}
 		]
@@ -49,15 +51,15 @@ class RbacMiddleware(MiddlewareMixin):
 				flag = True
 				request.current_selected_permission = item['pid'] or item['id']   # 把权限对应的url传递到inclusion_tag中
 				if  not item['pid']:
-					url_record.extend([{'title':item['title'],'url':item['url']}])
+					url_record.extend([{'title':item['title'],'url':item['url'],'class':'active'}])
 				else:
 					url_record.extend([
 						{'title':item['p_title'],'url':item['p_url']},
-						{'title':item['title'],'url':item['url']},
+						{'title':item['title'],'url':item['url'],'class':'active'},
 					])
 
-				request.breadcrumb = url_record
-				print(request.breadcrumb)
+				request.breadcrumb = url_record     # 路径导航
+				# print(request.breadcrumb)
 
 				break
 
