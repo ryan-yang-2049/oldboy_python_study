@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style type="text/css">
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h3>模板语法之标签</h3>
+{% for i in list %}
+    <p>{{ i }}</p>
+{% endfor %}
+
+{% for key,val in info.items %}
+    <p>序号{{ forloop.counter }}:{{ key }}<====>{{ val }}</p>
+{% endfor %}
+{% if list %}
+
+{% endif %}
+
+<hr>
+
+
+</body>
+</html>

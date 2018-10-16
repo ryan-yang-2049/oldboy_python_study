@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style type="text/css">
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+{{ info.name }}
+
+<h3>过滤器</h3>
+<span>过滤器 date : </span>{{ now_time |date:"Y/m/d" }}
+<br>
+<span>过滤器 default : 如果一个变量是false或者为空，使用给定的默认值。否则,使用变量的值: </span>
+{{ empty_list |default:"数据为空" }}
+<br>
+<span>过滤器 length : 返回值的长度。它对字符串和列表和字典等都起作用：</span>
+{{ info |length }}
+<br>
+<span>过滤器 filesizeformat : 将值(传递的值是字节)格式化为一个 "人类可读的" 文件尺寸 （例如：'13KB','4.1MB',等等）</span>
+{{ file_size |filesizeformat }}
+<br>
+<span>过滤器 safe ：定义传的该链接标签或者代码是安全的;</span>
+{{ link |safe }}
+
+</body>
+</html>
