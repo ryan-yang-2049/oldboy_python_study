@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'base.html' %}
+{% block title %}
     <title>index</title>
-    <style type="text/css">
-        *{margin: 0;padding: 0;}
-        .header{
-            width: 100%;
-            height: 50px;
-            background-color: lightgray;
-        }
+{% endblock %}
+{% block content %}
+
+    <h3>模板语法之标签</h3>
+    {% for i in list %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+    {% for key,val in info.items %}
+        <p>序号{{ forloop.counter }}:{{ key }}<====>{{ val }}</p>
+    {% endfor %}
+    {% if list %}
+
+    {% endif %}
+
+    <hr>
+    <h3>自定义过滤器与自定义标签</h3>
+
+    {%  load my_tag_filter %}
+
+    {{ num | mutli_fliter:3 }}
+    <br>
+    {% mutli_tag num 10 %}
 
 
-    </style>
-</head>
-<body>
-
-<div class="header">
-
-</div>
-
-
-</body>
-</html>
+    {% if num|mutli_fliter:2 > 50 %}
+        <p>num*2 大于 50</p>
+    {% else %}
+        <p>num*2 小于 50</p>
+    {% endif %}
+{% endblock %}

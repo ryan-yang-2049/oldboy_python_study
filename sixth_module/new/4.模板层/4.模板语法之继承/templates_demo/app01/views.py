@@ -31,3 +31,9 @@ def login(request):
 		return HttpResponse("OK  POST........")
 
 	return render(request,"login.html",locals())
+
+
+def orders(request):
+
+
+	return render(request,'orders.html',locals())
