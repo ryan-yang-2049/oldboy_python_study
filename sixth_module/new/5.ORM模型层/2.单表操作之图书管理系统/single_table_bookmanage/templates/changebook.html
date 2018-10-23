@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>书籍修改</title>
+{% endblock %}
+{% block content %}
+    <h3>修改书籍信息</h3>
+{% endblock %}
+{% block book_title_name %}
+    <input type="text" class="form-control" name="title" value="{{ book_obj.title }}">
+{% endblock %}
+{% block book_price %}
+    <input type="text" class="form-control" name="price" value="{{ book_obj.price }}"/>
+{% endblock %}
+{% block book_pub_date %}
+    <input type="date" class="form-control" name="date" value="{{ book_obj.pub_date|date:'Y-m-d' }}">
+{% endblock %}
+{% block book_publish %}
+    <input type="text" class="form-control" name="publish" value="{{ book_obj.publish }}">
+{% endblock %}
