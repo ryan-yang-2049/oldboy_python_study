@@ -49,7 +49,7 @@ def add_data(request):
 	return HttpResponse("insert data")
 
 
-def query_data(request):
+def query(request):
 	"""
 	跨表查询：
 		1.基于对象的查询
@@ -88,14 +88,89 @@ def query_data(request):
 
 
 	# 一对一查询的正向查询 : 查询alex的addr
+	# alex = Author.objects.filter(name='alex').first()
+	# print(alex)
+	# print(alex.authordetail.addr)
 
-	author_obj = Author.objects.filter(name="ryan").first()
-	detail_obj = author_obj.authordetail.telephone
-	# print(author_obj.authordetail)
-	for detail in detail_obj:
-		print(detail.telephone)
+	# 一对一查询的反向查询 : 查询手机号为119的作者的名字和年龄
+	# author_obj = AuthorDetail.objects.filter(telephone=911).first()
+	# print(author_obj)
+
+
+	#-------------------基于双下划綫的跨表查询(join查询)-------------------------#
+	# # 一对多查询的正向查询：查询python 出版社的名字
+	# # 方式一
+	# pub_name = Book.objects.filter(title='python').values('publish__name')
+	# print(pub_name)
+	#
+	# # 方式二：
+	# pub_name = Publish.objects.filter(book__title='python').values('name')
+	# print(pub_name)
+
+	# # 多对多查询：查询python所有作者的名字
+	# # 方式一：正向查询
+	# res = Book.objects.filter(title='python').values("authors__name")
+	# print(res)
+	# # 方式二：反向查询
+	# res = Author.objects.filter(book__title='python').values("name")
+	# print(res)
+	#
+
+
+
+	# 一对一查询的正向查询 : 查询alex的addr
+	# res = Author.objects.filter(name='alex').values("authordetail__telephone")
+	# print(res)
+	#
+	# res = AuthorDetail.objects.filter(author__name='alex').values('telephone','addr')
+	# print(res)
+
+	# 查询手机号以119 开头的作者出版过的所有书籍名称以及出版社名称
+	#
+	# res = Author.objects.filter(authordetail__telephone__contains=911).values("book__title","book__publish__name")
+	# print(res)
+	#
+	# res = Book.objects.filter(authors__authordetail__telephone=911).values("title","publish__name")
+	# print(res)
+
+
+	#-------------------聚合与分组查询-------------------------#
+	#-------------聚合: aggregate() : 返回值是字典 --------------#
+	# 查询所有书籍的平均价格
+	# from django.db.models import Avg,Max,Min,Count
+	#
+	# res = Book.objects.all().aggregate(Avg("price"))    #{'price__avg': 126.0}
+	# res = Book.objects.all().aggregate(avg_price =Avg("price"))    #{'avg_price': 126.0}
+	# res = Book.objects.all().aggregate(avg_price =Avg("price"),max_price=Max("price"))    #{'avg_price': 126.0, 'max_price': Decimal('180')}
+	# print(res)
+
+	#-------------分组查询 --------------#
+
+	# 查找每一个出版社的名称以及出版的书籍个数
+	from django.db.models import Count,Avg,Max,Min
+
+	# ret = Publish.objects.values("name").annotate(book_count=Count("book__title"))
+	# ret = Publish.objects.values("pk").annotate(book_count=Count("book__title")).values("name","book_count")
+	# ret = Book.objects.values("publish__pk").annotate(c=Count("title"))
+	# print(ret)
+
+
+	# 查询每一个作者的名字以及出版过的书籍的最高价格
+	# ret = Author.objects.values("pk").annotate(c=Max("book__price")).values("name","c")
+	# print(ret)
+
+	# 查询每本书籍的名称以及对应的作者个数
+	# ret = Book.objects.values('pk').annotate(c=Count("authors__name")).values("title","c")
+	# print(ret)
+
+	# 查询每一个出版社的名称以及出版的书籍个数
+	ret = Publish.objects.values("pk").annotate(c=Count("book__title")).values("name", "email", "c")
+	print(ret)
+	ret = Publish.objects.annotate(c=Count("book__title")).values("name", "email", "c")
+	print(ret)
 
 	return HttpResponse("query data")
+
 
 
 '''
@@ -104,18 +179,23 @@ A与B有关系：关联属性在A表中
 	正向查询： A表 -----正向查询-------> B表
 	反向查询： B表 -----反向查询------->A表
 
-一对多查询的正反向查询：
-	正向查询：按字段 ==>   model对象.字段
- 	反向查询：表名小写_set.all()   ==> model对象.表名小写_set.all() 
+基于对象
+	一对多查询的正反向查询：
+		正向查询：按字段 ==>   model对象.字段
+	    反向查询：表名小写_set.all()   ==> model对象.表名小写_set.all() 
+	
+	多对多查询的正反向查询
+		正向查询：按字段 ==>   model对象.字段
+		反向查询：表名小写_set.all()  ==> model对象.表名小写_set.all() 
+	
+	一对一查询的正反向查询
+		正向查询：按字段
+		反向查询：按表名小写
 
-多对多查询的正反向查询
-	正向查询：按字段 ==>   model对象.字段
-	反向查询：表名小写_set.all()  ==> model对象.表名小写_set.all() 
-
-一对一查询的正反向查询
-	正向查询：按字段
-	反向查询：按表名小写
-
+基于双下划綫的跨表查询(join查询)
+	key:正向查询按字段,反向查询按表名小写
+	
 
 
 '''
+
