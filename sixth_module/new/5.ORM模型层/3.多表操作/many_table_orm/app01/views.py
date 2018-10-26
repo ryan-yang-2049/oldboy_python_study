@@ -164,13 +164,36 @@ def query(request):
 	# print(ret)
 
 	# 查询每一个出版社的名称以及出版的书籍个数
-	ret = Publish.objects.values("pk").annotate(c=Count("book__title")).values("name", "email", "c")
-	print(ret)
-	ret = Publish.objects.annotate(c=Count("book__title")).values("name", "email", "c")
-	print(ret)
+	# ret = Publish.objects.values("pk").annotate(c=Count("book__title")).values("name", "email", "c")
+	# print(ret)
+	# ret = Publish.objects.annotate(c=Count("book__title")).values("name", "email", "c")
+	# print(ret)
+
+	# 统计每一本以HT开头的书籍的作者个数
+	# ret = Book.objects.filter(title__startswith="HT").values('pk').annotate(author_count=Count("authors__name")).values("title","author_count")
+	# print(ret)
+	#
+	#
+	# # 统计不止一个作者的书籍
+	# res = Book.objects.values("pk").annotate(c=Count("authors__name")).filter(c__gt=1).values("title","c")
+	# print(res)
+
+
+	################## F 与Q查询 ###############################
+	from django.db.models import F,Q
+
+	# 查询评论数大于阅读数
+	res = Book.objects.filter(comment_num__gt=F("read_num"))
+	print(res)
+
+	# HTML书籍的价格都提升 10 块钱
+	# Book.objects.filter(title="HTML").update(price=F("price")+10)
+	
+	ret1 = Book.objects.filter(Q(title="HTML") & Q(price=133))
+	ret2 = Book.objects.filter(~Q(title="HTML") & ~Q(price=133), publish_id=1)
+	ret3 = Book.objects.filter(~Q(title="HTML") | Q(price__gt=103))
 
 	return HttpResponse("query data")
-
 
 
 '''
