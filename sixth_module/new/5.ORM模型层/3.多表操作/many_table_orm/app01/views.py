@@ -188,7 +188,7 @@ def query(request):
 
 	# HTML书籍的价格都提升 10 块钱
 	# Book.objects.filter(title="HTML").update(price=F("price")+10)
-	
+
 	ret1 = Book.objects.filter(Q(title="HTML") & Q(price=133))
 	ret2 = Book.objects.filter(~Q(title="HTML") & ~Q(price=133), publish_id=1)
 	ret3 = Book.objects.filter(~Q(title="HTML") | Q(price__gt=103))
