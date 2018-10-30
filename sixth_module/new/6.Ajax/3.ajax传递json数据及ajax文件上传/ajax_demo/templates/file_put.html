@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file_put</title>
+    <script src="/static/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+
+
+<h3>基于form表单的文件上传</h3>
+
+<form action="" method="post" enctype="">
+    {% csrf_token %}
+    用户名：<input type="text" name="user" />
+    头像：<input type="file" name="avatar">
+    <input type="submit">
+</form>
+
+<h3>基于Ajax文件上传</h3>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    用户名：<input type="text" id="user">
+    <input type="file"  id="avatar02">
+    <input type="button" class="btn" value="Ajax提交">
+</form>
+
+<script>
+    $('.btn').click(function () {
+        var formdata = new  FormData();
+        formdata.append("user",$("#user").val());
+        formdata.append("avatar02",$("#avatar02")[0].files[0]);
+
+
+
+        $.ajax({
+            url:'',
+            type:"post",
+            contentType: false,      // 不做任何编码处理
+            processData:false,          // 不对数据做预处理
+
+            data:formdata,
+            success:function (data) {
+                console.log(data)
+            }
+        })
+
+
+    })
+</script>
+
+
+</body>
+</html>
