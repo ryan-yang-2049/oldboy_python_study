@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reg</title>
+</head>
+<body>
+<form action="" method="post" novalidate="novalidate">
+    {% csrf_token %}
+    <p>
+        <label for="name">用户名:</label>
+        <input type="text" name="name" id="name"></p>
+    <p>
+        <label for="pwd">密码:</label>
+        <input type="text" name="pwd" id="pwd">
+    </p>
+    <p>
+        <label for="r_pwd">确认密码：</label>
+        <input type="text" name="r_pwd" id="r_pwd">
+    </p>
+    <p>
+        <label for="email">邮箱：</label>
+        <input type="text" name="email" id="email"></p>
+    <p>
+        <label for="tel">手机号：</label>
+        <input type="text" name="tel" id="tel">
+    </p>
+    <input type="submit">
+</form>
+</body>
+</html>
