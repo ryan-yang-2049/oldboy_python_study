@@ -10,114 +10,111 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/$5_requestsget.coverage" NAME="5.requests模块get请求自定义请求头信息 Coverage Results" MODIFIED="1541575791786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$10_requests_cookie_.coverage" NAME="10.requests模块高级(cookie) Coverage Results" MODIFIED="1541643186873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$11_requests.coverage" NAME="11.requests模块的代理操作 Coverage Results" MODIFIED="1541652181341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$4_requestsget2.coverage" NAME="4.requests模块带参数get请求方式2 Coverage Results" MODIFIED="1541575518789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$3_requestsget1.coverage" NAME="3.requests模块带参数get请求方式1 Coverage Results" MODIFIED="1541575125272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$2_response.coverage" NAME="2.response常用属性 Coverage Results" MODIFIED="1541559136960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础/data_storage" />
+    <SUITE FILE_PATH="coverage/$3_.coverage" NAME="3.爬取美女图片 Coverage Results" MODIFIED="1541669380152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
     <SUITE FILE_PATH="coverage/$7_requestsajaxget.coverage" NAME="7.requests模块ajax的get请求 Coverage Results" MODIFIED="1541580040212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$1_requestsget.coverage" NAME="1.requests发起get请求 Coverage Results" MODIFIED="1541558661276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
-    <SUITE FILE_PATH="coverage/$5_requestsget.coverage" NAME="5.requests模块get请求自定义请求头信息 Coverage Results" MODIFIED="1541575791786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$9_requests.coverage" NAME="9.requests综合项目实战 Coverage Results" MODIFIED="1541584919859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
-    <SUITE FILE_PATH="coverage/$4_requestsget2.coverage" NAME="4.requests模块带参数get请求方式2 Coverage Results" MODIFIED="1541575518789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$2_.coverage" NAME="2.使用正则对嗅事百科中的图片数据进行解析和下载 Coverage Results" MODIFIED="1541665461510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
+    <SUITE FILE_PATH="coverage/$1_.coverage" NAME="1.练习 Coverage Results" MODIFIED="1541658366627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
     <SUITE FILE_PATH="coverage/$8_requestsajaxpost.coverage" NAME="8.requests模块ajax的post请求 Coverage Results" MODIFIED="1541582582074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$6_requestspost.coverage" NAME="6.requests模块的post请求 Coverage Results" MODIFIED="1541577533925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
-    <SUITE FILE_PATH="coverage/$3_requestsget1.coverage" NAME="3.requests模块带参数get请求方式1 Coverage Results" MODIFIED="1541575125272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="1.requests发起get请求.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/1.requests发起get请求.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2.response常用属性.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/2.response常用属性.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.requests模块带参数get请求方式1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/3.requests模块带参数get请求方式1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4.requests模块带参数get请求方式2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/4.requests模块带参数get请求方式2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="5.requests模块get请求自定义请求头信息.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/5.requests模块get请求自定义请求头信息.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="6.requests模块的post请求.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/6.requests模块的post请求.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="7.requests模块ajax的get请求.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/7.requests模块ajax的get请求.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8.requests模块ajax的post请求.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/8.requests模块ajax的post请求.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="9.requests综合项目实战.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/9.requests综合项目实战.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="29" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="1.练习.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/1.练习.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="2.使用正则对嗅事百科中的图片数据进行解析和下载.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/2.使用正则对嗅事百科中的图片数据进行解析和下载.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="359">
+                  <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="3.爬取美女图片.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/3.爬取美女图片.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="10.requests模块高级(cookie).py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/2.requests模块基础/10.requests模块高级(cookie).py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="2.使用正则对嗅事百科中的图片数据进行解析和下载.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/2.使用正则对嗅事百科中的图片数据进行解析和下载.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="495">
+                  <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/test.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#p#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#1;n#p#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -130,10 +127,17 @@
         <option value="$PROJECT_DIR$/2.requests模块基础/3.requests模块带参数get请求方式2.py" />
         <option value="$PROJECT_DIR$/2.requests模块基础/4.requests模块带参数get请求方式2.py" />
         <option value="$PROJECT_DIR$/2.requests模块基础/5.requests模块get请求自定义请求头信息.py" />
-        <option value="$PROJECT_DIR$/2.requests模块基础/6.requests模块的post请求.py" />
         <option value="$PROJECT_DIR$/2.requests模块基础/7.requests模块ajax的get请求.py" />
         <option value="$PROJECT_DIR$/2.requests模块基础/8.requests模块ajax的post请求.py" />
         <option value="$PROJECT_DIR$/2.requests模块基础/9.requests综合项目实战.py" />
+        <option value="$PROJECT_DIR$/2.requests模块基础/6.requests模块的post请求.py" />
+        <option value="$PROJECT_DIR$/2.requests模块基础/10.requests模块高级(cookie).py" />
+        <option value="$PROJECT_DIR$/2.requests模块基础/11.requests模块的代理操作.py" />
+        <option value="$PROJECT_DIR$/3.三种数据解析方式/1.正则/1.练习.py" />
+        <option value="$PROJECT_DIR$/3.三种数据解析方式/1.正则/2.使用正则对嗅事百科中的图片数据进行解析和下载.py" />
+        <option value="$PROJECT_DIR$/3.三种数据解析方式/1.正则/3.爬取煎蛋网妹子图片.py" />
+        <option value="$PROJECT_DIR$/3.三种数据解析方式/test.html" />
+        <option value="$PROJECT_DIR$/3.三种数据解析方式/1.正则/3.爬取美女图片.py" />
       </list>
     </option>
   </component>
@@ -191,13 +195,13 @@
             <path>
               <item name="爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="2.requests模块基础" type="462c0819:PsiDirectoryNode" />
+              <item name="3.三种数据解析方式" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="2.requests模块基础" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="3.三种数据解析方式" type="462c0819:PsiDirectoryNode" />
+              <item name="1.正则" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,6 +213,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -237,9 +242,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.9.requests综合项目实战">
-    <configuration name="douban.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/爬虫/2.requests模块基础/data_storage/douban.html" />
-    <configuration name="6.requests模块的post请求" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.3.爬取美女图片">
+    <configuration name="douban_person.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/爬虫/2.requests模块基础/data_storage/douban_person.html" />
+    <configuration name="11.requests模块的代理操作" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -252,83 +257,83 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.requests模块基础/6.requests模块的post请求.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.requests模块基础/11.requests模块的代理操作.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="7.requests模块ajax的get请求" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1.练习" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2.requests模块基础" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.requests模块基础/7.requests模块ajax的get请求.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3.三种数据解析方式/1.正则/1.练习.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="8.requests模块ajax的post请求" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2.使用正则对嗅事百科中的图片数据进行解析和下载" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2.requests模块基础" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.requests模块基础/8.requests模块ajax的post请求.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3.三种数据解析方式/1.正则/2.使用正则对嗅事百科中的图片数据进行解析和下载.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="9.requests综合项目实战" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="3.爬取美女图片" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2.requests模块基础" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.requests模块基础/9.requests综合项目实战.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3.三种数据解析方式/1.正则/3.爬取美女图片.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.6.requests模块的post请求" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.douban.html" />
-      <item index="2" class="java.lang.String" itemvalue="Python.7.requests模块ajax的get请求" />
-      <item index="3" class="java.lang.String" itemvalue="Python.8.requests模块ajax的post请求" />
-      <item index="4" class="java.lang.String" itemvalue="Python.9.requests综合项目实战" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.douban_person.html" />
+      <item index="1" class="java.lang.String" itemvalue="Python.11.requests模块的代理操作" />
+      <item index="2" class="java.lang.String" itemvalue="Python.1.练习" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2.使用正则对嗅事百科中的图片数据进行解析和下载" />
+      <item index="4" class="java.lang.String" itemvalue="Python.3.爬取美女图片" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.9.requests综合项目实战" />
-        <item index="1" class="java.lang.String" itemvalue="Python.8.requests模块ajax的post请求" />
-        <item index="2" class="java.lang.String" itemvalue="Python.7.requests模块ajax的get请求" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.douban.html" />
-        <item index="4" class="java.lang.String" itemvalue="Python.6.requests模块的post请求" />
+        <item index="0" class="java.lang.String" itemvalue="Python.3.爬取美女图片" />
+        <item index="1" class="java.lang.String" itemvalue="Python.2.使用正则对嗅事百科中的图片数据进行解析和下载" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1.练习" />
+        <item index="3" class="java.lang.String" itemvalue="Python.11.requests模块的代理操作" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.douban_person.html" />
       </list>
     </recent_temporary>
   </component>
@@ -356,10 +361,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39529914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2681624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33653846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21775083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21775083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -465,30 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/6.requests模块的post请求.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/7.requests模块ajax的get请求.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/8.requests模块ajax的post请求.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2.requests模块基础/pages/人工智能_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -507,8 +488,121 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2.requests模块基础/9.requests综合项目实战.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="49">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/8.requests模块ajax的post请求.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/7.requests模块ajax的get请求.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/6.requests模块的post请求.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/data_storage/douban_person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding>
+            <marker date="1541643192479" expanded="true" signature="12023:12077" ph="{...}" />
+            <marker date="1541643192479" expanded="true" signature="13127:13181" ph="{...}" />
+            <marker date="1541643192479" expanded="true" signature="13677:13731" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/data_storage/daili.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1541652185679" expanded="true" signature="119283:119332" ph="..." />
+            <marker date="1541652185679" expanded="true" signature="241146:241156" ph="..." />
+            <marker date="1541652185679" expanded="true" signature="241374:241384" ph="..." />
+            <marker date="1541652185679" expanded="true" signature="241550:241560" ph="..." />
+            <marker date="1541652185679" expanded="true" signature="241626:241636" ph="..." />
+            <marker date="1541652185679" expanded="true" signature="241750:241760" ph="..." />
+            <marker date="1541652185679" expanded="true" signature="241861:241871" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/11.requests模块的代理操作.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/1.练习.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/10.requests模块高级(cookie).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#p#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/2.使用正则对嗅事百科中的图片数据进行解析和下载.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/3.爬取美女图片.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding />
         </state>
       </provider>
