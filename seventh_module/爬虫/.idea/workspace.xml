@@ -10,54 +10,61 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/$3_3.coverage" NAME="3.实战3 Coverage Results" MODIFIED="1542171567431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
     <SUITE FILE_PATH="coverage/$5_requestsget.coverage" NAME="5.requests模块get请求自定义请求头信息 Coverage Results" MODIFIED="1541575791786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
-    <SUITE FILE_PATH="coverage/$2_xpath1.coverage" NAME="2.xpath应用1 Coverage Results" MODIFIED="1541745510877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/2.xpath" />
-    <SUITE FILE_PATH="coverage/$10_requests_cookie_.coverage" NAME="10.requests模块高级(cookie) Coverage Results" MODIFIED="1541643186873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$11_requests.coverage" NAME="11.requests模块的代理操作 Coverage Results" MODIFIED="1541652181341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$4_requestsget2.coverage" NAME="4.requests模块带参数get请求方式2 Coverage Results" MODIFIED="1541575518789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$3_xpath.coverage" NAME="3.xpath项目演练 Coverage Results" MODIFIED="1541746584639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/2.xpath" />
-    <SUITE FILE_PATH="coverage/$3_requestsget1.coverage" NAME="3.requests模块带参数get请求方式1 Coverage Results" MODIFIED="1541575125272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$2_response.coverage" NAME="2.response常用属性 Coverage Results" MODIFIED="1541559136960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础/data_storage" />
-    <SUITE FILE_PATH="coverage/$3_.coverage" NAME="3.爬取图片 Coverage Results" MODIFIED="1542088548140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
     <SUITE FILE_PATH="coverage/$12____1_.coverage" NAME="12.验证码处理-打码平台 (1) Coverage Results" MODIFIED="1542103998150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础/img_code" />
     <SUITE FILE_PATH="coverage/$7_requestsajaxget.coverage" NAME="7.requests模块ajax的get请求 Coverage Results" MODIFIED="1541580040212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
-    <SUITE FILE_PATH="coverage/$4_.coverage" NAME="4.爬取美女图片 Coverage Results" MODIFIED="1541732719821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
     <SUITE FILE_PATH="coverage/$1_requestsget.coverage" NAME="1.requests发起get请求 Coverage Results" MODIFIED="1541558661276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$.coverage" NAME="验证码处理 Coverage Results" MODIFIED="1542104964215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础/img_code" />
     <SUITE FILE_PATH="coverage/$9_requests.coverage" NAME="9.requests综合项目实战 Coverage Results" MODIFIED="1541584919859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
-    <SUITE FILE_PATH="coverage/$ceshi.coverage" NAME="ceshi Coverage Results" MODIFIED="1541750111051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
     <SUITE FILE_PATH="coverage/$2_.coverage" NAME="2.爬取古诗文网中三国小说里的标题和内容 Coverage Results" MODIFIED="1541755066245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
-    <SUITE FILE_PATH="coverage/$1_.coverage" NAME="1.属性和方法 Coverage Results" MODIFIED="1541751516956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
     <SUITE FILE_PATH="coverage/$8_requestsajaxpost.coverage" NAME="8.requests模块ajax的post请求 Coverage Results" MODIFIED="1541582582074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
     <SUITE FILE_PATH="coverage/$12__.coverage" NAME="12.验证码处理-打码平台 Coverage Results" MODIFIED="1542102911926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$2_phantomJs.coverage" NAME="2.phantomJs案例 Coverage Results" MODIFIED="1542163523538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
+    <SUITE FILE_PATH="coverage/$2_xpath1.coverage" NAME="2.xpath应用1 Coverage Results" MODIFIED="1541745510877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/2.xpath" />
+    <SUITE FILE_PATH="coverage/$10_requests_cookie_.coverage" NAME="10.requests模块高级(cookie) Coverage Results" MODIFIED="1541643186873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$3_requestsget1.coverage" NAME="3.requests模块带参数get请求方式1 Coverage Results" MODIFIED="1541575125272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$1_ex01.coverage" NAME="1.ex01 Coverage Results" MODIFIED="1542162233588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
+    <SUITE FILE_PATH="coverage/$3_.coverage" NAME="3.爬取图片 Coverage Results" MODIFIED="1542088548140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
+    <SUITE FILE_PATH="coverage/$4_.coverage" NAME="4.爬取美女图片 Coverage Results" MODIFIED="1541732719821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/1.正则" />
+    <SUITE FILE_PATH="coverage/$ceshi.coverage" NAME="ceshi Coverage Results" MODIFIED="1541750111051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
+    <SUITE FILE_PATH="coverage/$1_.coverage" NAME="1.属性和方法 Coverage Results" MODIFIED="1541751516956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
     <SUITE FILE_PATH="coverage/$6_requestspost.coverage" NAME="6.requests模块的post请求 Coverage Results" MODIFIED="1541577533925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2.requests模块基础" />
+    <SUITE FILE_PATH="coverage/$1_selenuim.coverage" NAME="1.selenuim案例 Coverage Results" MODIFIED="1542163311312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="12.验证码处理-打码平台.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/img_code/12.验证码处理-打码平台.py">
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5.scrapy/project_01/project_01/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="88" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="验证码处理.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/img_code/验证码处理.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/5.scrapy/project_01/project_01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="code_img.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.requests模块基础/img_code/code_img.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="reptile_file.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5.scrapy/project_01/project_01/spiders/reptile_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -118,6 +125,12 @@
         <option value="$PROJECT_DIR$/2.requests模块基础/img_code/12.验证码处理-打码平台.py" />
         <option value="$PROJECT_DIR$/2.requests模块基础/data_storage/daili.html" />
         <option value="$PROJECT_DIR$/2.requests模块基础/img_code/验证码处理.py" />
+        <option value="$PROJECT_DIR$/4.selenuim &amp; phantomJs/1.ex01.py" />
+        <option value="$PROJECT_DIR$/4.selenuim &amp; phantomJs/1.selenuim案例.py" />
+        <option value="$PROJECT_DIR$/4.selenuim &amp; phantomJs/2.phantomJs案例.py" />
+        <option value="$PROJECT_DIR$/4.selenuim &amp; phantomJs/3.实战3.py" />
+        <option value="$PROJECT_DIR$/5.scrapy/project_01/project_01/spiders/reptile_file.py" />
+        <option value="$PROJECT_DIR$/5.scrapy/project_01/project_01/settings.py" />
       </list>
     </option>
   </component>
@@ -173,24 +186,28 @@
             <path>
               <item name="爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="2.requests模块基础" type="462c0819:PsiDirectoryNode" />
+              <item name="5.scrapy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="2.requests模块基础" type="462c0819:PsiDirectoryNode" />
-              <item name="img_code" type="462c0819:PsiDirectoryNode" />
+              <item name="5.scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="project_01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="3.三种数据解析方式" type="462c0819:PsiDirectoryNode" />
+              <item name="5.scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="project_01" type="462c0819:PsiDirectoryNode" />
+              <item name="project_01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="3.三种数据解析方式" type="462c0819:PsiDirectoryNode" />
-              <item name="1.正则" type="462c0819:PsiDirectoryNode" />
+              <item name="5.scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="project_01" type="462c0819:PsiDirectoryNode" />
+              <item name="project_01" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -214,16 +231,17 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\4.selenuim &amp; phantomJs\driver" />
+      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\2.requests模块基础\img_code" />
+      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\2.requests模块基础" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\4.selenuim &amp; phantomJs\driver" />
+      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\4.selenuim &amp; phantomJs" />
       <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\2.requests模块基础\PythonHTTP调用示例" />
       <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\3.三种数据解析方式\3.beautiful" />
       <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\3.三种数据解析方式\2.xpath" />
-      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\3.三种数据解析方式\1.正则" />
-      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\2.requests模块基础" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\2.requests模块基础\img_code" />
-      <recent name="D:\gitcode\oldboy_python_study\seventh_module\爬虫\2.requests模块基础" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -238,7 +256,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.验证码处理">
+  <component name="RunManager" selected="Python.3.实战3">
     <configuration name="验证码处理" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -258,96 +276,96 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="12.验证码处理-打码平台 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1.ex01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2.requests模块基础/img_code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.requests模块基础/img_code/12.验证码处理-打码平台.py" />
+      <option name="SCRIPT_NAME" value="D:\gitcode\oldboy_python_study\seventh_module\爬虫\4.selenuim &amp; phantomJs\1.selenuim案例.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="12.验证码处理-打码平台" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1.selenuim案例" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2.requests模块基础" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\gitcode\oldboy_python_study\seventh_module\爬虫\2.requests模块基础\img_code\12.验证码处理-打码平台.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4.selenuim &amp; phantomJs/1.selenuim案例.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2.爬取古诗文网中三国小说里的标题和内容" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2.phantomJs案例" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup/2.爬取古诗文网中三国小说里的标题和内容.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4.selenuim &amp; phantomJs/2.phantomJs案例.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="3.爬取图片" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="3.实战3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4.selenuim &amp; phantomJs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="爬虫" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3.三种数据解析方式/3.BeautifulSoup/3.爬取图片.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4.selenuim &amp; phantomJs/3.实战3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.2.爬取古诗文网中三国小说里的标题和内容" />
-      <item index="1" class="java.lang.String" itemvalue="Python.3.爬取图片" />
-      <item index="2" class="java.lang.String" itemvalue="Python.12.验证码处理-打码平台" />
-      <item index="3" class="java.lang.String" itemvalue="Python.12.验证码处理-打码平台 (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.验证码处理" />
+      <item index="0" class="java.lang.String" itemvalue="Python.验证码处理" />
+      <item index="1" class="java.lang.String" itemvalue="Python.1.ex01" />
+      <item index="2" class="java.lang.String" itemvalue="Python.1.selenuim案例" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2.phantomJs案例" />
+      <item index="4" class="java.lang.String" itemvalue="Python.3.实战3" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.验证码处理" />
-        <item index="1" class="java.lang.String" itemvalue="Python.12.验证码处理-打码平台 (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.12.验证码处理-打码平台" />
-        <item index="3" class="java.lang.String" itemvalue="Python.3.爬取图片" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2.爬取古诗文网中三国小说里的标题和内容" />
+        <item index="0" class="java.lang.String" itemvalue="Python.3.实战3" />
+        <item index="1" class="java.lang.String" itemvalue="Python.2.phantomJs案例" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1.selenuim案例" />
+        <item index="3" class="java.lang.String" itemvalue="Python.1.ex01" />
+        <item index="4" class="java.lang.String" itemvalue="Python.验证码处理" />
       </list>
     </recent_temporary>
   </component>
@@ -384,10 +402,10 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43910256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43910256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33653846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33653846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22657111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -416,104 +434,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/1.练习.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/2.xpath/1.常用xpath表达式.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/1.正则/2.使用正则对嗅事百科中的图片数据进行解析和下载.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/2.xpath/text.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/10.requests模块高级(cookie).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.三种数据解析方式/2.xpath/2.xpath应用1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/requests基础.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/data_storage/sougou.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/1.requests发起get请求.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/2.response常用属性.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/data_storage/tangyan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1683">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/3.requests模块带参数get请求方式1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/4.requests模块带参数get请求方式2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/5.requests模块get请求自定义请求头信息.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python/Python36/Lib/site-packages/requests/api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -686,13 +606,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2.requests模块基础/img_code/YDM_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2.requests模块基础/PythonHTTP调用示例/YDMHTTPDemo3.x.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -738,10 +651,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/img_code/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1275">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/2.requests模块基础/img_code/验证码处理.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.requests模块基础/img_code/YDM_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="51" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/2.phantomJs案例.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/3-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/3-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/3-3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/3.实战3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.selenuim &amp; phantomJs/1.selenuim案例.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.scrapy/project_01/project_01/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.scrapy/project_01/project_01/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.scrapy/project_01/project_01/spiders/reptile_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.scrapy/project_01/project_01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
           <folding />
         </state>
       </provider>
