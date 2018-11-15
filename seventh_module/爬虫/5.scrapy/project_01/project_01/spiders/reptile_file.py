@@ -15,3 +15,4 @@ class ReptileFileSpider(scrapy.Spider):
 	# parse 方法的返回值：必须为迭代器对象或者空对象
 	def parse(self, response):
 		print(response.text)   # 获取响应对象中的页面数据。
+		print('执行结束')

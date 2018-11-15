@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for project_01 project
+# Scrapy settings for project_02 project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,18 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'project_01'
+BOT_NAME = 'project_02'
 
-SPIDER_MODULES = ['project_01.spiders']
-NEWSPIDER_MODULE = 'project_01.spiders'
+SPIDER_MODULES = ['project_02.spiders']
+NEWSPIDER_MODULE = 'project_02.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'project_01 (+http://www.yourdomain.com)'
+#USER_AGENT = 'project_02 (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36'
 
 # Obey robots.txt rules
-# ROBOTSTXT_OBEY = True
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
@@ -49,13 +48,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'project_01.middlewares.Project01SpiderMiddleware': 543,
+#    'project_02.middlewares.Project02SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'project_01.middlewares.Project01DownloaderMiddleware': 543,
+#    'project_02.middlewares.Project02DownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -66,9 +65,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'project_01.pipelines.Project01Pipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'project_02.pipelines.Project02Pipeline': 300,   # 300 表示优先级
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,3 +89,5 @@ ROBOTSTXT_OBEY = False
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+# FEED_EXPORT_ENCODING = 'utf-8'  # 解决写入json乱码
+FEED_EXPORT_ENCODING = 'gb18030' # 解决写入csv乱码
