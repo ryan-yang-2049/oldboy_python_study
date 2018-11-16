@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for project_02 project
+# Scrapy settings for project_03 project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,15 +9,15 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'project_02'
+BOT_NAME = 'project_03'
 
-SPIDER_MODULES = ['project_02.spiders']
-NEWSPIDER_MODULE = 'project_02.spiders'
+SPIDER_MODULES = ['project_03.spiders']
+NEWSPIDER_MODULE = 'project_03.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'project_02 (+http://www.yourdomain.com)'
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36'
+#USER_AGENT = 'project_03 (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -48,13 +48,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'project_02.middlewares.Project02SpiderMiddleware': 543,
+#    'project_03.middlewares.Project03SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'project_02.middlewares.Project02DownloaderMiddleware': 543,
+#    'project_03.middlewares.Project03DownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -66,9 +66,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'project_02.pipelines.Project02Pipeline': 500,   # 300 表示优先级,数值越高,优先级越低，范围(0-1000)
-   'project_02.pipelines.QiubaiByFiles': 400,
-   'project_02.pipelines.QiubaiByMysql': 300,
+   'project_03.pipelines.Project03Pipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -91,5 +89,3 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-# FEED_EXPORT_ENCODING = 'utf-8'  # 解决写入json乱码
-FEED_EXPORT_ENCODING = 'gb18030' # 解决写入csv乱码
