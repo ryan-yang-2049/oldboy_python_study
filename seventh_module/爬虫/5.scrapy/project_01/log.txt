@@ -1,0 +1,7 @@
+2018-11-19 11:43:00 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.qiushibaike.com/> (referer: None)
+Traceback (most recent call last):
+  File "c:\python\python36\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\gitcode\oldboy_python_study\seventh_module\爬虫\5.scrapy\project_01\project_01\spiders\reptile_file.py", line 17, in parse
+    print(response)   # 获取响应对象中的页面数据。
+NameError: name 'response' is not defined

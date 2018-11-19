@@ -13,6 +13,5 @@ class ReptileFileSpider(scrapy.Spider):
 	# 解析方法：对获取页面的数据进行指定内容的解析
 	# response ：根据起始url列表发起请求，请求成功后返回的响应对象
 	# parse 方法的返回值：必须为迭代器对象或者空对象
-	def parse(self, response):
-		print(response.text)   # 获取响应对象中的页面数据。
-		print('执行结束')
+	def parse(self, response123):
+		print(response)   # 获取响应对象中的页面数据。

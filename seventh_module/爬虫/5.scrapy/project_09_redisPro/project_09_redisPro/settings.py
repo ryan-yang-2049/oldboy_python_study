@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for project_01 project
+# Scrapy settings for project_09_redisPro project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,23 +9,18 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'project_01'
+BOT_NAME = 'project_09_redisPro'
 
-SPIDER_MODULES = ['project_01.spiders']
-NEWSPIDER_MODULE = 'project_01.spiders'
+SPIDER_MODULES = ['project_09_redisPro.spiders']
+NEWSPIDER_MODULE = 'project_09_redisPro.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'project_01 (+http://www.yourdomain.com)'
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36'
+#USER_AGENT = 'project_09_redisPro (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-# ROBOTSTXT_OBEY = True
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
-# 指定终端输入指定类型的日志信息
-LOG_LEVEL = 'ERROR'
-LOG_FILE = 'log.txt'
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -52,13 +47,13 @@ LOG_FILE = 'log.txt'
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'project_01.middlewares.Project01SpiderMiddleware': 543,
+#    'project_09_redisPro.middlewares.Project09RedisproSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'project_01.middlewares.Project01DownloaderMiddleware': 543,
+#    'project_09_redisPro.middlewares.Project09RedisproDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -70,7 +65,7 @@ LOG_FILE = 'log.txt'
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'project_01.pipelines.Project01Pipeline': 300,
+#    'project_09_redisPro.pipelines.Project09RedisproPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
