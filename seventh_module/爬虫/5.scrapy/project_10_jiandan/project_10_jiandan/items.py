@@ -8,7 +8,7 @@
 import scrapy
 
 
-class Project09RedisproItem(scrapy.Item):
+class Project10JiandanItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    img_url = scrapy.Field()
+    pass
