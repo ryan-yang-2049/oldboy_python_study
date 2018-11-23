@@ -17,7 +17,7 @@ class Payment(models.Model):
     """
     付费记录
     """
-    customer = models.ForeignKey(verbose_name='关联客户', to='Customer')
+    customer = models.ForeignKey(verbose_name='关联客户', to='Customer',on_delete=models.CASCADE)
     money = models.IntegerField(verbose_name='付费金额')
     create_time = models.DateTimeField(verbose_name='付费时间', auto_now_add=True)
 

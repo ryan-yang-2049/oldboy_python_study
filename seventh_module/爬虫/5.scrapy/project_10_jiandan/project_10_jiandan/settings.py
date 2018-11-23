@@ -56,6 +56,7 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
    # 'project_10_jiandan.middlewares.Project10JiandanDownloaderMiddleware': 543,
    'project_10_jiandan.middlewares.RandomUserAgent': 1,
+   'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
    'project_10_jiandan.middlewares.ProxyMiddleware': 100,
 }
 
@@ -120,10 +121,11 @@ USER_AGENTS = [
 
 
 PROXIES = [
-    {'ip_port': '87.226.37.80:8711', 'user_pass': ''},
-    {'ip_port': '185.132.133.62:8750', 'user_pass': ''},
-    {'ip_port': '109.60.140.47:8831', 'user_pass': ''},
-    {'ip_port': '117.191.11.113:8080', 'user_pass': ''},
-    {'ip_port': '117.191.11.72:8080', 'user_pass': ''},
-    {'ip_port': '117.191.11.107:8080', 'user_pass': ''},
+'http://87.226.37.80:60505',
+'http://109.60.140.47:41258',
+'http://165.227.1.35:8080',
+'http://59.44.43.198:80',
+'http://117.191.11.113:8080',
+'http://117.191.11.72:8080',
 ]
+
