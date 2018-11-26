@@ -30,7 +30,7 @@ class RbacMiddleware(MiddlewareMixin):
 		for valid_url in settings.VALID_URL_LIST:
 			if re.match(valid_url,current_url):
 				# 白名单中的URL无需权限验证即可访问
-				return None
+				return None  # 中间件返回None 可以执行后面的视图函数(return None 中间件不拦截)
 
 		# 获取session信息
 		permissions_list = request.session.get(settings.PERMISSION_SESSION_KEY)

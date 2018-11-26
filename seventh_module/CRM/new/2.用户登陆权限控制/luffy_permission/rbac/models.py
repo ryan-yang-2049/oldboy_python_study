@@ -43,7 +43,7 @@ current_user = models.UserInfo.objects.filter(name=user,password=pwd).first()
 role_list = current_user.roles.all()
 
 #获取当前用户所拥有的所有权限
-permissions_list = current_user.roles.filter(permissions__isnull=False).all().values(permissions__url,permissions__url).distinct()
+permissions_list = current_user.roles.filter(permissions__isnull=False).all().values(permissions__id,permissions__url).distinct()
 
 # 问题一：
 	1.一个用户是否可以拥有多个角色？是
