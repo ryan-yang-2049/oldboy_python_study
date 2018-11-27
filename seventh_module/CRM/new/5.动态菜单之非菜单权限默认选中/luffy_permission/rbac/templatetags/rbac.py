@@ -51,6 +51,7 @@ def  mutli_menu(request):
 	'''
 
 	menu_dict = request.session.get(settings.MENU_SESSION_KEY)  # 此处获取的值是从初始化权限py中得到的 --> init_permission.py
+	print("inclusion tag menu_dict",menu_dict)
 	# print(request.current_selected_permission,type(request.current_selected_permission))
 	# 对字典的key进行排序。因为字典无序，所以排序的意义在于生成的列表顺序一样。
 	key_list = sorted(menu_dict)
@@ -65,7 +66,6 @@ def  mutli_menu(request):
 				per['class'] = 'active'
 				val['class'] = ''
 		ordered_dict[key] = val
-
 	return {'menu_dict':ordered_dict}
 
 

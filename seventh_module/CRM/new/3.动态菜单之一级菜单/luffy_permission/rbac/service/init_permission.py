@@ -14,9 +14,12 @@ def init_permission(current_user,request):
 	:return:
 	"""
 	# 根据当前用户信息获取此用户所拥有的所有权限，并放入session (queryset 不能直接放在session中，只能是python的数据类型)
-	permissions_queryset = current_user.roles.filter(permissions__isnull=False).all().values("permissions__id","permissions__title","permissions__url","permissions__is_menu","permissions__icon").distinct()
-
-
+	permissions_queryset = current_user.roles.filter(permissions__isnull=False).all().values("permissions__id",
+	                                                                                         "permissions__title",
+	                                                                                         "permissions__url",
+	                                                                                         "permissions__is_menu",
+	                                                                                         "permissions__icon").distinct()
+	# 获取权限列表 + 菜单信息
 	menu_list = []   # 权限url中的可作为菜单的url存入列表
 	permission_list = []  # 用户的权限列表
 	for item in permissions_queryset:
@@ -28,10 +31,11 @@ def init_permission(current_user,request):
 				'url':item["permissions__url"],
 			}
 			menu_list.append(temp)
+	print(menu_list)
+	print(permission_list)
 
 
-	# 获取权限列表 + 菜单信息
-	permission_list = [ item['permissions__url'] for item in permissions_queryset]
+	# permission_list = [ item['permissions__url'] for item in permissions_queryset]
 	# 将权限信息放入session
 	request.session[settings.PERMISSION_SESSION_KEY] = permission_list
 	request.session[settings.MENU_SESSION_KEY] = menu_list

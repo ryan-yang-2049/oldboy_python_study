@@ -26,15 +26,14 @@ def init_permission(current_user,request):
 
 	permission_list = []  # 用户的权限列表
 
-	menu_dict = {}   # 权限url中的可作为菜单的url存入字典
-
+	menu_dict = {}   # 将可以作为菜单的url放入这个字典，不能作为菜单的则在权限列表里面去取
 	for item in permissions_queryset:
 		permission_list.append({'id':item['permissions__id'],'url':item['permissions__url'],'pid':item['permissions__pid']})
 
 		menu_id = item["permissions__menu_id"]
 		if not menu_id:
 			continue
-
+		# print("item=======>", item)
 		node = {'id':item['permissions__id'],'title':item["permissions__title"],'url':item["permissions__url"]}
 		if menu_id in menu_dict:
 			menu_dict[menu_id]['children'].append(node)
@@ -45,7 +44,6 @@ def init_permission(current_user,request):
 				'children':[node,]
 			}
 
-	print(menu_dict)
 
 	# 将权限信息放入session
 	request.session[settings.PERMISSION_SESSION_KEY] = permission_list

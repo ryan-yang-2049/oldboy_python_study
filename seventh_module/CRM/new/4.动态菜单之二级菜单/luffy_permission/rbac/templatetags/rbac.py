@@ -54,7 +54,6 @@ def  mutli_menu(request):
 
 	# 对字典的key进行排序。因为字典无序，所以排序的意义在于生成的列表顺序一样。
 	key_list = sorted(menu_dict)
-
 	# 创建一个空的有序字典
 	ordered_dict = OrderedDict()
 	for key in key_list:

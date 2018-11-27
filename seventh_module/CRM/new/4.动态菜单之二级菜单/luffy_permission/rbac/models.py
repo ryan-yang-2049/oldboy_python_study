@@ -3,6 +3,9 @@ from django.db import models
 
 
 class Menu(models.Model):
+	"""
+	菜单表
+	"""
 	title = models.CharField(verbose_name='一级菜单名称', max_length=32)
 	icon = models.CharField(verbose_name='图标',max_length=32,null=True,blank=True)
 	# null = True 表示数据库可以为空，blank=True：表示django admin里面对它操作可以为空

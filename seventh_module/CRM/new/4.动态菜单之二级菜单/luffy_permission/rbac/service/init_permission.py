@@ -15,13 +15,13 @@ def init_permission(current_user,request):
 	"""
 	# 根据当前用户信息获取此用户所拥有的所有权限以及权限所对应的菜单url，并放入session (queryset 不能直接放在session中，只能是python的数据类型)
 	permissions_queryset = current_user.roles.filter(permissions__isnull=False).all().values(
-																								"permissions__id",
-																								"permissions__title",
-																								"permissions__url",
-																								"permissions__menu_id",
-																								"permissions__menu__title",
-																								"permissions__menu__icon"
-																							).distinct()
+		"permissions__id",
+		"permissions__title",
+		"permissions__url",
+		"permissions__menu_id",
+		"permissions__menu__title",
+		"permissions__menu__icon"
+	).distinct()
 
 	permission_list = []  # 用户的权限列表
 

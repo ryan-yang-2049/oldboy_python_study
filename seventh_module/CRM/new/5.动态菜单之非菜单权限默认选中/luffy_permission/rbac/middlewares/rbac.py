@@ -35,6 +35,7 @@ class RbacMiddleware(MiddlewareMixin):
 		# 获取session信息
 		permissions_list = request.session.get(settings.PERMISSION_SESSION_KEY)
 
+		print("middlewares  permissions_list",permissions_list)
 		if not permissions_list:
 			return HttpResponse('未获取到用户权限信息,请登录！')
 
