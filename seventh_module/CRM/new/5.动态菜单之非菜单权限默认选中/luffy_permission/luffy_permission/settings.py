@@ -174,10 +174,3 @@ VALID_URL_LIST =[
 # 菜单变量
 
 MENU_SESSION_KEY = "luffy_permission_menu_list_key"
-
-
-
-
-
-
-
