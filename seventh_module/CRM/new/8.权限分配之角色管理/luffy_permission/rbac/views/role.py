@@ -9,18 +9,11 @@
 """
 
 from django.shortcuts import render,redirect,HttpResponse
-from django import forms
+
 from django.urls import reverse
 from rbac import models
+from rbac.forms.role import RoleModelForm
 
-class RoleModelForm(forms.ModelForm):
-	class Meta:         # https://blog.csdn.net/Leo062701/article/details/80963625
-		model = models.Role
-		fields = ['title',]
-
-		widgets ={
-			'title': forms.TextInput(attrs={'class':'form-control'})
-		}
 
 
 def role_list(request):
@@ -36,16 +29,53 @@ def role_add(requet):
 
 	if requet.method == "GET":
 		form = RoleModelForm()
-		return render(requet,'rbac/role_add.html',{'form':form})
+		return render(requet, 'rbac/role_change.html', {'form':form})
 
 	form = RoleModelForm(data=requet.POST)
 	if form.is_valid():
 		form.save()
 		return redirect(reverse('rbac:role_list'))
 
-	return render(requet, 'rbac/role_add.html', {'form': form}) # 如果输入为空，则在form 中有errors的错误信息
+	return render(requet, 'rbac/role_change.html', {'form': form}) # 如果输入为空，则在form 中有errors的错误信息
 
 
+def role_edit(request,pk):
+	"""
+	编辑角色
+	:param request:
+	:param pk: 要修改的角色ID
+	:return:
+	"""
+	obj = models.Role.objects.filter(id=pk).first()
+	if not obj:
+		return HttpResponse("角色不存在")
 
 
+	if request.method == "GET":
+		form = RoleModelForm(instance=obj)
 
+		return render(request, 'rbac/role_change.html', {"form":form})
+
+	form = RoleModelForm(instance=obj,data=request.POST)
+	if form.is_valid():
+		form.save()
+		return redirect(reverse('rbac:role_list'))
+
+	return render(request, 'rbac/role_change.html', {"form": form})
+
+
+def role_del(request,pk):
+	"""
+	删除角色
+	:param request:
+	:param pk: 要删除的角色ID
+	:return:
+	"""
+
+	origin_url = reverse('rbac:role_list')
+	if request.method == "GET":
+
+		return render(request,'rbac/role_delete.html',{"cancel":origin_url})
+
+	models.Role.objects.filter(id=pk).delete()
+	return redirect(origin_url)
