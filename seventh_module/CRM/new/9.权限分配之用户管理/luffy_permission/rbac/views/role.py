@@ -71,11 +71,11 @@ def role_del(request,pk):
 	:param pk: 要删除的角色ID
 	:return:
 	"""
-
+	# 用户点击取消删除角色按钮以后就回到role_list 界面
 	origin_url = reverse('rbac:role_list')
 	if request.method == "GET":
 
-		return render(request,'rbac/role_delete.html',{"cancel":origin_url})
+		return render(request, 'rbac/delete.html', {"cancel":origin_url})
 
 	models.Role.objects.filter(id=pk).delete()
 	return redirect(origin_url)

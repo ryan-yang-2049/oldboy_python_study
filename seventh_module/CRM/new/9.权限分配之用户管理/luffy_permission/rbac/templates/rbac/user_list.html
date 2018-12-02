@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+ {% extends 'layout.html' %}
 
 {% block content %}
 
@@ -29,7 +29,7 @@
                 <td>{{ row.name }}</td>
 
                 <td>{{ row.email }}</td>
-                <td><a href="">重置密码</a></td>
+                <td><a href="{% url 'rbac:user_reset_pwd' pk=row.id %}">重置密码</a></td>
                 <td>
                     <a style="color: #333333;" href="{% url 'rbac:user_edit' pk=row.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a>
                     <a style="color: #d9534f;" href="{% url 'rbac:user_del' pk=row.id %}"><i class="fa fa-trash-o"></i></a>

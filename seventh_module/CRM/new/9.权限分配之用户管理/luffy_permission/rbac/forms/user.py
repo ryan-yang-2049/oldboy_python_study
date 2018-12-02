@@ -51,14 +51,29 @@ class UpdateUserModelForm(forms.ModelForm):
 			field.widget.attrs['class'] = 'form-control'
 
 
-class PasswordUserModelForm(forms.ModelForm):
+class ResetPasswordUserModelForm(forms.ModelForm):
+	confirm_password = forms.CharField(label='确认密码')
 
 	class Meta:
 		model = models.UserInfo
-		fields = ['name','email']
+		fields = ['password','confirm_password']
 
 	# 统一给ModelForm生成的字段添加css 样式
 	def __init__(self,*args,**kwargs):
-		super(PasswordUserModelForm,self).__init__(*args,**kwargs)
+		super(ResetPasswordUserModelForm,self).__init__(*args,**kwargs)
 		for name,field in self.fields.items():
 			field.widget.attrs['class'] = 'form-control'
+
+	def clean_confirm_password(self):
+		"""
+		检测密码是否一致
+		:return:
+		"""
+		password = self.cleaned_data['password']
+		confirm_password = self.cleaned_data['confirm_password']
+
+		if password != confirm_password:
+			raise ValidationError("密码输入不一致")
+
+		# return self.cleaned_data  # 也可以这样返回
+		return confirm_password
