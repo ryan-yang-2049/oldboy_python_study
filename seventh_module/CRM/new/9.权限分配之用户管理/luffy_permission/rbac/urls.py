@@ -21,6 +21,7 @@ urlpatterns = [
 	url(r'^user/del/(?P<pk>\d+)/$', user.user_del, name='user_del'),
 	url(r'^user/reset/password/(?P<pk>\d+)/$', user.user_reset_pwd, name='user_reset_pwd'),
 
+	
 
 ]
 

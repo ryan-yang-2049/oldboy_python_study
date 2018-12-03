@@ -92,7 +92,8 @@ def has_permission(request,name):
 
 
 
-
+def memory_url(request,name,*args,**kwargs):
+	pass
 
 
 
