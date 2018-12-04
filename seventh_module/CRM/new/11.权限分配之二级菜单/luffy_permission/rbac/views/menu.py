@@ -8,7 +8,7 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.urls import reverse
 from rbac import  models
-from rbac.forms.menu import MenuModelForm,SecondMenuModelForm
+from rbac.forms.menu import MenuModelForm,SecondMenuModelForm,PermissionModelForm
 from rbac.service.parse_urls import memory_reverse_url
 
 
@@ -22,6 +22,8 @@ def menu_list(request):
 	menus = models.Menu.objects.all()
 	menu_id = request.GET.get('mid')    # 用户选择的一级菜单
 	second_menu_id = request.GET.get('sid')    # 用户选择的二级菜单
+
+	# 如果一级菜单的mid不存在那么久不在二级菜单里面展示"新增"按钮
 	menu_exists = models.Menu.objects.filter(id=menu_id).exists()
 	if not menu_exists:
 		menu_id = None
@@ -30,9 +32,35 @@ def menu_list(request):
 	else:
 		second_menus = []
 
+	# 如果二级菜单的sid不存在那么久不在权限信息里面展示"新增"按钮
+	second_menu_exists = models.Permission.objects.filter(id=second_menu_id).exists()
+	# second_menu_exists = models.Permission.objects.filter(id=second_menu_id).values("menu__id").first()
+	print("second_menu_exists",second_menu_exists,type(second_menu_exists))
+	if not second_menu_exists:
+		second_menu_id = None
+	if second_menu_id:
+		permissions = models.Permission.objects.filter(pid_id=second_menu_id)
+	else:
+		permissions = []
+
+
+	permission_exists = models.Permission.objects.filter(id=second_menu_id).exists()
+	print('permission_exists',permission_exists)
+	if permission_exists:
+		second_menu_exists = models.Permission.objects.filter(id=second_menu_id).values("menu__id").first()
+		print("second_menu_exists",second_menu_exists,type(second_menu_exists))
+		if not second_menu_exists["menu__id"]:
+			second_menu_id = None
+		if second_menu_id:
+			permissions = models.Permission.objects.filter(pid_id=second_menu_id)
+		else:
+			permissions = []
+	else:
+		permissions = []
+
 	return render(request,'rbac/menu_list.html',locals())
 
-
+# 15:40
 def menu_add(request):
 	"""
 
@@ -144,3 +172,33 @@ def second_menu_del(request,pk):
 
 	models.Permission.objects.filter(id=pk).delete()
 	return redirect(origin_url)
+
+
+def permission_add(request,second_menu_id):
+	"""
+	增加权限信息
+	:param request:
+	:param second_menu_id: 关联的父级菜单ID
+	:return:
+	"""
+	if request.method == "GET":
+		form = PermissionModelForm()
+		return render(request, 'rbac/change.html', {'form':form})
+
+	form = PermissionModelForm(data=request.POST)
+	if form.is_valid():
+		second_menu_object = models.Permission.objects.filter(id=second_menu_id).first()
+		if not  second_menu_object:
+			return HttpResponse("二级菜单不存在，请重新选择！")
+		# form.instance 中包含了用户提交的所有值
+		#
+		form.instance.pid = second_menu_object
+
+		form.save()
+		return redirect(memory_reverse_url(request,'rbac:menu_list'))
+
+	return render(request, 'rbac/change.html', {'form': form})
+
+
+
+

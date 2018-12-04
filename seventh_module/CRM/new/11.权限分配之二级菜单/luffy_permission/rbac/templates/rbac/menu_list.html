@@ -104,6 +104,52 @@
             </div>
         </div>
 
+        {# 权限列表   #}
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <i class="fa fa-legal" aria-hidden="true"></i>权限信息
+                    {% if permissions %}
+                        <a href="{% memory_url request 'rbac:permission_add' second_menu_id=second_menu_id %}" class="right btn btn-success btn-xs" style="padding: 2px 8px;margin: -3px">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>新建
+                        </a>
+                    {% endif %}
+                </div>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>URL别名 & URL</th>
+                        <th>选项</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in permissions %}
+                        <tr>
+                            <td rowspan="2">{{ row.title }}</td>
+                            <td>{{ row.name }}</td>
+
+                            <td>
+                                <a style="color: #333333;" href='#'>
+                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                </a>
+                                <a style="color: #d9534f;" href='#'>
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-top: 0">{{ row.url }}</td>
+                        </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
