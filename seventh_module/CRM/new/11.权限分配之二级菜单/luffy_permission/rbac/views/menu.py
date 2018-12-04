@@ -32,16 +32,16 @@ def menu_list(request):
 	else:
 		second_menus = []
 
-	# 如果二级菜单的sid不存在那么久不在权限信息里面展示"新增"按钮
-	second_menu_exists = models.Permission.objects.filter(id=second_menu_id).exists()
-	# second_menu_exists = models.Permission.objects.filter(id=second_menu_id).values("menu__id").first()
-	print("second_menu_exists",second_menu_exists,type(second_menu_exists))
-	if not second_menu_exists:
-		second_menu_id = None
-	if second_menu_id:
-		permissions = models.Permission.objects.filter(pid_id=second_menu_id)
-	else:
-		permissions = []
+	# # 如果二级菜单的sid不存在那么久不在权限信息里面展示"新增"按钮
+	# second_menu_exists = models.Permission.objects.filter(id=second_menu_id).exists()
+	# # second_menu_exists = models.Permission.objects.filter(id=second_menu_id).values("menu__id").first()
+	# print("second_menu_exists",second_menu_exists,type(second_menu_exists))
+	# if not second_menu_exists:
+	# 	second_menu_id = None
+	# if second_menu_id:
+	# 	permissions = models.Permission.objects.filter(pid_id=second_menu_id)
+	# else:
+	# 	permissions = []
 
 
 	permission_exists = models.Permission.objects.filter(id=second_menu_id).exists()
