@@ -29,7 +29,7 @@ b.思路
 					title:'用户管理',
 					icon : 'x1',
 					children:[
-						{'id':2,'title':'账单列表','url':'/payment/list'},
+						{'id':7,'title':'账单列表','url':'/payment/list'},
 					]
 				},
 			}
