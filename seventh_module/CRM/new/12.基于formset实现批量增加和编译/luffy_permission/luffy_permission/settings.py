@@ -177,7 +177,9 @@ VALID_URL_LIST =[
 MENU_SESSION_KEY = "luffy_permission_menu_list_key"
 
 
-
+AUTO_DISCOVER_EXCLUDE = [
+	'/admin/.*',
+]
 
 
 

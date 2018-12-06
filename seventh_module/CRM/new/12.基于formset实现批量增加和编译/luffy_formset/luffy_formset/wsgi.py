@@ -1,5 +1,5 @@
 """
-WSGI config for formset_example project.
+WSGI config for luffy_formset project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "formset_example.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "luffy_formset.settings")
 
 application = get_wsgi_application()

@@ -10,7 +10,7 @@ from django.urls import reverse
 from rbac import  models
 from rbac.forms.menu import MenuModelForm,SecondMenuModelForm,PermissionModelForm
 from rbac.service.parse_urls import memory_reverse_url
-
+from rbac.service.routes import get_all_url_dict
 
 def menu_list(request):
 	"""
@@ -33,16 +33,6 @@ def menu_list(request):
 		second_menus = []
 
 	# # 如果二级菜单的sid不存在那么久不在权限信息里面展示"新增"按钮
-	# second_menu_exists = models.Permission.objects.filter(id=second_menu_id).exists()
-	# # second_menu_exists = models.Permission.objects.filter(id=second_menu_id).values("menu__id").first()
-	# print("second_menu_exists",second_menu_exists,type(second_menu_exists))
-	# if not second_menu_exists:
-	# 	second_menu_id = None
-	# if second_menu_id:
-	# 	permissions = models.Permission.objects.filter(pid_id=second_menu_id)
-	# else:
-	# 	permissions = []
-
 	permission_exists = models.Permission.objects.filter(id=second_menu_id).values("menu_id")
 	if permission_exists:
 		second_menu_exists = models.Permission.objects.filter(id=second_menu_id).values("menu__id").first()
@@ -57,7 +47,6 @@ def menu_list(request):
 
 	return render(request,'rbac/menu_list.html',locals())
 
-# 15:40
 def menu_add(request):
 	"""
 
@@ -94,7 +83,6 @@ def menu_edit(request,pk):
 
 	return render(request, 'rbac/change.html', {"form": form})
 
-
 def menu_del(request,pk):
 	# 用户点击取消删除角色按钮以后就回到role_list 界面
 	origin_url = memory_reverse_url(request,'rbac:menu_list')
@@ -105,8 +93,6 @@ def menu_del(request,pk):
 
 	models.Menu.objects.filter(id=pk).delete()
 	return redirect(origin_url)
-
-
 
 def second_menu_add(request,menu_id):
 	"""
@@ -127,7 +113,6 @@ def second_menu_add(request,menu_id):
 		return redirect(memory_reverse_url(request,'rbac:menu_list'))
 
 	return render(request, 'rbac/change.html', {'form': form})
-
 
 def second_menu_edit(request,pk):
 	"""
@@ -152,7 +137,6 @@ def second_menu_edit(request,pk):
 		return redirect(memory_reverse_url(request, 'rbac:menu_list'))
 	return render(request, 'rbac/change.html', {"form": form})
 
-
 def second_menu_del(request,pk):
 	"""
 	删除二级菜单
@@ -169,7 +153,6 @@ def second_menu_del(request,pk):
 
 	models.Permission.objects.filter(id=pk).delete()
 	return redirect(origin_url)
-
 
 def permission_add(request,second_menu_id):
 	"""
@@ -194,8 +177,6 @@ def permission_add(request,second_menu_id):
 		return redirect(memory_reverse_url(request,'rbac:menu_list'))
 	return render(request, 'rbac/change.html', {'form': form})
 
-
-
 def permission_edit(request,pk):
 	"""
 	编辑
@@ -217,7 +198,6 @@ def permission_edit(request,pk):
 		return redirect(memory_reverse_url(request, 'rbac:menu_list'))
 	return render(request, 'rbac/change.html', {"form": form})
 
-
 def permission_del(request,pk):
 	"""
 	删除
@@ -230,3 +210,18 @@ def permission_del(request,pk):
 		return render(request, 'rbac/delete.html', {"cancel":origin_url})
 	models.Permission.objects.filter(id=pk).delete()
 	return redirect(origin_url)
+
+def multi_permission(request):
+	"""
+	批量操作权限
+	:param request:
+	:return:
+	"""
+	# 获取项目中所有的URL
+	all_url_dct = get_all_url_dict()
+	for k,v in all_url_dct.items():
+		print(k,"<========>",v)
+
+	return HttpResponse("multi_permission")
+
+

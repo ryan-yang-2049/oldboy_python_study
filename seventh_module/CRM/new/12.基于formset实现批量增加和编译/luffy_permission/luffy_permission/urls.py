@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 
+# settings.py中设置的 根URL  ROOT_URLCONF = 'luffy_permission.urls'
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('web.urls')),
-    url(r'^rbac/', include('rbac.urls',namespace='rbac')),
+    url(r'^admin/', admin.site.urls),   # RegexURLResolver
+    url(r'^', include('web.urls')), # RegexURLResolver
+    url(r'^rbac/', include('rbac.urls',namespace='rbac')), # RegexURLResolver
+    # url(r'^xx/x', lambda x: x,name="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"), # RegexURLPattern
+
 ]
