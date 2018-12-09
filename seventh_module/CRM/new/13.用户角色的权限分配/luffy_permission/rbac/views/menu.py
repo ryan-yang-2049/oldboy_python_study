@@ -347,6 +347,41 @@ def distribute_permission(request):
 	:param request:
 	:return:
 	"""
+	all_user_list = models.UserInfo.objects.all()
+
+	all_role_list = models.Role.objects.all()
+
+	menu_permission_list =[]
+	# 所有的一级菜单
+	all_menu_list = models.Menu.objects.all().values('id','title')
+
+	all_menu_dict = {}
+
+	for item in all_menu_list:
+		item['children'] = []
+		all_menu_dict[item['id']] = item
 
 
+	# 获取所有的二级菜单 (menu 不为空)
+	all_second_menu_list = models.Permission.objects.filter(menu__isnull=False).values('id','title','menu_id')
+	all_second_menu_dict = {}
+
+	for row in all_second_menu_list:
+		row['children'] = []
+		all_second_menu_dict[row['id']] = row
+		menu_id = row['menu_id']
+		all_menu_dict[menu_id]['children'].append(row)
+
+	# 获取所有三级菜单 （不能做菜单的权限）
+	all_permission_list = models.Permission.objects.filter(pid_id__isnull=False).values('id','title','pid_id')
+
+	for permission in all_permission_list:
+		pid = permission['pid_id']
+		if not pid:
+			continue
+		all_second_menu_dict[pid]['children'].append(permission)
+
+
+
+	print(all_menu_dict)
 	return render(request,'rbac/distribute_permission.html',locals())

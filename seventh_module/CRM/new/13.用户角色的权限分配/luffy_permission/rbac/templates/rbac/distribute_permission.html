@@ -1,10 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+{% load rbac %}
+{% block css %}
+    <style>
+        tr.active{
+            border-left: 2px solid #fdc00f;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="luffy-container">
+        {# 一级菜单   #}
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <i class="fa fa-book" aria-hidden="true"></i>用户信息
+                </div>
 
-</body>
-</html>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    {% for user in all_user_list %}
+                        <li>{{ user.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        {# 二级菜单 #}
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <i class="fa fa-legal" aria-hidden="true"></i>角色信息
+                </div>
+                <div class="panel-body">
+                    提示：点击用户才能为其分配权限
+                </div>
+
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>角色</th>
+                        <th>选项</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in all_role_list %}
+                        <tr>
+                            <td>{{ row.title }}</td>
+                            <td>
+                                <input type="checkbox" name="roles" value="{{ row.id }}">
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {# 权限列表   #}
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <i class="fa fa-legal" aria-hidden="true"></i>权限分配
+
+                </div>
+                <div class="panel-body">
+                    权限和菜单
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
