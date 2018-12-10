@@ -60,7 +60,7 @@
 
     </style>
     {% block css %}
-    
+
     {% endblock %}
 </head>
 <body>
@@ -125,12 +125,15 @@
 <div class="pg-body">
     <div class="left-menu">
         <div class="menu-body">
-{#            {% mutli_menu request %}#}
+            {% mutli_menu request %}
 
         </div>
     </div>
     <div class="right-body">
-{#        {% breadcrumb request %}#}
+        <div>
+            {% breadcrumb request %}
+        </div>
+
         {% block content %}
 
 

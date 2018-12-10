@@ -347,6 +347,54 @@ def distribute_permission(request):
 	:param request:
 	:return:
 	"""
+	user_id = request.GET.get('uid')
+	user_object = models.UserInfo.objects.filter(id=user_id).first()
+	if not user_object:
+		user_id =None
+
+	role_id = request.GET.get('rid')
+	role_object = models.Role.objects.filter(id=role_id).first()
+	if not role_object:
+		role_id = None
+
+
+	if request.method == "POST":
+		if request.POST.get("type") == "role":
+			roles_id_list = request.POST.getlist('roles')
+			print("roles_id_list",roles_id_list)
+			# 用户和角色的关系添加到第三张表 many to many
+			if not user_object:
+				return HttpResponse('请选择用户,然后在分配角色')
+			user_object.roles.set(roles_id_list)
+
+		elif request.POST.get("type") == "permission":
+			permission_id_list = request.POST.getlist('permissions')
+			if not role_object:
+				return HttpResponse("请选择角色,然后在分配权限")
+			role_object.permissions.set(permission_id_list)
+
+	# 获取当前用户拥有的所有角色
+	if user_id:
+		user_has_roles = user_object.roles.all()
+	else:
+		user_has_roles = []
+	user_has_roles_dict = {item.id:None for item in user_has_roles}
+	# print("user_has_roles_dict", user_has_roles_dict)
+
+	# 获取当前用户拥有的所有权限
+
+	# 如果选中了角色，优先显示选中角色所拥有的权限
+	# 如果没有选择角色，才显示用户所拥有的权限
+	if role_object: # 选择了角色
+		user_has_permissions = role_object.permissions.all()
+		user_has_permissions_dict = {item.id: None for item in user_has_permissions}
+	elif user_object:   # 未选择角色，但选择了用户
+		user_has_permissions = user_object.roles.filter(permissions__isnull=False).values('id','permissions').distinct()
+		user_has_permissions_dict = {item['permissions']: None for item in user_has_permissions}
+	else:
+		user_has_permissions = {}
+
+
 	all_user_list = models.UserInfo.objects.all()
 
 	all_role_list = models.Role.objects.all()
@@ -383,5 +431,5 @@ def distribute_permission(request):
 
 
 
-	print(all_menu_dict)
+	# print(all_menu_dict)
 	return render(request,'rbac/distribute_permission.html',locals())
