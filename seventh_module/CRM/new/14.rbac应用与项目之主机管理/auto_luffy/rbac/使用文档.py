@@ -19,7 +19,7 @@ RBAC组件的使用文档
             name = models.CharField(verbose_name='用户名', max_length=32)
             password = models.CharField(verbose_name='密码', max_length=64)
             email = models.CharField(verbose_name='邮箱', max_length=32)
-            roles = models.ManyToManyField(verbose_name='拥有的所有角色', to=Role, blank=True) 严重提醒 Role 不要加引号
+            roles = models.ManyToManyField(verbose_name='拥有的所有角色', to=Role, blank=True) # 严重提醒 Role 不要加引号
 
             def __str__(self):
                 return self.name
@@ -221,12 +221,12 @@ RBAC组件的使用文档
             <div class="pg-body">
                 <div class="left-menu">
                     <div class="menu-body">
-                        {% multi_menu request %}  # 开发时，去掉；上下时，取回。
+                        {% multi_menu request %}  # 开发时，去掉；上线时，取回。
                     </div>
                 </div>
                 <div class="right-body">
                     <div>
-                        {% breadcrumb request %} # 开发时，去掉；上下时，取回。
+                        {% breadcrumb request %} # 开发时，去掉；上线时，取回。
                     </div>
                     {% block content %} {% endblock %}
                 </div>
