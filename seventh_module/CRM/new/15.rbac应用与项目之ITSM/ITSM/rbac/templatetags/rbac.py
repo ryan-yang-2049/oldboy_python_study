@@ -47,7 +47,6 @@ def  mutli_menu(request):
 				per['class'] = 'active'
 				val['class'] = ''
 		ordered_dict[key] = val
-	print("ordered_dict",ordered_dict)
 	return {'menu_dict':ordered_dict}
 
 # 导航条

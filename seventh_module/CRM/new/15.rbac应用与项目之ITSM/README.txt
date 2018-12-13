@@ -98,10 +98,10 @@
 			</div>
 		</div>
 
-6.业务逻辑开发
+7.业务逻辑开发
 	将所有的路由都要设置一个别名"name" ,因为，在rbac中会根据整个项目的url 进行自动发现
 	
-	6.1 用户表和主机表的增删改查
+	7.1 用户表和主机表的增删改查
 		- 用户表的增删改查
 			1.ITSM/urls.py
 				url(r'cmdb/',include('cmdb.urls',namespace='cmdb')),
@@ -129,24 +129,24 @@
 				代码查看host.py文件即可
 				也要注意 html文件中的  {% memory_url request 'cmdb:host_add' %}等
 			
-7.权限的应用
+8.权限的应用
 
-	7.1 创建以及权限菜单
+	8.1 创建以及权限菜单
 		http://127.0.0.1:8000/rbac/menu/list/
-		7.1.1 创建一级权限菜单：
+		8.1.1 创建一级权限菜单：
 					权限管理
 					用户管理
 					主机管理
-		7.1.2 点击批量操作为一级权限菜单添加二级权限菜单以及非菜单权限
+		8.1.2 点击批量操作为一级权限菜单添加二级权限菜单以及非菜单权限
 
-		7.1.3 添加角色
-		7.1.4 添加用户
-		7.1.5 为角色分配权限
-		7.1.6 为用户分配角色
+		8.1.3 添加角色
+		8.1.4 添加用户
+		8.1.5 为角色分配权限
+		8.1.6 为用户分配角色
 		
 
 	
-	7.2 增加layout.html中用到的权限（菜单和导航条，目的是为了动态生成菜单和导航条）
+	8.2 增加layout.html中用到的权限（菜单和导航条，目的是为了动态生成菜单和导航条）
 		<div class="pg-body">
 			<div class="left-menu">
 				<div class="menu-body">
@@ -162,26 +162,26 @@
 		</div>	
 	
 	
-	7.3 中间件应用上
+	8.3 中间件应用上
 		MIDDLEWARE = [
 			...
 			'rbac.middlewares.rbac.RbacMiddleware',
 		]
 		
-	7.4 白名单处理，在settings.py 中添加
+	8.4 白名单处理，在settings.py 中添加
 		# 白名单
 		VALID_URL_LIST = [
 			'/login/',
 			'/admin/.*'
 		]
 					
-	7.5 权限初始化 settings.py 添加以下配置
+	8.5 权限初始化 settings.py 添加以下配置
 		# 权限在Session中存储的key
 		PERMISSION_SESSION_KEY = "luffy_permission_url_list_key"
 		# 菜单在Session中存储的key
 		MENU_SESSION_KEY = "luffy_permission_menu_key"
 
-	7.6 批量操作权限时，自动发现路由中所有的URL时，应该排除的URL
+	8.6 批量操作权限时，自动发现路由中所有的URL时，应该排除的URL
 		# 自动化发现路由中URL时，排除的URL
 		AUTO_DISCOVER_EXCLUDE = [
 			'/admin/.*',
@@ -191,7 +191,7 @@
 		]
 	
 	
-	7.7 用户登陆逻辑
+	8.7 用户登陆逻辑
 		写完用户登录权限，对于 /index/,/login/,/logout/ 三个是否分配权限？
 		方案一：
 			将 /index/,/logout/ 录入数据库，以后每个用户都分配该权限
@@ -216,14 +216,40 @@
 
 
 
+		# 白名单 表示不经过中间件的权限验证，直接就可以访问
+		VALID_URL_LIST = [
+			'/login/',
+			'/admin/.*'
+		]
+
+		# 需要登录但无需权限的URL
+		NO_PERMISSION_LIST = [
+			'/index/',
+			'/logout/',
+			'/cmdb/index/',
+		]
+
+		# 自动化发现路由中URL时，排除的URL
+		AUTO_DISCOVER_EXCLUDE = [
+			'/admin/.*',
+			'/login/',
+			'/logout',
+			'/cmdb/index/',
+
+		]
 
 		
 		
+到此处的目录：rbac权限基本完成。应用参照这个项目即可。
+优化点：
+	1.用户表是否可以使用django自带的用户表。
+	2.某些跨应用调用的是否可以全部使用 如下方式进行调用
+		from django.utils.module_loading import import_string
+		from django.conf import settings
+		user_model_calss = import_string(settings.RBAC_USER_MODLE_CLASS)
+		user_object = user_model_calss.objects.filter(id=user_id).first()
 		
-		
-		
-		
-		
+	
 		
 		
 		
