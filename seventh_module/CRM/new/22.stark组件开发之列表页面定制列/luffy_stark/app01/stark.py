@@ -11,42 +11,24 @@ from app01 import models
 
 
 class DepartHandler(StarkHandler):
-
-	# 预留的钩子函数，用于单独的对象添加额外的URL
-	def extra_urls(self):
-		"""
-		额外的增加URL
-		:return:
-		"""
-		extar_patterns = [
-			url(r'^detail/(\d+)/$', self.detail_view,name='detail'),
-		]
-
-		return extar_patterns
-
-	def detail_view(self, request, pk):
-		return HttpResponse("详情页面")
+	list_display = ['id', 'title']
 
 
-site.registry(models.Depart, DepartHandler,prev='public01')
+# site.registry(models.Depart, DepartHandler, prev='public01')
+site.registry(models.Depart, DepartHandler)
 
 
 class UserInfoHandler(StarkHandler):
+	# 定制页面的列
+	list_display = ['name', 'age', 'email']
 
-	# 对于某个对象需要减少几个URL,那就单独写这个函数并加上需要的URL即可
-	def get_urls(self):
+
+	def get_list_display(self):
 		"""
-		修改父类 StarkHandler 默认的URL
+		自定义扩展，例如：根据用户角色的不同展示不同的列
 		:return:
 		"""
-		patterns = [
-			url(r'^list/$', self.changelist_view,name=self.get_add_url_name),
-			url(r'^add/$', self.add_view,name=self.get_add_url_name),
-		]
-
-		return patterns
+		return ['id','name','age']
 
 
-site.registry(models.UserInfo, UserInfoHandler,prev='public02')
-
-
+site.registry(models.UserInfo, UserInfoHandler)

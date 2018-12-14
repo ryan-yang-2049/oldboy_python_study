@@ -8,9 +8,21 @@ from django.shortcuts import HttpResponse, render
 
 
 class StarkHandler(object):
+	list_display = []
+
 	def __init__(self, model_class, prev):
 		self.model_class = model_class  # 此时的model_class 是一个对象
-		self.prev = prev
+		self.prev = prev  # 表示别名
+
+	def get_list_display(self):
+		"""
+		获取页面上应该显示的列，预留的自定义扩展，例如：以后根据用户角色的不同展示不同的列
+		:return:
+		"""
+		value = []
+		value.extend(self.list_display)
+
+		return value
 
 	def changelist_view(self, request):
 		"""
@@ -18,8 +30,39 @@ class StarkHandler(object):
 		:param request:
 		:return:
 		"""
+
+		list_display = self.get_list_display()
+
+		# 1.处理表头
+		header_list = []
+		if list_display:
+			for key in list_display:
+				verbose_name = self.model_class._meta.get_field(key).verbose_name
+				header_list.append(verbose_name)
+		else:
+			header_list.append(self.model_class._meta.model_name)
+
+		# 2.处理表的内容
+		# queryset[对象1，对象2]
 		data_list = self.model_class.objects.all()
-		# print(data_list)
+		"""
+		获取的数据，要根据list_display 来进行构造数据
+		[
+			['name1','18','123@qq.com'],
+			['name2','28','234@qq.com']
+		]
+		
+		"""
+		body_list = []
+		for row in data_list:
+			tr_list = []
+			if list_display:
+				for key in list_display:
+					tr_list.append(getattr(row, key))
+			else:
+				tr_list.append(row)
+			body_list.append(tr_list)
+
 		return render(request, 'stark/changelist.html', locals())
 
 	def add_view(self, request):
@@ -117,7 +160,7 @@ class StarkSite(object):
 		if not handler_calss:
 			handler_calss = StarkHandler  # StarkHandler 就是上面创建的类
 
-		self._registry.append({'model_class': model_class, 'handler': handler_calss(model_class,prev), 'prev': prev})
+		self._registry.append({'model_class': model_class, 'handler': handler_calss(model_class, prev), 'prev': prev})
 		"""
 		site._registry = [
 			{'prev':None,'model_class': <class 'app01.models.Depart'>, 'handler': DepartHandler(models.Depart,prev)对象中有一个model_class=models.Depart},
