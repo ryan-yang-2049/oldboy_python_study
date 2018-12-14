@@ -4,10 +4,12 @@
 # __author__ = 'YangYang'
 # __mtime__ = '2018.12.13'
 
+from luffy import site
+
+site._registry.append("app02")
 
 
 
-print('app02目录下的xxxx.py')
 
 
 

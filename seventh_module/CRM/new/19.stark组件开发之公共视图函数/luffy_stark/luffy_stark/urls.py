@@ -1,4 +1,4 @@
-"""prev_luffy_stark URL Configuration
+"""luffy_stark URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,44 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url,include
+from django.conf.urls import url
 from django.contrib import admin
-#
-# urlpatterns = [
-#     url(r'^web/', include('app01.urls')),
-# ]
 
+from stark.service.v1 import site
 
-from django.conf.urls import url,include
-from luffy import site
 
 urlpatterns = [
-	url(r'^web/',site.urls)
+    url(r'^admin/', admin.site.urls),
+    url(r'^stark/', site.urls()),
 ]
-
-print(urlpatterns)
-
-# urlpatterns = [
-# 	url(r'^web/', ([
-# 		           url(r'^index/', views.index),
-# 		           url(r'^home/', views.home),
-# 		           ], None, None)),
-# ]
-"""
-web/index/   -->app01.views.index
-web/home/   -->app01.views.home
-
-from app01 import urls
-urlpatterns = [
-    url(r'^web/', (urls, app_name, namespace)),
-]
-
-
-"""
-
-
-
-
-
-
-

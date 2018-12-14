@@ -4,9 +4,9 @@ from django.shortcuts import render,HttpResponse
 
 def index(request):
 
-	return HttpResponse("index  ok")
+	return HttpResponse("app01 index  ok")
 
 
 def home(request):
 
-	return HttpResponse("home  ok")
+	return HttpResponse("app01 home  ok")
