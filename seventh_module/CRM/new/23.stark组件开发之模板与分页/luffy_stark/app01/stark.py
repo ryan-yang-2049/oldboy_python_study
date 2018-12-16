@@ -20,6 +20,7 @@ site.registry(models.Depart, DepartHandler)
 
 
 class UserInfoHandler(StarkHandler):
+	per_page_num = 1
 
 	def display_edit(self, obj=None, is_header=None):
 		"""

@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 
-from types import  FunctionType
+from types import FunctionType
 from django.conf.urls import url
 from django.shortcuts import HttpResponse, render
 
+from stark.utils.pagination import Pagination
 
 class StarkHandler(object):
 	list_display = []
-
+	per_page_num = 10
 	def __init__(self, model_class, prev):
 		self.model_class = model_class  # 此时的model_class 是一个对象
 		self.prev = prev  # 表示别名
@@ -28,40 +29,54 @@ class StarkHandler(object):
 		:param request:
 		:return:
 		"""
+		# 1.处理分页
+		# 数据库里面所有的数据
+		all_data = self.model_class.objects.all()
+		query_params = request.GET.copy()   # copy方法是默认不能修改request.GET里面的参数的
+		query_params._mutable = True    # 这样就可以修改request.GET 里面的参数值了
 
+		pager = Pagination(
+			current_page=request.GET.get('page'),
+			all_count = all_data.count(),
+			base_url = request.path_info,
+			params = query_params,
+			per_page_num= self.per_page_num
+		)
+
+		# 列表展示页使用分页的设置
+		data_list = all_data[pager.start:pager.end]
+
+		# 处理表格
 		list_display = self.get_list_display()
-
 		# 1.处理表头
 		header_list = []
-		if list_display:    # 如果有list_display(展示列) 就循环它
+		if list_display:  # 如果有list_display(展示列) 就循环它
 			for key_or_func in list_display:
-				if isinstance(key_or_func,FunctionType):
-					verbose_name = key_or_func(self,obj=None,is_header=True)
+				if isinstance(key_or_func, FunctionType):
+					verbose_name = key_or_func(self, obj=None, is_header=True)
 				else:
 					verbose_name = self.model_class._meta.get_field(key_or_func).verbose_name
 				header_list.append(verbose_name)
-		else:   # 如果没有list_display(展示列)，那么表头就是它的表名
+		else:  # 如果没有list_display(展示列)，那么表头就是它的表名
 			header_list.append(self.model_class._meta.model_name)
 
 		# 2.处理表的内容
 		# queryset[对象1，对象2]
-		data_list = self.model_class.objects.all()
+
 		"""
 		获取的数据，要根据list_display 来进行构造数据
 		[
 			['name1','18','123@qq.com'],
 			['name2','28','234@qq.com']
 		]
-		
 		"""
 		body_list = []
 		for row in data_list:
 			tr_list = []
 			if list_display:
 				for key_or_func in list_display:
-					if isinstance(key_or_func,FunctionType):
-						tr_list.append(key_or_func(self,obj=row,is_header=False))
-
+					if isinstance(key_or_func, FunctionType):
+						tr_list.append(key_or_func(self, obj=row, is_header=False))
 					else:
 						tr_list.append(getattr(row, key_or_func))
 			else:
