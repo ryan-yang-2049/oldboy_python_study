@@ -3,13 +3,28 @@
 {% block content %}
     <div class="luffy-container">
         <div>
-            {% if add_btn %}
-                <div style="margin: 5px 0;">
-                    {{ add_btn|safe }}
-                </div>
-            {% endif %}
-        </div>
 
+
+        {% if add_btn %}
+            <div style="margin: 5px 0;float: left">
+                {{ add_btn|safe }}
+            </div>
+        {% endif %}
+        {% if search_list %}
+            <div style="float: right">
+                <form method="get" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="q" value="{{ search_key_value }}" placeholder="关键字搜索">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        {% endif %}
+
+</div>
         <table class="table table-bordered table-striped table-hover">
             <thead>
             <tr>

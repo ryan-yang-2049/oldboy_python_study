@@ -27,7 +27,7 @@ class UserInfoModelForm(StarkModelForm):
 
 
 class UserInfoHandler(StarkHandler):
-	per_page_num = 3
+	# per_page_num = 3
 	# 定制页面的列
 	list_display = ['name',
 	                get_choice_text('性别', 'gender'),
@@ -41,10 +41,19 @@ class UserInfoHandler(StarkHandler):
 	# 在stark/service/v1 下面定义了一个model_form_class的None，就是为了可以自定义自己的ModelForm
 	model_form_class = UserInfoModelForm
 
+	# order_list = ['name']
+
+	# 姓名中含有关键字或邮箱中含有关键字 如果没有 __contains 就算精确查找
+	search_list = ['name__contains','email__contains']
+
 	# 当页面减少了部门字段以后，数据库保存不了，因此，就要使用form_database_save的这个钩子函数，去自定义部门字段的值
 	def form_database_save(self,form,is_update=False):
 		form.instance.depart_id = 1
 		form.save()
+
+
+
+
 
 site.registry(models.UserInfo, UserInfoHandler)
 
