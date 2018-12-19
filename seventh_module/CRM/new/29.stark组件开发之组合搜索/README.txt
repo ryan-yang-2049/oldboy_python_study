@@ -94,10 +94,32 @@ https://www.cnblogs.com/wupeiqi/articles/9979155.html
 							option_object.get_queryset_or_tuple(self.model_class,request,*args,**kwargs)
 		
 		
+		- 第四步：在页面上显示组合搜索按钮
+			- 将QuerySet 和元组进行封装
+			
+		- 第五步：为组合搜索按钮生成URL
+			- 生成URl时不影响其他组的条件
+			- 条件的筛选
+			- 多选
 		
 		
 		
 		
+		
+总结：
+	1.功能
+		- 展示页面
+		- 添加页面
+		- 编辑页面
+		- 删除页面
+		
+		- 模糊搜索(关键字)
+		
+		- 批量操作
+		
+		- 选择批量操作
+		
+		- 组合搜索
 		
 		
 		

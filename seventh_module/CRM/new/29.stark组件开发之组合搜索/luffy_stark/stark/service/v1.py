@@ -20,28 +20,95 @@ def get_choice_text(title, field):
 	:param field: 字段名称
 	:return:
 	"""
-
 	def inner(self, obj=None, is_header=None):
 		if is_header:
 			return title
-		method = "get_%s_display" % field
+		method = "get_%s_display" % field  # obj.get_字段名_display 可以获取choice的值
 		return getattr(obj, method)()
 
 	return inner
 
 
+class SearchGroupRow(object):
+	def __init__(self,title,queryset_or_tuple,option,query_dict):
+		"""
+
+		:param title: 组合搜索的列名称
+		:param queryset_or_tuple: 组合搜索关联获取到的数据
+		:param option: 调用此方法实例后自己的对象
+		:param query_dict: request.GET 的值
+		"""
+		self.queryset_or_tuple = queryset_or_tuple
+		self.title = title
+		self.option = option
+		self.query_dict = query_dict
+
+	def __iter__(self):
+		yield '<div class="whole">%s</div>'%self.title
+		yield '<div class="others">'
+
+		total_query_dict = self.query_dict.copy()
+		total_query_dict.mutable = True
+		origin_value_list = self.query_dict.getlist(self.option.field) # reuqest.GET 的参数列表
+		if not  origin_value_list:
+			yield "<a class='active' href='?%s'>全部</a>"%total_query_dict.urlencode()
+		else:
+			total_query_dict.pop(self.option.field)
+			yield "<a href='?%s'>全部</a>"%total_query_dict.urlencode()
+
+		for item in self.queryset_or_tuple:
+			text = self.option.get_text(item)   # 下面 Option类的 get_text方法
+			# 获取组合搜索按钮文本背后的值
+			value = str(self.option.get_value(item)) # 数据库里面获取的值 int类型。
+
+			# 获取reuqest.GET ==> QueryDict对象={gender:['1',],depart:['2',]}
+			query_dict = self.query_dict.copy() # 拷贝以后以后，修改自己的，不影响 reuqest.GET 原来的值
+			query_dict._mutable = True  # reuqest.GET 默认不能修改，这样设置了才可以被修改
+
+			# origin_value_list = query_dict.getlist(self.option.field)
+
+			if not self.option.is_multi:
+				query_dict[self.option.field] = value
+				print(origin_value_list)
+				if value in origin_value_list:
+					query_dict.pop(self.option.field)
+					yield "<a class='active' href='?%s'>%s</a>" % (query_dict.urlencode(), text)
+				else:
+					yield "<a href='?%s'>%s</a>"%(query_dict.urlencode(),text)
+			else:
+				# {}
+				multi_value_list = query_dict.getlist(self.option.field)
+				if value in multi_value_list:
+					multi_value_list.remove(value)
+					query_dict.setlist(self.option.field,multi_value_list)
+					yield "<a class='active' href='?%s'>%s</a>" % (query_dict.urlencode(), text)
+				else:
+					multi_value_list.append(value)
+					query_dict.setlist(self.option.field, multi_value_list)
+					yield "<a href='?%s'>%s</a>" % (query_dict.urlencode(), text)
+		yield '</div>'
+
+
 class Option(object):
-	def __init__(self,field,db_condition=None):
+	def __init__(self,field,is_multi=False,db_condition=None,text_func=None,value_func=None):
 		"""
 
 		:param field: 组合搜索的字段
+		:param is_multi: 是否支持多选
 		:param db_condition: 数据库关联查询时的条件
+		:param text_func: 此函数用于显示组合搜索按钮页面文本
+		:param value_func: 此函数用于显示组合搜索按钮值
 		"""
 		self.field = field
+		self.is_multi = is_multi
 		if not db_condition:
 			db_condition = {}
-		else:
-			self.db_condition = db_condition
+		self.db_condition = db_condition
+		self.text_func = text_func
+
+		self.is_choice = False
+		self.value_func = value_func
+
 
 	def get_db_condition(self,request,*args,**kwargs):
 		return self.db_condition
@@ -53,21 +120,38 @@ class Option(object):
 		"""
 		# 根据gender或depart字符串，去自己对应的Model类中找到字段对象，
 		field_object = model_class._meta.get_field(self.field)
+		verbose_name = field_object.verbose_name
 
 		# 根据对象获取关联数据
 		if isinstance(field_object, ForeignKey) or isinstance(field_object, ManyToManyField):
 			# FK和M2M，应该获取其关联表中的数据
 			# 根据表字段获取其关联表的所有数据 field_object.rel.model.objects.all()
 			db_condition = self.get_db_condition(request,*args,**kwargs)
-			print("关联的表", self.field, field_object.rel.model.objects.filter(**db_condition))
+
+			return  SearchGroupRow(verbose_name,field_object.rel.model.objects.filter(**db_condition),self,request.GET)   # 返回的queryset类型,self 是自身的Option对象
 
 		else:
 			# 获取Choice中的数据
-			print(self.field, "<===Choice==>", field_object.choices)
+			self.is_choice = True
+			return SearchGroupRow(verbose_name,field_object.choices,self,request.GET) #返回的元组类型,self 是自身的Option对象
 
+	def get_text(self,field_object):
+		if self.text_func:  # 此为扩展此函数的条件，只要为此类实例化时，可以传递一个自定义的text_func 的函数对象
+			return self.text_func(field_object)
 
+		if self.is_choice:
+			return field_object[1]
 
+		return str(field_object)
 
+	def get_value(self,field_object):
+		if self.value_func:  # 此为扩展此函数的条件，只要为此类实例化时，可以传递一个自定义的text_func 的函数对象
+			return self.value_func(field_object)
+
+		if self.is_choice:
+			return field_object[0]
+
+		return field_object.pk
 
 
 
@@ -98,6 +182,26 @@ class StarkHandler(object):
 	def get_search_group(self):
 		return self.search_group
 
+	def get_search_group_condition(self, request):
+		"""
+		获取组合搜索的条件
+		:param request:
+		:return:
+		"""
+		condition = {}
+		# ?depart=1&gender=2&page=123&q=999
+		for option in self.get_search_group():
+			if option.is_multi: # 支持多选的时候
+				values_list = request.GET.getlist(option.field)  # tags=[1,2]
+				if not values_list:
+					continue
+				condition['%s__in' % option.field] = values_list
+			else:   # 不支持多选的时候
+				value = request.GET.get(option.field)
+				if not value:
+					continue
+				condition[option.field] = value
+		return condition
 
 
 	def display_checkbox(self, obj=None, is_header=None):
@@ -221,7 +325,9 @@ class StarkHandler(object):
 
 		################ 4.处理分页 #############
 		# 数据库里面所有的数据
-		all_data = self.model_class.objects.filter(conn).order_by(*order_list)
+		# 获取组合搜索条件
+		search_group_condition = self.get_search_group_condition(request)
+		all_data = self.model_class.objects.filter(conn).filter(**search_group_condition).order_by(*order_list)
 		query_params = request.GET.copy()  # copy方法是默认不能修改request.GET里面的参数的
 		query_params._mutable = True  # 这样就可以修改request.GET 里面的参数值了
 
@@ -270,12 +376,14 @@ class StarkHandler(object):
 		add_btn = self.get_add_btn()
 
 		################ 7.组合搜索 #############
+		search_group_row_list = []
 		search_group = self.get_search_group()  # ['gender', 'depart']
 		for option_object in search_group:
-			option_object.get_queryset_or_tuple(self.model_class,request,*args,**kwargs)
+			row = option_object.get_queryset_or_tuple(self.model_class,request,*args,**kwargs)
 
+			search_group_row_list.append(row)
 
-
+		print("================",search_group_row_list)
 
 		return render(request, 'stark/changelist.html', locals())
 

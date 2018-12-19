@@ -17,7 +17,7 @@ def get_choice_text(title, field):
 	def inner(self, obj=None, is_header=None):
 		if is_header:
 			return title
-		method = "get_%s_display" % field
+		method = "get_%s_display" % field   # obj.get_字段名_display 可以获取choice的值
 		return getattr(obj, method)()
 	return inner
 
@@ -211,7 +211,7 @@ class StarkSite(object):
 		self._registry.append({'model_class': model_class, 'handler': handler_calss(self,model_class, prev), 'prev': prev})
 		"""
 		site._registry = [
-			{'prev':None,'model_class': <class 'app01.models.Depart'>, 'handler': DepartHandler(models.Depart,prev)对象中有一个model_class=models.Depart},
+			{'prev':None,'model_class': <class 'app01.models.Depart'>, 'handler': DepartHandler(self(对象自己),models.Depart,prev)对象中有一个model_class=models.Depart},
 			{'prev':private,'model_class': <class 'app01.models.UserInfo'>, 'handler': StarkHandler(models.UserInfo,prev)对象中有一个model_class=models.UserInfo},    
 			{'prev':None,'model_class': <class 'app02.models.Host'>, 'handler': StarkHandler(models.Host,prev)对象中有一个model_class=models.Host}
 			]

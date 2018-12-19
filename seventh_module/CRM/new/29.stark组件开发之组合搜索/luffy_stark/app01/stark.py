@@ -71,8 +71,10 @@ class UserInfoHandler(StarkHandler):
 	# 组合搜索
 	# search_group = ['gender','depart']
 	search_group = {
+		# Option('gender',text_func=lambda field_object:field_object[1]+'66666'),
 		Option('gender'),
-		MyOption('depart',{'id__gt': 2}),
+		Option('depart',is_multi=True,db_condition={'id__gt': 0}),
+		# MyOption('depart',{'id__gt': 2}),
 	}
 
 
