@@ -1,0 +1,191 @@
+1.django启动前加载配置文件
+    1.1 stark/apps.py
+        from django.apps import AppConfig
+        from django.utils.module_loading import autodiscover_modules
+        class StarkConfig(AppConfig):
+            name = 'stark'
+            def ready(self):
+                autodiscover_modules('stark')
+    1.2 这样做的意义：
+        当stark注册到django里面以后，就会去每个APP下面找到stark.py的文件，然后 stark.py 就会在路由加载前自动导入
+
+    1.3 注意点：
+        在任意app的apps.py中的Config类中定义ready()方法，并调用autodiscover_modules
+    1.4 提示：
+        如果 xxxx.py 执行的代码向 “某个神奇的地方” 放入了一些值。之后的路由加载时，可以去“某个神奇的地方” 读取到原来设置的值
+
+2.单例模式
+    2.1 单例模式的理解：
+        单：一个。
+        例：实例，对象。
+        模式：方法。
+
+    2.2 例子：
+        通过利用 python模块导入的特性：在python中，如果已经导入过的文件再次被重新导入时，python不会重新在解释一遍，而是选择从内存中直接将原来导入的值拿来用
+        utils.py
+            class AdminSite(object):
+                pass
+            site = AdminSite()  # 为AdminSite类创建了一个对象（实例）
+        
+        commons.py
+            import utils
+            print(utils.site)
+        
+        app.py
+            import utils
+            print(utils.site)
+            import commons
+            -------------------------------------------------------------------------------------
+            执行app.py 的结果是：
+                <utils.AdminSite object at 0x000001910513F358>
+                <utils.AdminSite object at 0x000001910513F358>
+            -------------------------------------------------------------------------------------
+        
+        提示: 
+            如果以后存在一个单例模式的对象，可以先此对象中放入一个值，然后在其他的文件中导入该对象。通过对象再次将值获取到。
+            utils.py
+                class AdminSite(object):
+                    pass
+                site = AdminSite()  # 为AdminSite类创建了一个对象（实例）
+            
+            commons.py
+                import utils
+                print(utils.site)
+            
+            app.py
+                import utils
+                utils.site.name="ryan"   # <utils.AdminSite object at 0x0000021C493481D0>
+                import commons
+            -------------------------------------------------------------------------------------
+            执行app.py 的结果是：
+                    ryan
+            -------------------------------------------------------------------------------------
+
+3.django路由分发的本质
+    3.1 一般情况下的分发
+        from django.conf.urls import url,include
+        urlpatterns = [
+            url(r'^web/', include('app01.urls')),
+        ]
+    3.2 使用元组分发
+        include函数主要返回三个元素的元组。
+        from app01 import urls
+        urlpatterns = [
+            url(r'^web/', (urls, app_name, namespace)), # 第一个参数是urls文件对象，通过此对象可以获取urls.patterns获取分发的路由
+        ]
+        在源码内部，读取路由前"(urls, app_name, namespace)"：
+            如果第一个参数有 urls.patterns属性，那么子路由就从该属性中获取。
+            如果第一个参数无 urls.patterns属性，那么子路由就是第一个参数 urls
+
+    3.3 使用元组里面套元组分发
+        include函数主要返回三个元素的元组。
+        from app01 import urls
+        urlpatterns = [
+            url(r'^web/', ([
+                    url(r'^index/', views.index),
+                    url(r'^home/', views.home),
+                    ], app_name, namespace)),   # 第一个参数是urls文件对象，通过此对象可以获取urls.patterns获取分发的路由
+        ]
+
+        例如：
+            from django.conf.urls import url,include
+            from app01 import views
+
+            urlpatterns = [
+                url(r'^web/', ([
+                               url(r'^index/', views.index),
+                               url(r'^home/', views.home),
+                               ], None, None)),
+                            ]       
+
+    3.4 include分发的本质就是返回一个： return (urlconf_module, app_name, namespace)
+
+4.property
+    property是一种特殊的属性，访问它时会执行一段功能（函数）然后返回值
+    property 可以封装一些通过计算后，在访问的数据类型等封装在函数里面，通过 “对象.属性” 访问。
+
+    class People:
+        def __init__(self,name):
+            self.__name=name
+
+        @property
+        def name(self):
+            return self.__name
+
+        @name.setter
+        def name(self,val):
+            if not isinstance(val,str):
+                print('名字必须是字符串类型')
+                return
+            self.__name=val
+
+        @name.deleter
+        def name(self):
+            print('不允许删除')
+
+    p=People('egon')
+    print("1)打印name：",p.name)
+    p.name='EGON'
+    p.name=123
+    print("2)打印name",p.name)
+    del p.name
+
+    执行结果：
+        1)打印name： egon
+        名字必须是字符串类型
+        2)打印name EGON
+        不允许删除
+    结论：后面的name.setter 或者 name.deleter 都是现有 name被property装饰了以后才会有。如果name改名为 A，那setter 就要改写成为 A.setter。该例子其实和上面例子的解释对应，property是给一个把一个方法（函数）作为属性去调用，但是在属性调用的过程中，又不可以传入参数，因此，才会有后面的 setter and delete 
+
+5.getattr :反射
+    反射：通过字符串映射到对象的属性
+    class People(object):
+        country='China'
+        def __init__(self,name,age):
+            self.name=name
+            self.age=age
+        def talk(self):
+            return  '%s is talking' %self.name
+    obj=People('lucky',18)
+    print("getattr 对象属性:",getattr(obj,'name'))
+    print("getattr 对象绑定方法:",getattr(obj,'talk'))
+    print("getattr 执行绑定方法:",getattr(obj,'talk')())
+    执行结果：
+      getattr 对象属性: lucky
+    getattr 对象绑定方法: <bound method People.talk of <__main__.People object at 0x00000201FBE49EF0>>
+    getattr 执行绑定方法: lucky is talking  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

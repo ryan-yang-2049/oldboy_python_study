@@ -1,0 +1,242 @@
+1.创建django project
+   django project : luffy_stark
+   django app : stark
+   django app : app01
+   django app : app02
+
+2.创建基础业务表
+    1.app01/models.py
+        from django.db import models
+        class Depart(models.Model):
+            """
+            部门表
+            """
+            title = models.CharField(verbose_name='部门名称', max_length=32)
+            def __str__(self):
+                return self.title
+        class UserInfo(models.Model):
+            """
+            用户表
+            """
+            name = models.CharField(verbose_name='姓名', max_length=32)
+            gender_choices = (
+                (1, '男'),
+                (2, '女'),
+            )
+            gender = models.IntegerField(verbose_name='性别', choices=gender_choices, default=1)
+            classes_choice = (
+                (11, '全栈1期'),
+                (21, '全栈3期'),
+            )
+            classes = models.IntegerField(verbose_name='班级', choices=classes_choice, default=11)
+            age = models.CharField(verbose_name='年龄', max_length=32)
+            email = models.CharField(verbose_name='邮箱', max_length=32)
+            depart = models.ForeignKey(verbose_name='部门', to=Depart)
+            def __str__(self):
+                return self.name
+        class Deploy(models.Model):
+            title = models.CharField(verbose_name='标题',max_length=32)
+            status_choice = (
+                (1,'在线'),
+                (2,'离线')
+            )
+            status = models.IntegerField(verbose_name='状态',choices=status_choice)
+
+            def __str__(self):
+                return self.title
+    2.app02/models.py
+        from django.db import models
+        class Host(models.Model):
+            """
+            主机表
+            """
+            host = models.CharField(verbose_name='主机名', max_length=32)
+            ip = models.GenericIPAddressField(verbose_name='IP', protocol='both')  # protocol='both' 表示既支持IPV4 也支持IPV6
+            def __str__(self):
+                return self.host
+        class Role(models.Model):
+            """
+            角色表
+            """
+            title = models.CharField(verbose_name='角色名称', max_length=32)
+            def __str__(self):
+                return self.title
+        class Project(models.Model):
+            """
+            角色表
+            """
+            title = models.CharField(verbose_name='项目名称', max_length=32)
+            def __str__(self):
+                return self.title
+
+3.django启动前加载配置文件
+    1.stark/apps.py
+        from django.apps import AppConfig
+        from django.utils.module_loading import autodiscover_modules
+        class StarkConfig(AppConfig):
+            name = 'stark'
+            def ready(self):
+                autodiscover_modules('stark')
+    2.主要是ready方法以及autodiscover_modules 
+
+
+
+
+4.stark组件之自动生成URL
+    1.为什么需要自动生成URL？
+        解释：因为对于数据库的每张表来说都有4个操作，查增删改。并且对于以后来说，每个APP的表都需要用到增删改查，因此，写一个通用的增删改查就可以节约以后的代码成本。快速完成开发。
+    2.增删改查分析，分别以简单的两张表为例
+
+        - 为每张表创建4个url
+        - 为每张表创建4个视图函数
+            app01/models.py                
+                UserInfo
+                    /app01/userinfo/list/
+                    /app01/userinfo/add/
+                    /app01/userinfo/edit/(\d+)/
+                    /app01/userinfo/del/(\d+)/
+            app02/models.py
+                Host
+                    /app02/host/list/
+                    /app02/host/add/
+                    /app02/host/edit/(\d+)/
+                    /app02/host/del/(\d+)/
+        提示：如果自己写的话，那就是2张表对应8个url和8个视图函数 ，而且进本上的增删改查都差不多。      
+
+
+5.StarkSite(object) 代码解释--主要以UserInfo为例
+    查看文件 3.StarkSite.py
+    这个主要用于UserInfo表的注册，或者称为 UserInfo 是否要使用stark组件的内容
+    我的理解为：其实此函数为stark的入口，只有基于此函数才会继续使用stark组件的配置
+
+6.StarkHandler(object)代码解释
+    查看 “4.StarkHangler.py” 文件，代码解释如下（根据代码执行程序解释）：
+    1. StarkSite.get_urls(),以changelist_view 为例
+        1.1 StarkSite 中的 handler.get_urls()会找到StarkHandler的 get_urls()
+        1.2 此方法主要是生成对象自己的url
+        1.3 self.wrapper 是一个装饰器,用于每个URL把自己的request信息放到 changelist_view 里面
+        1.4 url(URL,views,url别名)
+        1.5 patterns.extend(self.extra_urls()) 这个是一个扩展url的钩子函数，可以用于某个表单独增加自己的url,当然也要写自己的视图函数,和别名。
+        1.6 这里要注意的是self，如果表有自己Handler，那么先查看自己是否有对应的函数，如果有就使用自己的，没有就使用StarkHandler的
+        1.7 StarkSite.extra_urls 
+        用于扩展url，表可以在自己的Handler里面新增一个Handler的extra_urls的方法。
+        1.8 name=self.get_list_url_name
+            @property
+            def get_list_url_name(self):
+                # 获取别名
+                return self.get_url_name('list')
+
+            def get_url_name(self, param):
+                app_label, model_name = self.model_class._meta.app_label, self.model_class._meta.model_name
+                if self.prev:   # prev 为别名
+                    return '%s_%s_%s_%s' % (app_label, model_name, self.prev, param)
+                return '%s_%s_%s' % (app_label, model_name, param)            
+
+            此时的name的名称为：app01_userinfo_list 或者 app01_userinfo_前缀_list
+
+    2.StarkSite.changelist_view(self, request, *args, **kwargs)
+        根据视频步骤来进行解释
+        1.页面定制列显示
+            1.1 页面的显示数据可以根据对象自己来设定，主要写 list_display 来定制表使用的列。
+                例如： list_display = [StarkHandler.display_checkbox,
+                        'name',
+                        get_choice_text('性别', 'gender'),
+                        get_choice_text('班级', 'classes'),
+                        'age', 'email', 'depart',
+                        StarkHandler.display_edit,
+                        StarkHandler.display_del]
+            1.2 处理表头
+                1.2.1 代码
+                    header_list = []
+                    if list_display:  # 如果有list_display(展示列) 就循环它
+                        for key_or_func in list_display:
+                            if isinstance(key_or_func, FunctionType):
+                                verbose_name = key_or_func(self, obj=None, is_header=True)
+                            else:
+                                verbose_name = self.model_class._meta.get_field(key_or_func).verbose_name
+                            header_list.append(verbose_name)
+                    else:  # 如果没有list_display(展示列)，那么表头就是它的表名
+                        header_list.append(self.model_class._meta.model_name)            
+
+                1.2.2 判断传入的 list_display 是一个正常的字段还剩一个被封装的函数
+                    1） 如果是函数,以display_edit为例子--> 那么表头就是 "编辑"
+                            def display_edit(self, obj=None, is_header=None):
+                                if is_header:
+                                    return "编辑"
+                                parse_url = ParseUrl(request=self.request, namespace=self.site.namespace, name=self.get_change_url_name, pk=obj.pk)
+                                url = parse_url.memory_reverse_url()
+                                return mark_safe('<a href="%s">编辑</a>' % url)
+                    2） 如果传入的是正常字段，那么获取的表头就是表里面的verbose_name，key_or_func此时就是字段名称
+                        self.model_class._meta.get_field(key_or_func).verbose_name
+                1.2.3 如果list_display 里面没有传入字段,那么显示 表名称（self.model_class._meta.model_name）
+            1.3 处理表内容
+                1.3.1 代码
+                    body_list = []
+                    for row in data_list:
+                        tr_list = []
+                        if list_display:
+                            for key_or_func in list_display:
+                                if isinstance(key_or_func, FunctionType):
+                                    tr_list.append(key_or_func(self, row, is_header=False))
+                                else:
+                                    tr_list.append(getattr(row, key_or_func))
+                        else:
+                            tr_list.append(row)
+                        body_list.append(tr_list)                
+
+                1.3.2 data_list 的值是queryset对象
+                    all_data = self.model_class.objects.filter(conn).filter(**search_group_condition).order_by(*order_list) # 此处的数据是经过查询和搜索后的值
+                    data_list = all_data[pager.start:pager.end]  # 此时的data_list 是经过分页后的值
+                    data_list的值:<QuerySet [<UserInfo: alex>, <UserInfo: ryan>, <UserInfo: cherry>]>
+                1.3.3 判断传入的 list_display 是一个正常的字段还剩一个被封装的函数
+                    1）如果是函数，那么数据就是：<a href="%s">编辑</a>
+                        parse_url = ParseUrl(request=self.request, namespace=self.site.namespace, name=self.get_change_url_name, pk=obj.pk)
+                        url = parse_url.memory_reverse_url()
+                        return mark_safe('<a href="%s">编辑</a>' % url)
+                        此时的parse_url是一个保留搜索条件的赋值处理，意思就是，当点击编辑的时候,会把当前request.path_info里面的参数保留到后面编辑页面
+                    2) 如果传入的是正常的字段,那么值就是：tr_list.append(getattr(row, key_or_func))
+                        getattr 反射：row是data_list(queryset)对象的一个值，例如<UserInfo: ryan>
+                        获取<UserInfo: ryan>获取属性的值：getattr(<UserInfo: ryan>对象, "属性名称")
+
+                1.3.3 是否有list_display：
+                    1）有list_display：
+                        那么 tr_list里面就是数据库表里面对应的字段的值
+                    2）没有list_display：
+                        那么就是一个个的queryset对象
+            1.4 表里面 choice 字段的特殊处理
+                例如：get_choice_text('性别', 'gender')
+                def get_choice_text(title, field):
+                    """
+                    对于Stark组件中定义列时，choice如果想要显示中文信息，调用此方法即可。
+                    :param title: 希望页面显示的表头
+                    :param field: 字段名称
+                    :return:
+                    """
+                    def inner(self, obj=None, is_header=None):
+                        if is_header:
+                            return title
+                        method = "get_%s_display" % field  # obj.get_字段名_display 可以获取choice的值
+                        return getattr(obj, method)()
+                    return inner 
+
+                提示：这里要注意的点是，obj.get_字段名_display 可以获取表中choice的值。第二此处也用到了 getattr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

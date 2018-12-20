@@ -158,6 +158,12 @@ class StarkHandler(object):
 	has_add_btn = True  # 是否具有添加按钮
 
 	def __init__(self, site, model_class, prev):
+		"""
+
+		:param site: 调用此函数的对象自己
+		:param model_class: 类似于 models.UserInfo
+		:param prev:    URL的前缀，也可以是后缀
+		"""
 		self.site = site
 		self.model_class = model_class  # 此时的model_class 是一个对象
 		self.prev = prev  # 表示别名
@@ -212,7 +218,7 @@ class StarkHandler(object):
 			return "选择"
 		return mark_safe('<input type="checkbox" name="pk" value="%s"/>' % (obj.pk))
 
-	# 编辑按钮
+	# 编辑
 	def display_edit(self, obj=None, is_header=None):
 		"""
 		自定义页面显示的列（表头和内容）
@@ -357,6 +363,7 @@ class StarkHandler(object):
 		# 5.2 处理表的内容
 		# queryset[对象1，对象2]
 		body_list = []
+		print("data_list====>",data_list)
 		for row in data_list:
 			tr_list = []
 			if list_display:
@@ -454,7 +461,6 @@ class StarkHandler(object):
 
 	def get_url_name(self, param):
 		app_label, model_name = self.model_class._meta.app_label, self.model_class._meta.model_name
-
 		if self.prev:
 			return '%s_%s_%s_%s' % (app_label, model_name, self.prev, param)
 		return '%s_%s_%s' % (app_label, model_name, param)
@@ -550,8 +556,7 @@ class StarkSite(object):
 			# app_label 表示项目下某个应用的名称  ：app01
 			# model_name 表示应用的表名称(小写) ：depart
 			if prev:  # url中带前缀的
-				patterns.append(url(r'%s/%s/%s/' % (app_label, model_name, prev),
-				                    (handler.get_urls(), None, None)))  # 第一个None 是namespace,第二个是name
+				patterns.append(url(r'%s/%s/%s/' % (app_label, model_name, prev),(handler.get_urls(), None, None)))  # 第一个None 是namespace,第二个是name
 			else:  # url中不带前缀的
 				patterns.append(url(r'%s/%s/' % (app_label, model_name), (handler.get_urls(), None, None)))
 
