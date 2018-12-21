@@ -46,7 +46,7 @@ class SearchGroupRow(object):
 		yield '<div class="others">'
 
 		total_query_dict = self.query_dict.copy()
-		total_query_dict.mutable = True
+		total_query_dict._mutable = True
 		origin_value_list = self.query_dict.getlist(self.option.field) # reuqest.GET 的参数列表
 		if not  origin_value_list:
 			yield "<a class='active' href='?%s'>全部</a>"%total_query_dict.urlencode()
@@ -106,7 +106,6 @@ class Option(object):
 		self.is_choice = False
 		self.value_func = value_func
 
-
 	def get_db_condition(self,request,*args,**kwargs):
 		return self.db_condition
 
@@ -118,6 +117,7 @@ class Option(object):
 		# 根据gender或depart字符串，去自己对应的Model类中找到字段对象，
 		field_object = model_class._meta.get_field(self.field)
 		verbose_name = field_object.verbose_name
+
 
 		# 根据对象获取关联数据
 		if isinstance(field_object, ForeignKey) or isinstance(field_object, ManyToManyField):
@@ -142,7 +142,7 @@ class Option(object):
 		return str(field_object)
 
 	def get_value(self,field_object):
-		if self.value_func:  # 此为扩展此函数的条件，只要为此类实例化时，可以传递一个自定义的text_func 的函数对象
+		if self.value_func:
 			return self.value_func(field_object)
 
 		if self.is_choice:
@@ -179,6 +179,16 @@ class StarkHandler(object):
 		pk_list = request.POST.getlist('pk')
 		self.model_class.objects.filter(id__in=pk_list).delete()
 	action_multi_delete.text = '批量删除'
+	def action_depart_multi_init(self, request, *args, **kwargs):
+		"""
+		批量初始化
+		:param request:
+		:return:
+		"""
+		pk_list = request.POST.getlist('pk')
+		print(pk_list, type(pk_list))
+		self.model_class.objects.filter(id__in=pk_list).update(depart_id=3)
+	action_depart_multi_init.text = '部门初始化'
 
 	# 组合搜索
 	search_group = []
@@ -296,25 +306,27 @@ class StarkHandler(object):
 		"""
 		################ 1.批量操作(处理Action 下拉框) #############
 		action_list = self.get_action_list()
-		action_dict = {func.__name__: func.text for func in action_list}  # {'multi_delete':'批量删除','multi_init':'批量初始化'}
+		action_dict = {func.__name__: func.text for func in action_list}  # {'action_multi_delete':'批量删除','action_depart_multi_init':'批量初始化'}
 		# 并且此时的multi_delete 是一个对象的名称
-
 		if request.method == "POST":
 			action_func_name = request.POST.get(
 				"action")  # action_func_name,type(action_func_name),bool(action_func_name) = multi_init <class 'str'> True
 			if action_func_name and action_func_name in action_dict:
 				# <bound method UserInfoHandler.multi_delete of <app01.stark.UserInfoHandler object at ...>>
 				action_response = getattr(self, action_func_name)(request, *args, **kwargs)
+				print("action_response",action_response)
 				if action_response: # 如果调用的批量处理函数有返回值，则执行返回值
 					return action_response
 		################ 2.模糊搜索 #############
-		search_list = self.search_list
 		"""
-		1.如果search_list 中没有之,则不显示搜索框
+		1.如果search_list 中没有值,则不显示搜索框
 		2.获取用户提交的关键字
 		3.构造条件
 		"""
-		search_key_value = request.GET.get('q', None)
+
+		search_list = self.search_list
+
+		search_key_value = request.GET.get('q', '')
 		from django.db.models import Q
 		# Q　用于构造复杂的ORM查询条件
 		conn = Q()
@@ -337,7 +349,7 @@ class StarkHandler(object):
 		pager = Pagination(
 			current_page=request.GET.get('page'),  # 获取页面返回的获取的页码
 			all_count=all_data.count(),  # 数据库里面所有数据的计算
-			base_url=request.path_info,  # 访问的基础URL,例如 http://127.0.0.1/abc?name=ryan&age=18 里面的 http://127.0.0.1
+			base_url=request.path_info,  # 访问的基础URL,例如 http://127.0.0.1/abc?name=ryan&age=18 里面的 /abc
 			params=query_params,
 			# 用户URL里面的参数,例如 http://127.0.0.1/abc?name=ryan&age=18里面的name=ryan&age=18,它是 QueryDict类型
 			per_page_num=self.per_page_num  # 这个是每页显示的个数(扩展，可以在网页端输入，然后在传入服务器端)
@@ -363,7 +375,6 @@ class StarkHandler(object):
 		# 5.2 处理表的内容
 		# queryset[对象1，对象2]
 		body_list = []
-		print("data_list====>",data_list)
 		for row in data_list:
 			tr_list = []
 			if list_display:
@@ -387,7 +398,6 @@ class StarkHandler(object):
 
 			search_group_row_list.append(row)
 
-		print("================",search_group_row_list)
 
 		return render(request, 'stark/changelist.html', locals())
 

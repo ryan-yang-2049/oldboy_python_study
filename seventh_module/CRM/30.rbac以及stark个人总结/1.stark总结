@@ -5,7 +5,7 @@
    django app : app02
 
 2.创建基础业务表
-    1.app01/models.py
+    1. app01/models.py
         from django.db import models
         class Depart(models.Model):
             """
@@ -44,7 +44,7 @@
 
             def __str__(self):
                 return self.title
-    2.app02/models.py
+    2. app02/models.py
         from django.db import models
         class Host(models.Model):
             """
@@ -79,9 +79,6 @@
                 autodiscover_modules('stark')
     2.主要是ready方法以及autodiscover_modules 
 
-
-
-
 4.stark组件之自动生成URL
     1.为什么需要自动生成URL？
         解释：因为对于数据库的每张表来说都有4个操作，查增删改。并且对于以后来说，每个APP的表都需要用到增删改查，因此，写一个通用的增删改查就可以节约以后的代码成本。快速完成开发。
@@ -102,7 +99,6 @@
                     /app02/host/edit/(\d+)/
                     /app02/host/del/(\d+)/
         提示：如果自己写的话，那就是2张表对应8个url和8个视图函数 ，而且进本上的增删改查都差不多。      
-
 
 5.StarkSite(object) 代码解释--主要以UserInfo为例
     查看文件 3.StarkSite.py
@@ -134,7 +130,7 @@
 
             此时的name的名称为：app01_userinfo_list 或者 app01_userinfo_前缀_list
 
-    2.StarkSite.changelist_view(self, request, *args, **kwargs)
+    2. StarkSite.changelist_view(self, request, *args, **kwargs)
         根据视频步骤来进行解释
         1.页面定制列显示
             1.1 页面的显示数据可以根据对象自己来设定，主要写 list_display 来定制表使用的列。
@@ -203,13 +199,13 @@
                         那么 tr_list里面就是数据库表里面对应的字段的值
                     2）没有list_display：
                         那么就是一个个的queryset对象
-            1.4 表里面 choice 字段的特殊处理
+            1.4 表里面 choice 字段的特殊处理（闭包）
                 例如：get_choice_text('性别', 'gender')
                 def get_choice_text(title, field):
                     """
                     对于Stark组件中定义列时，choice如果想要显示中文信息，调用此方法即可。
                     :param title: 希望页面显示的表头
-                    :param field: 字段名称
+                    :param field: 字段名称，可以通过此字段名称关联值
                     :return:
                     """
                     def inner(self, obj=None, is_header=None):
@@ -220,6 +216,259 @@
                     return inner 
 
                 提示：这里要注意的点是，obj.get_字段名_display 可以获取表中choice的值。第二此处也用到了 getattr
+
+        2.处理分页
+            2.1 查看分页代码 “5.pagination.py”
+            2.2 分页方法使用
+                search_group_condition = self.get_search_group_condition(request)
+                all_data = self.model_class.objects.filter(conn).filter(**search_group_condition).order_by(*order_list)
+                query_params = request.GET.copy()  # copy方法是默认不能修改request.GET里面的参数的
+                query_params._mutable = True  # 这样就可以修改request.GET 里面的参数值了
+
+                pager = Pagination(
+                    current_page=request.GET.get('page'),  # 获取页面返回的获取的页码
+                    all_count=all_data.count(),  # 数据库里面所有数据的计算
+                    base_url=request.path_info,  # 访问的基础URL,例如 http://127.0.0.1/abc?name=ryan&age=18 里面的/abc
+                    params=query_params,
+                    # 用户URL里面的参数,例如 http://127.0.0.1/abc?name=ryan&age=18里面的name=ryan&age=18,它是 QueryDict类型
+                    per_page_num=self.per_page_num  # 这个是每页显示的个数(扩展，可以在网页端输入，然后在传入服务器端)
+                )
+                # 列表展示页使用分页的设置 （切片的应用）
+                data_list = all_data[pager.start:pager.end]
+
+            2.3 数据获取
+                search_group_condition 这个是组合搜索的条件，后面会仔细解释
+                all_data 页面展示的所有数据，里面的conn是模糊搜索的条件
+                per_page_num 此参数表可以自己指定，也可以使用StarkHandler设定的，注意self的用法
+            2.4 获取GET里面所有的参数，并修改
+                query_params = request.GET.copy()  # copy方法是默认不能修改request.GET里面的参数的
+                query_params._mutable = True  # 这样就可以修改request.GET 里面的参数值了
+
+            2.6 data_list = all_data[pager.start:pager.end]
+                是对整个数据的切片处理
+
+        3.排序处理
+            order_list = self.get_order_list()
+            表对象自己可以设置排序对象
+
+        4.添加按钮
+            add_btn = self.get_add_btn()
+            4.1 当表对象自己没有设置 get_add_btn()方法的时候,就用StarkHandler自己的。
+                # 添加按钮的钩子函数
+                def get_add_btn(self):
+                    if self.has_add_btn:
+                        # 根据别名反向生成URL
+                        parse_url = ParseUrl(self.request, self.site.namespace, self.get_add_url_name)
+                        url = parse_url.memory_reverse_url()
+                        return '<a class="btn btn-primary" href="%s">添加</a>' % (url)
+                    return None
+            4.2 表对象自己必须设置 has_add_btn = True 才可以有添加按钮的图标
+
+        5.添加按钮/编辑按钮等的反向解析
+            parse_url = ParseUrl(self.request, self.site.namespace, self.get_add_url_name)
+            url = parse_url.memory_reverse_url()
+
+            5.1 ParseUrl是一个类，专门用于保留搜索条件的方法
+                此ParseURL　可以继续优化
+
+        6.模糊搜索
+            6.1 代码
+                from django.db.models import Q
+                # 姓名中含有关键字或邮箱中含有关键字 如果没有 __contains 就算精确查找
+                search_list = ['name__contains', 'email__contains'] # UserInfoHandler中配置的
+                search_key_value = request.GET.get('q', '')
+                # Q　用于构造复杂的ORM查询条件
+                conn = Q()
+                conn.connector = 'OR'
+                if search_key_value:
+                    for item in search_list:
+                        conn.children.append((item, search_key_value))
+            6.2 CRM的Q查询，可以构造复杂查询
+                models.UserInfo.objects.filter(conn) 
+                相当于
+                models.UserInfo.objects.filter(Q('name__contains'='ryan')|Q('email__contains'='ryan'))
+        
+        7.批量操作(处理Action 下拉框)
+            1. 此批量操作是配合表格中的checkbox使用的。display_checkbox(self, obj=None, is_header=None)
+
+            2. 代码
+                stark.py/UserInfoHandler(objects):
+                    # 批量操作的选项 。 如果没有值，那么页面就不显示
+                    action_list = [StarkHandler.action_multi_delete, action_depart_multi_init]  # 具有什么批量操作的功能 
+
+                ################ 1.批量操作(处理Action 下拉框) #############
+                action_list = self.get_action_list()
+                action_dict = {func.__name__: func.text for func in action_list}  # {'action_multi_delete':'批量删除','action_depart_multi_init':'批量初始化'}
+                # 并且此时的action_multi_delete 是一个对象的名称
+                if request.method == "POST":
+                    action_func_name = request.POST.get(
+                        "action")  # action_func_name,type(action_func_name),bool(action_func_name) = multi_init <class 'str'> True
+                    if action_func_name and action_func_name in action_dict:
+                        # <bound method UserInfoHandler.multi_delete of <app01.stark.UserInfoHandler object at ...>>
+                        action_response = getattr(self, action_func_name)(request, *args, **kwargs)
+                        if action_response: # 如果调用的批量处理函数有返回值，则执行返回值
+                            return action_response
+            3. 当表在自己的Handler中设置了action_list 那么，self.get_action_list() 就会去获取到。
+            4. action_dict 是一个字典生成式，是UserInfoHandler中action_list 进行生成的
+                {'action_multi_delete':'批量删除','action_depart_multi_init':'批量初始化'}
+                目前此项目中仅仅用了两个: 批量删除、批量初始化。以批量删除为例
+
+            5. 批量删除的方法和给函数(方法)设置属性
+                    def action_multi_delete(self, request, *args, **kwargs):
+                        """
+                        批量删除(如果想要定制成功后的返回值，那么就为action函数设置返回值即可)
+                        例如：该函数后面加上   return rediret('https://www.baidu.com')
+                        :param request:
+                        :return:
+                        """
+                        pk_list = request.POST.getlist('pk')    # type:list
+                        self.model_class.objects.filter(id__in=pk_list).delete()
+                    action_multi_delete.text = '批量删除'   # 给函数或者方法设置属性
+            6. 当提交POST请求以后。获取到 action_func_name "执行的函数名称"
+                如果有 action_func_name 并且在 action_dict 中。那么通过getattr进行反射,然后在 action_multi_delete去删除数据
+
+        8.组合搜索在一级索引第7开始解释
+
+7.组合搜索（难点,重点）------------------------------
+
+    1.search_group 定义
+        定义要进行组合查询的字段
+        stark.py/class UserInfoHandler(StarkHandler)/ search_group
+            search_group = {
+                Option('gender'),
+                Option('depart',is_multi=True,db_condition={'id__gt': 0}),
+                # MyOption('depart',{'id__gt': 2}), # 可以进行自定义
+            }
+    2.changelist_view的代码
+        ################ 7.组合搜索 #############
+        search_group_row_list = []
+        search_group = self.get_search_group()  # ['gender', 'depart']
+        for option_object in search_group:
+            row = option_object.get_queryset_or_tuple(self.model_class,request,*args,**kwargs)
+            search_group_row_list.append(row)
+
+    3.get_search_group 就是UserInfoHandler里面定义的 search_group
+
+    4.option_object.get_queryset_or_tuple(self.model_class,request,*args,**kwargs)
+        option_object这是经过Option类实例化过后的对象   相当于 Option('gender')
+
+    5.Option类的解读
+        1.代码"7.option_class.py"
+        2.构造函数
+            def __init__(self,field,is_multi=False,db_condition=None,text_func=None,value_func=None):
+                """
+                组合搜索
+                :param field: 组合搜索的字段
+                :param is_multi: 是否支持多选
+                :param db_condition: 数据库关联查询时的条件
+                :param text_func: 此函数用于显示组合搜索按钮页面文本
+                :param value_func: 此函数用于显示组合搜索按钮值
+                """
+                self.field = field
+                self.is_multi = is_multi
+                if not db_condition:
+                    db_condition = {}
+                self.db_condition = db_condition
+                self.text_func = text_func
+                self.is_choice = False
+                self.value_func = value_func
+
+        2.get_queryset_or_tuple(self,model_class,request,*args,**kwargs) 
+            此方法是根据字段去获取数据库关联的数据
+            1.根据字段名称获取字段的对象，假如 self.field 是 depart
+                field_object = model_class._meta.get_field(self.field)  # app01.UserInfo.depart
+                verbose_name = field_object.verbose_name    # 部门
+
+            2.(Fk,M2M)根据表字段获取其关联表的所有数据
+                Fk:外键(1对多)，M2M:多对多
+                field_object.rel.model.objects.all()
+
+            3.获取models表中choice的值
+                field_object.choices
+                例如:
+                    ((1, '男'), (2, '女'))
+                    ((11, '全栈1期'), (21, '全栈3期'))
+
+        3.get_text(self,field_object)
+            # 在SearchGroupRow中传值并调用
+            def get_text(self,field_object):
+                if self.text_func: 
+                    return self.text_func(field_object)
+                if self.is_choice:
+                    return field_object[1]
+                return str(field_object)
+
+            如果UserInfo定义了text_func，就会用UserInfo的。如果没有定义，那么非choice字段就显示 str(field_object)。而choice字段就显示 field_object[1] 此时的[1] 表示下标获取的元组(1, '男')的 “男” 
+            注意：此时的field_object 非上面2 中提到的field_object
+
+        4.get_value(self,field_object) 
+            # 在SearchGroupRow中传值并调用
+             def get_value(self,field_object):
+                if self.value_func:
+                    return self.value_func(field_object)
+                if self.is_choice:
+                    return field_object[0]
+                return field_object.pk
+            返回组合搜索的pk值，或者 choice字段 (1, '男') 的 “1”
+
+    6.SearchGroupRow类的解读
+        1.代码"8.SearchGroupRow.py"
+        2.构造函数
+             def __init__(self,title,queryset_or_tuple,option,query_dict):
+                """
+                :param title: 组合搜索的列名称
+                :param queryset_or_tuple: 组合搜索关联获取到的数据
+                :param option: 调用此方法实例后自己的对象
+                :param query_dict: request.GET 的值
+                """
+                self.queryset_or_tuple = queryset_or_tuple
+                self.title = title
+                self.option = option
+                self.query_dict = query_dict
+
+
+        3.__iter__(self) ：此方法是一个生成器
+            此方法实现了一个生成器，因此，实例化此类的对象是一个可以被循环的对象。 
+            3.1 yield生成的值有，以性别为例：
+                <div class="whole">性别</div>
+                <div class="others">
+                    <a href='?depart=1'>全部</a>
+                    <a href='?depart=1&gender=1'>男</a>
+                    <a class='active' href='?depart=1'>女</a>
+                </div>
+            3.2 逐句解释
+                1. 返回 '<div class="whole">%s</div>'%self.title  此时的self.title 就是组合搜索的列名称
+                2. 返回 '<div class="others">' 字段的值的父级标签
+                3. 
+                    total_query_dict = self.query_dict.copy()   
+                        # query_dict是request.GET 的所有参数
+                        # copy() 是为了拷贝一份，以后修改request.GET 里面的值的时候，不会影响request.GET原来的值
+                    total_query_dict._mutable = True # request.GET 默认不能修改，要先设置_mutable 才可以进行修改
+                4. origin_value_list = self.query_dict.getlist(self.option.field)
+                    option:调用此方法实例后自己的对象 stark.service.v1.Option object at 0x000001FAC2C18C18，准确来说是一个单独的列的对象，
+                    origin_value_list:
+                        1.如果不支持多选，那么就是一个['1']
+                        2.如果支持多选，那么就是 ['1','2'] 此为标签返回的key值
+                5.如果origin_value_list有值，也就是说，组合搜索的这一列有被选中一个值，那么就把这个被选中的标签 “active”
+                  如果没有值，那么就把 total_query_dict 这里面对应的值pop掉，
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

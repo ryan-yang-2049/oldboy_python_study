@@ -160,7 +160,7 @@ class StarkHandler(object):
         2.获取用户提交的关键字
         3.构造条件
         """
-        search_key_value = request.GET.get('q', None)
+        search_key_value = request.GET.get('q', '')
         from django.db.models import Q
         # Q　用于构造复杂的ORM查询条件
         conn = Q()

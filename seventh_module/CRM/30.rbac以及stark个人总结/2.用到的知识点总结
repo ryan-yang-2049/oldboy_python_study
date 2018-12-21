@@ -156,9 +156,22 @@
     getattr 执行绑定方法: lucky is talking  
 
 
-
-
-
+6. CRM Q查询
+    from django.db.models import Q
+    search_list = ['name__contains', 'email__contains'] # 这里是可以是 name__startswith 等
+    search_key_value = 'ryan'
+    # Q　用于构造复杂的ORM查询条件
+    conn = Q()
+    conn.connector = 'OR'
+    if search_key_value:    # 如果存在搜索的值
+        for item in search_list:    # 自定义要搜索的字段
+            conn.children.append((item, search_key_value))
+    models.UserInfo.objects.filter(conn) 
+        相当于
+    models.UserInfo.objects.filter(Q('name__contains'='ryan')|Q('email__contains'='ryan'))
+    
+7.class对象的 __iter__ 方法
+    迭代器就是重复的做一些事情，可以简单的理解为循环，在python中实现了__iter__方法的对象是可以迭代的，实现了next()方法的对象是迭代器，这样说有点拗口，实际上想要让一个迭代器工作，至少要实现__iter__方法和next方法。很多时候使用迭代器完成的工作使用列表也可以完成。但是，如果有很多值列表就会占用太多的内存，而且使用迭代器也让我们的程序更加的通明，优雅，pythonic。
 
 
 

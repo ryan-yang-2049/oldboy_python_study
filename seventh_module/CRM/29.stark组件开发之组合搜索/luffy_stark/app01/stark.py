@@ -34,7 +34,7 @@ class UserInfoModelForm(StarkModelForm):
 
 
 class UserInfoHandler(StarkHandler):
-	# per_page_num = 3
+	per_page_num = 2
 	# 定制页面的列
 	list_display = [StarkHandler.display_checkbox,
 	                'name',
@@ -54,26 +54,17 @@ class UserInfoHandler(StarkHandler):
 	# 姓名中含有关键字或邮箱中含有关键字 如果没有 __contains 就算精确查找
 	search_list = ['name__contains', 'email__contains']
 
-	def action_depart_multi_init(self, request, *args, **kwargs):
-		"""
-		批量初始化
-		:param request:
-		:return:
-		"""
-		pk_list = request.POST.getlist('pk')
-		self.model_class.objects.filter(id__in=pk_list).update(depart_id=3)
 
-	action_depart_multi_init.text = '部门初始化'
 
 	# 批量操作的选项 。 如果没有值，那么页面就不显示
-	action_list = [StarkHandler.action_multi_delete, action_depart_multi_init]  # 具有什么批量操作的功能
+	action_list = [StarkHandler.action_multi_delete, StarkHandler.action_depart_multi_init]  # 具有什么批量操作的功能
 
 	# 组合搜索
 	# search_group = ['gender','depart']
 	search_group = {
-		# Option('gender',text_func=lambda field_object:field_object[1]+'66666'),
 		Option('gender'),
 		Option('depart',is_multi=True,db_condition={'id__gt': 0}),
+		Option('classes',is_multi=True,db_condition={'id__gt': 0}),
 		# MyOption('depart',{'id__gt': 2}),
 	}
 

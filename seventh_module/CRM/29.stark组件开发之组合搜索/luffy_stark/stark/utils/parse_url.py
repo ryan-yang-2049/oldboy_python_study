@@ -14,6 +14,14 @@ class ParseUrl(object):
 	保留原搜索条件
 	"""
 	def __init__(self,request,namespace,name,*args,**kwargs):
+		"""
+
+		:param request:  URL 的request
+		:param namespace: URL 的namespace
+		:param name:    URL的别名
+		:param args:    默认传参
+		:param kwargs:  默认传参
+		"""
 		self.request = request
 		self.namespace= namespace
 		self.name = name
