@@ -1,0 +1,26 @@
+vue课程：
+
+1.上来不要搞vue，因为前端知识点太多,html+css+js(ECMAScript5)+jquery+bootstrap+响应式
+
+2.ESMAScript6的语法(目的:主要是能看懂别人的代码，能够看懂里面的API) http://es6.ruanyifeng.com/
+    主流的浏览器有部分es6语法不识别(引擎不识别)
+    babel工具 转义es6 为es5 能后看懂的语法
+    
+3.服务器语言nodejs(了解)   express  包管理:npm(学会使用)  一个js文件就是一个包（模块）
+4.vue的基础语法
+5.vue的高级语法
+6.vue提供的脚手架的东西:vue-cli, webpack(前端中的工具)
+7.设计模式，如何在实现单页面应用，前段中的路由.....
+
+
+复习：
+    1.js的DOM操作
+        节点的操作
+        属性的操作
+        样式属性的操作
+        值的操作
+    2.事件 事件对象回顾起来
+    3.阻止冒泡 阻止默认事件
+
+
+ECMAScript 6 ：http://es6.ruanyifeng.com/

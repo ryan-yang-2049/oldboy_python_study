@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.let和const的使用</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+    // var a;
+    // var c;
+    // // 变量提升 导致var声明的变量属于全局作用域
+    // console.log(a); // undefine
+    // // es5 中声明变量 使用var
+    // a = 10;
+    // console.log(a); // 10
+    //
+    // console.log(c); // undefine
+    // {c = 10;}
+    // console.log(c); // 10
+    //
+    // for (var i=0;i<10;i++){
+    // }
+    // console.log(i)  // 10
+
+    // 1.let声明的变量属于局部作用域
+
+    // var a = [];
+    // for(let i=0;i<20;i++){
+    //     a[i] = function () {
+    //         console.log(i)
+    //     }
+    // };
+    // a[10]();    // 10
+    // a[5]();     // 5
+    //
+    // console.log(d); // 报错
+    // {
+    //     let d = 30;
+    //     let d = 40;
+    // }
+    //
+    // console.log(d)  // 30
+
+
+    // const 声明的是常量,常量一旦声明不可修改
+    {
+        const pai = 3.1415926;
+        // pai = 20   // 如果这样定义 报错: Uncaught TypeError: Assignment to constant variable.
+    }
+
+    console.log(pai) // 报错：Uncaught ReferenceError: pai is not defined
+
+
+
+
+</script>
+</body>
+</html>

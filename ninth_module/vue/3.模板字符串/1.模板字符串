@@ -1,0 +1,21 @@
+2. 模板字符串
+
+    2.1 es5 语法
+        let name = 'ryan';
+        const year = 2018;
+        var desc = name + '是个帅哥,今年是'+year+',有梦想的年级';
+        console.log(desc)
+
+
+    2.2 es6 模板字符串
+        let name = 'ryan';
+        const year = 2018;
+        let desc = `${name}是个帅哥,今年是${year},有梦想的年级`;
+        console.log(desc)
+
+
+3. 函数的书写
+
+
+
+4. 对象的创建

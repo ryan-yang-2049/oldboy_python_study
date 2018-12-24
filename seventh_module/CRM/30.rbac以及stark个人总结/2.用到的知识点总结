@@ -1,4 +1,4 @@
-1.django启动前加载配置文件
+1. django启动前加载配置文件
     1.1 stark/apps.py
         from django.apps import AppConfig
         from django.utils.module_loading import autodiscover_modules
@@ -14,7 +14,7 @@
     1.4 提示：
         如果 xxxx.py 执行的代码向 “某个神奇的地方” 放入了一些值。之后的路由加载时，可以去“某个神奇的地方” 读取到原来设置的值
 
-2.单例模式
+2. 单例模式
     2.1 单例模式的理解：
         单：一个。
         例：实例，对象。
@@ -61,7 +61,7 @@
                     ryan
             -------------------------------------------------------------------------------------
 
-3.django路由分发的本质
+3. django路由分发的本质
     3.1 一般情况下的分发
         from django.conf.urls import url,include
         urlpatterns = [
@@ -100,7 +100,7 @@
 
     3.4 include分发的本质就是返回一个： return (urlconf_module, app_name, namespace)
 
-4.property
+4. property
     property是一种特殊的属性，访问它时会执行一段功能（函数）然后返回值
     property 可以封装一些通过计算后，在访问的数据类型等封装在函数里面，通过 “对象.属性” 访问。
 
@@ -137,7 +137,7 @@
         不允许删除
     结论：后面的name.setter 或者 name.deleter 都是现有 name被property装饰了以后才会有。如果name改名为 A，那setter 就要改写成为 A.setter。该例子其实和上面例子的解释对应，property是给一个把一个方法（函数）作为属性去调用，但是在属性调用的过程中，又不可以传入参数，因此，才会有后面的 setter and delete 
 
-5.getattr :反射
+5. getattr :反射
     反射：通过字符串映射到对象的属性
     class People(object):
         country='China'
@@ -170,9 +170,15 @@
         相当于
     models.UserInfo.objects.filter(Q('name__contains'='ryan')|Q('email__contains'='ryan'))
     
-7.class对象的 __iter__ 方法
+7. class对象的 __iter__ 方法
     迭代器就是重复的做一些事情，可以简单的理解为循环，在python中实现了__iter__方法的对象是可以迭代的，实现了next()方法的对象是迭代器，这样说有点拗口，实际上想要让一个迭代器工作，至少要实现__iter__方法和next方法。很多时候使用迭代器完成的工作使用列表也可以完成。但是，如果有很多值列表就会占用太多的内存，而且使用迭代器也让我们的程序更加的通明，优雅，pythonic。
 
+8. urlencode() urlencode方法的作用是把dict格式的参数转换为url参数，并以utf-8编码,可以拼接为HTTP请求。
+    query_dict = request.GET.copy() # 此时不可修改 GET里面的参数值 
+    query_dict._mutable = True      # 此时可以修改GET里面的参数值
+    value_list = query_dict.getlist(*args,**kwargs)  # 
+    if not value_list:
+        return "<a class='active' href='?%s'>全部</a>"%total_query_dict.urlencode()
 
 
 

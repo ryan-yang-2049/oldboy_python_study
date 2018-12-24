@@ -17,7 +17,7 @@ class SearchGroupRow(object):
         yield '<div class="others">'
 
         total_query_dict = self.query_dict.copy()
-        total_query_dict.mutable = True
+        total_query_dict._mutable = True
         origin_value_list = self.query_dict.getlist(self.option.field) # reuqest.GET 的参数列表
         if not  origin_value_list:
             yield "<a class='active' href='?%s'>全部</a>"%total_query_dict.urlencode()
