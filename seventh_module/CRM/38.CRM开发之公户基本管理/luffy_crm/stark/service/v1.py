@@ -366,6 +366,17 @@ class StarkHandler(object):
 
 		return value
 
+	def get_queryset(self, request, *args, **kwargs):
+		"""
+		针对特有的数据，可以先进行一步筛选，然后，在放到展示页面(changelist)去
+		例如 ，客户表的课程顾问为空的时候
+		:param request:
+		:param args:
+		:param kwargs:
+		:return:
+		"""
+		return self.model_class.objects
+
 	def changelist_view(self, request, *args, **kwargs):
 		"""
 		列表页面
@@ -411,7 +422,11 @@ class StarkHandler(object):
 		# 数据库里面所有的数据
 		# 获取组合搜索条件
 		search_group_condition = self.get_search_group_condition(request)
-		all_data = self.model_class.objects.filter(conn).filter(**search_group_condition).order_by(*order_list)
+
+		prev_queryset = self.get_queryset(request,*args,**kwargs)
+		all_data = prev_queryset.filter(conn).filter(**search_group_condition).order_by(*order_list)
+
+
 		query_params = request.GET.copy()  # copy方法是默认不能修改request.GET里面的参数的
 		query_params._mutable = True  # 这样就可以修改request.GET 里面的参数值了
 
