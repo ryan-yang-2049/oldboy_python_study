@@ -24,9 +24,9 @@ class ConsultRecordHandler(StarkHandler):
 	model_form_class = ConsultRecordModelForm
 	def get_urls(self):
 		patterns = [
-			url(r'^list/(?P<customer_id>\d+)$', self.wrapper(self.changelist_view), name=self.get_list_url_name),
-			url(r'^add/(?P<customer_id>\d+)$', self.wrapper(self.add_view), name=self.get_add_url_name),
-			url(r'^change/(?P<pk>\d+)/$', self.wrapper(self.change_view), name=self.get_change_url_name),
+			url(r'^list/(?P<customer_id>\d+/)$', self.wrapper(self.changelist_view), name=self.get_list_url_name),
+			url(r'^add/(?P<customer_id>\d+)/$', self.wrapper(self.add_view), name=self.get_add_url_name),
+			url(r'^change/(?P<customer_id>\d+)/(?P<pk>\d+)/$', self.wrapper(self.change_view), name=self.get_change_url_name),
 			url(r'^del/(?P<pk>\d+)/$', self.wrapper(self.delete_view), name=self.get_delete_url_name),
 		]
 		patterns.extend(self.extra_urls())
