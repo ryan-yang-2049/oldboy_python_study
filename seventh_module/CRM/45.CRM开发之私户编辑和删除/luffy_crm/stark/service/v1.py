@@ -265,7 +265,7 @@ class StarkHandler(object):
 				condition[option.field] = value
 		return condition
 
-	def display_checkbox(self, obj=None, is_header=None):
+	def display_checkbox(self, obj=None, is_header=None,*args, **kwargs):
 		"""
 		自定义页面显示CheckBox
 		:param obj:
@@ -277,7 +277,7 @@ class StarkHandler(object):
 		return mark_safe('<input type="checkbox" name="pk" value="%s"/>' % (obj.pk))
 
 	# 编辑
-	def display_edit(self, obj=None, is_header=None):
+	def display_edit(self, obj=None, is_header=None,*args, **kwargs):
 		"""
 		自定义页面显示的列（表头和内容）
 		:param obj:
@@ -290,16 +290,15 @@ class StarkHandler(object):
 		return mark_safe('<a href="%s">编辑</a>' % self.reverse_change_url(pk=obj.pk))
 
 	# 删除按钮
-	def display_del(self, obj=None, is_header=None):
+	def display_del(self, obj=None, is_header=None,*args, **kwargs):
 		if is_header:
 			return "删除"
 
 		return mark_safe('<a href="%s">删除</a>' %  self.reverse_delete_url(pk=obj.pk))
 
-	def display_edit_del(self, obj=None, is_header=None):
+	def display_edit_del(self, obj=None, is_header=None,*args, **kwargs):
 		if is_header:
 			return "操作"
-
 
 		tpl = '<a href="%s">编辑</a>||<a href="%s">删除</a>' % (self.reverse_change_url(pk=obj.pk), self.reverse_delete_url(pk=obj.pk))
 		return mark_safe(tpl)
@@ -355,7 +354,7 @@ class StarkHandler(object):
 		value = []
 		if self.list_display:
 			value.extend(self.list_display)
-			value.append(StarkHandler.display_edit_del)
+			value.append(type(self).display_edit_del)
 
 		return value
 
@@ -441,7 +440,7 @@ class StarkHandler(object):
 		if list_display:  # 如果有list_display(展示列) 就循环它
 			for key_or_func in list_display:
 				if isinstance(key_or_func, FunctionType):
-					verbose_name = key_or_func(self, obj=None, is_header=True)
+					verbose_name = key_or_func(self, obj=None, is_header=True,)
 				else:
 					verbose_name = self.model_class._meta.get_field(key_or_func).verbose_name
 				header_list.append(verbose_name)
@@ -456,12 +455,13 @@ class StarkHandler(object):
 			if list_display:
 				for key_or_func in list_display:
 					if isinstance(key_or_func, FunctionType):
-						tr_list.append(key_or_func(self, row, is_header=False))
+						tr_list.append(key_or_func(self, row, is_header=False,*args,**kwargs))
 					else:
 						tr_list.append(getattr(row, key_or_func))
 			else:
 				tr_list.append(row)
 			body_list.append(tr_list)
+
 
 		################ 6.添加按钮 #############
 		add_btn = self.get_add_btn(request,*args,**kwargs)
@@ -523,7 +523,7 @@ class StarkHandler(object):
 		if form.is_valid():
 			self.form_database_save(request, form, True, *args, **kwargs)
 			# 在数据库中保存成功后,跳转回列表页面（携带原来的参数）
-			return redirect(self.reverse_list_url())
+			return redirect(self.reverse_list_url(*args,**kwargs))
 		return render(request, 'stark/change.html', {"form": form})
 
 	def delete_view(self, request, pk, *args, **kwargs):
@@ -533,7 +533,7 @@ class StarkHandler(object):
 		:param pk:
 		:return:
 		"""
-		origin_list_url = self.reverse_list_url()
+		origin_list_url = self.reverse_list_url(*args,**kwargs)
 		if request.method == "GET":
 			return render(request, self.delete_template or 'stark/delete.html', {'cancel': origin_list_url})
 		self.model_class.objects.filter(pk=pk).delete()
