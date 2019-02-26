@@ -22,7 +22,7 @@ def get_choice_text(title, field):
 	:return:
 	"""
 
-	def inner(self, obj=None, is_header=None):
+	def inner(self, obj=None, is_header=None,*args, **kwargs):
 		if is_header:
 			return title
 		method = "get_%s_display" % field  # obj.get_字段名_display 可以获取choice的值
@@ -40,7 +40,7 @@ def get_datetime_text(title, field, time_format='%Y-%m-%d'):
 	:return:
 	"""
 
-	def inner(self, obj=None, is_header=None):
+	def inner(self, obj=None, is_header=None,*args, **kwargs):
 		if is_header:
 			return title
 		datetime_value = getattr(obj, field)
@@ -58,7 +58,7 @@ def get_m2m_text(title, field):
 	:return:
 	"""
 
-	def inner(self, obj=None, is_header=None):
+	def inner(self, obj=None, is_header=None,*args, **kwargs):
 		if is_header:
 			return title
 		queryset_value = getattr(obj, field).all()
@@ -316,7 +316,7 @@ class StarkHandler(object):
 
 	model_form_class = None
 
-	def get_model_form_class(self, is_add=False):
+	def get_model_form_class(self, is_add, request, pk, *args, **kwargs):
 		"""
 		定制添加和编辑页面的ModelForm的定制
 		:param is_add:
@@ -398,14 +398,14 @@ class StarkHandler(object):
 
 		search_list = self.get_search_list()
 
-		search_key_value = request.GET.get('q', '')
+		search_value = request.GET.get('q', '')
 		from django.db.models import Q
 		# Q　用于构造复杂的ORM查询条件
 		conn = Q()
 		conn.connector = 'OR'
-		if search_key_value:
+		if search_value:
 			for item in search_list:
-				conn.children.append((item, search_key_value))
+				conn.children.append((item, search_value))
 
 		################ 3.排序处理 #############
 		order_list = self.get_order_list()
@@ -416,7 +416,7 @@ class StarkHandler(object):
 		search_group_condition = self.get_search_group_condition(request)
 
 		prev_queryset = self.get_queryset(request, *args, **kwargs)
-		print('prev_queryset--->',prev_queryset)
+
 		all_data = prev_queryset.filter(conn).filter(**search_group_condition).order_by(*order_list)
 
 		query_params = request.GET.copy()  # copy方法是默认不能修改request.GET里面的参数的
@@ -451,6 +451,7 @@ class StarkHandler(object):
 		# 5.2 处理表的内容
 		# queryset[对象1，对象2]
 		body_list = []
+
 		for row in data_list:
 			tr_list = []
 			if list_display:
@@ -474,7 +475,17 @@ class StarkHandler(object):
 
 			search_group_row_list.append(row)
 
-		return render(request, self.change_list_template or 'stark/changelist.html', locals())
+		return render(request, self.change_list_template or 'stark/changelist.html',            {
+                'data_list': data_list,
+                'header_list': header_list,
+                'body_list': body_list,
+                'pager': pager,
+                'add_btn': add_btn,
+                'search_list': search_list,
+                'search_value': search_value,
+                'action_dict': action_dict,
+                'search_group_row_list': search_group_row_list
+            })
 
 	def form_database_save(self, request, form, is_update, *args, **kwargs):  # 视频中的save
 		"""
@@ -491,7 +502,7 @@ class StarkHandler(object):
 		:param request:
 		:return:
 		"""
-		model_form_class = self.get_model_form_class(is_add=True)
+		model_form_class = self.get_model_form_class(True, request, None, *args, **kwargs)
 		if request.method == "GET":
 			form = model_form_class()
 			return render(request, self.add_template or  'stark/change.html', {"form": form})
@@ -517,7 +528,7 @@ class StarkHandler(object):
 		if not current_change_object:
 			return HttpResponse("需要修改的对象不存在，请重新选择")
 
-		model_form_class = self.get_model_form_class(is_add=False)
+		model_form_class = self.get_model_form_class(False, request, pk, *args, **kwargs)
 		if request.method == "GET":
 			form = model_form_class(instance=current_change_object)
 			return render(request, self.change_template or 'stark/change.html', {"form": form})
@@ -630,6 +641,7 @@ class StarkHandler(object):
 		param = self.request.GET.get('_filter')
 		if not param:
 			return base_url
+		print("------------->%s?%s" % (base_url, param))
 		return "%s?%s" % (base_url, param)
 
 	def wrapper(self, func):
@@ -668,7 +680,7 @@ class StarkSite(object):
 		:return:
 		"""
 		if not handler_class:
-			handler_calss = StarkHandler  # StarkHandler 就是上面创建的类
+			handler_class = StarkHandler  # StarkHandler 就是上面创建的类
 
 		self._registry.append(
 			{'model_class': model_class, 'handler': handler_class(self, model_class, prev), 'prev': prev})
