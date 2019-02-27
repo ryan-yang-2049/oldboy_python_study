@@ -26,4 +26,4 @@ site.registry(models.Customer, private_customer.PrivateCustomerHandler, prev='pr
 site.registry(models.ConsultRecord, consult_record.ConsultRecordHandler)
 
 # 缴费记录
-site.registry(models.PaymentRecord, payment_record.PaymentRecordHandler)
+site.registry(models.PaymentRecord,payment_record.PaymentRecordHandler)

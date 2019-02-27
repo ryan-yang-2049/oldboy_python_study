@@ -215,7 +215,7 @@ class Student(models.Model):
 	qq = models.CharField(verbose_name='QQ号', max_length=32)
 	mobile = models.CharField(verbose_name='手机号', max_length=32)
 	emergency_contract = models.CharField(verbose_name='紧急联系人电话', max_length=32)
-	class_list = models.ManyToManyField(verbose_name="已报班级", to='ClassList', blank=True,null=True)
+	class_list = models.ManyToManyField(verbose_name="已报班级", to='ClassList', blank=True, null=True)
 	student_status_choices = [
 		(1, "申请中"),
 		(2, "在读"),
@@ -227,4 +227,3 @@ class Student(models.Model):
 
 	def __str__(self):
 		return self.customer.name
-
