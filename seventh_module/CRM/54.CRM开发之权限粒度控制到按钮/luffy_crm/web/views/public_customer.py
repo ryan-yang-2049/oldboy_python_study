@@ -12,7 +12,7 @@ from django.db import transaction
 
 from stark.service.v1 import StarkHandler, StarkModelForm, get_choice_text, get_m2m_text, Option
 from web import models
-
+from web.views.base import PermissionHandler
 
 class PublicCustomerModelForm(StarkModelForm):
 	class Meta:
@@ -20,7 +20,7 @@ class PublicCustomerModelForm(StarkModelForm):
 		exclude = ['consultant', ]
 
 
-class PublicCustomerHandler(StarkHandler):
+class PublicCustomerHandler(PermissionHandler,StarkHandler):
 
 	def display_record(self, obj=None, is_header=None,*args, **kwargs):
 		if is_header:
@@ -105,3 +105,20 @@ class PublicCustomerHandler(StarkHandler):
 		Option('status'),
 		Option('course')
 	]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

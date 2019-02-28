@@ -7,7 +7,7 @@
 from django.conf.urls import url
 from stark.service.v1 import StarkHandler,StarkModelForm
 from web import models
-
+from web.views.base import PermissionHandler
 
 class ScoreRecordModelForm(StarkModelForm):
 	class Meta:
@@ -16,7 +16,7 @@ class ScoreRecordModelForm(StarkModelForm):
 
 
 
-class ScoreRecordHandler(StarkHandler):
+class ScoreRecordHandler(PermissionHandler,StarkHandler):
 	list_display = ['student','content','score','user']
 	model_form_class = ScoreRecordModelForm
 	def get_urls(self):
@@ -31,7 +31,7 @@ class ScoreRecordHandler(StarkHandler):
 		student_id = kwargs.get('student_id')
 		return self.model_class.objects.filter(student_id=student_id)
 
-	def get_list_display(self):
+	def get_list_display(self,*args,**kwargs):
 		"""
 		获取页面上应该显示的列，预留的自定义扩展，例如：以后根据用户角色的不同展示不同的列
 		:return:

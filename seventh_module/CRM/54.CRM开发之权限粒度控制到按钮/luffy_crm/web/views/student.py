@@ -9,7 +9,7 @@ from django.utils.safestring import mark_safe
 from stark.service.v1 import StarkHandler, get_choice_text, StarkModelForm, get_m2m_text, Option
 from django.urls import reverse
 from web import models
-
+from web.views.base import PermissionHandler
 
 class StudentModelForm(StarkModelForm):
 	class Meta:
@@ -17,7 +17,7 @@ class StudentModelForm(StarkModelForm):
 		fields = ['qq', 'mobile', 'emergency_contract', 'memo']
 
 
-class StudentHandler(StarkHandler):
+class StudentHandler(PermissionHandler,StarkHandler):
 	model_form_class = StudentModelForm
 	'web_scorerecord_list'
 
@@ -33,7 +33,7 @@ class StudentHandler(StarkHandler):
 
 	has_add_btn = False
 
-	def get_list_display(self):
+	def get_list_display(self,request,*args,**kwargs):
 		"""
 		获取页面上应该显示的列，预留的自定义扩展，例如：以后根据用户角色的不同展示不同的列
 		:return:

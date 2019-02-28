@@ -10,13 +10,13 @@ from django.shortcuts import HttpResponse
 
 from stark.service.v1 import StarkHandler,StarkModelForm
 from web import models
-
+from web.views.base import PermissionHandler
 class ConsultRecordModelForm(StarkModelForm):
 	class Meta:
 		model = models.ConsultRecord
 		fields = ['note']
 
-class ConsultRecordHandler(StarkHandler):
+class ConsultRecordHandler(PermissionHandler,StarkHandler):
 
 	change_list_template = 'consult_record.html'
 

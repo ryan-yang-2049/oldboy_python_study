@@ -11,9 +11,9 @@ from django.conf.urls import url
 from stark.service.v1 import StarkHandler, get_choice_text, Option
 from web import models
 from web.forms.user_form import UserInfoChangeModelForm, UserInfoAddModelForm, ResetPasswordForm
+from web.views.base import PermissionHandler
 
-
-class UserInfoHandler(StarkHandler):
+class UserInfoHandler(PermissionHandler,StarkHandler):
 	def display_reset_pwd(self, obj=None, is_header=None):
 		if is_header:
 			return "重置密码"

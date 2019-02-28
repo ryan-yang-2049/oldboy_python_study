@@ -349,7 +349,7 @@ class StarkHandler(object):
 	def get_action_list(self):
 		return self.action_list
 
-	def get_list_display(self):
+	def get_list_display(self,request,*args,**kwargs):
 		"""
 		获取页面上应该显示的列，预留的自定义扩展，例如：以后根据用户角色的不同展示不同的列
 		:return:
@@ -435,7 +435,7 @@ class StarkHandler(object):
 		data_list = all_data[pager.start:pager.end]
 
 		################ 5.处理表格 #############
-		list_display = self.get_list_display()
+		list_display = self.get_list_display(request,*args,**kwargs)
 		# 5.1 处理表头
 		header_list = []
 		if list_display:  # 如果有list_display(展示列) 就循环它

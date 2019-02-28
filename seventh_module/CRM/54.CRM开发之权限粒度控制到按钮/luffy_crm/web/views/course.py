@@ -5,8 +5,8 @@
 # __mtime__ = '2019.02.21'
 
 from stark.service.v1 import StarkHandler
-
-class CourseHandler(StarkHandler):
+from web.views.base import PermissionHandler
+class CourseHandler(PermissionHandler,StarkHandler):
 	list_display = ['name',]
 
 

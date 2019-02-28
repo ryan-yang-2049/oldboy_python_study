@@ -9,7 +9,7 @@ from django.urls import reverse
 from stark.service.v1 import StarkHandler,get_datetime_text,get_m2m_text,StarkModelForm,Option
 from web import  models
 from stark.forms.widgets import DateTimePickerInput
-
+from web.views.base import PermissionHandler
 class ClassListModelForm(StarkModelForm):
 	class Meta:
 		model = models.ClassList
@@ -19,7 +19,7 @@ class ClassListModelForm(StarkModelForm):
 			'graduate_date':DateTimePickerInput
 		}
 
-class ClassListHandler(StarkHandler):
+class ClassListHandler(PermissionHandler,StarkHandler):
 
 	def display_course(self, obj=None, is_header=None,*args,**kwargs):
 		if is_header:

@@ -11,7 +11,7 @@ from django.urls import reverse
 from django import forms
 from web import models
 
-
+from web.views.base import PermissionHandler
 class PaymentRecordModelForm(StarkModelForm):
 	class Meta:
 		model = models.PaymentRecord
@@ -28,13 +28,13 @@ class StudentPaymentRecordModelForm(StarkModelForm):
 		fields = ['pay_type', 'paid_fee', 'class_list', 'qq', 'mobile', 'emergency_contract', 'note']
 
 
-class PaymentRecordHandler(StarkHandler):
+class PaymentRecordHandler(PermissionHandler,StarkHandler):
 	list_display = [get_choice_text('缴费类型', 'pay_type'), 'paid_fee', 'class_list', 'consultant',
 	                get_choice_text('状态', 'confirm_status')]
 
 	# model_form_class = PaymentRecordModelForm
 
-	def get_list_display(self):
+	def get_list_display(self,request,*args,**kwargs):
 		"""
 		不展示操作(编辑，删除列)
 		:return:

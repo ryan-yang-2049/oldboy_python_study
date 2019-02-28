@@ -9,7 +9,7 @@ from stark.service.v1 import StarkHandler, StarkModelForm, get_m2m_text, get_cho
 from django.urls import reverse
 
 from web import models
-
+from web.views.base import PermissionHandler
 
 class PrivateCustomerModelForm(StarkModelForm):
 	class Meta:
@@ -17,7 +17,7 @@ class PrivateCustomerModelForm(StarkModelForm):
 		exclude = ['consultant', ]
 
 
-class PrivateCustomerHandler(StarkHandler):
+class PrivateCustomerHandler(PermissionHandler,StarkHandler):
 	def display_record(self, obj=None, is_header=None,*args, **kwargs):
 		if is_header:
 			return '跟进'

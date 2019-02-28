@@ -2,9 +2,9 @@
 
 from django.conf.urls import url
 from stark.service.v1 import StarkHandler, StarkModelForm, get_m2m_text, get_choice_text,get_datetime_text,Option
+from web.views.base import PermissionHandler
 
-
-class CheckPaymentRecordHandler(StarkHandler):
+class CheckPaymentRecordHandler(PermissionHandler,StarkHandler):
 
 	order_list = ['confirm_status','-id']
 
@@ -16,7 +16,7 @@ class CheckPaymentRecordHandler(StarkHandler):
 		patterns.extend(self.extra_urls())
 		return patterns
 
-	def get_list_display(self):
+	def get_list_display(self,request,*args,**kwargs):
 		"""
 		不展示操作(编辑，删除列)
 		:return:

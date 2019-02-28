@@ -12,7 +12,7 @@ from django.forms.models import modelformset_factory
 
 from stark.service.v1 import StarkHandler, StarkModelForm, get_datetime_text
 from web import models
-
+from web.views.base import PermissionHandler
 
 class CourseRecordModelForm(StarkModelForm):
 	class Meta:
@@ -26,7 +26,7 @@ class StudyRecordModelForm(StarkModelForm):
 
 
 
-class CourseRecordHandler(StarkHandler):
+class CourseRecordHandler(PermissionHandler,StarkHandler):
 	def display_attendance(self, obj=None, is_header=None, *args, **kwargs):
 		if is_header:
 			return '考勤'
