@@ -22,7 +22,7 @@ def get_choice_text(title, field):
 	:return:
 	"""
 
-	def inner(self, obj=None, is_header=None,*args, **kwargs):
+	def inner(self, obj=None, is_header=None, *args, **kwargs):
 		if is_header:
 			return title
 		method = "get_%s_display" % field  # obj.get_字段名_display 可以获取choice的值
@@ -40,7 +40,7 @@ def get_datetime_text(title, field, time_format='%Y-%m-%d'):
 	:return:
 	"""
 
-	def inner(self, obj=None, is_header=None,*args, **kwargs):
+	def inner(self, obj=None, is_header=None, *args, **kwargs):
 		if is_header:
 			return title
 		datetime_value = getattr(obj, field)
@@ -58,7 +58,7 @@ def get_m2m_text(title, field):
 	:return:
 	"""
 
-	def inner(self, obj=None, is_header=None,*args, **kwargs):
+	def inner(self, obj=None, is_header=None, *args, **kwargs):
 		if is_header:
 			return title
 		queryset_value = getattr(obj, field).all()
@@ -203,7 +203,6 @@ class StarkHandler(object):
 	add_template = None
 	change_template = None
 
-
 	def __init__(self, site, model_class, prev):
 		"""
 
@@ -314,6 +313,9 @@ class StarkHandler(object):
 			return '<a class="btn btn-primary" href="%s">添加</a>' % self.reverse_add_url(*args, **kwargs)
 		return None
 
+	def get_import_excel_btn(self, request, *args, **kwargs):
+		return None
+
 	model_form_class = None
 
 	def get_model_form_class(self, is_add, request, pk, *args, **kwargs):
@@ -349,7 +351,7 @@ class StarkHandler(object):
 	def get_action_list(self):
 		return self.action_list
 
-	def get_list_display(self,request,*args,**kwargs):
+	def get_list_display(self, request, *args, **kwargs):
 		"""
 		获取页面上应该显示的列，预留的自定义扩展，例如：以后根据用户角色的不同展示不同的列
 		:return:
@@ -380,10 +382,12 @@ class StarkHandler(object):
 		"""
 		################ 1.批量操作(处理Action 下拉框) #############
 		action_list = self.get_action_list()
-		action_dict = {func.__name__: func.text for func in action_list}  # {'action_multi_delete':'批量删除','action_depart_multi_init':'批量初始化'}
+		action_dict = {func.__name__: func.text for func in
+		               action_list}  # {'action_multi_delete':'批量删除','action_depart_multi_init':'批量初始化'}
 		# 并且此时的multi_delete 是一个对象的名称
 		if request.method == "POST":
-			action_func_name = request.POST.get("action")  # action_func_name,type(action_func_name),bool(action_func_name) = multi_init <class 'str'> True
+			action_func_name = request.POST.get(
+				"action")  # action_func_name,type(action_func_name),bool(action_func_name) = multi_init <class 'str'> True
 			if action_func_name and action_func_name in action_dict:
 				# <bound method UserInfoHandler.multi_delete of <app01.stark.UserInfoHandler object at ...>>
 				action_response = getattr(self, action_func_name)(request, *args, **kwargs)
@@ -435,7 +439,7 @@ class StarkHandler(object):
 		data_list = all_data[pager.start:pager.end]
 
 		################ 5.处理表格 #############
-		list_display = self.get_list_display(request,*args,**kwargs)
+		list_display = self.get_list_display(request, *args, **kwargs)
 		# 5.1 处理表头
 		header_list = []
 		if list_display:  # 如果有list_display(展示列) 就循环它
@@ -467,6 +471,9 @@ class StarkHandler(object):
 		################ 6.添加按钮 #############
 		add_btn = self.get_add_btn(request, *args, **kwargs)
 
+		################ 添加批量上传按钮 ########
+		import_excel_btn = self.get_import_excel_btn(request, *args, **kwargs)
+
 		################ 7.组合搜索 #############
 		search_group_row_list = []
 		search_group = self.get_search_group()  # ['gender', 'depart']
@@ -475,17 +482,18 @@ class StarkHandler(object):
 
 			search_group_row_list.append(row)
 
-		return render(request, self.change_list_template or 'stark/changelist.html',            {
-                'data_list': data_list,
-                'header_list': header_list,
-                'body_list': body_list,
-                'pager': pager,
-                'add_btn': add_btn,
-                'search_list': search_list,
-                'search_value': search_value,
-                'action_dict': action_dict,
-                'search_group_row_list': search_group_row_list
-            })
+		return render(request, self.change_list_template or 'stark/changelist.html', {
+			'data_list': data_list,
+			'header_list': header_list,
+			'body_list': body_list,
+			'pager': pager,
+			'add_btn': add_btn,
+			'import_excel_btn': import_excel_btn,
+			'search_list': search_list,
+			'search_value': search_value,
+			'action_dict': action_dict,
+			'search_group_row_list': search_group_row_list
+		})
 
 	def form_database_save(self, request, form, is_update, *args, **kwargs):  # 视频中的save
 		"""
@@ -505,7 +513,7 @@ class StarkHandler(object):
 		model_form_class = self.get_model_form_class(True, request, None, *args, **kwargs)
 		if request.method == "GET":
 			form = model_form_class()
-			return render(request, self.add_template or  'stark/change.html', {"form": form})
+			return render(request, self.add_template or 'stark/change.html', {"form": form})
 
 		form = model_form_class(data=request.POST)
 		if form.is_valid():
@@ -538,7 +546,7 @@ class StarkHandler(object):
 			response = self.form_database_save(request, form, True, *args, **kwargs)
 			# 在数据库中保存成功后,跳转回列表页面（携带原来的参数）
 			return response or redirect(self.reverse_list_url(*args, **kwargs))
-		return render(request,self.change_template or 'stark/change.html', {"form": form})
+		return render(request, self.change_template or 'stark/change.html', {"form": form})
 
 	def delete_object(self, request, pk, *args, **kwargs):
 		self.model_class.objects.filter(pk=pk).delete()
@@ -593,6 +601,14 @@ class StarkHandler(object):
 		:return:
 		"""
 		return self.get_url_name('delete')
+
+	@property
+	def get_import_excel_url_name(self):
+		"""
+		获取删除页面URL的name
+		:return:
+		"""
+		return self.get_url_name('import')
 
 	def reverse_commons_url(self, name, *args, **kwargs):
 		name = "%s:%s" % (self.site.namespace, name)
@@ -649,6 +665,7 @@ class StarkHandler(object):
 		def inner(request, *args, **kwargs):
 			self.request = request
 			return func(request, *args, **kwargs)
+
 		return inner
 
 	def get_urls(self):
@@ -702,7 +719,8 @@ class StarkSite(object):
 			# app_label 表示项目下某个应用的名称  ：app01
 			# model_name 表示应用的表名称(小写) ：depart
 			if prev:  # url中带前缀的
-				patterns.append(url(r'%s/%s/%s/' % (app_label, model_name, prev),(handler.get_urls(), None, None)))  # 第一个None 是namespace,第二个是name
+				patterns.append(url(r'%s/%s/%s/' % (app_label, model_name, prev),
+				                    (handler.get_urls(), None, None)))  # 第一个None 是namespace,第二个是name
 			else:  # url中不带前缀的
 				patterns.append(url(r'%s/%s/' % (app_label, model_name), (handler.get_urls(), None, None)))
 

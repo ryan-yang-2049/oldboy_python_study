@@ -50,7 +50,6 @@ class UserInfoHandler(StarkHandler):
 
 	def extra_urls(self):
 		patterns = [
-			url(r'^reset/password/(?P<pk>\d+)/$', self.wrapper(self.reset_password),
-			    name=self.get_url_name('reset_pwd'))
+			url(r'^reset/password/(?P<pk>\d+)/$', self.wrapper(self.reset_password),name=self.get_url_name('reset_pwd'))
 		]
 		return patterns
