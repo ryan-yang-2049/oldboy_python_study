@@ -84,15 +84,15 @@ class Employee(models.Model):
 	员工表
 	"""
 	name = models.CharField(verbose_name='姓名', max_length=32)
-	depart = models.ForeignKey(verbose_name='部门', to=EmployeeDepartment)
+	depart = models.CharField(verbose_name='部门', max_length=32,null=True,blank=True)
 
 	def __str__(self):
 		return self.name
 
 
 class FixPhone(models.Model):
-	user = models.ForeignKey(verbose_name='使用者', to='Employee')
-	depart = models.ForeignKey(verbose_name='所属部门', to=EmployeeDepartment)
+	user = models.CharField(verbose_name='使用者', max_length=32)
+	depart = models.CharField(verbose_name='所属部门',max_length=32)
 	extension = models.IntegerField(verbose_name='分机号')
 	straight_line = models.IntegerField(verbose_name='直线号码', default=38959191,null=True, blank=True)
 

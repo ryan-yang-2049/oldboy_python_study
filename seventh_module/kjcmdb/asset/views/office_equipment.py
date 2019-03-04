@@ -5,7 +5,7 @@
 # __mtime__ = '2019.03.01'
 
 
-from stark.service.v1 import StarkHandler,get_choice_text,Option
+from stark.service.v1 import StarkHandler,get_choice_text,Option,get_datetime_text
 
 class OfficeEquipmentHandler(StarkHandler):
 	list_display = [
@@ -14,7 +14,7 @@ class OfficeEquipmentHandler(StarkHandler):
 		get_choice_text('设备类型','types'),
 		'department',
 		'sn',
-		'buydate',
+		get_datetime_text('购买日期','buydate'),
 		'warrantydate',
 		'user',
 		'cpu',
