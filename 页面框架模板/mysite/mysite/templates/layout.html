@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="/static/bower_components/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="/static/dist/css/AdminLTE.min.css">
     <!-- 调整顶部颜色-->
-    <link rel="stylesheet" href="/static/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="/static/dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    {% block css %}
+    {% endblock %}
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -22,7 +24,7 @@
             <span class="logo-lg"><b>Admin</b>LTE</span>
         </a>
         <!-- 顶部导航栏 -->
-        <nav class="navbar navbar-static-top" role="navigation">
+        <nav class="navbar navbar-static-top">
             <!-- 侧边栏开关按钮-->
             <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
             <!-- 导航栏右边菜单 -->
@@ -88,7 +90,7 @@
                         </ul>
                     </li>
                     <!-- 通知菜单 end -->
-                    
+
                     <!-- 任务菜单 endstart  -->
                     <li class="dropdown tasks-menu">
                         <!-- Menu Toggle Button -->
@@ -127,7 +129,7 @@
                         </ul>
                     </li>
                     <!-- 任务菜单 end  -->
-                    
+
                     <!-- 用户登录信息菜单 start  -->
                     <li class="dropdown user user-menu">
                         <!-- Menu Toggle Button -->
@@ -178,7 +180,7 @@
                     <li>
                         <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
                     </li>
-                      <!-- 导航栏右上角任务按钮  -->
+                    <!-- 导航栏右上角任务按钮  -->
                 </ul>
             </div>
         </nav>
@@ -186,7 +188,12 @@
     <!-- 顶部导航栏菜单 end -->
 
     <!-- 右边栏菜单包含用户信息菜单 start -->
-    <aside class="main-sidebar">
+    <aside class="main-sidebar" style="margin-top: 5px">
+{#        <p></p>#}
+
+
+
+
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
             <!--右边栏展示菜单 start-->
@@ -214,22 +221,23 @@
         </section>
     </aside>
     <!-- 右边栏菜单包含用户信息菜单 end -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" style="min-height: 581px;">
         <!-- 标题以及页面导航  -->
-        <section class="content-header">
-            <h1>
-                Page Header
-                <small>Optional description</small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
-            </ol>
-        </section>
-        <!-- 标题以及页面导航  -->
-        <!-- 主页内容 start -->
+        {#        <section class="content-header">#}
+        {#            <h1>#}
+        {#                Page Header#}
+        {#                <small>Optional description</small>#}
+        {#            </h1>#}
+        {#            <ol class="breadcrumb">#}
+        {#                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>#}
+        {#                <li class="active">Here</li>#}
+        {#            </ol>#}
+        {#        </section>#}
+        {#        <!-- 标题以及页面导航  -->#}
+        {#        <!-- 主页内容 start -->#}
         <section class="content container-fluid">
-
+            {% block content %}
+            {% endblock %}
         </section>
         <!-- 主页内容 end -->
     </div>
@@ -328,7 +336,8 @@
 <script src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/static/dist/js/adminlte.min.js"></script>
-
+{% block script %}
+{% endblock %}
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
