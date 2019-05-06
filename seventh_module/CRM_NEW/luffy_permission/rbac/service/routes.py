@@ -62,7 +62,7 @@ def recursion_urls(pre_namespace,pre_url,urlpatterns,url_ordered_dict):
 
 def get_all_url_dict():
 	"""
-	获取项目中所有的URL（url中必须有name别名）
+	获取项目中所有的URL（url中必须有name别名,否则不会返回URL）
 	:return:
 	"""
 
