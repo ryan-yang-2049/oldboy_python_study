@@ -38,7 +38,7 @@ def multi_menu(request):
 		val['class'] = 'hide'
 		for per in val['children']:
 			if per['id'] == request.current_selected_permission:  # 第19课
-				per['class'] = 'active'
+				per['class'] = 'active success'
 				val['class'] = ''
 		ordered_dict[key] = val
 

@@ -274,18 +274,18 @@ def multi_permissions(request):
 	all_url_dict = get_all_url_dict()
 	"""
 	all_url_dct = {
-		' rbac:user_list ' {'name': 'rbac:user_list', 'url': '/rbac/user/list/'},
-		' rbac:user_add ' {'name': 'rbac:user_add', 'url': '/rbac/user/add/'},
-		' rbac:user_edit ' {'name': 'rbac:user_edit', 'url': '/rbac/user/edit/(?P<pk>\\d+)/'},
-		' rbac:user_del ' {'name': 'rbac:user_del', 'url': '/rbac/user/del/(?P<pk>\\d+)/'},
+		' rbac:user_list':{'name': 'rbac:user_list', 'url': '/rbac/user/list/'},
+		' rbac:user_add':{'name': 'rbac:user_add', 'url': '/rbac/user/add/'},
+		' rbac:user_edit':{'name': 'rbac:user_edit', 'url': '/rbac/user/edit/(?P<pk>\\d+)/'},
+		' rbac:user_del':{'name': 'rbac:user_del', 'url': '/rbac/user/del/(?P<pk>\\d+)/'},
 	}"""
-	router_name_set = set(all_url_dict.keys())
+	router_name_set = set(all_url_dict.keys())	# 获取项目中所有URL的name 'rbac:user_del'
 
 	# 2.获取数据库中所有的URL
-	permissions = models.Permission.objects.all().values('id','title','name','url','menu_id','pid_id')   #QuerySet类型
+	permissions = models.Permission.objects.all().values('id','title','name','url','menu_id','pid_id')   # QuerySet类型
 
 	permission_dict = OrderedDict()
-	permission_name_set = set()
+	permission_name_set = set()	# 数据库中的name集合。
 	for row in permissions:
 		permission_dict[row['name']] = row
 		permission_name_set.add(row['name'])

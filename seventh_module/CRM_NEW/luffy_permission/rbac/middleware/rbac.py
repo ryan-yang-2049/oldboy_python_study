@@ -46,11 +46,11 @@ class RbacMiddleware(MiddlewareMixin):
 				request.current_selected_permission = item['pid'] or item['id']  # 第19课
 
 				if not item['pid']:
-					url_record.extend([{'title':item['title'],'url':item['url'],'class':'active'}])
+					url_record.extend([{'title':item['title'],'url':item['url'],'class':'active success'}])
 				else:
 					url_record.extend([
 						{'title':item['p_title'],'url':item['p_url']},
-						{'title': item['title'], 'url': item['url'],'class':'active'}
+						{'title': item['title'], 'url': item['url'],'class':'active success'}
 					])
 				request.breadcrumb = url_record
 				print(request.breadcrumb)
