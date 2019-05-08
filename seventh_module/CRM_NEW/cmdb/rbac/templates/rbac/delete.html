@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <div class="luffy-container">
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <form class="form-horizontal" method="post">
+                {% csrf_token %}
+                {% if info %}
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        删除 <strong>{{ info }}</strong>
+                    </div>
+                    <p style="font-size: 15px;"><i class="fa fa-warning" aria-hidden="true"></i>删除后将不可恢复，请确定是否删除?</p>
+
+                {% else %}
+                    <p style="font-size: 15px;"><i class="fa fa-warning" aria-hidden="true"></i>删除后将不可恢复，请确定是否删除?</p>
+                {% endif %}
+
+                <div style="margin-top: 20px;">
+                    <a href="{{ cancel }}" class="btn btn-success btn-sm">取消</a>
+                    <button class="btn btn-danger btn-sm" type="submit">确 认</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+

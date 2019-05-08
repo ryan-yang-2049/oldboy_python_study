@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+{% block css %}
+    <style type="text/css">
+        tr,th{
+            text-align: center;
+
+        }
+        th{font-size: 16px}
+        tr{font-size: 14px}
+    </style>
+{% endblock %}
+{% block page_header %}
+    <h3 style="margin-top: -3px">
+        权限列表
+    </h3>
+{% endblock %}
+{% block content %}
+    <div class="btn-group" style="margin: 5px 0">
+        <a class="btn btn-success" href="{% url 'rbac:role_add' %}">
+            <i class="fa fa-plus-square" aria-hidden="true"></i> 添加角色
+        </a>
+    </div>
+    <div class="box">
+        <div class="box-body">
+            <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example2_info">
+                            <thead>
+                            <tr role="row">
+                                <th>ID</th>
+                                <th>名称</th>
+                                <th>选项</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            {% for row in roles %}
+                                <tr role="row" class="odd">
+                                <td>{{ row.id }}</td>
+                                <td>{{ row.title }}</td>
+                                <td>
+                                    <a style="color: #333333;" href="{% url 'rbac:user_edit'  row.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    <a style="color: #d9534f;" href="{% url 'rbac:user_del' row.id %}"><i class="fa fa-trash-o"></i></a>
+                                </td>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        $(function () {
+            $('#example1').DataTable();
+            $('#example2').DataTable({
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : false,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            })
+        })
+    </script>
+{% endblock %}
