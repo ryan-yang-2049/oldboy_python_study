@@ -43,6 +43,7 @@ class DepartHandler(object):
 		:param pk:
 		:return:
 		"""
+		pass
 
 site.registry(models.Depart,DepartHandler)
 
