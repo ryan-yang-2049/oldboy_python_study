@@ -133,10 +133,38 @@ MENU_SESSION_KEY = 'luffy_permission_menu_key'
 VALID_URL_LIST = [
 	'/login/',
 	'/admin/*',
-	'/index/'
+
 ]
 
 AUTO_DISCOVER_EXCLUDE = [
-	'/admin/.*',
-	# '/web/.*'
+	'/login/',
+	'/admin/*',
+	'/index/',
+	'/logout/'
 ]
+
+
+# 需要登录但无需权限的URL
+NO_PERMISSION_LIST = [
+	'/index/',
+	'/logout/'
+]
+
+
+
+#################### 权限相关配置 ####################
+# 业务中的用户表
+RBAC_USER_MODEL_CLASS = 'app01.models.UserInfo'
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,12 +1,19 @@
 {% extends 'layout.html' %}
+{% load rbac %}
 {% block css %}
     <style type="text/css">
-        tr,th{
+        tr, th {
             text-align: center;
 
         }
-        th{font-size: 16px}
-        tr{font-size: 14px}
+
+        th {
+            font-size: 16px
+        }
+
+        tr {
+            font-size: 14px
+        }
     </style>
 {% endblock %}
 {% block page_header %}
@@ -19,9 +26,11 @@
 {% endblock %}
 {% block content %}
     <div class="btn-group" style="margin: 5px 0">
-        <a class="btn btn-success" href="{% url 'rbac:user_add' %}">
-            <i class="fa fa-plus-square" aria-hidden="true"></i> 添加用户
-        </a>
+        {% if request|has_permission:'user_add' %}
+            <a class="btn btn-success" href="{% memory_url request 'user_add' %}">
+                <i class="fa fa-plus-square" aria-hidden="true"></i> 添加用户
+            </a>
+        {% endif %}
     </div>
     <div class="box">
         <div class="box-body">
@@ -29,28 +38,50 @@
 
                 <div class="row">
                     <div class="col-sm-12">
-                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example2_info">
+                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid"
+                               aria-describedby="example2_info">
                             <thead>
                             <tr role="row">
-                                <th>序号</th>
                                 <th>用户名</th>
                                 <th>邮箱</th>
-                                <th>重置密码</th>
-                                <th>操作</th>
+                                <th>级别</th>
+                                <th>部门</th>
+                                <th>手机</th>
+                                {% if request|has_permission:'user_reset_pwd' %}
+                                    <th>重置密码</th>
+                                {% endif %}
+                                {% if request|has_permission:'user_edit' or  request|has_permission:'user_del' %}
+                                    <th>操作</th>
+                                {% endif %}
                             </tr>
                             </thead>
                             <tbody>
 
                             {% for row in users %}
                                 <tr role="row" class="odd">
-                                <td class="sorting_1">{{ forloop.counter }}</td>
-                                <td>{{ row.name }}</td>
+                                <td class="sorting_1">{{ row.name }}</td>
                                 <td>{{ row.email }}</td>
-                                <td><a href="{% url 'rbac:user_reset' row.id %}">重置密码</a></td>
-                                <td>
-                                    <a style="color: #333333;" href="{% url 'rbac:user_edit'  row.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a>
-                                    <a style="color: #d9534f;" href="{% url 'rbac:user_del' row.id %}"><i class="fa fa-trash-o"></i></a>
-                                </td>
+                                <td>{{ row.get_level_display }}</td>
+                                <td>{{ row.depart }}</td>
+                                <td>{{ row.phone }}</td>
+                                {% if request|has_permission:'user_reset_pwd' %}
+                                    <td><a href="{% memory_url request 'user_reset_pwd' pk=row.id %}">重置密码</a></td>
+                                {% endif %}
+
+                                {% if request|has_permission:'user_edit' or  request|has_permission:'user_del' %}
+                                    <td>
+                                        {% if request|has_permission:'user_edit' %}
+                                            <a style="color: #333333;"
+                                               href="{% memory_url request 'user_edit' pk=row.id %}"><i
+                                                    class="fa fa-edit" aria-hidden="true"></i></a>
+                                        {% endif %}
+                                        {% if request|has_permission:'user_del' %}
+                                            <a style="color: #d9534f;"
+                                               href="{% memory_url request 'user_del' pk=row.id %}"><i
+                                                    class="fa fa-trash-o"></i></a>
+                                        {% endif %}
+                                    </td>
+                                {% endif %}
                             {% endfor %}
                             </tbody>
                         </table>
@@ -61,20 +92,18 @@
         </div>
         <!-- /.box-body -->
     </div>
-
-
 {% endblock %}
 {% block script %}
     <script>
         $(function () {
             $('#example1').DataTable();
             $('#example2').DataTable({
-                'paging'      : true,
+                'paging': true,
                 'lengthChange': false,
-                'searching'   : false,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
             })
         })
     </script>

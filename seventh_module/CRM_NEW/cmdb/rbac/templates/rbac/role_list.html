@@ -41,8 +41,8 @@
                                 <td>{{ row.id }}</td>
                                 <td>{{ row.title }}</td>
                                 <td>
-                                    <a style="color: #333333;" href="{% url 'rbac:user_edit'  row.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a>
-                                    <a style="color: #d9534f;" href="{% url 'rbac:user_del' row.id %}"><i class="fa fa-trash-o"></i></a>
+                                    <a style="color: #333333;" href="{% url 'rbac:role_edit'  row.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    <a style="color: #d9534f;" href="{% url 'rbac:role_del' row.id %}"><i class="fa fa-trash-o"></i></a>
                                 </td>
                             {% endfor %}
                             </tbody>

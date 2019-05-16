@@ -385,8 +385,8 @@ def multi_permissions_del(request, pk):
 	- 选择用户、角色时，页面上的默认选项
 	- 角色和权限的保存与分配
 """
-
-
+from django.conf  import settings
+from django.utils.module_loading import import_string
 def distribute_permission(request):
 	"""
 	权限分配
@@ -394,7 +394,9 @@ def distribute_permission(request):
 	:return:
 	"""
 	user_id = request.GET.get('uid')  # 页面选中的用户ID
-	user_object = models.UserInfo.objects.filter(id=user_id).first()
+	# 业务中的用户表
+	user_model_class = import_string(settings.RBAC_USER_MODEL_CLASS)
+	user_object = user_model_class.objects.filter(id=user_id).first()
 	if not user_object:
 		user_id = None
 
@@ -440,7 +442,7 @@ def distribute_permission(request):
 	else:
 		user_has_permissions = {}
 
-	all_user_list = models.UserInfo.objects.all()
+	all_user_list = user_model_class.objects.all()
 
 	all_role_list = models.Role.objects.all()
 

@@ -43,7 +43,12 @@ class UserInfo(models.Model):
 	name = models.CharField(verbose_name='用户名', max_length=32)
 	password = models.CharField(verbose_name='密码', max_length=64)
 	email = models.CharField(verbose_name='邮箱', max_length=32)
-	roles = models.ManyToManyField(verbose_name='拥有的所有角色', to='Role', blank=True)
+	roles = models.ManyToManyField(verbose_name='拥有的所有角色', to=Role, blank=True)
 
 	def __str__(self):
 		return self.name
+
+	class Meta:
+		# django以后再做数据库迁移时，不在为UserInfo类创建相关的表以及表结构了
+		# 此类可以当作 “父类”,被其他Model类继承
+		abstract = True

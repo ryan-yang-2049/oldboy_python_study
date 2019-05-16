@@ -8,11 +8,11 @@ urlpatterns = [
 	url(r'^role/edit/(?P<pk>\d+)/$', role.role_edit,name='role_edit'),
 	url(r'^role/del/(?P<pk>\d+)/$', role.role_del,name='role_del'),
 
-	url(r'^user/list/$', user.user_list, name='user_list'),
-	url(r'^user/add/$', user.user_add, name='user_add'),
-	url(r'^user/edit/(?P<pk>\d+)/$', user.user_edit, name='user_edit'),
-	url(r'^user/del/(?P<pk>\d+)/$', user.user_del, name='user_del'),
-	url(r'^user/reset/password/(?P<pk>\d+)/$', user.user_reset, name='user_reset'),
+	# url(r'^user/list/$', user.user_list, name='user_list'),
+	# url(r'^user/add/$', user.user_add, name='user_add'),
+	# url(r'^user/edit/(?P<pk>\d+)/$', user.user_edit, name='user_edit'),
+	# url(r'^user/del/(?P<pk>\d+)/$', user.user_del, name='user_del'),
+	# url(r'^user/reset/password/(?P<pk>\d+)/$', user.user_reset, name='user_reset'),
 
 
 	url(r'^menu/list/$', menu.menu_list, name='menu_list'),

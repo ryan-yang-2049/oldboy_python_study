@@ -33,25 +33,38 @@ class RbacMiddleware(MiddlewareMixin):
 		if not permission_dict:
 			return HttpResponse('为获取到用户权限信息，请登录!')
 
-		flag = False  # Flag=False 的时候表示未匹配成功
-
 		url_record = [
 			{'title':'首页','url':'/index/'}
 		]
 
+
+		#
+		for url in settings.NO_PERMISSION_LIST:
+			if re.match(url, request.path_info):
+				# 需要登录，但无需权限校验
+				request.current_selected_permission = 0
+				request.breadcrumb = url_record
+				return None
+
+
+		flag = False  # Flag=False 的时候表示未匹配成功
+
+
+
 		for item in permission_dict.values():
+
 			reg = "^%s$" % (item['url'])
+			print(reg)
 			if re.match(reg, current_url):
 				flag = True
 				request.current_selected_permission = item['pid'] or item['id']  # 第19课
-				print("middle:",request.current_selected_permission)
 
 				if not item['pid']:
-					url_record.extend([{'title':item['title'],'url':item['url'],'class':'active success'}])
+					url_record.extend([{'title':item['title'],'url':item['url'],'class':'active'}])
 				else:
 					url_record.extend([
 						{'title':item['p_title'],'url':item['p_url']},
-						{'title': item['title'], 'url': item['url'],'class':'active success'}
+						{'title': item['title'], 'url': item['url'],'class':'active'}
 					])
 				request.breadcrumb = url_record
 				break
