@@ -26,7 +26,6 @@ def get_choice_text(title, field):
 			return title
 		method = "get_%s_display" % field
 		return getattr(obj, method)()
-
 	return inner
 
 
@@ -90,7 +89,7 @@ class StarkHandler(object):
 	order_list = []
 
 	def get_order_list(self):
-		return self.order_list or ['id']  # -id 按照id降序
+		return self.order_list or ['id',]  # -id 按照id降序
 
 	search_list = []
 

@@ -147,8 +147,7 @@ class StarkHandler(object):
 		action_dict = {func.__name__: func.text for func in action_list}  # {'multi_delete':'批量删除','multi_init':'批量初始化'}
 
 		if request.method == "POST":
-			action_func_name = request.POST.get(
-				"action")  # action_func_name,type(action_func_name),bool(action_func_name) = multi_init <class 'str'> True
+			action_func_name = request.POST.get("action")  # action_func_name,type(action_func_name),bool(action_func_name) = multi_init <class 'str'> True
 			if action_func_name and action_func_name in action_dict:
 				# <bound method UserInfoHandler.multi_delete of <app01.stark.UserInfoHandler object at ...>>
 				action_response = getattr(self, action_func_name)(request, *args, **kwargs)

@@ -10,7 +10,7 @@ from web import models
 
 class SchoolHandler(StarkHandler):
 	list_display = ['title']
-
+	order_list = ['-title']
 
 site.registry(models.School, SchoolHandler)
 

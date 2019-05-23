@@ -268,7 +268,7 @@ class StarkHandler(object):
 		                            pk=obj.pk)
 		delete_url = parse_delete_url.memory_reverse_url()
 
-		tpl = '<a href="%s">编辑</a>||<a href="%s">删除</a>' % (edit_url, delete_url)
+		tpl = '<a class="btn btn-primary" href="%s">编辑</a> <a  class="btn btn-warning" href="%s">删除</a>' % (edit_url, delete_url)
 		return mark_safe(tpl)
 
 	# 添加按钮的钩子函数

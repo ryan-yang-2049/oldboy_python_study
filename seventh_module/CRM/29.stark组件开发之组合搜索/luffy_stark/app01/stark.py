@@ -34,7 +34,7 @@ class UserInfoModelForm(StarkModelForm):
 
 
 class UserInfoHandler(StarkHandler):
-	per_page_num = 2
+	# per_page_num = 2
 	# 定制页面的列
 	list_display = [StarkHandler.display_checkbox,
 	                'name',

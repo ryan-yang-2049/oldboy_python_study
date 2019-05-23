@@ -26,7 +26,7 @@ class StarkHandler(object):
 	list_display = []
 	per_page_num = 10
 	def __init__(self,site,model_class, prev):
-		self.site = site
+		self.site = site  # 对象本身自己，就可以获取到 namespace
 		self.model_class = model_class  # 此时的model_class 是一个对象
 		self.prev = prev  # 表示别名
 

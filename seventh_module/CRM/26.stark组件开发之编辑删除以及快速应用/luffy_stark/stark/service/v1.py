@@ -211,7 +211,7 @@ class StarkHandler(object):
 		parse_url = ParseUrl(request=self.request, namespace=self.site.namespace, name=self.get_list_url_name)
 		cancel = parse_url.memory_url()
 		if request.method == "GET":
-			return render(request,'stark/delete.html',locals())
+			return render(request,'stark/delete.html',{'cancel':cancel})
 		current_delete_object = self.model_class.objects.filter(pk=pk).delete()
 		return redirect(cancel)
 

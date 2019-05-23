@@ -29,7 +29,7 @@ def get_choice_text(title, field):
 
 class StarkHandler(object):
 	list_display = []   # 页面显示列
-	per_page_num = 10   # 每页显示格式
+	per_page_num = 2   # 每页显示格式
 	has_add_btn = True  # 是否具有添加按钮
 	def __init__(self,site,model_class, prev):
 		self.site = site
@@ -102,7 +102,7 @@ class StarkHandler(object):
 		pager = Pagination(
 			current_page=request.GET.get('page'),   # 获取页面返回的获取的页码
 			all_count = all_data.count(),           # 数据库里面所有数据的计算
-			base_url = request.path_info,           # 访问的基础URL,例如 http://127.0.0.1/abc?name=ryan&age=18 里面的 http://127.0.0.1
+			base_url = request.path_info,           # 访问的基础URL,例如 http://127.0.0.1/abc?name=ryan&age=18 里面的 http://127.0.0.1/abc/
 			params = query_params,                  # 用户URL里面的参数,例如 http://127.0.0.1/abc?name=ryan&age=18里面的name=ryan&age=18,它是 QueryDict类型
 			per_page_num= self.per_page_num         # 这个是每页显示的个数(扩展，可以在网页端输入，然后在传入服务器端)
 		)
@@ -172,9 +172,8 @@ class StarkHandler(object):
 			# 在数据库中保存成功后,跳转回列表页面（携带原来的参数）
 			parse_url = ParseUrl(request=self.request,namespace=self.site.namespace,name=self.get_list_url_name)
 			url = parse_url.memory_url()
-			#
 			return redirect(url)
-		# return HttpResponse('添加页面')
+		return render(request, 'stark/change.html', {"form": form})
 
 	def change_view(self, request, pk):
 		"""
@@ -215,19 +214,6 @@ class StarkHandler(object):
 		:return:
 		"""
 		return self.get_url_name('add')
-
-	# def reverse_add_url(self):
-	# 	name = "%s:%s" % (self.site.namespace, self.get_add_url_name)
-	# 	base_url = reverse(name)
-	# 	if not self.request.GET:
-	# 		add_url = base_url
-	# 	else:
-	# 		# 保留原搜索条件
-	# 		param = self.request.GET.urlencode()
-	# 		new_query_dict = QueryDict(mutable=True)
-	# 		new_query_dict['_filter'] = param
-	# 		add_url = "%s?%s" % (base_url, new_query_dict.urlencode())
-	# 	return add_url
 
 
 	@property
