@@ -75,7 +75,7 @@ class ClassList(models.Model):
 	tech_teachers = models.ManyToManyField(verbose_name='任课老师', to='UserInfo', related_name='teach_classes', blank=True,
 	                                       limit_choices_to={'depart__title__in':['Linux教学部','Python教学部']})
 	memo = models.TextField(verbose_name='说明',max_length=255, blank=True, null=True)
-
+	aa = models.TextField
 	def __str__(self):
 		return "{0}({1}期)".format(self.course.name, self.semester)
 

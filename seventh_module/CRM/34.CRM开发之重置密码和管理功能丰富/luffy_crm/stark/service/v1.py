@@ -501,8 +501,8 @@ class StarkHandler(object):
 	def get_url_name(self, param):
 		app_label, model_name = self.model_class._meta.app_label, self.model_class._meta.model_name
 		if self.prev:
-			return '%s_%s_%s_%s' % (app_label, model_name, self.prev, param)
-		return '%s_%s_%s' % (app_label, model_name, param)
+			return '%s_%s_%s_%s' % (app_label, model_name, self.prev, param)    # app01_userinfo_prev_add
+		return '%s_%s_%s' % (app_label, model_name, param)  # app01_userinfo_add
 
 	@property
 	def get_list_url_name(self):

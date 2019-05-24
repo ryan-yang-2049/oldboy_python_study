@@ -6,20 +6,12 @@
 
 from stark.service.v1 import site
 from web import models
-from  web.views import school,depart,userinfo,course
-
-
-
+from web.views import school, depart, userinfo, course
 
 site.registry(models.School, school.SchoolHandler)
 
-site.registry(models.Department,depart.DepartmentHandler)
+site.registry(models.Department, depart.DepartmentHandler)
 
-site.registry(models.UserInfo,userinfo.UserInfoHandler)
+site.registry(models.UserInfo, userinfo.UserInfoHandler)
 
-site.registry(models.Course,course.CourseHandler)
-
-
-
-
-
+site.registry(models.Course, course.CourseHandler)
