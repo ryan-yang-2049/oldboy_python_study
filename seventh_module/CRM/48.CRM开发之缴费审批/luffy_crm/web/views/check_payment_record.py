@@ -53,7 +53,7 @@ class CheckPaymentRecordHandler(StarkHandler):
 			payment_object.customer.status = 1
 			payment_object.customer.save()
 			# 学生表
-			payment_object.customer.student.student_status = 2
+			payment_object.customer.student.student_status = 2      # One2One 表名小写反向关联学生信息
 			payment_object.customer.student.save()
 
 

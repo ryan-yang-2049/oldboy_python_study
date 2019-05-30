@@ -29,7 +29,7 @@ class StudentPaymentRecordModelForm(StarkModelForm):
 
 
 class PaymentRecordHandler(StarkHandler):
-	list_display = [get_choice_text('缴费类型', 'pay_type'), 'paid_fee', 'class_list', 'consultant',
+	list_display = [get_choice_text('缴费类型', 'pay_type'), 'customer','paid_fee', 'class_list', 'consultant',
 	                get_choice_text('状态', 'confirm_status')]
 
 	# model_form_class = PaymentRecordModelForm

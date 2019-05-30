@@ -18,7 +18,7 @@ class ConsultRecordModelForm(StarkModelForm):
 
 class ConsultRecordHandler(StarkHandler):
 
-	change_list_template = 'consult_record.html'
+	# change_list_template = 'consult_record.html'
 
 	def display_edit_del(self, obj=None, is_header=None, *args, **kwargs):
 		if is_header:

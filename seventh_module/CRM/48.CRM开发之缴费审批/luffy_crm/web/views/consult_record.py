@@ -8,7 +8,7 @@ from django.conf.urls import url
 from django.utils.safestring import mark_safe
 from django.shortcuts import HttpResponse
 
-from stark.service.v1 import StarkHandler,StarkModelForm
+from stark.service.v1 import StarkHandler,StarkModelForm,get_datetime_text
 from web import models
 
 class ConsultRecordModelForm(StarkModelForm):
@@ -30,7 +30,7 @@ class ConsultRecordHandler(StarkHandler):
 		return mark_safe(tpl)
 
 
-	list_display = ['note','consultant','date']
+	list_display = ['note','consultant',get_datetime_text("日期",'date')]
 	model_form_class = ConsultRecordModelForm
 	def get_urls(self):
 		patterns = [

@@ -18,7 +18,7 @@ class ConsultRecordModelForm(StarkModelForm):
 
 class ConsultRecordHandler(StarkHandler):
 
-	change_list_template = 'consult_record.html'
+	change_list_template = 'consu   lt_record.html'
 
 	list_display = ['note','consultant','date']
 	model_form_class = ConsultRecordModelForm

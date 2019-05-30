@@ -49,9 +49,8 @@ class ScoreRecordHandler(StarkHandler):
 		form.instance.user_id = user_id
 		form.save()
 
-		# 原来的积分
-
-		score = form.instance.score
+		# 原来的积分  form.instance.student.score
+		score = form.instance.score #增加或减少的积分
 		if score > 0:
 			form.instance.student.score += abs(score)
 		else:
