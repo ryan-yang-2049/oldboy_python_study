@@ -4,13 +4,14 @@ __title__ = 'base.py'
 __author__ = 'yangyang'
 __mtime__ = '2019-02-28'
 """
+from django.conf import settings
 
 class PermissionHandler(object):
 
 	# 控制添加按钮
 	# 是否显示添加按钮
 	def get_add_btn(self, request, *args, **kwargs):
-		from django.conf import settings
+
 		# 当前用户所有的权限信息
 		permissions_dict = request.session.get(settings.PERMISSION_SESSION_KEY)
 		if self.get_add_url_name not in permissions_dict:
