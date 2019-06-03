@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/static/dist/css/AdminLTE.css">
+</head>
+<body>
+<form role="form"  method="post" action="{% url  'stark:assets_computer_import_excel' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="box-body">
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="asset_import" name="asset_import">
+
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
+    </div>
+    <!-- /.box-body -->
+
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">导入数据</button>
+    </div>
+    {% if not status %}
+        {% for computer in exist_computer %}
+            <li style="color: red">{{ computer }}</li>
+        {% endfor %}
+
+    {% endif %}
+</form>
+</body>
+<script type="text/javascript">
+        var index = parent.layer.getFrameIndex(window.name);
+        var success = {{ status }};
+        if ( success === '1' ) {
+            parent.$("#handle_status").val('1');
+            parent.layer.close(index);
+        } else if( success === '2' ) {
+            parent.$("#handle_status").val('2');
+            parent.layer.close(index);
+        }
+</script>
+</html>

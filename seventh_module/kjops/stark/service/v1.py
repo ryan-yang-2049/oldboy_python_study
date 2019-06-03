@@ -84,7 +84,7 @@ class SearchGroupRow(object):
 		self.query_dict = query_dict
 
 	def __iter__(self):
-		yield '<div class="whole">%s</div>' % self.title
+		yield '<div class="whole" style="width:70px;text-align:center;">%s</div>' % self.title
 		yield '<div class="others">'
 
 		total_query_dict = self.query_dict.copy()
@@ -289,7 +289,7 @@ class StarkHandler(object):
 		if is_header:
 			return "编辑"
 
-		return mark_safe('<a class="btn btn-sm btn-info" href="%s">编辑</a>' % self.reverse_change_url(pk=obj.pk))
+		return mark_safe('<a class="btn btn-sm btn-warning" href="%s">编辑</a>' % self.reverse_change_url(pk=obj.pk))
 
 	# 删除按钮
 	def display_del(self, obj=None, is_header=None, *args, **kwargs):
@@ -302,7 +302,7 @@ class StarkHandler(object):
 		if is_header:
 			return "操作"
 
-		tpl = '<a class="btn btn-sm btn-info" href="%s">编辑</a>&nbsp;&nbsp;<a class="btn btn-sm btn-danger" href="%s">删除</a>' % (
+		tpl = '<a class="btn btn-sm btn-warning" href="%s">编辑</a>&nbsp;&nbsp;<a class="btn btn-sm btn-danger" href="%s">删除</a>' % (
 			self.reverse_change_url(pk=obj.pk), self.reverse_delete_url(pk=obj.pk))
 		return mark_safe(tpl)
 
@@ -311,7 +311,7 @@ class StarkHandler(object):
 		if self.has_add_btn:
 			# 根据别名反向生成URL
 
-			return '<a class="btn btn-primary" href="%s">添加</a>' % self.reverse_add_url(*args, **kwargs)
+			return '<a class="btn btn-success" href="%s">添加</a>' % self.reverse_add_url(*args, **kwargs)
 		return None
 
 	model_form_class = None
