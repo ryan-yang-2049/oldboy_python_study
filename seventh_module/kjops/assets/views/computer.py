@@ -46,82 +46,6 @@ class ComputerHandler(StarkHandler):
 		Option('asset_type'),
 		Option('memory',),
 	]
-
-	# def export_excel_data(self,request,*args,**kwargs):
-	# 	"""
-	# 	导出数据
-	# 	:param request:
-	# 	:param args:
-	# 	:param kwargs:
-	# 	:return:
-	# 	"""
-	# 	# pk_list = request.POST.getlist('pk')
-	# 	# print(pk_list)
-	# 	# if not pk_list:
-	# 	# 	data = self.model_class.objects.all()
-	# 	# else:
-	#
-	# 	data = self.model_class.objects.all()
-	# 	response = HttpResponse(content_type='text/csv')
-	# 	response.write(codecs.BOM_UTF8)
-	# 	now = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')
-	# 	file_name = 'assets_computer_'+now+'.csv'
-	# 	response['Content-Disposition'] = "attachment; filename=" + file_name
-	# 	writer = csv.writer(response)
-	# 	writer.writerow([
-	# 		'资产编号',
-	# 		'设备类型',
-	# 		'所属公司',
-	# 		'设备状态',
-	# 		'设备厂商',
-	# 		'价格',
-	# 		'购买时间',
-	# 		'内存',
-	# 		'磁盘',
-	# 		'SN号码',
-	# 		'备注信息',
-	# 	])
-	#
-	# 	for item in data:
-	# 		if item.asset_type:
-	# 			asset_type_num = int(item.asset_type)
-	# 			asset_type_info = ASSET_TYPE_CHOICE[asset_type_num-1][1]
-	# 		else:
-	# 			asset_type_info = ""
-	#
-	# 		if item.company:
-	# 			company_num = int(item.company)
-	# 			company_info = COMPANY_CHOICE[company_num-1][1]
-	# 		else:
-	# 			company_info = ""
-	#
-	# 		if item.status:
-	# 			status_num = int(item.status)
-	# 			status_info = ASSET_STATUS[status_num-1][1]
-	# 		else:
-	# 			status_info = ""
-	#
-	# 		if item.memory:
-	# 			memory_num = int(item.memory)
-	# 			memory_info = MEMORY_CHOICE[memory_num-1][1]
-	# 		else:
-	# 			memory_info = ""
-	#
-	# 		writer.writerow([
-	# 			item.asset_no,
-	# 			asset_type_info,
-	# 			company_info,
-	# 			status_info,
-	# 			item.vendor,
-	# 			item.price,
-	# 			item.buy_time,
-	# 			memory_info,
-	# 			item.disk,
-	# 			item.sn,
-	# 			item.memo,
-	# 		])
-	# 	return response
-
 	def export_excel_data(self,request,*args,**kwargs):
 		"""
 		导出数据
@@ -252,7 +176,6 @@ class ComputerHandler(StarkHandler):
 		response.write(output.getvalue())
 		return response
 
-
 	def import_excel_data(self,request,*args,**kwargs):
 		if request.method == "GET":
 			return render(request,'assets/import.html')
@@ -277,10 +200,11 @@ class ComputerHandler(StarkHandler):
 			}
 
 			object_list = []
-			flag = False
+
 			for row_num in range(1,sheet.nrows):
 				row = sheet.row(row_num)
 				row_dict = {}
+
 				for col_num,name_text in row_map.items():
 					if name_text['name'] == 'asset_no':
 						asset_no = row[col_num].value
@@ -313,13 +237,13 @@ class ComputerHandler(StarkHandler):
 								row_dict['memory'] = int(memory_value)
 					else:
 						row_dict[name_text['name']] = row[col_num].value
-				if row_dict:
-					object_list.append(models.Computer(**row_dict))
-
+				object_list.append(models.Computer(**row_dict))
 			models.Computer.objects.bulk_create(object_list,batch_size=20)
+
 		except Exception as  e:
+			print(e)
 			context['status'] = False
 			context['msg'] = '导入失败'
-			print(context['exist_computer'])
+
 
 		return render(request, 'assets/import.html', context)

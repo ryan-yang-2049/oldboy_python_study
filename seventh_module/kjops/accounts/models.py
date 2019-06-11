@@ -5,7 +5,7 @@ class Department(models.Model):
 	"""
 	部门表
 	"""
-	title = models.CharField(verbose_name='部门名称', max_length=32)
+	title = models.CharField(verbose_name='部门名称', max_length=32,unique=True)
 
 	def __str__(self):
 		return self.title
@@ -32,4 +32,10 @@ class UserInfo(RbacUserInfo):
 
 	def __str__(self):
 		return self.nickname
+
+
+
+
+
+
 

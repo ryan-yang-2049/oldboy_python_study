@@ -64,8 +64,10 @@ class FixPhone(models.Model):
 	"""
 	固定电话
 	"""
-	pass
-
+	phone_num = models.IntegerField(verbose_name="电话号码",unique=True,null=True,blank=True)
+	depart = models.ForeignKey(verbose_name="部门",to=Department,null=True,blank=True)
+	user = models.CharField(verbose_name="使用者",max_length=32,null=True,blank=True)
+	note = models.TextField(verbose_name="备注",max_length=200,null=True,blank=True)
 
 
 

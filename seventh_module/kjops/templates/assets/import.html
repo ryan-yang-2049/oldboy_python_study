@@ -23,7 +23,7 @@
     <div class="box-footer">
         <button type="submit" class="btn btn-primary">导入数据</button>
     </div>
-    {% if not status %}
+    {% if not False %}
         {% for computer in exist_computer %}
             <li style="color: red">{{ computer }}</li>
         {% endfor %}
@@ -31,15 +31,16 @@
     {% endif %}
 </form>
 </body>
+<script src="/static/bower_components/jquery/dist/jquery.js"></script>
+<script src="/static/dist/layer/layer.js"></script>
 <script type="text/javascript">
-        var index = parent.layer.getFrameIndex(window.name);
-        var success = {{ status }};
-        if ( success === '1' ) {
-            parent.$("#handle_status").val('1');
-            parent.layer.close(index);
-        } else if( success === '2' ) {
-            parent.$("#handle_status").val('2');
-            parent.layer.close(index);
-        }
+    {#window.parent.location.reload();#}
+    var index = parent.layer.getFrameIndex(window.name);
+    var status = {{ status }};
+    if (status) {
+        console.log("True")
+    }else {
+        console.log("False")
+    }
 </script>
 </html>

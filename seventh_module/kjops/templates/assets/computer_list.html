@@ -100,20 +100,21 @@
                 type: 2,
                 title: 'Asset Import',
                 closeBtn: 1,
-                area: ['350px', '250px'],
+                area: ['550px', '450px'],
                 shadeClose: true, //点击遮罩关闭
                 content: ['/stark/assets/computer/import_excel/'],
 
                 end:function(){
                     var handle_status = $("#handle_status").val();
-                    if ( handle_status === '1' ) {
+                    console.log("aaaa",handle_status);
+                    if ( handle_status) {
                         layer.msg('导入成功！',{
                             icon: 1,
                             time: 2000 //2秒关闭（如果不配置，默认是3秒）
                         },function(){
                             parent.location.reload();
                         });
-                    } else if ( handle_status === '2' ) {
+                    } else {
                         layer.msg('导入失败！',{
                             icon: 2,
                             time: 2000 //2秒关闭（如果不配置，默认是3秒）
